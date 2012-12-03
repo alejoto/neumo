@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Neumomania</title>
+    <title>HIAPULCO</title>
     <link href="assets/stylesheets/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="assets/stylesheets/neumo.css" rel="stylesheet" media="screen">
 
