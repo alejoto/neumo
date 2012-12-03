@@ -19,7 +19,16 @@ html,body {
 
 #hd_slide4{
   background-image: url('../images/4.png');
-} 
+}
+
+.btn{
+  margin-left: 10px;
+}
+
+.sign_up{
+  margin-left: -150px;
+  width: 350px;
+}
 
 .hd_slide{
   height: 300px;

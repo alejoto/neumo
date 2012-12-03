@@ -22,8 +22,9 @@
           <a href="#" style="margin-left: 15px;"> link2 </a>
           <a href="#" style="margin-left: 15px;"> link3 </a>
           &nbsp; | &nbsp;
-          <button class="btn btn-success" type="button" style="margin-left: 15px;">Login</button>
-          <button class="btn btn-primary" type="button" style="margin-left: 15px;">Sign up</button>
+          <a href="#myModal" role="button" class="btn btn-success" data-toggle="modal">Login</a>
+          <a href="#myModal" role="button" class="btn btn-primary" data-toggle="modal">Sign up</a>
+          <? include 'modules/login.php'; ?>
         
         </div>
       </div>
@@ -58,6 +59,7 @@
         </div>
       </div>
       
+      <hr></hr>
     </div>
       
   </body>
