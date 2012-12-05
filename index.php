@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -22,9 +24,17 @@
           <a href="#" style="margin-left: 15px;"> link2 </a>
           <a href="#" style="margin-left: 15px;"> link3 </a>
           &nbsp; | &nbsp;
-          <a href="#myModal" role="button" class="btn btn-success" data-toggle="modal">Login</a>
-          <a href="#myModal" role="button" class="btn btn-primary" data-toggle="modal">Sign up</a>
-          <? include 'modules/login.php'; ?>
+          
+          <?php
+            if(isset($_SESSION['username'])){ 
+              echo $_SESSION['username'];
+              echo '<a href="modules/logout.php" role="button" class="btn btn-primary" data-toggle="modal">Logout</a>';
+            }else{
+              echo '<a href="#myModal" role="button" class="btn btn-success" data-toggle="modal">Login</a>';
+            }
+    
+            include 'modules/login.php';
+          ?>
         
         </div>
       </div>
@@ -52,6 +62,7 @@
       </div>
       
       <hr></hr>
+      
     </div>
       
   </body>
