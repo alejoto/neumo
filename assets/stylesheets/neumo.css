@@ -2,7 +2,8 @@ html,body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -60px;      
+  margin: 0 auto -60px; 
+  text-align: center;     
 }
 
 #hd_slide1{
@@ -66,6 +67,10 @@ html,body {
 .logoimg{
   height: 91px;
   width: 80px;
+}
+
+.left_space{
+  margin-left: 15px;
 }
 
 #banner{

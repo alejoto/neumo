@@ -1,4 +1,4 @@
-<form action="modules/login_response.php" method="post">
+<form action="" method="post">
   <div id="myModal" class="modal hide fade sign_up" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 
     <div class="modal-header">
@@ -16,18 +16,24 @@
     
       <div class="input-prepend">
         <span class="add-on">@</span>
-        <input class="input-large" id="prependedInput" name="user" type="text" placeholder="Username">
+        <input class="input-large" id="usr" name="usr" type="text" placeholder="Username">
         <br><br>
       
         <span class="add-on">@</span>
-        <input class="input-large" id="prependedInput" name="pwd" type="text" placeholder="Password">
+        <input class="input-large" id="pwd" name="pwd" type="password" placeholder="Password"><br>
+
       </div><br>
+    
+      <div class="control-group error" id="msg"></div>
     
     </div>
 
     <div class="modal-footer">
-      <button class="btn" data-dismiss="modal" aria-hidden="true">Cerrar</button>
-      <button class="btn btn-primary" type="submit" >Entrar</button>
+      <a class="btn btn-primary" data-dismiss="modal" aria-hidden="true" >Cerrar</a>
+      <a class="btn btn-success" id="login" >Entrar</a>
     </div>
   </div>
 </form>
+
+<script src="assets/js/login.js"></script>
+

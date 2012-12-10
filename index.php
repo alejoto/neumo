@@ -11,7 +11,7 @@
     <script src="assets/js/bootstrap.min.js"></script>    
   </head>
   
-  <body style="text-align: center;">
+  <body>
 
     <div class="container">
       
@@ -20,20 +20,20 @@
         <div class="span6" style="">Page Name Logo</div>
         <div class="span6" style="">
           
-          <a href="#" style="margin-left: 15px;"> link1 </a>
-          <a href="#" style="margin-left: 15px;"> link2 </a>
-          <a href="#" style="margin-left: 15px;"> link3 </a>
+          <a href="#" class="left_space"> link1 </a>
+          <a href="#" class="left_space"> link2 </a>
+          <a href="#" class="left_space"> link3 </a>
           &nbsp; | &nbsp;
           
           <?php
             if(isset($_SESSION['username'])){ 
-              echo $_SESSION['username'];
-              echo '<a href="modules/logout.php" role="button" class="btn btn-primary" data-toggle="modal">Logout</a>';
+              echo '<u>'.$_SESSION['username'].'</u>';
+              echo '<a href="modules/login/logout.php" role="button" class="btn btn-primary left_space">Logout</a>';
             }else{
               echo '<a href="#myModal" role="button" class="btn btn-success" data-toggle="modal">Login</a>';
             }
     
-            include 'modules/login.php';
+            include 'modules/login/login.php';
           ?>
         
         </div>
@@ -62,6 +62,9 @@
       </div>
       
       <hr></hr>
+      
+      <div id="footer">
+      </div>
       
     </div>
       
