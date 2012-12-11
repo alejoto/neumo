@@ -27,7 +27,10 @@
           
           <?php
             if(isset($_SESSION['username'])){ 
-              echo '<u>'.$_SESSION['username'].'</u>';
+              echo '<a href="modules/myaccount/myaccount.php"><u>'
+                    .$_SESSION['username'].
+                    '</u></a>';
+
               echo '<a href="modules/login/logout.php" role="button" class="btn btn-primary left_space">Logout</a>';
             }else{
               echo '<a href="#modal_login" id="button_modal" role="button" class="btn btn-success" data-toggle="modal">Entrar</a>';
@@ -65,8 +68,6 @@
       <hr></hr>
       
       <div id="footer">
-        <a class="btn" href="#"> <i class="icon-align-left"></i> </a>
-          <a class="btn" href="#"><i class="icon-align-center"></i></a>
       </div>
       
     </div>

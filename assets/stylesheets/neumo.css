@@ -6,6 +6,17 @@ html,body {
   text-align: center;     
 }
 
+#header_lung{
+  width:16px;
+  height: 18px;
+}
+
+.main_icon{
+  width:91px;
+  height:71px;
+  background: url('http://www.healmydisease.com/13hiapulco/images/eval_icons.png') 0 0 ;
+}
+
 #hd_slide1{
   background-image: url('../images/1.png');
 } 
@@ -75,4 +86,8 @@ html,body {
 
 #banner{
   margin-top: 5px;
+}
+
+a{
+  color: black;
 }
