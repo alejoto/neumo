@@ -1,8 +1,9 @@
 <?php
   session_start();
-  
+
+  include '../DB/connect.php';
   $con = mysql_connect("localhost","root","root");
-  mysql_select_db("hiapulco", $con);    
+  mysql_select_db("hiapulco", $con);   
 
   $usr  = htmlspecialchars($_POST['usr'],ENT_QUOTES);
   $pwd  = $_POST['pwd'];
