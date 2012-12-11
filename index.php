@@ -20,9 +20,9 @@
         <div class="span6" style="">Page Name Logo</div>
         <div class="span6" style="">
           
-          <a href="#" class="left_space"> link1 </a>
-          <a href="#" class="left_space"> link2 </a>
-          <a href="#" class="left_space"> link3 </a>
+          <a href="#" class="left_space"> Blog </a>
+          <a href="#" class="left_space"> Twitter </a>
+          <a href="#" class="left_space"> Contactanos </a>
           &nbsp; | &nbsp;
           
           <?php
@@ -30,7 +30,8 @@
               echo '<u>'.$_SESSION['username'].'</u>';
               echo '<a href="modules/login/logout.php" role="button" class="btn btn-primary left_space">Logout</a>';
             }else{
-              echo '<a href="#myModal" role="button" class="btn btn-success" data-toggle="modal">Login</a>';
+              echo '<a href="#modal_login" id="button_modal" role="button" class="btn btn-success" data-toggle="modal">Entrar</a>';
+              echo '<a href="" role="button" class="btn btn-primary left_space">Registrate</a>';
             }
     
             include 'modules/login/login.php';
@@ -64,6 +65,8 @@
       <hr></hr>
       
       <div id="footer">
+        <a class="btn" href="#"> <i class="icon-align-left"></i> </a>
+          <a class="btn" href="#"><i class="icon-align-center"></i></a>
       </div>
       
     </div>

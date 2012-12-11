@@ -1,3 +1,7 @@
+$("#button_modal").click(function(){
+   $("#msg").html("");
+});
+
 $("#login").click(function(){
 
   $.post("modules/login/ajax_login.php",{ usr:$('#usr').val(), pwd:$('#pwd').val() }, function(data) {
