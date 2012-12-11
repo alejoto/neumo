@@ -4,7 +4,7 @@
       <div class="span2" style="color:gray"><b>HIAPULCO</b></div>
       <div class="span5">
         <div class="btn-group">
-          <button class="btn btn-inverse">Inicio <img id="header_lung" src="http://www.healmydisease.com/13hiapulco/images/whitelogo%20trpHIAP.gif" /></button>
+          <a href="../../" class="btn btn-inverse">Inicio <img id="header_lung" src="http://www.healmydisease.com/13hiapulco/images/whitelogo%20trpHIAP.gif" /></a>
           <a class="btn btn-inverse ">Mi perfil <i class="icon-edit icon-white"></i></a>
           <a class="btn  btn-inverse ">Editar paciente <i class="icon-user icon-white"></i></a>          
           <a href="../login/logout.php" class="btn btn-inverse">Salir <i class="icon-share-alt icon-white"></i></a>
