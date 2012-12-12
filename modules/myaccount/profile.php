@@ -14,14 +14,14 @@
   
   <!--main content here-->
     <div class="container">
-      <div class="row">
+      <div class="row-fluid">
         
-        <div class="span3" style="margin-top: 30px;">
+        <div class="span3" style="border-right: ridge; padding-right: 0px; height: 600px;margin-top: 30px;">
           <? include '../includes/left_menu.php'; ?>
           <script src="../../assets/js/neumo.js"></script>
         </div>
 
-        <div class="span8 offset1" style="margin-top: 50px;">  
+        <div class="span7 offset2" style="margin-top: 50px;">  
           <div class="row">
             <? include '../includes/info.php'; ?>
           </div>

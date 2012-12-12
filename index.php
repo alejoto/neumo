@@ -34,10 +34,11 @@
               echo '<a href="modules/login/logout.php" role="button" class="btn btn-primary left_space">Logout</a>';
             }else{
               echo '<a href="#modal_login" id="button_modal" role="button" class="btn btn-success" data-toggle="modal">Entrar</a>';
-              echo '<a href="" role="button" class="btn btn-primary left_space">Registrate</a>';
+              echo '<a href="#modal_register" role="button" class="btn btn-primary left_space" data-toggle="modal">Registrate</a>';
             }
     
             include 'modules/login/login.php';
+            include 'modules/register/register.php';
           ?>
         
         </div>

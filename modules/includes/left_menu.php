@@ -10,8 +10,9 @@
 <br><br><center><div class="main_icon"></div></center>
 
 <h3>Datos basicos</h3>
-<div style="padding-left: 12px;">
-  <a class="btn span2" >Ingreso clinico</a>
-  <a class="btn span2" >subformulario2</a>
-  <a class="btn span2" >subformulario3</a>
+
+<div style="padding-left: 0px;">
+  <a class="btn" >Ingreso clinico</a>
+  <a class="btn" style="margin-top: 10px;" >subformulario2</a>
+  <a class="btn" style="margin-top: 10px;" >subformulario3</a>
 </div>
