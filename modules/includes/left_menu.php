@@ -7,7 +7,7 @@
 </div>
 <!-- end of menugroup-->
 
-<br><br><center><div class="main_icon"></div></center>
+<br><br><center><div class="main_icon"></div></center><br>
 
 <h3>Datos basicos</h3>
 

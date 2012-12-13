@@ -8,27 +8,30 @@
   
     <div class="modal-body">
       <blockquote>
-        <p>Tambien atraves de tu correo electronico:</p>
-        <small>Las aventuras de <cite title="Source Title">coder boy</cite></small>
+        <p>Ingresa tu correo electronico y una contrase&ntilde;a segura:</p>
+        <small>Luego deberas completar tu informacion personal.</small>
       </blockquote>
     
-      <div class="input-prepend">
+      <div class="input-prepend">        
         <span class="add-on">@</span>
-        <input class="input-large" id="usr" name="usr" type="text" placeholder="Username">
+        <input class="input-large" id="mail" name="mail" type="text" value="@hotmail.com" placeholder="Correo electronico">
         <br><br>
       
         <span class="add-on">@</span>
-        <input class="input-large" id="pwd" name="pwd" type="password" placeholder="Password"><br>
+        <input class="input-large" id="pwd1" name="pwd1" type="password" placeholder="Contrase&ntilde;a"><br><br>
+
+        <span class="add-on">@</span>
+        <input class="input-large" id="pwd2" name="pwd2" type="password" placeholder="Confirma tu contrase&ntilde;a"><br>
 
       </div><br>
     
-      <div class="control-group error" id="msg"></div>
+      <div class="control-group error" id="msg_register"></div>
     
     </div>
 
     <div class="modal-footer">
       <a class="btn btn-primary" data-dismiss="modal" aria-hidden="true" >Cerrar</a>
-      <a class="btn btn-success" id="login" >Entrar</a>
+      <a class="btn btn-success" id="register_button" >Registrarse</a>
     </div>
   </div>
 </form>

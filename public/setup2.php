@@ -1,9 +1,9 @@
 <?php
 
-  $con = mysql_connect("localhost","root","root");
-  
-  $sql = "RENAME TABLE add_data_patient TO main_add_data_patient
-  ,arterialgasses TO hap_arterialgases
+  $con = mysql_connect("instance33555.db.xeround.com:5852","admin","damabugo");
+  mysql_select_db("health", $con);
+  $sql = "RENAME TABLE
+  arterialgasses TO hap_arterialgasses
   ,cp_stress_test TO hap_cp_stress_test
   ,digiter TO main_digiter
   ,dimer_trop TO hap_dimer_trop
@@ -36,5 +36,6 @@
   ,x_ray TO hap_x_ray";
   
   mysql_query($sql,$con);
-
+  
+  mysql_close($con);
 ?>

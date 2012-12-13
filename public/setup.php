@@ -1,13 +1,14 @@
 <?php
   $con = mysql_connect("instance33555.db.xeround.com:5852","admin","damabugo");
+  //$con = mysql_connect("localhost","root","root");
   if (!$con) die('Could not connect: ' . mysql_error());
   else echo 'connection succesfull', "\n";
 
-  $db = "CREATE DATABASE hiapulco";
+  $db = "CREATE DATABASE health";
   if( mysql_query($db,$con) ) echo "Database created";
   else echo "Error creating database: " . mysql_error();
   
-  mysql_select_db("hiapulco", $con);
+  mysql_select_db("health", $con);
   
   $sql = "CREATE TABLE IF NOT EXISTS permissions (page_name VARCHAR (150) PRIMARY KEY
   ,coordinator VARCHAR (50)
@@ -19,7 +20,8 @@
 
   $sql = "CREATE TABLE IF NOT EXISTS users (user_id VARCHAR (150) PRIMARY KEY
   ,pwd VARCHAR (50)
-  ,rol VARCHAR (50))
+  ,rol VARCHAR (50)
+  ,status VARCHAR(50))
   ";
   mysql_query($sql,$con); 
   
@@ -28,18 +30,18 @@
   ";
   mysql_query($sql,$con); 
   
-  $sql = "CREATE TABLE IF NOT EXISTS digiter (digiter_id VARCHAR (100) PRIMARY KEY
-  ,dig_rol VARCHAR (50)
+  $sql = "CREATE TABLE IF NOT EXISTS digiter (
+  dig_rol VARCHAR (50)
   ,dig_name VARCHAR (50)
   ,dig_surn VARCHAR (50)
   ,dig_mobile VARCHAR (50)
-  ,investigator_id VARCHAR (16),FOREIGN KEY (investigator_id) REFERENCES investigator(investigator_id)
+  ,investigator_id VARCHAR (16),FOREIGN KEY (investigator_id) REFERENCES investigator(user_id)
   ,user_id VARCHAR (30),FOREIGN KEY (user_id) REFERENCES users(user_id))
   ";
   mysql_query($sql,$con);
   
-  $sql = "CREATE TABLE IF NOT EXISTS investigator (investigator_id VARCHAR (50) PRIMARY KEY
-  ,ivt_name VARCHAR (50)
+  $sql = "CREATE TABLE IF NOT EXISTS investigator (
+  ivt_name VARCHAR (50)
   ,ivt_surname VARCHAR (50)
   ,ivt_prof VARCHAR (30)
   ,ivt_specialty VARCHAR (30)
@@ -347,7 +349,43 @@
   ,dead_date DATE 
   ,dead_cause VARCHAR (50)
   ,dead_place VARCHAR (50)
-  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysql_query($sql,$con);
+  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysql_query($sql,$con);  
+    
+  $sql = "RENAME TABLE
+  arterialgasses TO hap_arterialgasses
+  ,cp_stress_test TO hap_cp_stress_test
+  ,digiter TO main_digiter
+  ,dimer_trop TO hap_dimer_trop
+  ,drug_treatment TO hap_drug_treatment
+  ,duplex_legs TO hap_duplex_legs
+  ,ecocardio TO hap_ecocardio
+  ,electrok TO hap_electrok
+  ,eval TO main_eval
+  ,first_eval TO hap_first_eval
+  ,follow_up TO hap_follow_up
+  ,gammagr TO hap_gammagr
+  ,hb TO hap_hb
+  ,hepatic TO hap_hepatic
+  ,hospital TO main_hospital
+  ,hyperclotting TO hap_hyperclotting
+  ,investigator TO main_investigator
+  ,mri TO hap_mri
+  ,outcome TO hap_outcome
+  ,patient TO main_patient
+  ,pep_natr TO hap_pep_natr
+  ,pulm_arteriography TO hap_pulm_arteriography
+  ,renal TO hap_renal
+  ,reuma TO hap_reuma
+  ,right_cathet TO hap_right_cathet
+  ,six_mins_walk TO hap_six_mins_walk
+  ,spirometry TO hap_spirometry
+  ,tc_angio TO hap_tc_angio
+  ,vasoreact_test TO hap_vasoreact_test
+  ,vih TO hap_vih
+  ,x_ray TO hap_x_ray";
+  
+  mysql_query($sql,$con);
+    
     
   mysql_close($con);
 ?>
