@@ -27,7 +27,7 @@
           
           <?php
             if(isset($_SESSION['username'])){ 
-              echo '<a href="modules/myaccount/myaccount.php"><u>'
+              echo '<a href="modules/myaccount/myaccount.php?page=profile"><u>'
                     .$_SESSION['username'].
                     '</u></a>';
 

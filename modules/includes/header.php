@@ -1,4 +1,16 @@
-<!--header starts here-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HIAPULCO</title>
+    <link href="../../assets/stylesheets/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../../assets/stylesheets/neumo.css" rel="stylesheet" media="screen">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>    
+  </head>
+<body>
+
+<!--menu starts here-->
   <div style="background:#3A3A3A;color:#fff;padding:10px">
     <div class="row-fluid">
       <div class="span2" style="color:gray"><b>HIAPULCO</b></div>
@@ -13,4 +25,4 @@
       <div class="span5" style="color:gray">Dr. HECTOR ORTEGA</div>
     </div>
   </div>
-<!--header ending-->
+<!--menu ending-->

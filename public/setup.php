@@ -65,11 +65,11 @@
   ,countrybth VARCHAR (50)
   ,citybth VARCHAR (50)
   ,statebth VARCHAR (50)
-  ,digiter_id VARCHAR (50),FOREIGN KEY (digiter_id) REFERENCES digiter(digiter_id))";mysql_query($sql,$con);
+  ,user_id VARCHAR (50),FOREIGN KEY (user_id) REFERENCES digiter(user_id))";mysql_query($sql,$con);
 
   $sql = "CREATE TABLE IF NOT EXISTS eval (eval_id INT (16) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,patient_id VARCHAR (50),FOREIGN KEY (patient_id) REFERENCES patient(patient_id)
-  ,digiter_id VARCHAR (50),FOREIGN KEY (digiter_id) REFERENCES digiter(digiter_id)
+  ,user_id VARCHAR (50),FOREIGN KEY (user_id) REFERENCES digiter(user_id)
   ,hospital_id INT (50),FOREIGN KEY (hospital_id) REFERENCES hospital(hospital_id)
   ,t_st DATE )";mysql_query($sql,$con);
 
@@ -90,6 +90,7 @@
   ,dxdate DATE 
   ,yearofsymptoms VARCHAR (50)
   ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysql_query($sql,$con);
+
   $sql = "CREATE TABLE IF NOT EXISTS follow_up (follow_up_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,eval_date DATE 
   ,homeoxigen VARCHAR (50)
@@ -100,6 +101,7 @@
   ,loweredema VARCHAR (50)
   ,hemoptysis VARCHAR (50)
   ,syncope VARCHAR (50)
+  ,improved_symts VARCHAR (50)
   ,pregnant VARCHAR (50)
   ,weight VARCHAR (50)
   ,height VARCHAR (50)
@@ -107,11 +109,17 @@
   ,sat_ox VARCHAR (50)
   ,pulse VARCHAR (50)
   ,breathing VARCHAR (50)
-  ,trycuspid_murmur VARCHAR (50)
-  ,p2_greater_than_a2 VARCHAR (50)
+  ,psist VARCHAR (50)
+  ,pdiast VARCHAR (50)
   ,cyanosis VARCHAR (50)
+  ,ing_yu VARCHAR (50)
+  ,hepatomegaly VARCHAR (50)
+  ,ef_edema VARCHAR (50)
   ,finger_clubbing VARCHAR (50)
-  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysql_query($sql,$con);
+  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";
+  
+  mysql_query($sql,$con);
+  
   $sql = "CREATE TABLE IF NOT EXISTS hyperclotting (hyperclotting_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,antiphs_syndr VARCHAR (50)
   ,protr20210_mutation VARCHAR (50)
@@ -122,8 +130,12 @@
   ,unspecific_tromboph VARCHAR (50)
   ,hyperhomocist VARCHAR (50)
   ,neoplasia VARCHAR (50)
+  ,esplenectomy VARCHAR (50)
   ,other_hyperclott_disord VARCHAR (50)
-  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysql_query($sql,$con);
+  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";
+  
+  mysql_query($sql,$con);
+  
   $sql = "CREATE TABLE IF NOT EXISTS electrok (electrok_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,ecg_date DATE 
   ,ecg_lecture VARCHAR (50)
@@ -268,25 +280,37 @@
   ,artergph_date DATE 
   ,artergph_TEP VARCHAR (50)
   ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysql_query($sql,$con);
+  
   $sql = "CREATE TABLE IF NOT EXISTS right_cathet (right_cathet_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,rt_cat_date DATE 
+  ,wgt VARCHAR (50)
+  ,hgt VARCHAR (50)
+  ,bsa VARCHAR (50)
   ,res_vasc_pulm VARCHAR (50)
   ,res_vasc_pulm_unit VARCHAR (50)
   ,res_vasc_syst VARCHAR (50)
   ,res_vasc_syst_unit VARCHAR (50)
   ,pap_sys VARCHAR (50)
   ,pap_dias VARCHAR (50)
+  ,pam_pulm VARCHAR (50)
   ,pas_sys VARCHAR (50)
   ,pas_dias VARCHAR (50)
+  ,pam_stm VARCHAR (50)
   ,rt_atr_press VARCHAR (50)
   ,pulm_wedg_press VARCHAR (50)
   ,pulm_gradient VARCHAR (50)
   ,its_right VARCHAR (50)
   ,its_left VARCHAR (50)
   ,cardiac_outp VARCHAR (50)
+  ,cardiac_index VARCHAR (50)  
   ,rt_atr_oxim VARCHAR (50)
+  ,rt_ventr_oxim VARCHAR (50)
+  ,pulm_artery VARCHAR (50)
   ,heart_rate VARCHAR (50)
-  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysql_query($sql,$con);
+  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";
+  
+  mysql_query($sql,$con);
+  
   $sql = "CREATE TABLE IF NOT EXISTS vasoreact_test (vasoreact_test_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,reactivity_date DATE 
   ,reactivity VARCHAR (50)
@@ -296,18 +320,27 @@
   ,post_res_vasc_syst VARCHAR (50)
   ,post_res_vasc_syst_unit VARCHAR (50)
   ,post_pap_sys VARCHAR (50)
-  ,post_pap_dias VARCHAR (50)
+  ,post_pap_dias VARCHAR (50)  
+  ,post_pam_pulm VARCHAR (50)  
   ,post_pas_sys VARCHAR (50)
-  ,post_pas_dias VARCHAR (50)
+  ,post_pas_dias VARCHAR (50)  
+  ,post_pam_stm VARCHAR (50)  
   ,post_rt_atr_press VARCHAR (50)
   ,post_pulm_wedg_press VARCHAR (50)
   ,post_pulm_gradient VARCHAR (50)
   ,post_its_right VARCHAR (50)
   ,post_its_left VARCHAR (50)
   ,post_cardiac_outp VARCHAR (50)
+  ,post_cardiac_index VARCHAR (50)
   ,post_rt_atr_oxim VARCHAR (50)
+  ,post_rt_ventr_oxim VARCHAR (50)
+  ,post_pulm_artery VARCHAR (50)
   ,post_heart_rate VARCHAR (50)
-  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysql_query($sql,$con);
+  ,react_result VARCHAR (50)    
+  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";
+  
+  mysql_query($sql,$con);
+
   $sql = "CREATE TABLE IF NOT EXISTS six_mins_walk (six_mins_walk_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,walk_date DATE 
   ,walk_meters VARCHAR (50)
@@ -331,7 +364,10 @@
   ,vo2max_peak VARCHAR (50)
   ,art_press_vo2 VARCHAR (50)
   ,pulse_vo2 VARCHAR (50)
-  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysql_query($sql,$con);
+  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";
+  
+  mysql_query($sql,$con);
+
   $sql = "CREATE TABLE IF NOT EXISTS drug_treatment (drug_treatment_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,drug VARCHAR (50)
   ,drug_other VARCHAR (50)
@@ -340,16 +376,27 @@
   ,drug_end DATE 
   ,suspend_cause VARCHAR (50)
   ,drug_adv_event VARCHAR (50)
-  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysql_query($sql,$con);
+  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";
+  
+  mysql_query($sql,$con);
+  
+  $sql = "CREATE TABLE IF NOT EXISTS hap_surgery (surgery_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
+  ,transplant VARCHAR (50)
+  ,transplant_date DATE 
+  ,tendt VARCHAR (50)
+  ,tendt_date DATE
+  ,atr_sept VARCHAR (50)
+  ,atr_sept_date DATE
+  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";
+  
+  mysql_query($sql,$con);  
+
   $sql = "CREATE TABLE IF NOT EXISTS outcome (outcome_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
-  ,outcome_dyspn VARCHAR (50)
-  ,outcome_epid VARCHAR (50)
-  ,endart_failure VARCHAR (50)
-  ,lung_transplant VARCHAR (50)
   ,dead_date DATE 
   ,dead_cause VARCHAR (50)
-  ,dead_place VARCHAR (50)
-  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysql_query($sql,$con);  
+  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";
+  
+  mysql_query($sql,$con);  
     
   $sql = "RENAME TABLE
   arterialgasses TO hap_arterialgasses
