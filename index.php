@@ -3,26 +3,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HIAPULCO</title>
+    <title>RECOLHAP</title>
     <link href="assets/stylesheets/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="assets/stylesheets/neumo.css" rel="stylesheet" media="screen">
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>    
   </head>
-  
   <body>
-
     <div class="container">
-      
       <hr></hr>
       <div class="row-fluid">
-        <div class="span6" style="">Page Name Logo</div>
+        <div class="span6" style="">Registro Colombiano de Hipertensión Arterial Pulmonar</div>
         <div class="span6" style="">
-          
-          <a href="#" class="left_space"> Blog </a>
-          <a href="#" class="left_space"> Twitter </a>
-          <a href="#" class="left_space"> Contactanos </a>
+          <a href="mailto:marketing@healmydisease.com" class="left_space"> Contactanos </a>
           &nbsp; | &nbsp;
           
           <?php
@@ -30,8 +24,7 @@
               echo '<a href="modules/myaccount/myaccount.php?page=patients"><u>'
                     .$_SESSION['username'].
                     '</u></a>';
-
-              echo '<a href="modules/login/logout.php" role="button" class="btn btn-primary left_space">Logout</a>';
+              echo '<a href="modules/login/logout.php" role="button" class="btn btn-primary left_space">Salir</a>';
             }else{
               echo '<a href="#modal_login" id="button_modal" role="button" class="btn btn-success" data-toggle="modal">Entrar</a>';
               echo '<a href="#modal_register" role="button" class="btn btn-primary left_space" data-toggle="modal">Registrate</a>';
@@ -53,15 +46,23 @@
       
       <div class="row-fluid">  
         <div class="span8">
-          <h4 class="info_index_title">Lorem ipsum</h4>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
-          laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation 
-          ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+          <h4 class="info_index_title">RECOLHAP</h4>
+          El <b>REGISTRO MULTICÉNTRICO COLOMBIANO DE HIPERTENSIÓN ARTERIAL PULMONAR - RECOLHAP</b> es 
+          una iniciativa de la Asociación Colombiana de Neumología y Cirugía del Tórax
+          que a la luz de las mas recientes alternativas terapéuticas pretende 
+          recopilar la mayor información posible para identificar conductas terapéuticas innovadoras
+          - preventivas, curativas y rehabilitadoras -  con miras a mejorar la calidad de vida
+          y supervivencia de aquellas personas con esta enfermedad.
+          <br><br> 
+          
         </div>
       
         <div class="span4 info_index">
-          <h4 class="info_index_title2">Duis autem</h4>
-          Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.
+          <h4 class="info_index_title2">PARTICIPA EN EL REGISTRO!</h4>
+          Si usted pertenece a una institución que atiende pacientes con Hipertensión Arterial Pulmonar, 
+          te invitamos a que hagas parte de este registro, inscribiéndote - es muy fácil - y añadiendo
+          los datos solicitados para el registro.
+          
           <br><br>
         </div>
       </div>
@@ -69,6 +70,7 @@
       <hr></hr>
       
       <div id="footer">
+          RECOLHAP - Registro Multicéntrico Colombiano de Hipertensión Arterial Pulmonar - 2012
       </div>
       
     </div>
