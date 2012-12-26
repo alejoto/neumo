@@ -16,7 +16,7 @@
     for($i=0;$i<10; ++$i)
       if($i != 1)
         $patient .= $row[$i]."-";
-    
+        
     $_SESSION['patient'] = $patient;
     echo 'yes';    
   

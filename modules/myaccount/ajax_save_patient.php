@@ -21,6 +21,12 @@
     header('Location: ../myaccount/myaccount.php?page=patients'); 
   }else{
     mysql_query("INSERT INTO main_patient (patient_id, timestamp, name, surn, gender, birthd, countrybth, citybth, statebth, digiter_id) VALUES ('".$docidnum."', '".$actual_date."', '".$name."', '".$surname."', '".$gender."', '".$birthd."', '".$countrybth."', '".$citybth."', '".$statebth."', '".$user_id."')");
+    
+    $patient = $docidnum."-".$name."-".$surname."-";
+    $patient .= $gender."-".$birthd."-".$countrybth."-";
+    $patient .= $citybth."-".$statebth."-".$user_id;
+    
+    $_SESSION['patient'] = $patient;
     header('Location: ../myaccount/myaccount.php?page=profile');     
   }
   

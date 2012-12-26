@@ -46,19 +46,19 @@
         <p style="color: red; padding: 10px 10px 10px 10px; margin-left: 70px; text-align: left; margin-top: 40px; margin-left: 70px; border: solid red 1px;">
           El paciente con el numero de identificacion especificado no existe si desea registrarlo llene los datos en el siguiente formulario
         </p>
-      
-        <form action="ajax_save_patient.php" method="post" style="padding-left: 70px; text-align: left; margin-top: 0px;">
+        
+        <form action="ajax_save_patient.php" method="post" style="padding-left: 70px; text-align: center; margin-top: 0px;">
           <input type="text" id="docidnum" name="docidnum" style="visibility: hidden;">        
           <input type="text" id="name" name="name" placeholder="Nombre completo"><br>
           <input type="text" id="surname" name="surname" placeholder="Apellidos"><br>
       
-          <select id="gender" name="gender" >
+          <select id="gender" name="gender">
             <option value="">Genero</option>
             <option value="cc">Hombre</option>
             <option value="rc">Mujer</option>
           </select><br>
       
-          <input type="text" id="year" name="year" placeholder="A&ntilde;o" class="span3">
+          <input type="text" id="year" name="year" placeholder="A&ntilde;o" class="span3" style="margin-left: -125px;">
           <input type="text" id="month" name="month" placeholder="Mes" class="span3">
           <input type="text" id="day" name="day" placeholder="Dia" class="span3"><br>
 
@@ -67,9 +67,10 @@
           <input type="text" id="countrybth" name="countrybth" placeholder="Pais de origen"><br><br>
 
           <button type="submit" class="btn btn-primary" id="save_patient" style="margin-left: 0px;">Guardar</button>
+          <a href="#" role="button" class="btn btn-success" style=""> Datos adicionales </a>
         </form>
       </div>
-              
+          
       
       <div id="patientexist">
         <h3 style="padding-left: 70px;"><u>Paciente</u></h3>
@@ -79,7 +80,7 @@
         
         <div style="padding-left: 70px; text-align: left;">
           <center>
-            <? include 'xml_info_patient.php'; ?>
+            <? include 'info_patient.php'; ?>
           </center>
         </div>
         
