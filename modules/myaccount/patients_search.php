@@ -73,15 +73,20 @@
       
       <div id="patientexist">
         <h3 style="padding-left: 70px;"><u>Paciente</u></h3>
-        <p style="color: red; padding: 10px 10px 10px 10px; margin-left: 70px; text-align: left; margin-top: 40px; margin-left: 70px; border: solid red 1px;">
-          El paciente con el numero de identificacion especificado no existe si desea registrarlo llene los datos en el siguiente formulario
-        </p>
+        <p style="color: green; padding: 10px 10px 10px 10px; margin-left: 70px; text-align: left; margin-top: 40px; margin-left: 70px; border: solid green 1px;">
+          El paciente ya ha sido registrado con anterioridad si desea cotinuar a su historia clinica de click en siguiente.
+        </p><br>
         
-        <div>nombre</div>
-        <div>apellidos</div>
-        <div>nombre</div>
-        <div>nombre</div>
-        <div>nombre</div>
+
+        <? //include 'xml_info_patient.php'; ?>
+
+        <div style="padding-left: 70px;">
+          <div>nombre</div><br>
+          <div>apellidos</div><br>
+          <div>nombre</div><br>
+          <div>nombre</div><br>
+          <div>nombre</div>
+        </div>
         
       </div>
       

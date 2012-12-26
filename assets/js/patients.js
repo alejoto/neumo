@@ -52,7 +52,6 @@ $("#idnumber").blur(function() {
   });
   
   $("#docidnum").val(docidnum);
-  
 });
 
 function tiprequired (reqfld) {
