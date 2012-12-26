@@ -1,42 +1,17 @@
-<?php
-  $ruta_fichero = "../../temp_info/patient.xml";
-  $contenido = ""; 
-  if($da = fopen($ruta_fichero,"r")) {
-
-    while ($aux= fgets($da,1024)) 
-      $contenido.=$aux;
-    fclose($da);
-
-  }else
-    echo "Error: no se ha podido leer el archivo <strong>$ruta_fichero</strong>";
-
-  $tagnames = array ("patient","doc","name","surn","gender","birth","country","city","state","digiter"); 
-
-  if (!$xml = domxml_open_mem($contenido)) {
-    echo "Ha ocurrido un error al procesar el documento<strong> \"$ruta_fichero\"</strong> a XML <br>"; 
-    exit; 
-  }else{
-
-    $raiz = $xml->document_element(); 
-
-    $tam = sizeof($tagnames); 
-    $main = $raiz->get_elements_by_tagname($tagnames[0]); 
-
-    for($i=1; $i<$tam; $i++) {
-      $nodo = $main->get_elements_by_tagname($tagnames[$i]); 
-      $matriz[$i-1] = $nodo->get_content();  
+<?
+  $chunk = explode("-",$_SESSION['patient']);
+  $names = array('Documento','Nombre','Apellidos','Genero','Nacimiento','Pais','Ciudad','Estado','Digitador');
+  $chunk[4] = $chunk[4].'/'.$chunk[5].'/'.$chunk[6];
+  
+  $cont = 0;
+  echo '<table>';
+  for($i=0;$i<11;++$i){
+    if( $i != 5 && $i != 6 ){
+      echo '<tr><td style="border: ridge; padding-right: 25px; "><b>'.$names[$cont].'</b></td><td style="border: ridge;">'.$chunk[$i].'</td></tr>';
+      $cont++;
     }
-
-    //return $matriz; 
-
-    $num_noticias=sizeof($matriz); 
-    echo '<table border=1>';
-
-    for($i=0;$i<$num_noticias;$i++)
-      echo '<tr><td align=center>'.$matriz[$i].'</td></tr>';
-      
-    echo '</table><br>';
-
   }
-
+  echo '</table>';
+  
+  echo '<br><br><a href="#" role="button" class="btn btn-success pull-right" style=""> Siguiente </a>';
 ?>

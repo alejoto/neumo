@@ -77,15 +77,10 @@
           El paciente ya ha sido registrado con anterioridad si desea cotinuar a su historia clinica de click en siguiente.
         </p><br>
         
-
-        <? //include 'xml_info_patient.php'; ?>
-
-        <div style="padding-left: 70px;">
-          <div>nombre</div><br>
-          <div>apellidos</div><br>
-          <div>nombre</div><br>
-          <div>nombre</div><br>
-          <div>nombre</div>
+        <div style="padding-left: 70px; text-align: left;">
+          <center>
+            <? include 'xml_info_patient.php'; ?>
+          </center>
         </div>
         
       </div>
