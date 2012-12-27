@@ -27,6 +27,3 @@
   </div>
 
 <!--end of main content-->
-
-<div id="footer" style="background:#3A3A3A;color:white; margin-top: 30px;">
-</div>

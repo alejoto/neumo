@@ -50,13 +50,13 @@
       
       <div class="row-fluid" style="margin-top: 20px;">
           
-        <div class="span8 info_index_0 alert alert-info">  
+        <div class="span8 info_index_0">  
 
           <div class="page-header" style="padding-left: 20px; color: black; text-align: left;">
-            <h2><u>RECOLHAP</u> &nbsp; <small>Subtext for header</small></h2>
+            <h2><u>RECOLHAP</u> &nbsp; <small></small></h2>
           </div>
           
-          <p class="alert alert-info" style="margin-top: -30px; font-size: 12px;">
+          <p class="alert alert-info" style="background: white; color: black; margin-top: -30px; font-size: 12px;">
             El <b>REGISTRO MULTIC&Eacute;NTRICO COLOMBIANO DE HIPERTENSI&oacute;N ARTERIAL PULMONAR - RECOLHAP</b> es 
             una iniciativa de la Asociaci&oacute;n Colombiana de Neumolog&iacute;a y Cirug&iacute;a del T&oacute;rax
             que a la luz de las mas recientes alternativas terap&eacute;uticas pretende 
@@ -67,13 +67,13 @@
           
         </div>
       
-        <div class="span4 info_index alert alert-success">
+        <div class="span4 info_index">
           
-          <div class="page-header" style="text-align: center; margin-top: -0px; color: black;">
-            <h3><u>PARTICIPA EN EL REGISTRO</u></h3>
+          <div class="page-header" style="text-align: center; margin-top: -0px; color: black; border: none;">
+            <h3><u>REGISTRATE!</u></h3>
           </div>
           
-          <p class="alert alert-success" style="margin-top: -40px;">
+          <p class="alert" style="background: white; color: black; margin-top: -20px;">
           Si usted pertenece a una instituci&oacute;n que atiende pacientes con Hipertensi&oacute;n Arterial Pulmonar, 
           te invitamos a que hagas parte de este registro.
           </p><br>
@@ -81,10 +81,10 @@
         </div>
       </div>
             
-      <div id="footer" class="pull-left" style="margin-top: -70px; padding-left: 25px;">
+      <div id="footer" class="pull-left" style="margin-top: 0px; padding-left: 25px;">
         <br>
         <h5 style="color: green; border-top: solid;">
-          RECOLHAP - Copyright 1999-2012 Colombia.
+          RECOLHAP - Copyright 2012, Medell&iacute;n - Colombia.
         </h5>
       </div>
       
