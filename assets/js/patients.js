@@ -29,6 +29,7 @@ function hide_if_empty(n_empty, hid_shw) {
 $(document).ready(function() {
   $("#patientexist").hide();
   $("#enterpatient").hide();
+  $("#docidnum").hide();
 })
 
 $("#idnumber").blur(function() {
@@ -42,12 +43,18 @@ $("#idnumber").blur(function() {
   var docidnum=doc+$("#idnumber").val();
 
   $.post("ajax_search_patient.php",{ doc:docidnum }, function(data) {
-    if(data=='yes') {
-      $("#enterpatient").hide("fast");
-      $("#patientexist").show("fast");
-    }else{
+    if(data=='no') {
       $("#enterpatient").show("fast");
       $("#patientexist").hide("fast");
+    }else{
+      $("#enterpatient").hide("fast");
+      $("#patientexist").show("fast");
+
+      var myArray = data.split('?');
+      for(var i=0;i<myArray.length;i++){
+        var pos = "#patient_" +  i;
+        $(pos).html(myArray[i]);
+      }
     }
   });
   

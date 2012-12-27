@@ -41,14 +41,18 @@
     <div class="span6 offset1" style="border-left: ridge; height: 560px; margin-top: 40px; " >
 
       <div id="enterpatient">
-        <h3 style="padding-left: 70px;"><u>Registro Pacientes</u></h3>
-      
-        <p style="color: red; padding: 10px 10px 10px 10px; margin-left: 70px; text-align: left; margin-top: 40px; margin-left: 70px; border: solid red 1px;">
-          El paciente con el numero de identificacion especificado no existe si desea registrarlo llene los datos en el siguiente formulario
-        </p>
+        <div class="page-header" style="border: none; padding-left: 70px;">
+          <h2><u>Registro de pacientes</u></h2>
+        </div>
+                
+        <div class="alert alert-error fade in" style="margin-left: 70px; margin-top: -15px;">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          El paciente con el numero de identificacion especificado no existe si desea registrarlo llene sus datos en el siguiente formulario
+        </div>
         
-        <form action="ajax_save_patient.php" method="post" style="padding-left: 70px; text-align: center; margin-top: 0px;">
-          <input type="text" id="docidnum" name="docidnum" style="visibility: hidden;">        
+        
+        <form action="ajax_save_patient.php" method="post" style="padding-left: 70px; text-align: center; margin-top: 40px;">
+          <input type="text" id="docidnum" name="docidnum">        
           <input type="text" id="name" name="name" placeholder="Nombre completo"><br>
           <input type="text" id="surname" name="surname" placeholder="Apellidos"><br>
       
@@ -73,12 +77,17 @@
           
       
       <div id="patientexist">
-        <h3 style="padding-left: 70px;"><u>Paciente</u></h3>
-        <p style="color: green; padding: 10px 10px 10px 10px; margin-left: 70px; text-align: left; margin-top: 40px; margin-left: 70px; border: solid green 1px;">
-          El paciente ya ha sido registrado con anterioridad si desea cotinuar a su historia clinica de click en siguiente.
-        </p><br>
+                
+        <div class="page-header" style="border: none; padding-left: 70px;">
+          <h1><u>Paciente</u><br> <small>Informacion Pertinente</small></h1>
+        </div>
         
-        <div style="padding-left: 70px; text-align: left;">
+        <div class="alert alert-success fade in" style="margin-left: 70px; margin-top: -15px;">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          El paciente ya ha sido registrado si desea cotinuar a su historia clinica de click en siguiente.
+        </div>
+        
+        <div style="padding-left: 70px; text-align: left; margin-top: 35px;">
           <center>
             <? include 'info_patient.php'; ?>
           </center>
