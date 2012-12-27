@@ -3,25 +3,24 @@
 
     <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-      <h2 id="myModalLabel"><u>Registrate</u></h2>
+      <h2 id="myModalLabel"><u>Registrarse</u></h2>
     </div>
   
     <div class="modal-body">
       <blockquote>
-        <p>Ingresa tu correo electronico y una contrase&ntilde;a segura:</p>
-        <small>Luego deberas completar tu informacion personal.</small>
+        <p>Para registrarse ingrese su correo electronico y una contrase&ntilde;a segura:</p>
       </blockquote>
     
       <div class="input-prepend">        
         <span class="add-on">@</span>
-        <input class="input-large" id="mail" name="mail" type="text" value="@hotmail.com" placeholder="Correo electronico">
+        <input class="input-large" id="mail" name="mail" type="text" value="@" placeholder="email">
         <br><br>
       
         <span class="add-on">@</span>
         <input class="input-large" id="pwd1" name="pwd1" type="password" placeholder="Contrase&ntilde;a"><br><br>
 
         <span class="add-on">@</span>
-        <input class="input-large" id="pwd2" name="pwd2" type="password" placeholder="Confirma tu contrase&ntilde;a"><br>
+        <input class="input-large" id="pwd2" name="pwd2" type="password" placeholder="Confirmar contrase&ntilde;a"><br>
 
       </div><br>
     

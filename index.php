@@ -45,7 +45,7 @@
     <div class="container">
       
       <div class="row-fluid">  
-        <div class="span8">
+        <div class="span8 info_index_0">
           <h4 class="info_index_title">RECOLHAP</h4>
           El <b>REGISTRO MULTICÉNTRICO COLOMBIANO DE HIPERTENSIÓN ARTERIAL PULMONAR - RECOLHAP</b> es 
           una iniciativa de la Asociación Colombiana de Neumología y Cirugía del Tórax
@@ -70,7 +70,7 @@
       <hr></hr>
       
       <div id="footer">
-          RECOLHAP - Registro Multicéntrico Colombiano de Hipertensión Arterial Pulmonar - 2012
+          RECOLHAP - Registro Multicéntrico Colombiano de Hipertensión Arterial Pulmonar - 2012. Derechos reservados.
       </div>
       
     </div>

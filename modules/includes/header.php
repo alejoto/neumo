@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HIAPULCO</title>
+    <title>RECOLHAP</title>
     <link href="../../assets/stylesheets/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="../../assets/stylesheets/neumo.css" rel="stylesheet" media="screen">
 
@@ -13,7 +13,7 @@
 <!--menu starts here-->
   <div style="background:#3A3A3A;color:#fff;padding:10px">
     <div class="row-fluid">
-      <div class="span2" style="color:gray"><b>HIAPULCO</b></div>
+      <div class="span2" style="color:gray"><b>RECOLHAP</b></div>
       <div class="span5">
         <div class="btn-group">
           <a href="../../" class="btn btn-inverse">Inicio <img id="header_lung" src="http://www.healmydisease.com/13hiapulco/images/whitelogo%20trpHIAP.gif" /></a>

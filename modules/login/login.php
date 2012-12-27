@@ -10,8 +10,7 @@
   
     <div class="modal-body">
       <blockquote>
-        <p>Tambien atraves de tu correo electronico:</p>
-        <small>Las aventuras de <cite title="Source Title">coder boy</cite></small>
+        <p>Ingrese su email y password:</p>
       </blockquote>
     
       <div class="input-prepend">
