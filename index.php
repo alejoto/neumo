@@ -67,14 +67,13 @@
           
         </div>
       
-        &nbsp;
-        <div class="span4 info_index alert alert-block">
+        <div class="span4 info_index alert alert-success">
           
-          <div class="page-header" style="text-align: center; margin-top: -10px; color: black;">
+          <div class="page-header" style="text-align: center; margin-top: -0px; color: black;">
             <h3><u>PARTICIPA EN EL REGISTRO</u></h3>
           </div>
           
-          <p class="alert" style="margin-top: -30px;">
+          <p class="alert alert-success" style="margin-top: -40px;">
           Si usted pertenece a una instituci&oacute;n que atiende pacientes con Hipertensi&oacute;n Arterial Pulmonar, 
           te invitamos a que hagas parte de este registro.
           </p><br>
