@@ -83,8 +83,8 @@
       </div>
             
       <div id="footer" class="pull-left" style="margin-top: -70px; padding-left: 25px;">
-        <hr></hr>
-        <h5 style="color: green;">
+        <br>
+        <h5 style="color: green; border-top: solid;">
           RECOLHAP - Copyright 1999-2012 Colombia.
         </h5>
       </div>
