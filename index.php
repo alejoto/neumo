@@ -14,9 +14,13 @@
     <div class="container">
       <hr></hr>
       <div class="row-fluid">
-        <div class="span6" style="">Registro Colombiano de Hipertensión Arterial Pulmonar</div>
+        
+        <div class="span6" style="text-align: left; padding-left: 50px;">
+          <img src="https://kippt.com/static/img/kippt-logo-86.png">
+        </div>
+        
         <div class="span6" style="">
-          <a href="mailto:marketing@healmydisease.com" class="left_space"> Contactanos </a>
+          <a href="mailto:marketing@healmydisease.com" class="left_space"> <b> Contactanos </b> </a>
           &nbsp; | &nbsp;
           
           <?php
@@ -44,33 +48,45 @@
         
     <div class="container">
       
-      <div class="row-fluid">  
-        <div class="span8 info_index_0">
-          <h4 class="info_index_title">RECOLHAP</h4>
-          El <b>REGISTRO MULTICÉNTRICO COLOMBIANO DE HIPERTENSIÓN ARTERIAL PULMONAR - RECOLHAP</b> es 
-          una iniciativa de la Asociación Colombiana de Neumología y Cirugía del Tórax
-          que a la luz de las mas recientes alternativas terapéuticas pretende 
-          recopilar la mayor información posible para identificar conductas terapéuticas innovadoras
-          - preventivas, curativas y rehabilitadoras -  con miras a mejorar la calidad de vida
-          y supervivencia de aquellas personas con esta enfermedad.
-          <br><br> 
+      <div class="row-fluid" style="margin-top: 20px;">
+          
+        <div class="span8 info_index_0 alert alert-info">  
+
+          <div class="page-header" style="padding-left: 20px; color: black; text-align: left;">
+            <h2><u>RECOLHAP</u> &nbsp; <small>Subtext for header</small></h2>
+          </div>
+          
+          <p class="alert alert-info" style="margin-top: -30px; font-size: 12px;">
+            El <b>REGISTRO MULTIC&Eacute;NTRICO COLOMBIANO DE HIPERTENSI&oacute;N ARTERIAL PULMONAR - RECOLHAP</b> es 
+            una iniciativa de la Asociaci&oacute;n Colombiana de Neumolog&iacute;a y Cirug&iacute;a del T&oacute;rax
+            que a la luz de las mas recientes alternativas terap&eacute;uticas pretende 
+            recopilar la mayor informaci&oacute;n posible para identificar conductas terap&eacute;uticas innovadoras
+            - preventivas, curativas y rehabilitadoras -  con miras a mejorar la calidad de vida
+            y supervivencia de aquellas personas con esta enfermedad.
+          </p>
           
         </div>
       
-        <div class="span4 info_index">
-          <h4 class="info_index_title2">PARTICIPA EN EL REGISTRO!</h4>
-          Si usted pertenece a una institución que atiende pacientes con Hipertensión Arterial Pulmonar, 
-          te invitamos a que hagas parte de este registro, inscribiéndote - es muy fácil - y añadiendo
-          los datos solicitados para el registro.
+        &nbsp;
+        <div class="span4 info_index alert alert-block">
           
-          <br><br>
+          <div class="page-header" style="text-align: center; margin-top: -10px; color: black;">
+            <h3><u>PARTICIPA EN EL REGISTRO</u></h3>
+          </div>
+          
+          <p class="alert" style="margin-top: -30px;">
+          Si usted pertenece a una instituci&oacute;n que atiende pacientes con Hipertensi&oacute;n Arterial Pulmonar, 
+          te invitamos a que hagas parte de este registro.
+          </p><br>
+          
         </div>
       </div>
-      
-      <hr></hr>
-      
-      <div id="footer">
-          RECOLHAP - Registro Multicéntrico Colombiano de Hipertensión Arterial Pulmonar - 2012. Derechos reservados.
+            
+      <div id="footer" class="pull-left" style="margin-top: -70px; padding-left: 25px;">
+        <hr></hr>
+        <h5 style="color: green;">
+          RECOLHAP - Copyright 1999-2012 Colombia.
+        </h5>
       </div>
       
     </div>
