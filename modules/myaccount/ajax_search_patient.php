@@ -13,12 +13,15 @@
 
     $patient = "";
     
-    for($i=0;$i<10; ++$i)
-      if($i != 1)
-        $patient .= $row[$i]."-";
-        
+    for($i=0;$i<10; ++$i){
+      if($i != 1){
+        $patient .= $row[$i];
+        if( $i<9 ) $patient .= "?";
+      }
+    }
+    
     $_SESSION['patient'] = $patient;
-    echo 'yes';    
+    echo $patient;
   
   }else echo 'no';
   
