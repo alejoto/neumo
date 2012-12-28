@@ -6,5 +6,6 @@
     Email info@micarga.com <br>
     T&eacute;rminos y condiciones 2012 Todos los derechos reservados
   </div>
+      
 </body>
 </html>

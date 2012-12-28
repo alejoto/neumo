@@ -15,8 +15,8 @@
       <hr></hr>
       <div class="row-fluid">
         
-        <div class="span6" style="text-align: left; padding-left: 50px;">
-          <img src="https://kippt.com/static/img/kippt-logo-86.png">
+        <div class="span6" style="margin-top: -15px; text-align: left; padding-left: 50px;">
+          <h2 style="color: #C22222">RECOLHAP</h2>
         </div>
         
         <div class="span6" style="">
