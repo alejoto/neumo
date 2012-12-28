@@ -101,8 +101,4 @@
 
   </div>
 
-  <div id="footer" style="background:#3A3A3A;color:white; margin-top: 30px;">
-    here we must write a minimalistic phrase for the footer
-  </div>
-
 </div>

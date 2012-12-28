@@ -48,15 +48,16 @@
         
     <div class="container">
       
-      <div class="row-fluid" style="margin-top: 20px;">
+      <div class="row-fluid" style="margin-top: 40px;">
           
+        <!--
         <div class="span8 info_index_0">  
 
           <div class="page-header" style="padding-left: 20px; color: black; text-align: left;">
             <h2><u>RECOLHAP</u> &nbsp; <small></small></h2>
           </div>
           
-          <p class="alert alert-info" style="background: white; color: black; margin-top: -30px; font-size: 12px;">
+          <p class="alert alert-info" style=" margin-top: -30px; font-size: 12px;">
             El <b>REGISTRO MULTIC&Eacute;NTRICO COLOMBIANO DE HIPERTENSI&oacute;N ARTERIAL PULMONAR - RECOLHAP</b> es 
             una iniciativa de la Asociaci&oacute;n Colombiana de Neumolog&iacute;a y Cirug&iacute;a del T&oacute;rax
             que a la luz de las mas recientes alternativas terap&eacute;uticas pretende 
@@ -73,17 +74,34 @@
             <h3><u>REGISTRATE!</u></h3>
           </div>
           
-          <p class="alert" style="background: white; color: black; margin-top: -20px;">
+          <p class="alert" style=" margin-top: -20px;">
           Si usted pertenece a una instituci&oacute;n que atiende pacientes con Hipertensi&oacute;n Arterial Pulmonar, 
           te invitamos a que hagas parte de este registro.
           </p><br>
           
         </div>
+        -->
+        
+        <div class="span4 alert" style="background: white; color: gray; border-color: white;">
+          <h2 style="color: black;"><u>un titulo</u></h2><br>
+          Un texto largo de prueba para testear la cantidad de caracteres y como se ven los recuadros<br><br>
+        </div>
+        
+        <div class="span4 alert" style="background: white; color: gray; border-color: white;">
+          <h1 style="color: black;"><u>un titulo</u></h1><br>
+          Un texto largo de prueba para testear la cantidad de caracteres y como se ven los recuadros<br><br>
+        </div>
+
+        <div class="span4 alert" style="background: white; color: gray; border-color: white;">
+          <h2 style="color: black;"><u>un titulo</u></h2><br>
+          Un texto largo de prueba para testear la cantidad de caracteres y como se ven los recuadros<br><br>
+        </div>
+
       </div>
             
-      <div id="footer" class="pull-left" style="margin-top: 0px; padding-left: 25px;">
+      <div id="footer_index" class="" style="margin-top: 0px; padding-left: 25px;">
         <br>
-        <h5 style="color: green; border-top: solid;">
+        <h5 style="color: green; border-top: solid;"><br>
           RECOLHAP - Copyright 2012, Medell&iacute;n - Colombia.
         </h5>
       </div>

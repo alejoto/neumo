@@ -10,12 +10,9 @@
     
     if($page == "profile") include 'profile.php';
     else if($page == "patients") include 'patients_search.php';
+    else if($page == "basic") include '../patient/basic.php';
     
-    echo '<div id="footer" style="background:#3A3A3A;color:white; margin-top: 30px; height: 120px;">
-      &nbsp;
-    </div>';
-    echo '</body>';
-    echo '</html>';
+    include '../includes/footer.php';
     
   }else{
     header('Location: ../../index.php'); 

