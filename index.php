@@ -15,7 +15,7 @@
       <hr></hr>
       <div class="row-fluid">
         
-        <div class="span6" style="margin-top: -15px; text-align: left; padding-left: 50px;">
+        <div class="span6" style="margin-top: -18px; text-align: left; padding-left: 50px;">
           <h2 style="color: #C22222">RECOLHAP</h2>
         </div>
         
@@ -83,17 +83,17 @@
         -->
         
         <div class="span4 alert" style="background: white; color: gray; border-color: white;">
-          <h2 style="color: black;"><u>un titulo</u></h2><br>
+          <h2 style="color: black;">un titulo</h2><br>
           Un texto largo de prueba para testear la cantidad de caracteres y como se ven los recuadros<br><br>
         </div>
         
         <div class="span4 alert" style="background: white; color: gray; border-color: white;">
-          <h1 style="color: black;"><u>un titulo</u></h1><br>
+          <h1 style="color: black;">un titulo</h1><br>
           Un texto largo de prueba para testear la cantidad de caracteres y como se ven los recuadros<br><br>
         </div>
 
         <div class="span4 alert" style="background: white; color: gray; border-color: white;">
-          <h2 style="color: black;"><u>un titulo</u></h2><br>
+          <h2 style="color: black;">un titulo</h2><br>
           Un texto largo de prueba para testear la cantidad de caracteres y como se ven los recuadros<br><br>
         </div>
 
