@@ -52,7 +52,7 @@ $("#idnumber").blur(function() {
 
       var myArray = data.split('?');
       for(var i=0;i<myArray.length;i++){
-        var pos = "#patient_" +  i;
+        var pos = "#patient_" +  i;        
         $(pos).html(myArray[i]);
       }
     }

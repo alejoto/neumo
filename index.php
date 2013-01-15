@@ -12,7 +12,7 @@
   </head>
   <body>
     <div class="container">
-      <hr></hr>
+      <br><br>
       <div class="row-fluid">
         
         <div class="span6" style="margin-top: -18px; text-align: left; padding-left: 50px;">

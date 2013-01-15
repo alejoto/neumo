@@ -5,7 +5,6 @@
 
       <div class="span3" style=" padding-right: 0px; height: 600px;margin-top: 30px;">
         <? include '../includes/left_menu.php'; ?>
-        <script src="../../assets/js/neumo.js"></script>
       </div>
 
       <div class="span8 offset1" style="margin-top: 50px;">  

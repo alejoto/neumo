@@ -20,6 +20,8 @@
       }
     }
     
+    //$patient = str_replace("&Iacute;","Í",$patient);
+    
     $_SESSION['patient'] = $patient;
     echo $patient;
   
