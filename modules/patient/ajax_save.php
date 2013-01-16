@@ -2,28 +2,18 @@
 
   include '../DB/connect.php';
 
-  $info  = $_POST['info'];
+  $info  = $_POST['info']; // Ejemplo: patient_id,timestamp,name,etc?'1','1999-12-01 12:00:00','Jhon'
   $table  = $_POST['table'];
 
-  $pieces = explode("?", $info);  
-    
-  $sql = "INSERT INTO '".$table."' (";
-  $sql2 = ") VALUES (";
-  for( $i=0; $i<count($pieces); $i++ ){
-    $val = explode("=", $pieces[$i]);
-    $sql .= ($val[0].",");
-    $sql2 .= "'".$val[1]."', ";
+  $pieces = explode("?", $info);  // La primera pieza son los nombres, la segunda los grupos de valores unidos por =
+  $sql = "INSERT INTO ".$table." (".$pieces[0].") VALUES ('" . implode("', '", explode(",", $pieces[1])) . "')";
+  
+  if( !mysql_query($sql,$con) ){
+    echo 'No';
+    die('Error: ' . mysql_error());
   }
-  $sql2 .= ")";
-  
-  $result = mysql_query($sql.$sql2);
-  
-  /*
-  Ejemplo 
-  
-  mysql_query("INSERT INTO main_patient (patient_id, timestamp, name, surn, gender, birthd, countrybth, citybth, statebth, digiter_id) VALUES ('".$docidnum."', '".$actual_date."', '".$name."', '".$surname."', '".$gender."', '".$birthd."', '".$countrybth."', '".$citybth."', '".$statebth."', '".$user_id."')");
-  */
-  
-  echo 'yes';
+
+  mysql_close($con);    
+  echo 'Yes';
   
 ?>

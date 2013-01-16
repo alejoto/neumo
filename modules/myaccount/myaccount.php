@@ -11,6 +11,9 @@
     if($page == "profile") include 'profile.php';
     else if($page == "patients") include 'patients_search.php';
     else if($page == "basic") include '../patient/basic.php';
+    else if($page == "blood") include '../patient/blood.php';
+    else if($page == "diagnostic") include '../patient/diagnostic.php';
+    else if($page == "cardiovascular") include '../patient/cardiovascular.php';
     
     include '../includes/footer.php';
     
