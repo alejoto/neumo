@@ -7,11 +7,12 @@
     <link href="assets/stylesheets/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="assets/stylesheets/neumo.css" rel="stylesheet" media="screen">
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>    
   </head>
+  
   <body>
-    <div class="container">
+    <div class="container" style="height: auto;">
       <br><br>
       <div class="row-fluid">
         
@@ -46,7 +47,7 @@
       <? include 'modules/includes/carousel.html'; ?>
     </div>    
         
-    <div class="container">
+    <div class="container" style="height: auto;">
       
       <div class="row-fluid" style="margin-top: 40px;">
           
