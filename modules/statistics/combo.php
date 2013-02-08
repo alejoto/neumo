@@ -1,89 +1,81 @@
+<script type="text/javascript">
 
-		<script type="text/javascript">
 $(function () {
-    var chart;
-    $(document).ready(function() {
-        chart = new Highcharts.Chart({
-            chart: {
-                renderTo: 'container'
-            },
-            title: {
-                text: 'Combination chart'
-            },
-            xAxis: {
-                categories: ['Apples', 'Oranges', 'Pears', 'Bananas', 'Plums']
-            },
-            tooltip: {
-                formatter: function() {
-                    var s;
-                    if (this.point.name) { // the pie chart
-                        s = ''+
-                            this.point.name +': '+ this.y +' fruits';
-                    } else {
-                        s = ''+
-                            this.x  +': '+ this.y;
-                    }
-                    return s;
-                }
-            },
-            labels: {
-                items: [{
-                    html: 'Total fruit consumption',
-                    style: {
-                        left: '40px',
-                        top: '8px',
-                        color: 'black'
-                    }
-                }]
-            },
-            series: [{
-                type: 'column',
-                name: 'Jane',
-                data: [3, 2, 1, 3, 4]
-            }, {
-                type: 'column',
-                name: 'John',
-                data: [2, 3, 5, 7, 6]
-            }, {
-                type: 'column',
-                name: 'Joe',
-                data: [4, 3, 3, 9, 0]
-            }, {
-                type: 'spline',
-                name: 'Average',
-                data: [3, 2.67, 3, 6.33, 3.33],
-                marker: {
-                	lineWidth: 2,
-                	lineColor: Highcharts.getOptions().colors[3],
-                	fillColor: 'white'
-                }
-            }, {
-                type: 'pie',
-                name: 'Total consumption',
-                data: [{
-                    name: 'Jane',
-                    y: 13,
-                    color: '#4572A7' // Jane's color
-                }, {
-                    name: 'John',
-                    y: 23,
-                    color: '#AA4643' // John's color
-                }, {
-                    name: 'Joe',
-                    y: 19,
-                    color: '#89A54E' // Joe's color
-                }],
-                center: [100, 80],
-                size: 100,
-                showInLegend: false,
-                dataLabels: {
-                    enabled: false
-                }
-            }]
-        });
-    });
+  var chart;
+  var cosa = $("#dates")[0].value;
+  //var near = dates.split(',');
+  alert(cosa);
+  
+  $(document).ready(function() {
+    chart = new Highcharts.Chart({
     
-});
-		</script>
+      chart: {
+        renderTo: 'container'
+      },
+    
+      title: {
+        text: 'Combination chart'
+      },
+    
+      xAxis: {
+        categories: ['January', 'February', 'March', 'April', 'May',
+                     'June', 'July', 'Agost', 'September', 'October',
+                     'November', 'December' ]
+      },
+    
+      tooltip: {
+        formatter: function() {
+          var s = "";  
+          if (this.point.name) s = this.point.name +': '+ this.y +' fruits';
+          else s = this.x  +': '+ this.y;
+          return s;
+        }
+      },
+    
+      labels: {
+        items: [{
+          html: '',
+          style: {
+            left: '40px',
+            top: '8px',
+            color: 'black'
+          }
+        }]
+      },
+    
+      series: [{
+        type: 'column',
+        name: 'Año: 2013',
+        data: [3, 2, 1, 3, 4, 1, 2, 4, 5, 3, 0, 11]
+      }, {
+        type: 'spline',
+        name: 'Seguimiento',
+        data: [3, 2, 1, 3, 4, 1, 2, 4, 5, 3, 0, 11],
+        marker: {
+          lineWidth: 2,
+          lineColor: Highcharts.getOptions().colors[4],
+          fillColor: 'white'
+        }
+      }/*, {
+        type: 'pie',
+        name: 'Total consumption',
+        data: 
+          [
+            { name: 'January', y: 13, color: Highcharts.getOptions().colors[0] }, 
+            { name: 'February', y: 23, color: Highcharts.getOptions().colors[1] }, 
+            { name: 'March', y: 19, color: Highcharts.getOptions().colors[2] }
+          ],
+          
+        center: [100, 80],
+        size: 100,
+        showInLegend: false,
+        dataLabels: { enabled: false }
+      }*/] // series end
+      
+    }); // Highcharts end
+  }); // document end
+}); // function end
+
+</script>
 
 <div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
