@@ -32,34 +32,40 @@ $(document).ready(function() {
   $("#docidnum").hide();
 })
 
-$("#idnumber").blur(function() {
+ $("#idnumber").blur(function() {
+    if ($("#idnumber").val()!="") {
+    var doc=$("#docid").val();
+    if (doc=="Cédula") {doc="cc"};
+    if (doc=="Registro Civil") {doc="rc"};
+    if (doc=="Tarjeta de Identidad") {doc="ti"};
+    if (doc=="Cédula Extranjería") {doc="ce"};
+    if (doc=="Pasaporte") {doc="ps"};
+    var docidnum=doc+$("#idnumber").val();
+    
   
-  var doc=$("#docid").val();
-  if (doc=="Cédula") {doc="cc"};
-  if (doc=="Registro Civil") {doc="rc"};
-  if (doc=="Tarjeta de Identidad") {doc="ti"};
-  if (doc=="Cédula Extranjería") {doc="ce"};
-  if (doc=="Pasaporte") {doc="ps"};
-  var docidnum=doc+$("#idnumber").val();
+    $.post("ajax_search_patient.php",{ doc:docidnum }, function(data) {
+      if(data=='no') {
+        $("#enterpatient").show("fast");
+        $("#patientexist").hide("fast");
+      }else{
+        $("#enterpatient").hide("fast");
+        $("#patientexist").show("fast");
 
-  $.post("ajax_search_patient.php",{ doc:docidnum }, function(data) {
-    if(data=='no') {
-      $("#enterpatient").show("fast");
-      $("#patientexist").hide("fast");
-    }else{
-      $("#enterpatient").hide("fast");
-      $("#patientexist").show("fast");
-
-      var myArray = data.split('?');
-      for(var i=0;i<myArray.length;i++){
-        var pos = "#patient_" +  i;        
-        $(pos).html(myArray[i]);
+        var myArray = data.split('?');
+        for(var i=0;i<myArray.length;i++){
+          var pos = "#patient_" +  i;        
+          $(pos).html(myArray[i]);
+        }
       }
-    }
+    });
+  }
+  else{
+    $("#patientexist").hide("fast");
+    $("#enterpatient").hide("fast");
+  }
+   
+    $("#docidnum").val(docidnum);
   });
-  
-  $("#docidnum").val(docidnum);
-});
 
 function tiprequired (reqfld) {
   $(document).ready(function() {
