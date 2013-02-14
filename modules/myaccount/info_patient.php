@@ -13,6 +13,5 @@
     }
   }
   echo '</table><br><br>';
-  echo '<a href="myaccount.php?page=profile" role="button" class="btn btn-primary"> Editar Paciente </a>';
-  echo '<a href="myaccount.php?page=profile" role="button" class="btn btn-success"> Siguiente </a>';
+  echo '<a href="myaccount.php?page=profile" role="button" class="btn btn-success span8"> Ingresar datos del paciente </a>';
 ?>
