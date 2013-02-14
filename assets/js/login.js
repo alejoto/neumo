@@ -2,6 +2,26 @@ $("#button_modal").click(function(){
    $("#msg").html("");
 });
 
+function validateEmail(sEmail) {
+    var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+    if (filter.test(sEmail)) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+$('#usr').blur(function(){
+  if (!validateEmail($('#usr').val()))
+    {$('#usr').val('');
+  $('#usr').focus();
+  $("#msg").html("Ingrese email v&aacute;lido");
+  
+}
+ else $("#msg").html("");
+})
+
 function hap_login_method (){
   $("#msg").text("");
   if ($('#usr').val()==""&&$('#pwd').val()=="") {
