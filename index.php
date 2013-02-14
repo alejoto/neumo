@@ -51,13 +51,10 @@
     <div class="container" style="height: auto;">
       
       <div class="row-fluid" style="margin-top: 40px;">
-          
-        
-        
         <div class="span4 alert" style="background: white; color: gray; border-color: white;">
           <h2 style="color: black;">Prop&oacute;sito</h2><br>
-          <div style="font-size:12px;">Nuevos tratamientos de la <b>hipertensi&oacute;n Arterial Pulmonar </b>hacen necesario investigar el impacto en la salud y 
-          bienestar de estos pacientes.</div>
+          <div style="font-size:12px;">Nuevos tratamientos de la <b>Hipertensi&oacute;n Arterial Pulmonar </b>
+            hacen necesario investigar el impacto en la salud y sobrevida con dichas alternativas.</div>
            <br><br>
         </div>
         
