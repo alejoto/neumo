@@ -3,7 +3,7 @@
   
   <div class="row">
     <div CLASS="well well-small span8">
-      <h4>EXAMEN F&iacute;SICO</h4>
+      <h4>EXAMEN F&Iacute;SICO</h4>
     </div>
   </div>
   

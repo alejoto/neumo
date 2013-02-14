@@ -81,6 +81,14 @@
 
     while( $row = mysql_fetch_array($result) ){
       $fc = $row['nyha_funct_class']; // functional class
+      
+      /*
+      $act_date = $row['eval_date'];
+      $sql2 = "SELECT * FROM hap_follow_up WHERE eval_id = '".$act_date"' ";
+      $result2 = mysql_query($sql);
+      while( $row = mysql_fetch_array($result) ){
+      }
+      */
       $month = 2; //$row['eval_date']; // restarle el inicial osea minimo de toda la tabla con el mismo eval_id
 
       if( $fc == 'i')   $a_id = 0;
