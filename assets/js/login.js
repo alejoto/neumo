@@ -14,12 +14,16 @@ function validateEmail(sEmail) {
 
 $('#usr').blur(function(){
   if (!validateEmail($('#usr').val()))
-    {$('#usr').val('');
-  $('#usr').focus();
-  $("#msg").html("Ingrese email v&aacute;lido");
+    {
+      $('#usr').val('');
+    $('#usr').focus();
+    $("#msg").html("Ingrese email v&aacute;lido");
+    $("#forgot_pwd").hide();
   
 }
- else $("#msg").html("");
+ else {$("#msg").html("");
+  $("#forgot_pwd").show();}
+ 
 })
 
 function hap_login_method (){
@@ -43,7 +47,7 @@ function hap_login_method (){
     if(data=='yes') {
       document.location='modules/myaccount/myaccount.php?page=patients';
     }else{
-      $("#msg").html("<label class='control-label' for='inputError'>Verifique usuario y contrase&ntilde;a. <br/>Si nunca se ha registrado ingrese al link respectivo.</label>");
+      $("#msg").html("<label class='control-label' for='inputError'>Verifique usuario y contrase&ntilde;a. <br/>o reg&iacute;strese.</label>");
     }
     $("#loading").hide();
     });
@@ -64,7 +68,10 @@ $("#register_button").click(function(){
     
     if(data=='yes') {
       document.location='index.php';
-    }else{
+    }
+    //else if () {} // send messagge 'already exist' to data.  if exist
+    else
+    {
       $("#msg_register").html("<label class='control-label' for='inputError'>por favor Verifica tus datos.</label>");
     }
     
