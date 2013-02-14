@@ -25,6 +25,12 @@
       <div  id="loading" style="display:none">
         <img src="assets/images/ajax-loader.gif"/>
       </div>
+      <div class="row">
+        <a class="offset2 span6" id="forgot_pwd" 
+        style="text-align:left;font-size:12px;color:#006600;display:none" href="#">
+          Olvid&oacute; su contrase&ntilde;a?
+        </a>
+      </div>
     
     </div>
 

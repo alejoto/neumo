@@ -59,6 +59,13 @@ $("#login").click(function(){hap_login_method();});
 $("#pwd").keyup(function(event){if(event.keyCode == 13){hap_login_method();} });
 
 
+$('#forgot_pwd').click(function(){
+  $.post("modules/login/rememberpwd.php",{usr:$('#usr').val()}, function(data2){
+    $("#msg").html(data2);
+  })
+})
+
+
 
 
 
