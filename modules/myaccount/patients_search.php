@@ -1,7 +1,8 @@
 <div class="container">
   <div class="row-fluid">
 
-    <form class="form-horizontal span5" style="text-align: left; margin-top: 30px;" >
+    <form  class="form-horizontal span5" style="text-align: left; margin-top: 30px;" onsubmit="return false">
+
 
       <div style=" height: 300px; background: #000000; margin-top: 10px; margin-bottom: 30px;"></div>
 
@@ -29,7 +30,7 @@
           <label class="control-label" for="idnumber"></label>
           <div class="controls" style="margin-left: 0px;">
             <div id="idnumberctr" class="input-append">
-              <input type="text" id="idnumber" placeholder="N&uacute;mero identidad">
+              <input type="text" id="idnumber" placeholder="N&uacute;mero identidad" onkeypress='validate(event)'/>
               <button class="btn" type="button"><i class="icon-search"></i></button>
             </div>
           </div>
@@ -96,7 +97,7 @@
       </div>
       
       <script src="../../assets/js/patients.js"></script>    
-
+ 
     </div>
 
   </div>
