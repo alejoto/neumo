@@ -18,7 +18,7 @@
         <input class="input-large" id="usr" name="usr" type="text" placeholder="Username">
         <br><br>
       
-        <span class="add-on">@</span>
+        <span class="add-on"><i class="icon-user"></i></span>
         <input class="input-large" id="pwd" name="pwd" type="password" placeholder="Password"><br>
 
       </div><br>

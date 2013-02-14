@@ -6,6 +6,7 @@
     <title>RECOLHAP</title>
     <link href="assets/stylesheets/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="assets/stylesheets/neumo.css" rel="stylesheet" media="screen">
+    <link rel="icon"   type="image/png"  href="assets/images/favicon.ico">
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>    
@@ -51,51 +52,28 @@
       
       <div class="row-fluid" style="margin-top: 40px;">
           
-        <!--
-        <div class="span8 info_index_0">  
-
-          <div class="page-header" style="padding-left: 20px; color: black; text-align: left;">
-            <h2><u>RECOLHAP</u> &nbsp; <small></small></h2>
-          </div>
-          
-          <p class="alert alert-info" style=" margin-top: -30px; font-size: 12px;">
-            El <b>REGISTRO MULTIC&Eacute;NTRICO COLOMBIANO DE HIPERTENSI&oacute;N ARTERIAL PULMONAR - RECOLHAP</b> es 
-            una iniciativa de la Asociaci&oacute;n Colombiana de Neumolog&iacute;a y Cirug&iacute;a del T&oacute;rax
-            que a la luz de las mas recientes alternativas terap&eacute;uticas pretende 
-            recopilar la mayor informaci&oacute;n posible para identificar conductas terap&eacute;uticas innovadoras
-            - preventivas, curativas y rehabilitadoras -  con miras a mejorar la calidad de vida
-            y supervivencia de aquellas personas con esta enfermedad.
-          </p>
-          
-        </div>
-      
-        <div class="span4 info_index">
-          
-          <div class="page-header" style="text-align: center; margin-top: -0px; color: black; border: none;">
-            <h3><u>REGISTRATE!</u></h3>
-          </div>
-          
-          <p class="alert" style=" margin-top: -20px;">
-          Si usted pertenece a una instituci&oacute;n que atiende pacientes con Hipertensi&oacute;n Arterial Pulmonar, 
-          te invitamos a que hagas parte de este registro.
-          </p><br>
-          
-        </div>
-        -->
+        
         
         <div class="span4 alert" style="background: white; color: gray; border-color: white;">
-          <h2 style="color: black;">un titulo</h2><br>
-          Un texto largo de prueba para testear la cantidad de caracteres y como se ven los recuadros<br><br>
+          <h2 style="color: black;">Prop&oacute;sito</h2><br>
+          <div style="font-size:12px;">Nuevos tratamientos de la <b>hipertensi&oacute;n Arterial Pulmonar </b>hacen necesario investigar el impacto en la salud y 
+          bienestar de estos pacientes.</div>
+           <br><br>
         </div>
         
         <div class="span4 alert" style="background: white; color: gray; border-color: white;">
-          <h1 style="color: black;">un titulo</h1><br>
-          Un texto largo de prueba para testear la cantidad de caracteres y como se ven los recuadros<br><br>
+          <h1 style="color: black;">El Registro</h1><br>
+          <div style="font-size:12px;">pretende recopilar la mayor informaci&oacute;n posible 
+           sobre la enfermedad para identificar conductas terap&eacute;uticas innovadoras
+            que mejoren la calidad de vida de quienes la padecen.</div>
+           <br><br>
         </div>
 
         <div class="span4 alert" style="background: white; color: gray; border-color: white;">
-          <h2 style="color: black;">un titulo</h2><br>
-          Un texto largo de prueba para testear la cantidad de caracteres y como se ven los recuadros<br><br>
+          <h2 style="color: black;">Participe!</h2><br>
+          <div style="font-size:12px;">Si usted pertenece a una instituci&oacute;n que atiende pacientes con la enfermedad, 
+          le invitamos a que hagas parte de este registro.</div>
+          <br><br>
         </div>
 
       </div>
@@ -106,8 +84,6 @@
           RECOLHAP - Copyright 2012, Medell&iacute;n - Colombia.
         </h5>
       </div>
-      
     </div>
-      
   </body>
 </html>
