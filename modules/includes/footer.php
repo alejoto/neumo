@@ -1,5 +1,5 @@
 <div id="footer">
-  Recolhap - Un peque&ntilde;o parrafo de una lina con informaci&iacute;n.
+  Recolhap - Registro colombiano de hipertensi&oacute;n arterial pulmonar.
 </div>
 
 </body>
