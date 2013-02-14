@@ -24,6 +24,9 @@
       </div><br>
     
       <div class="control-group error" id="msg"></div>
+      <div  id="loading" style="display:none">
+        <img src="assets/images/ajax-loader.gif"/>
+      </div>
     
     </div>
 
