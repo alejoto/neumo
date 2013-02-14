@@ -8,15 +8,18 @@ function hideshow1(main, second) {
 }
 
 
+// Esta funcion no se esta utilizando, se puede refinar para permitir o no el ingreso de valores en campos de texto
 function validate(evt) {
   var theEvent = evt || window.event;
   var key = theEvent.keyCode || theEvent.which;
   key = String.fromCharCode( key );
+  
   var regex = /[0-9]|\./;
-  if( !regex.test(key) ) {
+  if( !regex.test(key)) {
     theEvent.returnValue = false;
     if(theEvent.preventDefault) theEvent.preventDefault();
   }
+
 }
 
 
@@ -45,8 +48,9 @@ $(document).ready(function() {
   $("#docidnum").hide();
 })
 
- $("#idnumber").blur(function() {
-    if ($("#idnumber").val()!="") {
+
+function enter_search (){
+if ($("#idnumber").val()!="") {
     var doc=$("#docid").val();
     if (doc=="Cédula") {doc="cc"};
     if (doc=="Registro Civil") {doc="rc"};
@@ -54,8 +58,8 @@ $(document).ready(function() {
     if (doc=="Cédula Extranjería") {doc="ce"};
     if (doc=="Pasaporte") {doc="ps"};
     var docidnum=doc+$("#idnumber").val();
-    
-  
+
+
     $.post("ajax_search_patient.php",{ doc:docidnum }, function(data) {
       if(data=='no') {
         $("#enterpatient").show("fast");
@@ -66,7 +70,7 @@ $(document).ready(function() {
 
         var myArray = data.split('?');
         for(var i=0;i<myArray.length;i++){
-          var pos = "#patient_" +  i;        
+          var pos = "#patient_" +  i;
           $(pos).html(myArray[i]);
         }
       }
@@ -76,9 +80,21 @@ $(document).ready(function() {
     $("#patientexist").hide("fast");
     $("#enterpatient").hide("fast");
   }
-   
+
     $("#docidnum").val(docidnum);
-  });
+
+}
+
+
+
+ $("#idnumber").keyup(function(e){
+	if(e.keyCode == 13){
+		 enter_search();
+	}
+});
+ 	$("#idnumber").blur(function() {
+  	enter_search(); 
+ 	});
 
 function tiprequired (reqfld) {
   $(document).ready(function() {

@@ -30,7 +30,7 @@
           <label class="control-label" for="idnumber"></label>
           <div class="controls" style="margin-left: 0px;">
             <div id="idnumberctr" class="input-append">
-              <input type="text" id="idnumber" placeholder="N&uacute;mero identidad" onkeypress='validate(event)'/>
+              <input type="text" id="idnumber" placeholder="N&uacute;mero identidad"/>
               <button class="btn" type="button"><i class="icon-search"></i></button>
             </div>
           </div>
