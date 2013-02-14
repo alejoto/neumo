@@ -105,3 +105,7 @@
   </div>
 
 </div>
+
+<script>
+  $("#edit_patient").hide();
+</script>

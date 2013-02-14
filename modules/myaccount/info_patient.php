@@ -13,5 +13,5 @@
     }
   }
   echo '</table><br><br>';
-  echo '<a href="myaccount.php?page=profile" role="button" class="btn btn-success span8"> Ingresar datos del paciente </a>';
+  echo '<a style="margin-left: 70px;" href="myaccount.php?page=profile" role="button" class="btn btn-primary span8"> Ingresar datos del paciente </a>';
 ?>
