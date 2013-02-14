@@ -4,7 +4,9 @@
     <form  class="form-horizontal span5" style="text-align: left; margin-top: 30px;" onsubmit="return false">
 
 
-      <div style=" height: 300px; background: #000000; margin-top: 10px; margin-bottom: 30px;"></div>
+      <div style=" height: 300px; margin-top: 40px; margin-bottom: -30px; margin-left: 5px;">
+        <img src="../../assets/images/logo_temp.jpg" style="border-radius:25px 25px 25px 25px;">
+      </div>
 
       <blockquote>
         <p>Selecciona tipo y n&uacute;mero de documento:</p>
