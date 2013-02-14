@@ -1,7 +1,7 @@
 <div id="reuma">
   <div class="row">
     <div class="well well-small span8">
-      <h4>PRUEBAS REUMATOLÓGICAS</h4>
+      <h4>PRUEBAS REUMATOL&Oacute;GICAS</h4>
     </div>
   </div>
   <div class="row">
@@ -36,7 +36,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="span8"> <b>Anticuerpos antinucleares no específicos (ANA)</b>
+    <div class="span8"> <b>Anticuerpos antinucleares no espec&iacute;ficos (ANA)</b>
     </div>
   </div>
   <div class="row">
@@ -78,7 +78,7 @@
   </div>
   <div class="row">
     <div class="span2">
-      Anticentrómero
+      Anticentr&oacute;mero
     </div>
     <div class="span2">
       Anti RNA polimerasa
@@ -233,7 +233,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="span8"> <b>Anticuerpos antifosfolípidos:</b></div>
+    <div class="span8"> <b>Anticuerpos antifosfol&iacute;pidos:</b></div>
   </div>
   <div class="row">
     <div class="span1">Fecha</div>
@@ -270,10 +270,10 @@
   </div>
   <div class="row">
     <div class="span3">
-      Anticoagulante Lúpico
+      Anticoagulante L&uacute;pico
     </div>
     <div class="span3">
-      Anti glicoprotenía beta 2 (B2gp)
+      Anti glicoproten&iacute;a beta 2 (B2gp)
     </div>
   </div>
 
@@ -308,7 +308,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="span8"> <b>Anticuerpos citoplasmáticos antineutrófilos ANCA</b></div>
+    <div class="span8"> <b>Anticuerpos citoplasm&aacute;ticos antineutr&oacute;filos ANCA</b></div>
   </div>
   <div class="row">
     <div class="span1">Fecha</div>
@@ -320,7 +320,7 @@
   </div>
   <div class="row">
     <div class="span3">
-      c ANCA (citoplasmático)
+      c ANCA (citoplasm&aacute;tico)
     </div>
     <div class="span3">
       p ANCA (perinuclear)

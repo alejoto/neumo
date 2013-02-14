@@ -6,8 +6,8 @@
       <div style=" height: 300px; background: #000000; margin-top: 10px; margin-bottom: 30px;"></div>
 
       <blockquote>
-        <p>Selecciona tipo y numero de documento:</p>
-        <small>Recuerda que lon datos corresponden solo a pacientes</small>
+        <p>Selecciona tipo y n&uacute;mero de documento:</p>
+        <small>Recuerda que los datos corresponden solo a pacientes</small>
       </blockquote><br>
 
       <div style="margin-left: 20px;">
@@ -16,10 +16,10 @@
           <div class="controls" style="margin-left: 0px;">
             <select id="docid" >
               <option value=""></option>
-              <option value="cc">Cédula</option>
+              <option value="cc">C&eacute;dula</option>
               <option value="rc">Registro Civil</option>
               <option value="ti">Tarjeta de Identidad</option>
-              <option value="ce">Cédula Extranjería</option>
+              <option value="ce">C&eacute;dula Extranjera</option>
               <option value="pas">Pasaporte</option>
             </select>
           </div>
@@ -29,7 +29,7 @@
           <label class="control-label" for="idnumber"></label>
           <div class="controls" style="margin-left: 0px;">
             <div id="idnumberctr" class="input-append">
-              <input type="text" id="idnumber" placeholder="Numero identidad">
+              <input type="text" id="idnumber" placeholder="N&uacute;mero identidad">
               <button class="btn" type="button"><i class="icon-search"></i></button>
             </div>
           </div>
@@ -47,7 +47,7 @@
                 
         <div class="alert alert-error fade in" style="margin-left: 70px; margin-top: -15px;">
           <button type="button" class="close" data-dismiss="alert">&times;</button>
-          El paciente con el numero de identificacion especificado no existe si desea registrarlo llene sus datos en el siguiente formulario
+          El paciente con el n&uacute;mero de identificaci&oacute;n especificado no existe si desea registrarlo llene sus datos en el siguiente formulario
         </div>
         
         
@@ -57,18 +57,18 @@
           <input type="text" id="surname" name="surname" placeholder="Apellidos"><br>
       
           <select id="gender" name="gender">
-            <option value="">Genero</option>
+            <option value="">G&eacute;nero</option>
             <option value="cc">Hombre</option>
             <option value="rc">Mujer</option>
           </select><br>
       
           <input type="text" id="year" name="year" placeholder="A&ntilde;o" class="span3" style="margin-left: -125px;">
           <input type="text" id="month" name="month" placeholder="Mes" class="span3">
-          <input type="text" id="day" name="day" placeholder="Dia" class="span3"><br>
+          <input type="text" id="day" name="day" placeholder="D&iacute;a" class="span3"><br>
 
           <input type="text" id="citybth" name="citybth" placeholder="Ciudad nacimiento"><br>  
           <input type="text" id="statebth" name="statebth" placeholder="Departamento"><br>
-          <input type="text" id="countrybth" name="countrybth" placeholder="Pais de origen"><br><br>
+          <input type="text" id="countrybth" name="countrybth" placeholder="Pa&iacute;s de origen"><br><br>
 
           <button type="submit" class="btn btn-primary" id="save_patient" style="margin-left: 0px;">Guardar</button>
           <a href="#" role="button" class="btn btn-success" style=""> Datos adicionales </a>
@@ -79,12 +79,12 @@
       <div id="patientexist">
                 
         <div class="page-header" style="border: none; padding-left: 70px;">
-          <h1><u>Paciente</u><br> <small>Informacion Pertinente</small></h1>
+          <h1><u>Paciente</u><br> <small>Informaci&oacute;n Pertinente</small></h1>
         </div>
         
         <div class="alert alert-success fade in" style="margin-left: 70px; margin-top: -15px;">
           <button type="button" class="close" data-dismiss="alert">&times;</button>
-          El paciente ya ha sido registrado si desea cotinuar a su historia clinica de click en siguiente.
+          El paciente ya ha sido registrado si desea continuar a su historia cl&iacute;nica de click en siguiente.
         </div>
         
         <div style="padding-left: 70px; text-align: left; margin-top: 35px;">

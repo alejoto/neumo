@@ -1,30 +1,30 @@
 <div id="pulm_arteriography">
      <div class="row">
-         <div class="span8 well well-small">ARTERIOGRAFÍA PULMONAR</div>
+         <div class="span8 well well-small">ARTERIOGRAF&Iacute;A PULMONAR</div>
      </div>
      <div class="row">
          <div class="span1">Fecha</div>
          <div class="span3">
              <input type="text" id="y_artg" class="span1" placeholder="a&ntilde;o"/>
              <input type="text" id="m_artg" class="span1" placeholder="mes"/>
-             <input type="text" id="d_artg" class="span1" placeholder="día"/>
+             <input type="text" id="d_artg" class="span1" placeholder="d&iacute;a"/>
          </div>
      </div>
      <div class="row">
          <div class="span3">
              <select id="artergph_TEP" class="span3">
                  <option value="">REPORTE...</option>
-                 <option value="normal">normal</option>
+                 <option value="normal">Normal</option>
                  <option value="acute_pte">TEP agudo (copa invertida)</option>
-                 <option value="chronic_pte">TEP crónico (recanalización)</option>
+                 <option value="chronic_pte">TEP cr&oacute;nico (recanalizaci&oacute;n)</option>
                  <option value="both">Ambos</option>
              </select>
          </div>
          <div class="span3">
              <select id="artergph_location" class="span3">
-                 <option value="">LOCALIZACIÓN...</option>
-                 <option value="acute_pte">central (arts. ppales)</option>
-                 <option value="chronic_pte">periférico (arts. lobares)</option>
+                 <option value="">LOCALIZACI&Oacute;N...</option>
+                 <option value="acute_pte">Central (arts. ppales)</option>
+                 <option value="chronic_pte">Perif&eacute;rico (arts. lobares)</option>
                  <option value="both">Ambos</option>
              </select>
          </div>

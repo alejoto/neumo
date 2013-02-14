@@ -7,11 +7,11 @@
       <? include '../includes/left_menu.php'; ?>
 
       <div style="margin-left: 13px;">
-        <h3 id="left_title">Desempeño Cardiovascular</h3>
+        <h3 id="left_title">Desempe&ntilde;o cardiovascular</h3>
         <a class="btn span2" id="sel_elecg">Electrocardiograma</a>
-        <a class="btn span2" id="sel_spir">Espirometría</a>
+        <a class="btn span2" id="sel_spir">Espirometr&iacute;a</a>
         <a class="btn span2" id="sel_sixm_walk">Caminata 6 mins</a>
-        <a class="btn span2" id="sel_cp_test">Prueba  esfuerzo cp</a>
+        <a class="btn span2" id="sel_cp_test">Prueba esfuerzo cp</a>
       </div>
 
     </div>

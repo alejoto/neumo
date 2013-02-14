@@ -23,9 +23,9 @@
     <div class="span5">
       <select id="dead_cause" class="span5 outcome">
         <option></option>
-        <option value="si_dom">Muerte súbita en domicilio</option>
-        <option value="si_hosp">Muerte en hospital por complicación HAP</option>
-        <option value="no">Muerte no asociada a HAP (ej. cáncer, accidente de tránsito)</option>
+        <option value="si_dom">Muerte s&uacute;bita en domicilio</option>
+        <option value="si_hosp">Muerte en hospital por complicaci&oacute;n HAP</option>
+        <option value="no">Muerte no asociada a HAP (ej. c&aacute;ncer, accidente de tr&aacute;nsito)</option>
       </select>
     </div>
   </div>

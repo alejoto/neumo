@@ -1,12 +1,12 @@
 <div id="liver">
   <div class="row">
     <div class="well well-small span8">
-      <h4>FUNCIÓN HEPÁTICA</h4>
+      <h4>FUNCI&Oacute;N HEP&Aacute;TICA</h4>
 
     </div>
   </div>
   <div class="row">
-    <div class="span8">Pruebas hepáticas</div>
+    <div class="span8">Pruebas hep&aacute;ticas</div>
   </div>
   <div class="row">
     <div class="span1">Fecha</div>
@@ -14,7 +14,7 @@
       <input type="text" id="y_liver" class="span1" placeholder="a&ntilde;o"
       />
       <input type="text" id="m_liver" class="span1" placeholder="mes" />
-      <input type="text" id="d_liver" class="span1" placeholder="día" />
+      <input type="text" id="d_liver" class="span1" placeholder="d&iacute;a" />
     </div>
   </div>
   <div class="row">
@@ -49,7 +49,7 @@
     <div class="span1">
       <input type="text" id="hep_ggt" class="span1" placeholder="U/L" />
     </div>
-    <div class="span1" style="text-align:right">Albúmina</div>
+    <div class="span1" style="text-align:right">Alb&uacute;mina</div>
     <div class="span2">
       <input type="text" id="hep_albumin" class="span1" placeholder="g/dL" />
     </div>
@@ -63,14 +63,14 @@
     </div>
   </div>
   <div class="row">
-    <div class="span8">Pruebas de coagulación</div>
+    <div class="span8">Pruebas de coagulaci&oacute;n</div>
   </div>
   <div class="row">
     <div class="span1">Fecha</div>
     <div class="span3">
       <input type="text" id="y_bleed" class="span1" placeholder="a&ntilde;o"/>
       <input type="text" id="m_bleed" class="span1" placeholder="mes" />
-      <input type="text" id="d_bleed" class="span1" placeholder="día" />
+      <input type="text" id="d_bleed" class="span1" placeholder="d&iacute;a" />
     </div>
   </div>
   <div class="row">

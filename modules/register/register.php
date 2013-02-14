@@ -8,7 +8,7 @@
   
     <div class="modal-body">
       <blockquote>
-        <p>Para registrarse ingrese su correo electronico y una contrase&ntilde;a segura:</p>
+        <p>Para registrarse ingrese su correo electr&oacute;nico y una contrase&ntilde;a segura:</p>
       </blockquote>
     
       <div class="input-prepend">        

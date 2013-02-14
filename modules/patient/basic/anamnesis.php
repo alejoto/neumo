@@ -18,7 +18,7 @@
     <div class="span2">
       <select class="span2">
         <option value=""></option>
-        <option value="si">Si</option>
+        <option value="si">S&iacute;</option>
         <option value="no">No</option>
       </select>
     </div>
@@ -29,7 +29,7 @@
     <div class="span2">
       <select class="span2 anamnesis" id="pregnant" style="display:none">
         <option value=""></option>
-        <option value="si">Si</option>
+        <option value="si">S&iacute;</option>
         <option value="no">No</option>
       </select>
     </div>
@@ -53,13 +53,13 @@
     <div class="span2">
       <select id="homeoxigen" class="span2 anamnesis">
         <option value=""></option>
-        <option value="si">si</option>
-        <option value="">no</option>
+        <option value="si">S&iacute;</option>
+        <option value="no">No</option>
       </select>
     </div>
     
     <div id="ox_depend">
-      <div class="span2" style="text-align:right">Horas diarias ox&iacute;geno</div>
+      <div class="span2" style="text-align:right">Horas diarias de ox&iacute;geno</div>
       <div class="span2">
         <select id="dailyhours_ox" class="span2 anamnesis">
           <option val=""></option>
@@ -76,7 +76,7 @@
     <div class="span6" style="text-align: left; ">
       <select id="nyha_funct_class" class="span5 anamnesis">
         <option val=""></option>
-        <option val="i">I. Asintom&acute;tico</option>
+        <option val="i">I. Asintom&aacute;tico</option>
         <option val="ii">II. Disnea que limita pocas actividades cotidianas</option>
         <option val="iii">III. Disnea incapacitante, cede solo al reposo</option>
         <option val="iv">IV. Disnea de reposo</option>
@@ -101,7 +101,7 @@
     </div>
     
     <div class="span2" style="text-align:right">
-      Dolor torácico 
+      Dolor tor&aacute;cico 
       <input type="checkbox" id="chestpain" class="anamnesis">
     </div>
   </div>
@@ -132,8 +132,8 @@
     <div class="span2">
       <select id="improved_symts" class="span2 anamnesis">
         <option value=""></option>
-        <option value="si">si</option>
-        <option value="no">no</option>
+        <option value="si">S&iacute;</option>
+        <option value="no">No</option>
       </select>
     </div>
   </div>

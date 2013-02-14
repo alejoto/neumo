@@ -14,11 +14,11 @@
           <select class="span2" id="info_type" style="margin-top: 7px;">
             <option value=""></option>
             <option value="pacientes">Pacientes</option>
-            <option value="genero">Genero</option>
+            <option value="genero">G&eacute;nero</option>
             <option value="edades">Edades</option>
             <option value="afroamerican">Raza afroamericana</option>
             <option value="funcional">Clase funcional</option>
-            <option value="funcional_tiempo">Funcional En el tiempo</option>
+            <option value="funcional_tiempo">Funcional nn el tiempo</option>
           </select>
         </div>
 

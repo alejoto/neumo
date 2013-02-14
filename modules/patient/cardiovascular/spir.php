@@ -1,13 +1,13 @@
 <div id="spir">
     <div class="row">
-        <div class="span8 well well-small"><h4>ESPIROMETRÍA</h4></div>
+        <div class="span8 well well-small"><h4>ESPIROMETR&Iacute;A</h4></div>
     </div>
     <div class="row">
-        <div class="span2">Fecha realización</div>
+        <div class="span2">Fecha realizaci&oacute;n</div>
         <div class="span3">
             <input type="text" id="y_spir" class="span1" placeholder="a&ntilde;o"/>
             <input type="text" id="m_spir" class="span1" placeholder="mes"/>
-            <input type="text" id="d_spir" class="span1" placeholder="día"/>
+            <input type="text" id="d_spir" class="span1" placeholder="d&iacute;a"/>
         </div>
     </div>
     <div class="row">

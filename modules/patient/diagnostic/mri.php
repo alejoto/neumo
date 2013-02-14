@@ -1,23 +1,23 @@
 <div id="mri">
      <div class="row">
-         <div class="span8 well well-small">RESONANCIA MAGNÉTICA NUCLEAR</div>
+         <div class="span8 well well-small">RESONANCIA MAGN&Eacute;TICA NUCLEAR</div>
      </div>
      <div class="row">
          <div class="span1">Fecha</div>
          <div class="span3">
              <input type="text" id="y_rmn" class="span1" placeholder="a&ntilde;o"/>
              <input type="text" id="m_rmn" class="span1" placeholder="mes"/>
-             <input type="text" id="d_rmn" class="span1" placeholder="día"/>
+             <input type="text" id="d_rmn" class="span1" placeholder="d&iacute;a"/>
          </div>
      </div>
      <div class="row">
-         <div class="span4" style="text-align:right">Fracción eyección ventrículo derecho</div>
+         <div class="span4" style="text-align:right">Fracci&oacute;n eyecci&oacute;n ventr&iacute;culo derecho</div>
          <div class="span1">
              <input type="text" id="mri_fevd" class="span1" placeholder="%"/>
          </div>
      </div>
      <div class="row">
-         <div class="span8"><b>Diámetros arterias pulmonares (en milímetros)</b></div>
+         <div class="span8"><b>Di&aacute;metros arterias pulmonares (en mil&iacute;metros)</b></div>
      </div>
      <div class="row">
          <div class="span1" style="text-align:right">Tronco</div>
@@ -42,21 +42,21 @@
          <div class="span3">
              <select id="mri_rt_heart_dilat" class="span3">
                  <option value="">...</option>
-                 <option value="no">no</option>
-                 <option value="si_aur_der">dilatación aurícula derecha</option>
-                 <option value="si_vent_der">dilatación ventrículo derecho</option>
-                 <option value="si_ambos">dilatación aur. y ventr. derecho</option>
+                 <option value="no">No</option>
+                 <option value="si_aur_der">Dilataci&oacute;n aur&iacute;cula derecha</option>
+                 <option value="si_vent_der">Dilataci&oacute;n ventr&iacute;culo derecho</option>
+                 <option value="si_ambos">Dilataci&oacute;n aur. y ventr. derecho</option>
              </select>
          </div>
          <div class="span3">
              <select id="mri_defects" class="span3">
                  <option value="">...</option>
-                 <option value="no">sin defectos cardiacos</option>
+                 <option value="no">Sin defectos cardiacos</option>
                  <option value="cia">CIA</option>
                  <option value="civ">CIV</option>
-                 <option value="paradox_septum">movimiento paradójido septum</option>
-                 <option value="paradox_septum">foramen oval permeable</option>
-                 <option value="other">otros</option>
+                 <option value="paradox_septum">Movimiento parad&oacute;jido septum</option>
+                 <option value="paradox_septum">Foramen oval permeable</option>
+                 <option value="other">Otros</option>
              </select>
          </div>
          

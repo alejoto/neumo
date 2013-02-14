@@ -11,7 +11,7 @@
       <input type="text" id="y_art_gas" class="span1" placeholder="a&ntilde;o"
       />
       <input type="text" id="m_art_gas" class="span1" placeholder="mes" />
-      <input type="text" id="d_art_gas" class="span1" placeholder="día" />
+      <input type="text" id="d_art_gas" class="span1" placeholder="d&iacutea" />
     </div>
     <div class="span1" style="text-align:right">FIO2</div>
     <div class="span1">

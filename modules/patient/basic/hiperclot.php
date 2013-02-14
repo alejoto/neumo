@@ -23,18 +23,18 @@
     <div class="span1">
       <input type="checkbox" id="c_protein_resist" class="hiperclot" />
     </div>
-    <div class="span3" style="text-align:right">Déficit antiT-III</div>
+    <div class="span3" style="text-align:right">D&eacute;ficit antiT-III</div>
     <div class="span1">
       <input type="checkbox" id="antitrbiii_deficiency" class="hiperclot" />
     </div>
   </div>
   
   <div class="row">
-    <div class="span3" style="text-align:right">Déficit Prot S</div>
+    <div class="span3" style="text-align:right">D&eacute;ficit Prot S</div>
     <div class="span1">
       <input type="checkbox" id="prot_s_deficiency" class="hiperclot" />
     </div>
-    <div class="span3" style="text-align:right">Déficit Prot C</div>
+    <div class="span3" style="text-align:right">D&eacute;ficit Prot C</div>
     <div class="span1">
       <input type="checkbox" id="prot_c_deficiency" class="hiperclot" />
     </div>
@@ -52,7 +52,7 @@
   </div>
   
   <div class="row">
-    <div class="span3" style="text-align:right">Enf. neoplásica</div>
+    <div class="span3" style="text-align:right">Enf. neopl&aacute;sica</div>
     <div class="span1">
       <input type="checkbox" id="neoplasia" class="hiperclot" />
     </div>

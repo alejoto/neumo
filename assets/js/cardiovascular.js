@@ -81,7 +81,7 @@ $(document).ready(function() {
 (icon positioning) pos_ic_1, pos_ic_2, pos_ic_3,  pos_main,
 (icon titles)      title1,   title2,   title3,    maintitle
 */
-icon_exchanger($(".main_icon"), $("#basic_eval"), $("#blood_test"), $("#clin_images"), $("#performance"), '0  75px', '-92px 75px', '-276px 75px', '-184px 0px', 'Evaluación <br>clínica', 'Pruebas<br>en sangre', 'Imágenes diagnósticas', 'Desempeño cardiovascular');
+icon_exchanger($(".main_icon"), $("#basic_eval"), $("#blood_test"), $("#clin_images"), $("#performance"), '0  75px', '-92px 75px', '-276px 75px', '-184px 0px', 'Evaluaci&oacute;n <br>cl&iacute;nica', 'Pruebas<br>de sangre', 'Im&aacute;genes diagn&oacute;sticas', 'Desempe&ntilde;o cardiovascular');
 
 
 
@@ -106,7 +106,7 @@ num_ranges($("#d_ecg"), 31, 1, 0);
 num_ranges($("#y_spir"), 2020, 2010, 0);
 num_ranges($("#m_spir"), 12, 1, 0);
 num_ranges($("#d_spir"), 31, 1, 0);
-num_ranges($("#y_sixmw"), 2020, 2010, 0);
+num_ranges($("#y_sixmw"), 2020, 2010, 0)
 num_ranges($("#m_sixmw"), 12, 1, 0);
 num_ranges($("#d_sixmw"), 31, 1, 0);
 num_ranges($("#y_cpst"), 2020, 2010, 0);

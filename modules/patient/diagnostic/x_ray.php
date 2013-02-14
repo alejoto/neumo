@@ -7,48 +7,48 @@
          <div class="span3">
              <input type="text" id="y_xray" class="span1" placeholder="a&ntilde;o"/>
              <input type="text" id="m_xray" class="span1" placeholder="mes"/>
-             <input type="text" id="d_xray" class="span1" placeholder="día"/>
+             <input type="text" id="d_xray" class="span1" placeholder="d&iacute;a"/>
          </div>
          <div class="span2">
              <div class="input-append">
-                 <input type="text" id="cardiothrx_index" class="span2" placeholder="Índ. cardiotorácico"/>
+                 <input type="text" id="cardiothrx_index" class="span2" placeholder="&Iacute;nd. cardiotor&aacute;cico"/>
                  <span class="add-on">I.CT</span>
              </div>
          </div>
      </div>
      <div class="row">
          <div class="span2">Infiltrados</div>
-         <div class="span2">Áreas hipoperfusión</div>
+         <div class="span2">&Aacute;reas hipoperfusi&oacute;n</div>
          <div class="span3">Cardiomegalia derecha</div>
      </div>
      <div class="row">
          <div class="span2">
              <select id="alveolar_infiltrates" class="span2">
                  <option value=""></option>
-                 <option value="none">ninguno</option>
-                 <option value="focal">focal</option>
-                 <option value="lobar">lobar</option>
-                 <option value="multifocal">multifocal</option>
-                 <option value="multilobar">multilobar</option>
-                 <option value="difuso">difuso</option>
+                 <option value="none">Ninguno</option>
+                 <option value="focal">Focal</option>
+                 <option value="lobar">Lobar</option>
+                 <option value="multifocal">Multifocal</option>
+                 <option value="multilobar">Multilobar</option>
+                 <option value="difuso">Difuso</option>
              </select>
          </div>
          <div class="span2">
              <select id="hypoperfusion_areas" class="span2">
                  <option value=""></option>
-                 <option value="none">ninguno</option>
-                 <option value="focal">focal</option>
-                 <option value="lobar">lobar</option>
-                 <option value="multifocal">multifocal</option>
-                 <option value="multilobar">multilobar</option>
-                 <option value="difuso">difuso</option>
+                 <option value="none">Ninguno</option>
+                 <option value="focal">Focal</option>
+                 <option value="lobar">Lobar</option>
+                 <option value="multifocal">Multifocal</option>
+                 <option value="multilobar">Multilobar</option>
+                 <option value="difuso">Difuso</option>
              </select>
          </div>
          <div class="span2">
              <select id="right_heart_cardiomegs" class="span2">
                  <option value=""></option>
-                 <option value="presente">presente</option>
-                 <option value="ausente">ausente</option>
+                 <option value="presente">Presente</option>
+                 <option value="ausente">Ausente</option>
              </select>
          </div>
      </div>
@@ -63,10 +63,10 @@
              <input type="checkbox" id="pleur_effuss">Derrame pleural
          </div>
          <div class="span2">
-             <input type="checkbox" id="b_kerkey_lines">Línes B de kerley
+             <input type="checkbox" id="b_kerkey_lines">L&iacute;nes B de kerley
          </div>
          <div class="span3">
-             <input type="checkbox" id="pulm_cone_evertion">Eversión cono pulmonar
+             <input type="checkbox" id="pulm_cone_evertion">Eversi&oacute;n cono pulmonar
          </div>
      </div>
      <div class="row">

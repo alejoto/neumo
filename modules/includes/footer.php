@@ -1,5 +1,5 @@
 <div id="footer">
-  Recolhap - Un pequenio parrafo de una lina con informacion.
+  Recolhap - Un peque&ntilde;o parrafo de una lina con informaci&iacute;n.
 </div>
 
 </body>

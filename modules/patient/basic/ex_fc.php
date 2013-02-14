@@ -29,7 +29,7 @@
     <div class="span1">
       <input type="text" placeholder="resp/min" id="breathing" class="span1 ex_fc"/>
     </div>
-    <div class="span2" style="text-align:right">Saturación O2</div>
+    <div class="span2" style="text-align:right">Saturaci&oacute;n O2</div>
     <div class="span1">
       <input type="text" placeholder="%" id="sat_ox" class="span1 ex_fc"/>
     </div>
@@ -51,7 +51,7 @@
   </div>
     
   <div class="row">
-    <div class="span2" style="text-align:right">Ingurg. yugular 45°</div>
+    <div class="span2" style="text-align:right">Ingurg. yugular 45&ordm;</div>
     <div class="span1">
       <input type="checkbox" id="ing_yu" class="ex_fc">
     </div>

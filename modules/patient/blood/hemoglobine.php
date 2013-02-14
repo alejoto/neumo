@@ -1,7 +1,7 @@
 <div id="hb_and_others">
   <div class="row">
     <div class="well well-small span8">
-      <h4>HEMOGLOBINA - TIROIDES - DÍMERO D - TROPONINA - PÉPTIDO NATRIURÉTICO - VIH</h4>
+      <h4>HEMOGLOBINA - TIROIDES - D&Iacute;MERO D - TROPONINA - P&Eacute;PTIDO NATRIUR&Eacute;TICO - VIH</h4>
 
     </div>
   </div>
@@ -15,7 +15,7 @@
     <div class="span3">
       <input type="text" id="y_hb" class="span1" placeholder="a&ntilde;o" />
       <input type="text" id="m_hb" class="span1" placeholder="mes" />
-      <input type="text" id="d_hb" class="span1" placeholder="día" />
+      <input type="text" id="d_hb" class="span1" placeholder="d&iacute;a" />
     </div>
     <div class="span1">
       <input type="text" id="hb_value" class="span1" placeholder="mg/dL" />
@@ -30,7 +30,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="span8"> <b>FUNCIÓN TIROIDEA</b>
+    <div class="span8"> <b>FUNCI&Oacute;N TIROIDEA</b>
 
     </div>
   </div>
@@ -40,7 +40,7 @@
       <input type="text" id="y_thyr" class="span1" placeholder="a&ntilde;o"
       />
       <input type="text" id="m_thyr" class="span1" placeholder="mes" />
-      <input type="text" id="d_thyr" class="span1" placeholder="día" />
+      <input type="text" id="d_thyr" class="span1" placeholder="d&iacutea" />
     </div>
   </div>
   <div class="row">
@@ -70,7 +70,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="span8"> <b>DÍMERO D (mcg/mL)</b>
+    <div class="span8"> <b>D&Iacute;MERO D (mcg/mL)</b>
 
     </div>
   </div>
@@ -80,7 +80,7 @@
       <input type="text" id="y_dimer" class="span1" placeholder="a&ntilde;o"
       />
       <input type="text" id="m_dimer" class="span1" placeholder="mes" />
-      <input type="text" id="d_dimer" class="span1" placeholder="día" />
+      <input type="text" id="d_dimer" class="span1" placeholder="d&iacute;a" />
     </div>
     <div class="span1">
       <input type="text" id="d_dimer_value" class="span1" placeholder="ng/mL"
@@ -106,7 +106,7 @@
       <input type="text" id="y_trop" class="span1" placeholder="a&ntilde;o"
       />
       <input type="text" id="m_trop" class="span1" placeholder="mes" />
-      <input type="text" id="d_trop" class="span1" placeholder="día" />
+      <input type="text" id="d_trop" class="span1" placeholder="d&iacute;a" />
     </div>
     <div class="span1">
       <input type="text" id="trop_result" class="span1" placeholder="ng/ml"
@@ -122,7 +122,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="span8"> <b>PÉPTIDO NATRIURÉTICO CEREBRAL B-PN (mg/dL)</b>
+    <div class="span8"> <b>P&Eacute;PTIDO NATRIUR&Eacute;TICO CEREBRAL B-PN (mg/dL)</b>
 
     </div>
   </div>
@@ -131,7 +131,7 @@
     <div class="span3">
       <input type="text" id="y_bpn" class="span1" placeholder="a&ntilde;o" />
       <input type="text" id="m_bpn" class="span1" placeholder="mes" />
-      <input type="text" id="d_bpn" class="span1" placeholder="día" />
+      <input type="text" id="d_bpn" class="span1" placeholder="d&iacute;a" />
     </div>
   </div>
   <div class="row">
@@ -155,7 +155,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="span8"> <b>INFECCIÓN VIH </b>
+    <div class="span8"> <b>INFECCI&Oacute;N VIH </b>
 
     </div>
   </div>
@@ -164,13 +164,13 @@
     <div class="span3">
       <input type="text" id="y_vih" class="span1" placeholder="a&ntilde;o" />
       <input type="text" id="m_vih" class="span1" placeholder="mes" />
-      <input type="text" id="d_vih" class="span1" placeholder="día" />
+      <input type="text" id="d_vih" class="span1" placeholder="d&iacute;a" />
     </div>
   </div>
   <div class="row">
     <div class="offset1 span2">
       <select id="hiv_result" class="span2">
-        <option value="">Resultado…</option>
+        <option value="">Resultado</option>
         <option value="feu">Positivo</option>
         <option value="ddu">Negativo</option>
       </select>

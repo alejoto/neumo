@@ -3,6 +3,7 @@
   
   <div class="pull-right" style="text-align: left; padding-top: 13px; font-size: 12px; ">
     <b><u>JORMAN BUSTAMANTE</u></b> <br>documento CC1234567
-    <p>86 anos</p>
+    <p>a&ntilde;os</p>
+
   </div>
 </div>

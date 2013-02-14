@@ -25,7 +25,7 @@
         </select>
       </div>
     </div>
-    <div class="control-group"><label class="control-label" for="res_vasc_syst">Res. vasc.sistémica</label>
+    <div class="control-group"><label class="control-label" for="res_vasc_syst">Res. vasc.sist&eacute;mica</label>
       <div class="controls"><input type="text" id="res_vasc_syst" placeholder="res. vsc. sistémica"  class="span2">
         <select id="res_vasc_syst_unit" class="span2">
           <option>dinas</option>
@@ -38,12 +38,12 @@
         <input type="text" id="pap_dias" placeholder="diastól." class="span1"><b><span id="pam_pulm"></span></b>
       </div>
     </div>
-    <div class="control-group"><label class="control-label" for="pas_sys">Pres. arterial <b>sistémica</b></label>
+    <div class="control-group"><label class="control-label" for="pas_sys">Pres. arterial <b>sist&eacute;mica</b></label>
       <div class="controls"><input type="text" id="pas_sys" placeholder="sistól." class="span1">
         <input type="text" id="pas_dias" placeholder="diastól." class="span1"><b><span id="pam_stm"></span></b>
       </div>
     </div>
-    <div class="control-group"><label class="control-label" for="rt_atr_press">Pres aurícula derecha</label>
+    <div class="control-group"><label class="control-label" for="rt_atr_press">Pres aur&iacute;cula derecha</label>
       <div class="controls">
         <div class="input-append">
           <input type="text" id="rt_atr_press" placeholder="PAD" class="span2"><span class="add-on">mm/Hg</span>
@@ -72,7 +72,7 @@
         </div>
       </div>
     </div>
-    <div class="control-group"><label class="control-label" for="cardiac_index">Índice cardiaco</label>
+    <div class="control-group"><label class="control-label" for="cardiac_index">&Iacute;ndice cardiaco</label>
       <div class="controls">
         <div class="input-append">
           <input type="text" id="cardiac_index" placeholder="L/min/Mt2" class="span2" disabled>
@@ -80,7 +80,7 @@
         </div>
       </div>
     </div>
-    <div class="control-group"><label class="control-label" for="rt_atr_oxim">Oximetría AD/VD/AP %</label>
+    <div class="control-group"><label class="control-label" for="rt_atr_oxim">Oximetr&iacute;a AD/VD/AP %</label>
       <div class="controls">
         <input type="text" id="rt_atr_oxim" placeholder="aur. derecha" class="span2">
         <input type="text" id="rt_ventr_oxim" placeholder="vent. derecho" class="span2">
@@ -102,7 +102,7 @@
         </select>
       </div>
     </div>
-    <button class="btn span6" id="save_rt_cath">GRABAR</button>
+    <button class="btn span6" id="save_rt_cath">Grabar</button>
   </form><br><br>
 </div>
 <div id="reactiv">
@@ -122,7 +122,7 @@
           <option value="adenosina">Adenosina</option>
           <option value="epoprosterol">Epoprosterol</option>
           <option value="iloprost">Iloprost</option>
-          <option value="ox_nitrico">Óxido nítrico</option>
+          <option value="ox_nitrico">&Oacute;xido nítrico</option>
         </select><span class="add-on">Medicamento</span></div></div>
       </div>
     </form>
@@ -150,14 +150,14 @@
             <b><span id="post_pam_pulm"></span></b>
           </div>
         </div>
-        <div class="control-group"><label class="control-label" for="post_pas_sys">Pres. Arterial <b>Sistémica</b></label>
+        <div class="control-group"><label class="control-label" for="post_pas_sys">Pres. Arterial <b>Sist&eacute;mica</b></label>
           <div class="controls">
             <input type="text" id="post_pas_sys" placeholder="sistólica" class="span1">
             <input type="text" id="post_pas_dias" placeholder="diastólica" class="span1">
             <b><span id="post_pam_stm"></span></b>
           </div>
         </div>
-        <div class="control-group"><label class="control-label" for="post_rt_atr_press">Pres. aurícula derecha</label>
+        <div class="control-group"><label class="control-label" for="post_rt_atr_press">Pres. aur&iacute;cula derecha</label>
           <div class="controls">
             <div class="input-append">
               <input type="text" id="post_rt_atr_press" placeholder="PAD" class="span2">
@@ -189,7 +189,7 @@
             </div>
           </div>
         </div>
-        <div class="control-group"><label class="control-label" for="post_cardiac_index">Índice cardiaco</label>
+        <div class="control-group"><label class="control-label" for="post_cardiac_index">&Iacute;ndice cardiaco</label>
           <div class="controls">
             <div class="input-append">
               <input type="text" id="post_cardiac_index" placeholder="L/min/Mt2" class="span2" disabled>
@@ -198,7 +198,7 @@
           </div>
         </div>
         <div class="control-group">
-          <label class="control-label" for="post_rt_atr_oxim">Oximetría AD/VD/AP %</label>
+          <label class="control-label" for="post_rt_atr_oxim">Oximetr&iacute;a AD/VD/AP %</label>
           <div class="controls">
             <input type="text" id="post_rt_atr_oxim" placeholder="aur. derecha" class="span2">
             <input type="text" id="post_rt_ventr_oxim" placeholder="vent. derecho" class="span2">
@@ -220,7 +220,7 @@
       </div><br>
       <div class="row">
         <div class="span6">
-          <button class="btn span6">GRABAR</button>
+          <button class="btn span6">Grabar</button>
         </div>
       </div><br><br>
       <!--end of "drugdependant" -->

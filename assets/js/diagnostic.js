@@ -49,8 +49,8 @@ $(document).ready(function() {$("#x_ray").hide();$("#tc_angio").hide();$("#mri")
 (icon titles)      title1,   title2,   title3,    maintitle
 */
 icon_exchanger($(".main_icon"),$("#basic_eval"),$("#blood_test"),$("#performance"),$("#clin_images")
-              ,'0  75px','-92px 75px','-184px 75px','-276px 0','Evaluación <br>clínica',
-              'Pruebas<br>en sangre','Desempeño cardiovascular','Imágenes diagnósticas');
+              ,'0  75px','-92px 75px','-184px 75px','-276px 0','Evaluaci&oacute;n <br>cl&iacute;nica',
+              'Pruebas<br>de sangre','Desempe&ntilde;o cardiovascular','Im&aacute;genes diagn&oacute;sticas');
 
 
 showmain_img($("#sel_ecocardio"),$("#x_ray"),$("#tc_angio"),$("#mri"),$("#pulm_arteriography"),$("#gammagr"),$("#duplex_legs"),$("#ecocardio"))

@@ -57,7 +57,7 @@ function showmain(btnsw,hid1,hid2,hid3,hid4,shwmain){
 
     icon_exchanger($(".main_icon"),$("#blood_test"),$("#performance"),$("#clin_images"),$("#basic_eval")
     ,'-92px 75px','-184px 75px','-276px 75px','0  0px'
-    ,'Pruebas<br>en sangre','Desempeño cardiovascular','Imágenes diagnósticas','Evaluación <br>clínica');
+    ,'Pruebas<br>de sangre','Desempe&ntilde;o cardiovascular','Im&aacute;genes diagn&oacute;sticas','Evaluaci&oacute;n <br>cl&iacute;nica');
 
 
 

@@ -3,11 +3,11 @@
     <div class="span8 well well-small"><h4>ELECTROCARDIOGRAMA</h4></div>
   </div>
   <div class="row">
-    <div class="span2">Fecha realización</div>
+    <div class="span2">Fecha realizaci&oacute;n</div>
     <div class="span3">
       <input type="text" id="y_ecg" class="span1" placeholder="a&ntilde;o"/>
       <input type="text" id="m_ecg" class="span1" placeholder="mes"/>
-      <input type="text" id="d_ecg" class="span1" placeholder="día"/>
+      <input type="text" id="d_ecg" class="span1" placeholder="d&iacute;a"/>
     </div>
   </div>
   <div class="row">
@@ -24,9 +24,9 @@
       <select class="span3" id="rythm">
         <option valule="">Ritmo...</option>
         <option valule="sinusal">Sinusal</option>
-        <option valule="supravent">Rítmico supravent</option>
-        <option valule="ventr_or_BBB">Rítmico ventr o bloqueo rama</option>
-        <option valule="atr_fibrl">Fibrilación auricular</option>
+        <option valule="supravent">R&iacute;tmico supravent</option>
+        <option valule="ventr_or_BBB">R&iacute;tmico ventr o bloqueo rama</option>
+        <option valule="atr_fibrl">Fibrilaci&oacute;n auricular</option>
         <option valule="other_rythm">Otra arritmia no mencionada</option>
       </select>
     </div>
@@ -38,7 +38,7 @@
     <div class="span8"><hr></div>
   </div>
   <div class="row">
-    <div class="span8">PATRONES ANORMALES TRAZO ELÉCTRICO (de interés para hipertensión pulmonar)</div>
+    <div class="span8">PATRONES ANORMALES TRAZO EL&Eacute;CTRICO (de inter&eacute;s para hipertensi&oacute;n pulmonar)</div>
   </div>
   <div class="row">
     <div class="span4">

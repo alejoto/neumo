@@ -11,7 +11,7 @@
     <div class="span3">
       <input type="text" id="y_sixmw" class="span1" placeholder="a&ntilde;o"/>
       <input type="text" id="m_sixmw" class="span1" placeholder="mes"/>
-      <input type="text" id="d_sixmw" class="span1" placeholder="día"/>
+      <input type="text" id="d_sixmw" class="span1" placeholder="d&iacute;a"/>
     </div>
     <div class="span2" style="text-align:right">
       Metros caminados
@@ -49,7 +49,7 @@
         <option value="5">5-  Severa</option>
         <option value="7">7-  Muy severa</option>
         <option value="9">9-  Muy, muy severa</option>
-        <option value="10">10-  Disnea máxima</option>
+        <option value="10">10-  Disnea m&aacute;xima</option>
       </select>
     </div>
   </div>
@@ -60,18 +60,18 @@
   </div>
   <div class="row">
     <div class="span3">
-      <b>Otros síntomas durante el test</b>
+      <b>Otros s&iacute;ntomas durante el test</b>
     </div>
   </div>
   <div class="row">
     <div class="span3" style="text-align:right">
-      Lipotimia/Síncope
+      Lipotimia/S&iacute;ncope
     </div>
     <div class="span1">
       <input type="checkbox" id="walk_syncope">
     </div>
     <div class="span2" style="text-align:right" id="walk_chest_pain">
-      Dolor tóracico
+      Dolor t&oacute;racico
     </div>
     <div class="span1">
       <input type="checkbox">

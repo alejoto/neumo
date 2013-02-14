@@ -1,7 +1,7 @@
 <div id="renal">
   <div class="row">
     <div class="well well-small span8">
-      <h4>FUNCIÓN RENAL</h4>
+      <h4>FUNCI&Oacute;N RENAL</h4>
 
     </div>
   </div>
@@ -11,7 +11,7 @@
       <input type="text" id="y_renal" class="span1" placeholder="a&ntilde;o"
       />
       <input type="text" id="m_renal" class="span1" placeholder="mes" />
-      <input type="text" id="d_renal" class="span1" placeholder="día" />
+      <input type="text" id="d_renal" class="span1" placeholder="d&iacute;a" />
     </div>
   </div>
   <div class="row">

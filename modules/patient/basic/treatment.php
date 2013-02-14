@@ -9,7 +9,7 @@
   <div class="row">
     <table class="table table-hover span8">
       <tr class="span8">
-        <th class="span3">Fármaco</th>
+        <th class="span3">F&aacute;rmaco</th>
         <th class="span2">Fecha inicio</th>
         <th class="span2">Fecha susp</th>
         <th class="span2">Motivo susp</th>
@@ -58,11 +58,11 @@
           <option value="Riociguat">Riociguat</option>
           <option value="Furosemida">Furosemida</option>
           <option value="Digoxina">Digoxina</option>
-          <option value="warfarina">warfarina</option>
-          <option value="diltiazem">diltiazem</option>
-          <option value="nifedipina">nifedipina</option>
-          <option value="amlodipino">amlodipino</option>
-          <option value="hbpm">heparinas BPM</option>
+          <option value="warfarina">Warfarina</option>
+          <option value="diltiazem">Diltiazem</option>
+          <option value="nifedipina">Nifedipina</option>
+          <option value="amlodipino">Amlodipino</option>
+          <option value="hbpm">Heparinas BPM</option>
         </select>
       </div>
       <div class="span1" style="text-align:right">Inicio</div>
@@ -76,17 +76,17 @@
     <div class="row">
       <div class="span3">
         <select id="suspend_cause" class="treatment" >
-          <option value="">...Motivo suspensión tto</option>
-          <option value="">No ha habido suspensión</option>
+          <option value="">...Motivo suspensi&oacute;n tto</option>
+          <option value="">No ha habido suspensi&oacute;n</option>
           <option value="Evento adverso">Evento adverso</option>
-          <option value="No adherencia al tto">Desersión al tto</option>
-          <option value="Negación EPS">Negación por asegurador</option>
-          <option value="Negación EPS">Mejoró con otro tto</option>
+          <option value="No adherencia al tto">Desersi&oacute;n al tto</option>
+          <option value="Negación EPS">Negaci&oacute;n por asegurador</option>
+          <option value="Negación EPS">Mejor&oacute; con otro tto</option>
           <option value="Negación EPS">Paciente fallecido</option>
           <option value="Otras">Otras causas</option>
         </select>
       </div>
-      <div class="span1" style="text-align:right">Suspensión</div>
+      <div class="span1" style="text-align:right">Suspensi&oacute;n</div>
       <div class="span3">
         <input type="text" id="year_end_d" class="span1" placeholder="a&ntilde;o"/>
         <input type="text" id="month_end_d" class="span1" placeholder="mes"/>
@@ -96,7 +96,7 @@
 
     <div class="row">
       <div class="span8">
-        <textarea class="span8 treatment" rows="3" id="drug_adv_event" >Describir evento adverso:
+        <textarea class="span8 treatment" rows="3" id="drug_adv_event">Describir evento adverso
         </textarea>
       </div>
     </div>
@@ -109,12 +109,12 @@
   </div>
 
   <div class="row">
-    <div class="span8"><hr><h4>MANEJO QUIRÚRGICO</h4></div>
+    <div class="span8"><hr><h4>MANEJO QUIR&Uacute;RGICO</h4></div>
   </div>
 
   <div class="row">
     <div class="span8">
-      <h5>Transplante: diligenciar si paciente fue transplantado o está en lista de espera</h5>
+      <h5>Transplante: diligenciar si paciente fue transplantado o est&aacute; en lista de espera</h5>
     </div>
   </div>
 
@@ -123,8 +123,8 @@
       <select id="transplant" class="treatment">
         <option value="">...Tipo de transplante</option>
         <option value="en espera">En lista de espera</option>
-        <option value="pulmon">Transplantado: pulmón</option>
-        <option value="corazon pulmon">Transplantado: corazón-pulmón</option>
+        <option value="pulmon">Transplantado: pulm&oacute;n</option>
+        <option value="corazon pulmon">Transplantado: coraz&oacute;n-pulm&oacute;n</option>
       </select>
     </div>
 
@@ -168,7 +168,7 @@
   <div class="row">
     <div class="span8">
       <hr/>
-      <a class="btn class3" id="treatment_save">guardar</a>
+      <a class="btn class3" id="treatment_save">GUARDAR</a>
       <br><br>
     </div>
   </div>

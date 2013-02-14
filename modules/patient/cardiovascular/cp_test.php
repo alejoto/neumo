@@ -9,7 +9,7 @@
     <div class="span3">
       <input type="text" id="y_cpst" class="span1" placeholder="a&ntilde;o"/>
       <input type="text" id="m_cpst" class="span1" placeholder="mes"/>
-      <input type="text" id="d_cpst" class="span1" placeholder="día"/>
+      <input type="text" id="d_cpst" class="span1" placeholder="d&iacute;a"/>
     </div>
     <div class="span1" style="text-align:right">VO2 max</div>
     <div class="span1">
