@@ -5,14 +5,14 @@
   <div class="row">
     <div class="span2">Fecha realizaci&oacute;n</div>
     <div class="span3">
-      <input type="text" id="y_ecg" class="span1" placeholder="a&ntilde;o"/>
-      <input type="text" id="m_ecg" class="span1" placeholder="mes"/>
-      <input type="text" id="d_ecg" class="span1" placeholder="d&iacute;a"/>
+      <input type="text" id="y_ecg" name="ecg_date" class="span1 ecg date1" placeholder="a&ntilde;o"/>
+      <input type="text" id="m_ecg" class="span1 ecg date1" placeholder="mes"/>
+      <input type="text" id="d_ecg" class="span1 ecg date1" placeholder="d&iacute;a"/>
     </div>
   </div>
   <div class="row">
     <div class="span2">
-      <select id="axis" class="span2" >
+      <select id="axis" name="axis" class="span2 ecg" >
         <option valule="">Eje...</option>
         <option valule="normal">Eje normal</option>
         <option valule="right">Eje derecho</option>
@@ -21,7 +21,7 @@
       </select>
     </div>
     <div class="span3">
-      <select class="span3" id="rythm">
+      <select class="span3 ecg" id="rythm" name="rythm">
         <option valule="">Ritmo...</option>
         <option valule="sinusal">Sinusal</option>
         <option valule="supravent">R&iacute;tmico supravent</option>
@@ -31,7 +31,7 @@
       </select>
     </div>
     <div class="span2">
-      <input type="text" placeholder="frec."class="span1" id="frq">/min
+      <input type="text" placeholder="frec."class="span1 ecg" id="frq" name="frq">/min
     </div>
   </div>
   <div class="row">
@@ -42,7 +42,7 @@
   </div>
   <div class="row">
     <div class="span4">
-      <select class="span4" id="pattern">
+      <select class="span4 ecg" id="pattern" name="pattern">
         <option value=""></option>
         <option value="Ninguno">Ninguno</option>
         <option value="SIQIIITIII">SI-QIII-TIII</option>
@@ -52,6 +52,8 @@
     </div>
   </div>
   <div class="row">
-    <div class="span8"><a class="btn" id="save_ecg">Guardar</a></div>
+    <div class="span8">
+	<a class="btn" id="save_ecg" name="ecg_save">Guardar</a>
+    </div>
   </div>
 </div>

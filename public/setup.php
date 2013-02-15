@@ -136,14 +136,17 @@
   
   mysql_query($sql,$con);
   
-  $sql = "CREATE TABLE IF NOT EXISTS electrok (electrok_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
-  ,ecg_date DATE 
-  ,ecg_lecture VARCHAR (50)
-  ,right_axis_deviation VARCHAR (50)
-  ,siqiiitiii_pattern VARCHAR (50)
-  ,sinus_tachyc VARCHAR (50)
-  ,right_branch_block VARCHAR (50)
-  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysql_query($sql,$con);
+  $sql = "CREATE TABLE IF NOT EXISTS electrok (
+  electrok_id 	INT 	(50) 	PRIMARY KEY  NOT NULL AUTO_INCREMENT
+  ,ecg_date 	DATE 
+  ,axis 	VARCHAR (50)
+  ,rythm 	VARCHAR (50)
+  ,frq 		VARCHAR (50)
+  ,pattern 	VARCHAR (50)
+  ,eval_id	CONSTRAINT	FOREINGN KEY	REFERENCES main_eval(eval_id)";
+
+  mysql_query($sql,$con);
+
   $sql = "CREATE TABLE IF NOT EXISTS x_ray (x_ray_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,xray_date DATE 
   ,alveolar_infiltrates VARCHAR (50)
@@ -349,16 +352,19 @@
   ,end_sato2 VARCHAR (50)
   ,walk_symptoms VARCHAR (50)
   ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysql_query($sql,$con);
-  $sql = "CREATE TABLE IF NOT EXISTS spirometry (spirometry_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
-  ,spirodate DATE 
-  ,cvf_lt VARCHAR (50)
-  ,cvf_percent VARCHAR (50)
-  ,vef1_lt VARCHAR (50)
-  ,vef1_percent VARCHAR (50)
-  ,vef1_cvf VARCHAR (50)
-  ,bronchodil_changes VARCHAR (50)
-  ,dlco_percent VARCHAR (50)
+  
+$sql = "CREATE TABLE IF NOT EXISTS spirometry (
+   spirometry_id 	INT 	(50) 	PRIMARY KEY  NOT NULL AUTO_INCREMENT
+  ,spirodate 		DATE 
+  ,cvf_lt 		VARCHAR (50)
+  ,cvf_percent 		VARCHAR (50)
+  ,vef1_lt 		VARCHAR (50)
+  ,vef1_percent 	VARCHAR (50)
+  ,vef1_cvf 		VARCHAR (50)
+  ,bronchodil_changes 	VARCHAR (50)
+  ,dlco_percent 	VARCHAR (50)
   ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysql_query($sql,$con);
+
   $sql = "CREATE TABLE IF NOT EXISTS cp_stress_test (cp_stress_test_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,cp_stress_date DATE 
   ,vo2max_peak VARCHAR (50)

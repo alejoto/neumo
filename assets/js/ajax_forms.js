@@ -1,5 +1,6 @@
 function to_database(info,table) {
   $.post("../patient/ajax_save.php",{ info:info, table:table }, function(data) {
+    alert(data);
     if(data=='Yes') {
       alert("datos guardados exitosamente");
     }else{
@@ -8,6 +9,7 @@ function to_database(info,table) {
   });  
 }
 
+
 function get_info(info_id){
   var dates = "";
   var dates2 = "";
@@ -15,23 +17,32 @@ function get_info(info_id){
   
   arr = $("." + info_id);
   
-  for($i=0;$i<arr.length;$i++){
+ 
+  for(var i=0;i<arr.length;i++){
         
-    if( arr[$i].type == "checkbox" ){ 
+    if( arr[i].type == "checkbox" ){ 
 
       if( dates != "" ) dates += ",";
       if( dates2 != "" ) dates2 += ",";
 
-      dates += arr[$i].id;
-      dates2 += arr[$i].checked;
+      dates += arr[i].name;
+      dates2 += arr[i].checked;
 
-    }else if( arr[$i].value != "" ){
-      
+    }else if( arr[i].name != "" ){
+     
+	if($(arr[i]).is(".date1")){
+
+		dates += arr[i].name;
+		dates2 += arr[i].value+"-"+arr[i+1].value+"-"+arr[i+2].value; 
+                i += 3;
+	} 
+
+
       if( dates != "" ) dates += ",";
       if( dates2 != "" ) dates2 += ",";
       
-      dates += arr[$i].id;
-      dates2 += arr[$i].value;
+      dates += arr[i].name;
+      dates2 += arr[i].value;
     }
 
   }
@@ -43,6 +54,7 @@ function get_info(info_id){
 $("#sympt_save").click(function(){
   var info = get_info("anamnesis");
   to_database(info,"table_name");
+  //to_update();
 });
 
 $("#ef_save").click(function(){
@@ -63,4 +75,9 @@ $("#treatment_save").click(function(){
 $("#outcome_save").click(function(){
   var info = get_info("outcome");
   to_database(info,"table_name");
+});
+
+$("#save_ecg").click(function(){
+  var info = get_info("ecg");
+  to_database(info,"hap_electrok");
 });

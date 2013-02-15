@@ -9,14 +9,14 @@
     <div class="span2" style="text-align:right">Fecha inicio s&iacute;ntomas</div>
     
     <div class="span2" style="text-align: left;">
-      <input type="text" id="year" placeholder="a&ntilde;o" class="span1"/>
-      <input type="text" id="month" placeholder="mes" class="span1"/>
+      <input type="text" id="year" placeholder="a&ntilde;o" class="span1 anamnesis"/>
+      <input type="text" id="month" placeholder="mes" class="span1 anamnesis"/>
     </div>
     
     <div class="span2" style="text-align:left">Raza afroamericana?</div>
     
     <div class="span2">
-      <select class="span2">
+      <select class="span2 anamnesis">
         <option value=""></option>
         <option value="si">S&iacute;</option>
         <option value="no">No</option>
@@ -42,9 +42,9 @@
   <div class="row">
     <div class="span2">FECHA EVALUACI&Oacute;N</div>
     <div class="span3" style="text-align: left;">
-      <input type="text" id="year_ev" class="span1" placeholder="a&ntilde;o"/>
-      <input type="text" id="month_ev" class="span1" placeholder="mes"/>
-      <input type="text" id="day_ev" class="span1" placeholder="d&iacute;a"/>
+      <input type="text" id="year_ev" class="span1 anamnesis" placeholder="a&ntilde;o"/>
+      <input type="text" id="month_ev" class="span1 anamnesis" placeholder="mes"/>
+      <input type="text" id="day_ev" class="span1 anamnesis" placeholder="d&iacute;a"/>
     </div>
   </div>
 
@@ -141,7 +141,7 @@
   <div class="row">
     <div class="span8" style="text-align: left;">
       <br><br>
-      <a class="btn" id="sympt_save">GUARDAR</a>
+      <a class="btn" id="sympt_save">Guardar</a>
       <br><br>
     </div>
   </div>
