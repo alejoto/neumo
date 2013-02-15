@@ -12,4 +12,8 @@
   
   mysql_select_db("health", $con);  /*temporary user and pwd attr*/
   
+
+
+  $sql=mysql_query("SELECT status FROM users");
+if (!$sql){ mysql_query("ALTER TABLE users ADD status VARCHAR(60) AFTER rol");}
 ?>

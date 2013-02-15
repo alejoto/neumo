@@ -11,14 +11,49 @@
   $result = mysql_query($sql);
   $row    = mysql_fetch_array($result);
 
-  if( mysql_num_rows($result)>0 ) {
+  $sql2    = "SELECT * FROM users WHERE status='".$mail."'";
+  $result2 = mysql_query($sql2);
+  $row2   = mysql_fetch_array($result2);
+
+  if (mysql_num_rows($result2)>0) {
+    echo "mmm";
+  }
+
+  else if ( mysql_num_rows($result)>0  ) {
     echo "no";
-  }else{
+  } else {
     if( $pwd1 == $pwd2 && $pwd1 != "" ){
-      mysql_query("INSERT INTO users (user_id, pwd, rol, status) VALUES ('".$mail."', '".$pwd1."','NN','0')");
-      $_SESSION['username'] = $mail;
       echo "yes";
-    }else{
+      $tms=time().$mail;
+      $cont="<a href='http://www.recolhap.com//modules/register/confirm_register.php?activate=".$tms."'>Acceda a este link para activar su usuario</a>";
+
+      
+      /*send mail with mime specs*/
+      $headers = "MIME-Version: 1.0" . "\r\n";
+      $headers .= "Content-type:text/html;charset=iso-8859-1" . "\r\n";
+      $headers .= 'From: no reply<no_reply@healmydisease.com>' . "\r\n";
+      $subject="Activar usuario";
+      $content='<html><head><meta content="text/html; charset=ISO-8859-1" http-equiv="Content-Type"><title></title></head><body moz_template="id1" bgcolor="#ffffff" text="#000000">';
+      $content .='<font face="Tahoma">';
+
+      /*Define content*/
+      $content .=$cont;
+      /*Define content*/
+
+      $content .='</font>';
+      $content .='<br/><br/><br/><p><font face="verdana, arial, helvetica, sans-serif"><b>J. ALEJANDRO TORO D.</b></font></p>';
+      $content .='<font face="verdana, arial, helvetica, sans-serif" size="2"><p>Project manager HMD&#174</p>';
+      $content .='<p>HMD Web-based tools for clinical researches</p>';
+      $content .='<p>www.healmydisease.com</p>';
+      $content .='<p>Mobile (57)3006035703</p>';
+      $content .='<p>Email: <span style="color: #0002a5; ">';
+      $content .='<b><a href="mailto:projectmanager@healmydisease.com">projectmanager@healmydisease.com</a></b></span></p></font>';
+      $content .='</body></html>';
+      mysql_query("INSERT INTO users (user_id, pwd, rol, status) VALUES ('".$tms."', '".$pwd1."','NN','$mail')");
+      mail($mail,$subject,$content,$headers);
+    }
+    else
+    {
       echo 'no';
     }
   }

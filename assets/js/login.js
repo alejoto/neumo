@@ -8,7 +8,6 @@ function validateEmail(sEmail) {
     else {return false;}
 }
 
-
 /*checking valid email with blur function*/
 $('#usr').blur(function(){
   if (!validateEmail($('#usr').val()))
@@ -46,7 +45,7 @@ function hap_login_method (){
     $('#pwd').focus();
   }
 
-  //if no empty run ajax
+  //if no empty, run ajax
   else {
     //
     $("#loading").show();
@@ -74,6 +73,10 @@ $('#forgot_pwd').click(function(){
 
 /*-----end of login--------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
 
 
 /*-------------------------------------------------------------------------------*/
@@ -92,9 +95,8 @@ $('#mail').blur(function(){
   }
 })
 
+function hap_registration() {
 
-//Trigger user registration
-$("#register_button").click(function(){
   var pwd_reg=$('#pwd1').val();
   if ($('#mail').val()==""|| $('#pwd1').val()==""|| $('#pwd2').val()=="") {
     $("#msg_register").html("<div class='alert alert-error'>No puede dejar campos vac&iacute;os.</div>");
@@ -113,17 +115,27 @@ $("#register_button").click(function(){
 
     else
 {
+  $("#loading_reg").show();
   $("#msg_register").html("");
+
   $.post("modules/register/ajax_register.php",{ mail:$('#mail').val(), pwd1:$('#pwd1').val(), pwd2:$('#pwd2').val() }, function(data) {
     if(data=='yes') {
-      document.location='index.php';
+      
+      $("#msg_register").html("<div class='alert alert-success'>Muy bien! Ahora ingrese a su email para activar su cuenta.</div>");
+
     }
-    //else if () {} // send messagge 'already exist' to data.  if exist
+    else if (data=='mmm') {
+      $("#msg_register").html("<div class='alert alert-error'>Usuario ya inici&oacute; proceso de registro.  Verifique bandeja de entrada de su email para terminar de activar cuenta.</div>");
+    } 
     else
     {
-      $("#msg_register").html("<label class='control-label' for='inputError'>por favor Verifica tus datos.</label>");
+      $("#msg_register").html("<div class='alert alert-error'>Usuario ya existe.  Use el bot&oacute;n Entrar.  All&iacute; podr&aacute; recuperar su contrase&ntilde;a</div>");
     }
+    $("#loading_reg").hide();
     
   });}
+}
 
-});
+//Trigger user registration
+$("#register_button").click(function(){hap_registration()});
+$("#pwd2").keyup(function(event){if(event.keyCode == 13){hap_registration();} });

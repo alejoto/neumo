@@ -23,6 +23,9 @@
         <input class="input-large" id="pwd2" name="pwd2" type="password" placeholder="Confirmar contrase&ntilde;a"><br>
 
       </div><br>
+      <div  id="loading_reg" style="display:none">
+        <img src="assets/images/ajax-loader.gif"/>
+      </div>
     
       <div class="control-group error" id="msg_register"></div>
     
