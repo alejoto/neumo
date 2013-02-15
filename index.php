@@ -56,18 +56,20 @@
       </div>
      </div>
     <!--// END Imagenes Jquery-->
+
+    <hr>
         
     <div class="container" style="height: auto; background-image:url('http://localhost/hmd/neumo/assets/images/debut_light/debut_light.png');background-repeat:repeat-x;">
       
       <div class="row-fluid" style="margin-top: 40px; background-image:url('http://localhost/hmd/neumo/assets/images/debut_light/debut_light.png');background-repeat:repeat-x;">
         <div class="span4 alert" style="background: white; color: gray; border-color: white;">
           <h2 style="color: black; font-family: 'Oxygen', sans-serif;">Prop&oacute;sito</h2><br>
-          <div style="font-size:12px;font-family: 'Roboto', sans-serif;">Nuevos tratamientos de la <b>Hipertensi&oacute;n Arterial Pulmonar </b>
+          <div style="font-size:12px;font-family: 'Roboto', sans-serif; height: 263px;">Nuevos tratamientos de la <b>Hipertensi&oacute;n Arterial Pulmonar </b>
             hacen necesario investigar el impacto en la salud y sobrevida con dichas alternativas.</div>
            <br><br>
         </div>
         
-        <div class="span4 alert" style="background: white; color: gray; border-color: white;">
+        <div class="span4 alert" style="background: white; color: gray; border-color: white; height: 400px;">
           <h2 style="color: black; font-family: 'Oxygen', sans-serif;">El Registro</h2><br>
           <div style="font-size:12px;font-family: 'Roboto', sans-serif;">pretende recopilar la mayor informaci&oacute;n posible 
            sobre la enfermedad para identificar conductas terap&eacute;uticas innovadoras
@@ -75,7 +77,7 @@
            <br><br>
         </div>
 
-        <div class="span4 alert" style="background: white; color: gray; border-color: white;">
+        <div class="span4 alert" style="background: white; color: gray; border-color: white; height: 400px;">
           <h2 style="color: black; font-family: 'Oxygen', sans-serif;">Participe!</h2><br>
           <div style="font-size:12px; font-family: 'Roboto', sans-serif;">Si usted pertenece a una instituci&oacute;n que atiende pacientes con la enfermedad, 
           le invitamos a que hagas parte de este registro.</div>
@@ -89,7 +91,7 @@
         <div class="span4" style="color: #F2F2EF;">Columna 3</div>
         <br>
         <br>
-        <h5 style="color: #F2F2EF; border-top: solid;"><br>
+        <h5 style="color: #F2F2EF;"><br>
           RECOLHAP - Copyright 2012, Medell&iacute;n - Colombia.
         </h5>
       </div>
