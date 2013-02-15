@@ -12,14 +12,14 @@
       </blockquote>
     
       <div class="input-prepend">        
-        <span class="add-on">@</span>
-        <input class="input-large" id="mail" name="mail" type="text" value="@" placeholder="email">
+        <span class="add-on"><i class="icon-envelope "></i></span>
+        <input class="input-large" id="mail" name="mail" type="text" placeholder="Email">
         <br><br>
       
-        <span class="add-on">@</span>
+        <span class="add-on"><i class="icon-user"></i></span>
         <input class="input-large" id="pwd1" name="pwd1" type="password" placeholder="Contrase&ntilde;a"><br><br>
 
-        <span class="add-on">@</span>
+        <span class="add-on"><i class="icon-check "></i></span>
         <input class="input-large" id="pwd2" name="pwd2" type="password" placeholder="Confirmar contrase&ntilde;a"><br>
 
       </div><br>
