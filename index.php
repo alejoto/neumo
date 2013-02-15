@@ -50,7 +50,7 @@
     <center>
      <div class="row-fluid">
       <div class="span12" style="margin: 0px auto;">
-       <div id="banner" class="span10" style="width: 940px; margin: 0px auto;">
+       <div id="banner">
           <?php include 'modules/includes/carousel.html'; ?>
        </div>
       </div>
