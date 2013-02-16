@@ -22,13 +22,13 @@
     <script src="assets/js/bootstrap.min.js"></script>
   </head>
   
-  <body style="background-image:url('http://localhost/hmd/neumo/assets/images/debut_light.png');background-repeat:repeat;">
-   <div class="container" style="height: auto; background-image:url('http://localhost/hmd/neumo/assets/images/debut_light.png');background-repeat:repeat-x;">
+  <body style="background-image:url('assets/images/debut_light.png');background-repeat:repeat;">
+   <div class="container" style="height: auto; background-image:url('/assets/images/debut_light.png');background-repeat:repeat-x;">
       <br><br>
       <div class="row-fluid">
         
         <div class="span8" style="margin-top: -18px; text-align: left; padding-left: 50px;">
-          <h2 style="color: #5C5C64; font-family: 'Play', cursive;">RECOLHAP <img style="width: 36px; heigth: 29px;" src="http://localhost/hmd/neumo/assets/images/logo-gray.png"></h2>
+          <h2 style="color: #5C5C64; font-family: 'Play', cursive;">RECOLHAP <img style="width: 36px; heigth: 29px;" src="/assets/images/logo-gray.png"></h2>
         </div>
         
         <div class="span4">
@@ -67,33 +67,33 @@
 
     <hr>
         
-    <div class="container" style="height: auto; background-image:url('http://localhost/hmd/neumo/assets/images/debut_light.png');background-repeat:repeat-x;">
+    <div class="container" style="height: auto; background-image:url('/assets/images/debut_light.png');background-repeat:repeat-x;">
       
-      <div class="row-fluid" style="margin-top: 40px; background-image:url('http://localhost/hmd/neumo/assets/images/debut_light.png');background-repeat:repeat-x;">
-        <div class="span4 alert" style="background: white; color: gray; border-color: white;">
-          <h2 style="color: black; font-family: 'Oxygen', sans-serif;">Prop&oacute;sito <i class="icon-time"></i></h2><br>
+      <div class="row-fluid" style="margin-top: 40px; background-image:url('/assets/images/debut_light.png');background-repeat:repeat-x;">
+        <div class="span4 alert" style="background: #FAFAFA; color: gray; border-color: white;">
+          <h2 style="color: #4A4C4C;; font-family: 'Oxygen', sans-serif;">Prop&oacute;sito <i style="color: #4A4C4C;" class="icon-time"></i></h2><br>
           <div style="font-size:12px;font-family: 'Roboto', sans-serif; height: 263px;">Nuevos tratamientos de la <b>Hipertensi&oacute;n Arterial Pulmonar </b>
             hacen necesario investigar el impacto en la salud y sobrevida con dichas alternativas.</div>
            <br><br>
         </div>
         
-        <div class="span4 alert" style="background: white; color: gray; border-color: white; height: 400px;">
-          <h2 style="color: black; font-family: 'Oxygen', sans-serif;">El Registro  <i class="icon-user-md"></i></h2><br>
+        <div class="span4 alert" style="background: #FAFAFA; color: gray; border-color: white; height: 400px;">
+          <h2 style="color: #4A4C4C;; font-family: 'Oxygen', sans-serif;">El Registro  <i style="color: #4A4C4C;" class="icon-stethoscope"></i></h2><br>
           <div style="font-size:12px;font-family: 'Roboto', sans-serif;">pretende recopilar la mayor informaci&oacute;n posible 
            sobre la enfermedad para identificar conductas terap&eacute;uticas innovadoras
             que mejoren la calidad de vida de quienes la padecen.</div>
            <br><br>
         </div>
 
-        <div class="span4 alert" style="background: white; color: gray; border-color: white; height: 400px;">
-          <h2 style="color: black; font-family: 'Oxygen', sans-serif;">Participe  <i class="icon-globe"></i></h2><br>
+        <div class="span4 alert" style="background: #FAFAFA; color: gray; border-color: white; height: 400px;">
+          <h2 style="color: #4A4C4C;; font-family: 'Oxygen', sans-serif;">Participe  <i style="color: #4A4C4C;" class="icon-globe"></i></h2><br>
           <div style="font-size:12px; font-family: 'Roboto', sans-serif;">Si usted pertenece a una instituci&oacute;n que atiende pacientes con la enfermedad, 
           le invitamos a que hagas parte de este registro.</div>
           <br><br>
         </div>
       </div>
       <hr>
-      <div id="footer_index" class="row-fluid" style="margin-top: 0px; padding-left: 25px; background-image:url('http://localhost/hmd/neumo/assets/images/blackorchid.png')">
+      <div id="footer_index" class="row-fluid" style="margin-top: 0px; padding-left: 25px; background-image:url('assets/images/blackorchid.png')">
         <div class="span4" style="color: #F2F2EF;">Columna 1</div>
         <div class="span4" style="color: #F2F2EF;">Columna 2</div>
         <div class="span4" style="color: #F2F2EF;">Columna 3</div>
