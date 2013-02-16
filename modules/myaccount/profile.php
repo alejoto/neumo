@@ -17,7 +17,8 @@
             <h4>INGRESO CLINICO</h4>
           </div>
           
-          <? echo $_SESSION['patient']; ?>
+          <? //echo $_SESSION['patient']; 
+          ?>
           <? //include '../includes/form_clinico.php'; ?>  
         </div>
       </div>
