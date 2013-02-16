@@ -7,13 +7,9 @@
 
   //if (!$con) die('Could not connect: ' . mysql_error());
   //else echo 'connection succesfull', "\n";
-
   //mysql_select_db("healmy5_health", $con);
   
   mysql_select_db("health", $con);  /*temporary user and pwd attr*/
-  
-
-
   $sql=mysql_query("SELECT status FROM users");
 if (!$sql){ mysql_query("ALTER TABLE users ADD status VARCHAR(60) AFTER rol");}
 ?>

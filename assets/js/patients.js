@@ -61,19 +61,16 @@ if ($("#idnumber").val()!="") {
 
 
     $.post("ajax_search_patient.php",{ doc:docidnum }, function(data) {
+      $('#patientexist').html(data);
+      
       if(data=='no') {
         $("#enterpatient").show("fast");
         $("#patientexist").hide("fast");
       }else{
         $("#enterpatient").hide("fast");
         $("#patientexist").show("fast");
+      }/**/
 
-        var myArray = data.split('?');
-        for(var i=0;i<myArray.length;i++){
-          var pos = "#patient_" +  i;
-          $(pos).html(myArray[i]);
-        }
-      }
     });
   }
   else{

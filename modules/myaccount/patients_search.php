@@ -10,33 +10,38 @@
         <img src="../../assets/images/logo_temp.jpg" style="border-radius:25px 25px 25px 25px;">
       </div>
 
-      <blockquote>
-        <p>Selecciona tipo y n&uacute;mero de documento:</p>
-        <small>Recuerda que los datos corresponden solo a pacientes</small>
-      </blockquote><br>
+      
+        <p>INGRESE DOCUMENTO IDENTIDAD DEL PACIENTE:</p>
+        <br/>
+     
 
       <div style="margin-left: 20px;">
-        <b>Tipo documento</b><br><br>
         <div class="control-group" style="width: 300px;" >
           <div class="controls" style="margin-left: 0px;">
-            <select id="docid" >
-              <option value=""></option>
-              <option value="cc">C&eacute;dula</option>
-              <option value="rc">Registro Civil</option>
-              <option value="ti">Tarjeta de Identidad</option>
-              <option value="ce">C&eacute;dula Extranjera</option>
-              <option value="pas">Pasaporte</option>
-            </select>
+            <div id="idtypectr" class="input-prepend">
+              <span class="add-on"><i class="icon-list-alt"></i></span>
+              <select id="docid" >
+                <option value="" >Tipo documento</option>
+                <option value="cc">C&eacute;dula</option>
+                <option value="rc">Registro Civil</option>
+                <option value="ti">Tarjeta de Identidad</option>
+                <option value="ce">C&eacute;dula Extranjera</option>
+                <option value="pas">Pasaporte</option>
+              </select>
+            </div>
           </div>
         </div>
 
         <div class="control-group" style="width: 300px;" >
           <label class="control-label" for="idnumber"></label>
           <div class="controls" style="margin-left: 0px;">
-            <div id="idnumberctr" class="input-append">
+            <div id="idnumberctr" class="input-prepend input-append">
+              <span class="add-on"><i class="icon-user"></i></span>
               <input type="text" id="idnumber" placeholder="N&uacute;mero identidad"/>
-              <button class="btn" type="button"><i class="icon-search"></i></button>
+              <button class="btn" type="button"> <i class="icon-search"></i></button>
+              
             </div>
+            
           </div>
         </div>
       </div>
@@ -63,8 +68,8 @@
       
           <select id="gender" name="gender">
             <option value="">G&eacute;nero</option>
-            <option value="cc">Hombre</option>
-            <option value="rc">Mujer</option>
+            <option value="male">Hombre</option>
+            <option value="female">Mujer</option>
           </select><br>
       
           <input type="text" id="year" name="year" placeholder="A&ntilde;o" class="span3" style="margin-left: -125px;">
@@ -80,25 +85,19 @@
         </form>
       </div>
           
-      
-      <div id="patientexist">
-                
-        <div class="page-header" style="border: none; padding-left: 70px;">
-          <h1><u>Paciente</u><br> <small>Informaci&oacute;n Pertinente</small></h1>
-        </div>
-        
-        <div class="alert alert-success fade in" style="margin-left: 70px; margin-top: -15px;">
-          <button type="button" class="close" data-dismiss="alert">&times;</button>
-          El paciente ya ha sido registrado si desea continuar a su historia cl&iacute;nica de click en siguiente.
-        </div>
-        
+      <!-- *********************** -->
+      <!-- Found patient (if exist)-->
+      <div id="patientexist" style="padding-left: 70px; text-align: left; margin-top: 35px;">
+        <!--
         <div style="padding-left: 70px; text-align: left; margin-top: 35px;">
-          <center>
-            <? include 'info_patient.php'; ?>
-          </center>
+        -->
+          
+            <? /*include 'info_patient.php'; */?>
+          
         </div>
-        
       </div>
+      <!-- end of "Found patient"  -->
+      <!-- *********************** -->
       
       <script src="../../assets/js/patients.js"></script>    
  
@@ -110,4 +109,16 @@
 
 <script>
   $("#edit_patient").hide();
+  //$("#docid").hide();
+  
+  $(document).ready(function(){
+    if ($('#docid').val()=="") {$('#docid').css("color","#CECECE");}
+    //$('#docid').click(function(){$('#docid').css("color","black");});
+    $('#docid').change(function(){
+      if ($('#docid').val()=="") {$('#docid').css("color","#CECECE");}
+      else 
+      {$('#docid').css("color","#494949");}
+    });
+  });
+  
 </script>
