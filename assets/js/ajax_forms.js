@@ -1,11 +1,10 @@
 function to_database(info,table) {
   $.post("../patient/ajax_save.php",{ info:info, table:table }, function(data) {
-    alert(data+"cosa");
     if(data=='Yes') {
-      alert("datos guardados exitosamente");
+      alert("Datos guardados exitosamente");
     }else{
       //alert(data+"en el segundo");
-			alert("ocurrio un problema al guardar los datos");
+			alert("Ocurrio un problema al guardar los datos");
     }
   });  
 }
