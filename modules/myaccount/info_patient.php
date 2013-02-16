@@ -1,11 +1,12 @@
 <?
-  $names = array('Documento','Nombre','Apellidos','Genero','Nacimiento','Pais','Ciudad','Estado','Digitador');  
-  $cont = 0;
+  //$names = array('Documento','Nombre','Apellidos','Genero','Nacimiento','Pais','Ciudad','Estado','Digitador');  
+  //$cont = 0;
   
-  echo '';
+  //echo '';
   //for($i=0;$i<11;++$i){
     //if( $i != 5 && $i != 6 ){
       ?>
+      <!-- 
       <div class="row alert">
           <div class='span11'>
             <div class="row">
@@ -28,7 +29,7 @@
           </div>
       </div>
       
-      
+      -->
 
       <?php
 
@@ -37,9 +38,9 @@
               <td style="border: ridge; padding-right: 25px; "><b>'.$names[$cont].'</b></td>
               <td style="border: ridge;" id="patient_'.$cont.'"></td>
             </tr>';/**/
-      $cont++;
+      //$cont++;
     //}
   //}
-  echo '<br><br>';
-  echo '<a style="margin-left: 70px;" href="myaccount.php?page=profile" role="button" class="btn btn-primary span8"> Ingresar datos del paciente </a>';
+  //echo '<br><br>';
+  //echo '<a style="margin-left: 70px;" href="myaccount.php?page=profile" role="button" class="btn btn-primary span8"> Ingresar datos del paciente </a>';
 ?>

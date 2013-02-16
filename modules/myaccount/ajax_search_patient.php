@@ -1,21 +1,20 @@
 <?php
   session_start();
-
   include '../DB/connect.php';
-
   $doc  = $_POST['doc'];
-
   $sql    = "SELECT * FROM main_patient WHERE patient_id='".$doc."'";
   $result = mysql_query($sql);
   $row    = mysql_fetch_array($result);
 
   if (mysql_num_rows($result)>0 ){
     ?>
-    <div class="row alert">
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div class="row alert alert-success">
       <br/>
       <div class="span3">
-
-
         <?php 
         if ($row['gender']=='male') {
           ?>
@@ -72,28 +71,18 @@
         </div>
       </div>
     </div>
-<a style="margin-left: 70px;" href="myaccount.php?page=profile" role="button" class="btn btn-primary span8"> Ingresar datos del paciente </a>
-
-
+    <a style="margin-left: 10px;" href="myaccount.php?page=profile" role="button" class="btn btn-success span11">
+      Ingresar datos del paciente
+    </a>
     <?php
-
-    
-
     $patient = "";
-    
-    
     for($i=0;$i<10; ++$i){
       if($i != 1){
         $patient .= $row[$i];
         if( $i<9 ) $patient .= "?";
       }
-    }/**/
-    
-    
-    
+    }
     $_SESSION['patient'] = $patient;
-    //echo $patient;
-  
   }else echo 'no';
   mysql_close($con);
 ?>

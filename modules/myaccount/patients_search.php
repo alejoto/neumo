@@ -10,9 +10,10 @@
         <img src="../../assets/images/logo_temp.jpg" style="border-radius:25px 25px 25px 25px;">
       </div>
 
-      
-        <p>INGRESE DOCUMENTO IDENTIDAD DEL PACIENTE:</p>
-        <br/>
+      <blockquote>
+        <p  class="text-warning">Ingrese documento del paciente:</p>
+      </blockquote>
+        
      
 
       <div style="margin-left: 20px;">
@@ -50,17 +51,16 @@
 
     <div class="span6 offset1" style="border-left: ridge; height: 560px; margin-top: 40px; " >
 
+      <!-- ************************ -->
+      <!-- First time patient      -->
       <div id="enterpatient">
         <div class="page-header" style="border: none; padding-left: 70px;">
-          <h2><u>Registro de pacientes</u></h2>
+          <!-- <h2>Registrar paciente</h2> -->
         </div>
-                
-        <div class="alert alert-error fade in" style="margin-left: 70px; margin-top: -15px;">
+        <h4 class="alert  fade in" style="margin-left: 70px; margin-top: -15px;">
           <button type="button" class="close" data-dismiss="alert">&times;</button>
-          El paciente con el n&uacute;mero de identificaci&oacute;n especificado no existe si desea registrarlo llene sus datos en el siguiente formulario
-        </div>
-        
-        
+          Documento no existe.  Ingrese PACIENTE NUEVO o verifique documento ingresado.
+        </h4>
         <form action="ajax_save_patient.php" method="post" style="padding-left: 70px; text-align: center; margin-top: 40px;">
           <input type="text" id="docidnum" name="docidnum">        
           <input type="text" id="name" name="name" placeholder="Nombre completo"><br>
@@ -71,11 +71,14 @@
             <option value="male">Hombre</option>
             <option value="female">Mujer</option>
           </select><br>
-      
-          <input type="text" id="year" name="year" placeholder="A&ntilde;o" class="span3" style="margin-left: -125px;">
-          <input type="text" id="month" name="month" placeholder="Mes" class="span3">
-          <input type="text" id="day" name="day" placeholder="D&iacute;a" class="span3"><br>
-
+          <div class="row">
+            
+            <div class="span12" style="padding-left:105px;text-align:left">
+              <input type="text" id="year" name="year" placeholder="A&ntilde;o" class="span3" >
+              <input type="text" id="month" name="month" placeholder="Mes" class="span3">
+              <input type="text" id="day" name="day" placeholder="D&iacute;a" class="span3">
+            </div>
+          </div>
           <input type="text" id="citybth" name="citybth" placeholder="Ciudad nacimiento"><br>  
           <input type="text" id="statebth" name="statebth" placeholder="Departamento"><br>
           <input type="text" id="countrybth" name="countrybth" placeholder="Pa&iacute;s de origen"><br><br>
@@ -84,28 +87,22 @@
           <a href="#" role="button" class="btn btn-success" style=""> Datos adicionales </a>
         </form>
       </div>
-          
-      <!-- *********************** -->
-      <!-- Found patient (if exist)-->
+      <!-- End of First time patient-->
+      <!-- ************************ -->
+
+      <!-- ************************ -->
+      <!-- Found patient (if exist) -->
       <div id="patientexist" style="padding-left: 70px; text-align: left; margin-top: 35px;">
-        <!--
-        <div style="padding-left: 70px; text-align: left; margin-top: 35px;">
-        -->
-          
-            <? /*include 'info_patient.php'; */?>
-          
-        </div>
       </div>
-      <!-- end of "Found patient"  -->
-      <!-- *********************** -->
-      
-      <script src="../../assets/js/patients.js"></script>    
- 
+      <!-- end of "Found patient"   -->
+      <!-- ************************ -->
+
     </div>
-
+    <script src="../../assets/js/patients.js"></script>
   </div>
-
 </div>
+
+
 
 <script>
   $("#edit_patient").hide();
