@@ -11,8 +11,8 @@
       </div>
 
       <blockquote>
-        <p  class="text-warning">Ingrese documento del paciente:</p>
-      </blockquote>
+        <p>Selecciona tipo y n&uacute;mero de documento:</p>
+      </blockquote><br>
         
      
 
