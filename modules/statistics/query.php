@@ -89,8 +89,8 @@
 
         $min_date_arr = explode("-", $min_date );
         $act_date_arr = explode("-", $row['eval_date'] );
-        $miliseconds_min = mktime(0,0,0,intval($min_date_arr[2]),intval($min_date_arr[1]),intval($min_date_arr[0]));
-        $miliseconds_max = mktime(0,0,0,intval($act_date_arr[2]),intval($act_date_arr[1]),intval($act_date_arr[0]));
+        $miliseconds_min = mktime(0,0,0,intval($min_date_arr[1]),intval($min_date_arr[2]),intval($min_date_arr[0]));
+        $miliseconds_max = mktime(0,0,0,intval($act_date_arr[1]),intval($act_date_arr[2]),intval($act_date_arr[0]));
         $years_since_first_eval = floor( ($miliseconds_max - $miliseconds_min) / (60*60*24*365) );
         if($years_since_first_eval >= $year){
           $pat[(string)$row['eval_id']] = $inc;
@@ -109,8 +109,8 @@
     
     $min_date_arr = explode("-", $min_date );
     $act_date_arr = explode("-", $eval_date );
-    $miliseconds_min = mktime(0,0,0,intval($min_date_arr[2]),intval($min_date_arr[1]),intval($min_date_arr[0]));
-    $miliseconds_max = mktime(0,0,0,intval($act_date_arr[2]),intval($act_date_arr[1]),intval($act_date_arr[0]));
+    $miliseconds_min = mktime(0,0,0,intval($min_date_arr[1]),intval($min_date_arr[2]),intval($min_date_arr[0]));
+    $miliseconds_max = mktime(0,0,0,intval($act_date_arr[1]),intval($act_date_arr[2]),intval($act_date_arr[0]));
     $days_since_first_eval = floor( ($miliseconds_max - $miliseconds_min) / (60*60*24) );
     
     return intval($days_since_first_eval/30);
@@ -128,7 +128,7 @@
   if($info == "funcional_tiempo"){
     // crea arreglo pacientes
     $pat = array();
-    $pat = find_patients(1,$pat);
+    $pat = find_patients($y_opt,$pat);
      
     // crea arreglo clases functionales asociadas a pacientes
     $ap = array_fill(0, count($pat), array());
@@ -159,6 +159,11 @@
         if($ap[$j][$i] == "iv") $result[3][$i]++;
       }
     }
+
+    $result[0] = array_slice($result[0],0,12);
+    $result[1] = array_slice($result[1],0,12);
+    $result[2] = array_slice($result[2],0,12);
+    $result[3] = array_slice($result[3],0,12);
 
     $exit = false;
     $serialized_result = implode(",",$result[0])."?".

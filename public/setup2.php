@@ -20,8 +20,8 @@
 
         $min_date_arr = explode("-", $min_date );
         $act_date_arr = explode("-", $row['eval_date'] );
-        $miliseconds_min = mktime(0,0,0,intval($min_date_arr[2]),intval($min_date_arr[1]),intval($min_date_arr[0]));
-        $miliseconds_max = mktime(0,0,0,intval($act_date_arr[2]),intval($act_date_arr[1]),intval($act_date_arr[0]));
+        $miliseconds_min = mktime(0,0,0,intval($min_date_arr[1]),intval($min_date_arr[2]),intval($min_date_arr[0]));
+        $miliseconds_max = mktime(0,0,0,intval($act_date_arr[1]),intval($act_date_arr[2]),intval($act_date_arr[0]));
         $years_since_first_eval = floor( ($miliseconds_max - $miliseconds_min) / (60*60*24*365) );
         if($years_since_first_eval >= $year){
           $pat[(string)$row['eval_id']] = $inc;
@@ -40,11 +40,11 @@
     
     $min_date_arr = explode("-", $min_date );
     $act_date_arr = explode("-", $eval_date );
-    $miliseconds_min = mktime(0,0,0,intval($min_date_arr[2]),intval($min_date_arr[1]),intval($min_date_arr[0]));
-    $miliseconds_max = mktime(0,0,0,intval($act_date_arr[2]),intval($act_date_arr[1]),intval($act_date_arr[0]));
-    $days_since_first_eval = floor( ($miliseconds_max - $miliseconds_min) / (60*60*24) );
+    $miliseconds_min = mktime(0,0,0,intval($min_date_arr[1]),intval($min_date_arr[2]),intval($min_date_arr[0]));
+    $miliseconds_max = mktime(0,0,0,intval($act_date_arr[1]),intval($act_date_arr[2]),intval($act_date_arr[0]));
+    $days_since_first_eval = abs( ($miliseconds_max - $miliseconds_min) / (60*60*24) );
     
-    return intval($days_since_first_eval/30);
+    return floor($days_since_first_eval/30);
   }
   
   function fill_ap($ap){
@@ -73,11 +73,22 @@
       $eval_date = $row['eval_date'];
       if( isset($pat[(string)$act_p]) ){    
         $month = find_month_since_first_eval($act_p, $eval_date);
+        //echo $act_p." ".$eval_date." ".$month."<br>";
         $ap[$pat[(string)$act_p]][$month] = $row['nyha_funct_class'];
+        
       }
     }
     
     $ap = fill_ap($ap);
+    
+    /*
+    for( $i = 0; $i < count($ap); $i++ ){
+      for( $j = 0; $j < 36; $j++ ){
+        echo $j.$ap[$i][$j]." ";
+      }
+      echo '<br>';
+    }
+    */
 
     $result = array_fill(0, 4, array());
     for( $i = 0; $i < 4; $i++ ) $result[$i] = array_fill(0, 36, 0);
@@ -92,20 +103,19 @@
     }
 
     $exit = false;
+    //var_dump($ap);
+    $result[0] = array_slice($result[0],0,12);
+    $result[1] = array_slice($result[1],0,12);
+    $result[2] = array_slice($result[2],0,12);
+    $result[3] = array_slice($result[3],0,12);
+
     $serialized_result = implode(",",$result[0])."?".
                          implode(",",$result[1])."?".
                          implode(",",$result[2])."?".
                          implode(",",$result[3]);
     $serialized_result = str_replace(" ", "", $serialized_result);
+
     
-    /*
-    for( $i = 0; $i < 4; $i++ ){
-      for( $j = 0; $j < 36; $j++ ){
-        echo $result[$i][$j]." ";
-      }
-      echo '<br>';
-    }
-    */
   }
   
   mysql_close($con);

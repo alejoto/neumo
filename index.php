@@ -32,7 +32,7 @@
         </div>
         
         <div class="span4">
-          <a href="mailto:marketing@healmydisease.com" class="left_space"> <b style="font-family: 'Oxygen', sans-serif;"> Contactanos </b> </a>
+          <a href="mailto:marketing@healmydisease.com" class="left_space"> <b style="font-family: 'Oxygen', sans-serif; margin-left: -15px"> Contactanos </b> </a>
           &nbsp; | &nbsp;
           
           <?php
@@ -53,10 +53,10 @@
         </div>
       </div>
     </div>  
-    <hr>
+    <hr style="margin-top: 0px;">
     <!--// START Imagenes Carousel-->
     <center>
-     <div class="row-fluid">
+     <div class="row-fluid" style="margin-top: 0px;">
       <div class="span12" style="margin: 0px auto;">
        <div id="banner">
           <?php include 'modules/includes/carousel.html'; ?>
@@ -69,31 +69,33 @@
         
     <div class="container" style="height: auto; background-image:url('assets/images/debut_light.png');background-repeat:repeat-x;">
       
-      <div class="row-fluid" style="margin-top: 40px; background-image:url('assets/images/debut_light.png');background-repeat:repeat-x;">
+      <div class="row-fluid" style="margin-top: 40px; background-image:url('assets/images/debut_light.png');background-repeat:repeat-x; margin-top: 0px;">
+
         <div class="span4 alert" style="background: #FAFAFA; color: gray; border-color: white;">
-          <h2 style="color: #4A4C4C;; font-family: 'Oxygen', sans-serif;">Prop&oacute;sito <i style="color: #4A4C4C;" class="icon-time"></i></h2><br>
-          <div style="font-size:12px;font-family: 'Roboto', sans-serif; height: 263px;">Nuevos tratamientos de la <b>Hipertensi&oacute;n Arterial Pulmonar </b>
-            hacen necesario investigar el impacto en la salud y sobrevida con dichas alternativas.</div>
+                  <img src="assets/images/icon-discover.png">
+          <h2 style="color: #4A4C4C;; font-family: 'Oxygen', sans-serif; margin-top: 30px;">Prop&oacute;sito <i style="color: #4A4C4C;" class="icon-time"></i></h2><br>
+          <div  style="font-size:14px;font-family: 'Roboto', sans-serif; height: 80px;">Nuevos tratamientos de la <b>Hipertensi&oacute;n Arterial Pulmonar </b> y nuvas herramientas para su analisis</div>
            <br><br>
         </div>
         
-        <div class="span4 alert" style="background: #FAFAFA; color: gray; border-color: white; height: 400px;">
-          <h2 style="color: #4A4C4C;; font-family: 'Oxygen', sans-serif;">El Registro  <i style="color: #4A4C4C;" class="icon-stethoscope"></i></h2><br>
-          <div style="font-size:12px;font-family: 'Roboto', sans-serif;">pretende recopilar la mayor informaci&oacute;n posible 
-           sobre la enfermedad para identificar conductas terap&eacute;uticas innovadoras
-            que mejoren la calidad de vida de quienes la padecen.</div>
+        <div class="span4 alert" style="background: #FAFAFA; color: gray; border-color: white; height: 330px;">
+          <img src="assets/images/icon-one.png">
+          <h2 style="color: #4A4C4C;; font-family: 'Oxygen', sans-serif; margin-top: 30px;">El Registro  <i style="color: #4A4C4C;" class="icon-stethoscope"></i></h2><br>
+          <div  style="font-size:1rpx;font-family: 'Roboto', sans-serif;">pretende recopilar la mayor informaci&oacute;n posible 
+           sobre la enfermedad para identificar conductas terap&eacute;uticas innovadoras.</div>
            <br><br>
         </div>
 
-        <div class="span4 alert" style="background: #FAFAFA; color: gray; border-color: white; height: 400px;">
-          <h2 style="color: #4A4C4C;; font-family: 'Oxygen', sans-serif;">Participe  <i style="color: #4A4C4C;" class="icon-globe"></i></h2><br>
-          <div style="font-size:12px; font-family: 'Roboto', sans-serif;">Si usted pertenece a una instituci&oacute;n que atiende pacientes con la enfermedad, 
-          le invitamos a que hagas parte de este registro.</div>
+        <div class="span4 alert" style="background: #FAFAFA; color: gray; border-color: white; height: 330px;">
+          <img src="assets/images/icon-organized.png">
+          <h2 style="color: #4A4C4C;; font-family: 'Oxygen', sans-serif; margin-top: 30px;">Participe  <i style="color: #4A4C4C;" class="icon-globe"></i></h2><br>
+          <div  style="font-size:14px; font-family: 'Roboto', sans-serif;">Perteneces a una instituci&oacute;n que atiende pacientes con la enfermedad, 
+          le invitamos a registrarse.</div>
           <br><br>
         </div>
       </div>
       <hr>
-      <div id="footer_index" class="row-fluid" style="margin-top: 0px; padding-left: 25px; background-image:url('assets/images/blackorchid.png')">
+      <div hidden id="footer_index" class="row-fluid" style="margin-top: 0px; padding-left: 25px; background-image:url('assets/images/blackorchid.png')">
         <div class="span4" style="color: #F2F2EF;">Columna 1</div>
         <div class="span4" style="color: #F2F2EF;">Columna 2</div>
         <div class="span4" style="color: #F2F2EF;">Columna 3</div>
