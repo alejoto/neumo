@@ -23,12 +23,12 @@
   </head>
   
   <body style="background-image:url('assets/images/debut_light.png');background-repeat:repeat;">
-   <div class="container" style="height: auto; background-image:url('/assets/images/debut_light.png');background-repeat:repeat-x;">
+   <div class="container" style="height: auto; background-image:url('assets/images/debut_light.png');background-repeat:repeat-x;">
       <br><br>
       <div class="row-fluid">
         
         <div class="span8" style="margin-top: -18px; text-align: left; padding-left: 50px;">
-          <h2 style="color: #5C5C64; font-family: 'Play', cursive;">RECOLHAP <img style="width: 36px; heigth: 29px;" src="/assets/images/logo-gray.png"></h2>
+          <h2 style="color: #5C5C64; font-family: 'Play', cursive;">RECOLHAP <img style="width: 36px; heigth: 29px;" src="assets/images/logo-gray.png"></h2>
         </div>
         
         <div class="span4">
@@ -67,9 +67,9 @@
 
     <hr>
         
-    <div class="container" style="height: auto; background-image:url('/assets/images/debut_light.png');background-repeat:repeat-x;">
+    <div class="container" style="height: auto; background-image:url('assets/images/debut_light.png');background-repeat:repeat-x;">
       
-      <div class="row-fluid" style="margin-top: 40px; background-image:url('/assets/images/debut_light.png');background-repeat:repeat-x;">
+      <div class="row-fluid" style="margin-top: 40px; background-image:url('assets/images/debut_light.png');background-repeat:repeat-x;">
         <div class="span4 alert" style="background: #FAFAFA; color: gray; border-color: white;">
           <h2 style="color: #4A4C4C;; font-family: 'Oxygen', sans-serif;">Prop&oacute;sito <i style="color: #4A4C4C;" class="icon-time"></i></h2><br>
           <div style="font-size:12px;font-family: 'Roboto', sans-serif; height: 263px;">Nuevos tratamientos de la <b>Hipertensi&oacute;n Arterial Pulmonar </b>
