@@ -5,7 +5,6 @@
 
   $usr  = htmlspecialchars($_POST['usr'],ENT_QUOTES);
   $pwd  = $_POST['pwd'];
-
   $sql    = "SELECT * FROM users WHERE user_id='".$usr."'";
   $result = mysql_query($sql);
   $row    = mysql_fetch_array($result);

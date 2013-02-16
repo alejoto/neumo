@@ -1,10 +1,11 @@
 function to_database(info,table) {
   $.post("../patient/ajax_save.php",{ info:info, table:table }, function(data) {
-    alert(data);
+    alert(data+"cosa");
     if(data=='Yes') {
       alert("datos guardados exitosamente");
     }else{
-      alert("ocurrio un problema al guardar los datos");
+      //alert(data+"en el segundo");
+			alert("ocurrio un problema al guardar los datos");
     }
   });  
 }
@@ -51,6 +52,7 @@ function get_info(info_id){
   return result;
 }
 
+
 $("#sympt_save").click(function(){
   var info = get_info("anamnesis");
   to_database(info,"table_name");
@@ -79,5 +81,8 @@ $("#outcome_save").click(function(){
 
 $("#save_ecg").click(function(){
   var info = get_info("ecg");
+  //Insert into database the information about the evaluation
+	//insert_eval();
+
   to_database(info,"hap_electrok");
 });
