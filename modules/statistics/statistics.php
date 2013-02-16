@@ -5,31 +5,27 @@
     
     <div class="span12">
             
-      <div class="well well-small span12" style="color: gray; margin-top: 40px; text-align: center;">
+      <div class="well well-small span12" style="color: gray; margin-top: 40px; text-align: center; " >
         <h5 style="margin: 10px 0px 0px 10px; float: left;" class="span2">Graficando</h5>
         <div style="float: left; margin-top: 10px; margin-left: 0px;">|</div>
 
-        <div style="float: left; margin-left: 60px; margin-top: 0px;" >
+        <div style="float: left; margin-left: 40px; margin-top: 0px;" >
           Datos a graficar: &nbsp;
-          <select class="span2" id="info_type" style="margin-top: 7px;">
+          <select class="span3" id="info_type" style="margin-top: 7px;">
             <option value=""></option>
             <option value="pacientes">Pacientes</option>
             <option value="genero">G&eacute;nero</option>
             <option value="edades">Edades</option>
             <option value="afroamerican">Raza afroamericana</option>
             <option value="funcional">Clase funcional</option>
-            <option value="funcional_tiempo">Funcional nn el tiempo</option>
+            <option value="funcional_tiempo">Funcional en el tiempo</option>
           </select>
         </div>
 
-        <div style="float: left; margin-left: 30px; margin-top: 0px;" >
-          Tipo de grafica: &nbsp;
-          <select class="span2" id="graph_type" style="margin-top: 7px;">
+        <div style="float: left; margin-left: 30px; margin-top: 0px;" id="year_opt">
+          A&ntilde;o: &nbsp;
+          <select class="span2" id="year_stat" style="margin-top: 7px;">
             <option value=""></option>
-            <option value="combo">Combo</option>
-            <option value="line_time_zoom">Line Time Zoom</option>
-            <option value="spline">Spline</option>
-            <option value="spline_dynamic">Spline Dynamic</option>
           </select>
         </div>
         

@@ -119,12 +119,50 @@ function spline(all_content, graph_dates){
   }); // Highcharts end
 }
 
-function line_time_zoom(){
+function pie( all_content, graph_dates ){
+  var x_axis = all_content[0],
+      tooltip_label = all_content[1],
+      style_v = { left: '60px', top: '200px', color: 'black', fontSize: '30px' },
+      title_name = all_content[2];
   
-}
+  var graph_values = graph_dates.split(','),
+      pie_dates = new Array(),
+      tot = 0;  
+      
+  for(var i=0; i<graph_values.length; i++){
+    graph_values[i] = +graph_values[i];
+    pie_dates[i] = { name: x_axis[i], y: graph_values[i], color: Highcharts.getOptions().colors[1+i%5] };
+    tot += graph_values[i];
+  }
+  
+  var html_v = 'Total: ' + tot;
+      
+  chart = new Highcharts.Chart({
+  
+    chart: { renderTo: 'container' },
+    title: { text: title_name },
+    xAxis: { categories: x_axis },
+    tooltip: {
+      formatter: function() {
+        var s = (this.point.name)? this.point.name: this.x,
+            p = '<br>Porcentaje: '+parseInt((this.y*100.0)/tot) + '%';
+        s += ': '+this.y+' '+tooltip_label + p;
+        return s;
+      }
+    },
+    labels: { items: [{ html: html_v, style: style_v }] },
 
-function spline_dynamic(){
-  
+    series: [{
+      type: 'pie',
+      name: title_name,    
+      data: pie_dates,
+      center: [450, 180],
+      size: 300,
+      showInLegend: false,
+      dataLabels: { enabled: false }
+    }] // series end
+    
+  }); // Highcharts end
 }
 
 function content(info_type){
@@ -159,21 +197,44 @@ function content(info_type){
 }
 
 $("#graph").click(function(){
-  var graph_type = $("#graph_type")[0].value,
-      info_type = $("#info_type")[0].value,
+  var info_type = $("#info_type")[0].value,
+      year_option = $("#year_stat")[0].value,
       graph_name;
 
-  if(info_type=="") alert("Seleccione datos a graficar");
-  if(graph_type=="") alert("Seleccione un tipo de grafico");
-  if(info_type == "" || graph_type == "") return ;
-
-  if(graph_type == "combo") graph_name = combo;
-  else if(graph_type == "line_time_zoom") graph_name = line_time_zoom;
-  else if(graph_type == "spline") graph_name = spline;
-  else if(graph_type == "spline_dynamic") graph_name = spline_dynamic;
+  if(info_type==""){
+    alert("Seleccione datos a graficar");
+    return ;
+  }
   
-  $.post( "../statistics/query.php" ,{ info:info_type }, function(data) {
+  if( info_type == "pacientes") graph_name = combo;
+  else if( info_type == "funcional_tiempo") graph_name = spline;
+  else graph_name = pie;
+  
+  $.post( "../statistics/query.php" ,{ info:info_type, y_opt:year_option }, function(data) {
     graph_name( content(info_type), data );
   });
 
+});
+
+$(document).ready( function(){
+  $('#year_stat').hide();
+  $('#year_opt').hide();
+  
+  $('#info_type').on('change', function() {  
+
+    var opt2 = "";    
+    var opt1 = "<option value='1'>1</option><option value='2'>2</option><option value='3'>3</option>";
+    for(var i=2013;i<2016;++i) opt2 += "<option value='"+i+"'>"+i+"</option>";
+    
+    if( this.value=="pacientes" ){ 
+      $('#year_opt').show();
+      $('#year_stat').show().html(opt2);
+    }else if( this.value=="funcional_tiempo" ){ 
+      $('#year_opt').show();
+      $('#year_stat').show().html(opt1);
+    }else{
+      $('#year_opt').hide();
+      $('#year_stat').hide();
+    }
+  });
 });

@@ -1,3 +1,5 @@
+<? unset( $_SESSION['patient'] ); ?>
+
 <div class="container">
   <div class="row-fluid">
 

@@ -4,6 +4,7 @@
   include '../DB/connect.php';
 
   $info  = $_POST['info'];
+  $y_opt  = $_POST['y_opt'];
   $exit = true;
 
   if($info == "pacientes"){
@@ -13,7 +14,7 @@
     $temp = array(0,0,0,0,0,0,0,0,0,0,0,0);
     while( $row = mysql_fetch_array($result) ){
       $tales = explode("-", $row['timestamp']);
-      if( $tales[0] == "2013" ){
+      if( $tales[0] == $y_opt ){
         $temp[ intval($tales[1])-1 ]++;
       }
     }
@@ -69,44 +70,106 @@
     }
   }
   
-  if($info == "funcional_tiempo"){
+  // ------------------------------------------------------------------
+  // ------------------------------------------------------------------
+  
+  function find_patients($year, $pat){
+    $inc = 0;
     $sql    = "SELECT * FROM hap_follow_up";
     $result = mysql_query($sql);
-    
-    $func = array(array(), array(), array(), array());
-    $func[0] = array_fill(0, 36, 0);
-    $func[1] = array_fill(0, 36, 0);
-    $func[2] = array_fill(0, 36, 0);
-    $func[3] = array_fill(0, 36, 0);
-
     while( $row = mysql_fetch_array($result) ){
-      $fc = $row['nyha_funct_class']; // functional class
-      
-      /*
-      $act_date = $row['eval_date'];
-      $sql2 = "SELECT * FROM hap_follow_up WHERE eval_id = '".$act_date"' ";
-      $result2 = mysql_query($sql);
-      while( $row = mysql_fetch_array($result) ){
+
+      $act_p = $row['eval_id'];
+
+      if( !isset($pat[(string)$act_p]) ){
+        $sql2 = "SELECT min(eval_date) FROM hap_follow_up WHERE eval_id='".$act_p."'";
+        $result2 = mysql_query($sql2);
+        $row1 = mysql_fetch_array($result2);
+        $min_date = $row1[0];
+
+        $min_date_arr = explode("-", $min_date );
+        $act_date_arr = explode("-", $row['eval_date'] );
+        $miliseconds_min = mktime(0,0,0,intval($min_date_arr[2]),intval($min_date_arr[1]),intval($min_date_arr[0]));
+        $miliseconds_max = mktime(0,0,0,intval($act_date_arr[2]),intval($act_date_arr[1]),intval($act_date_arr[0]));
+        $years_since_first_eval = floor( ($miliseconds_max - $miliseconds_min) / (60*60*24*365) );
+        if($years_since_first_eval >= $year){
+          $pat[(string)$row['eval_id']] = $inc;
+          $inc++;
+        }
       }
-      */
-      $month = 2; //$row['eval_date']; // restarle el inicial osea minimo de toda la tabla con el mismo eval_id
-
-      if( $fc == 'i')   $a_id = 0;
-      if( $fc == 'ii')  $a_id = 1;
-      if( $fc == 'iii') $a_id = 2;
-      if( $fc == 'iv')  $a_id = 3;
-
-      $func[$a_id][$a_id]++;
+    }
+    return $pat;
+  }
+  
+  function find_month_since_first_eval($p, $eval_date){
+    $sql = "SELECT min(eval_date) FROM hap_follow_up WHERE eval_id='".$p."'";
+    $result = mysql_query($sql);
+    $row = mysql_fetch_array($result);
+    $min_date = $row[0];
+    
+    $min_date_arr = explode("-", $min_date );
+    $act_date_arr = explode("-", $eval_date );
+    $miliseconds_min = mktime(0,0,0,intval($min_date_arr[2]),intval($min_date_arr[1]),intval($min_date_arr[0]));
+    $miliseconds_max = mktime(0,0,0,intval($act_date_arr[2]),intval($act_date_arr[1]),intval($act_date_arr[0]));
+    $days_since_first_eval = floor( ($miliseconds_max - $miliseconds_min) / (60*60*24) );
+    
+    return intval($days_since_first_eval/30);
+  }
+  
+  function fill_ap($ap){
+    for( $i = 0; $i < count($ap); $i++ ){
+      for( $j = 1; $j < 36; $j++ ){
+        if( $ap[$i][$j] == "." ) $ap[$i][$j] = $ap[$i][$j-1];
+      }
+    }
+    return $ap;
+  }
+  
+  if($info == "funcional_tiempo"){
+    // crea arreglo pacientes
+    $pat = array();
+    $pat = find_patients(1,$pat);
+     
+    // crea arreglo clases functionales asociadas a pacientes
+    $ap = array_fill(0, count($pat), array());
+    for( $i=0; $i<count($pat); $i++ ) $ap[$i] = array_fill(0, 36, ".");
+    
+    // llena el arreglo clases funcionales - ap
+    $sql    = "SELECT * FROM hap_follow_up";
+    $result = mysql_query($sql);
+    while( $row = mysql_fetch_array($result) ){
+      $act_p = $row['eval_id'];
+      $eval_date = $row['eval_date'];
+      if( isset($pat[(string)$act_p]) ){    
+        $month = find_month_since_first_eval($act_p, $eval_date);
+        $ap[$pat[(string)$act_p]][$month] = $row['nyha_funct_class'];
+      }
     }
     
-    // rellenar los arreglos los 0's con el anterior valor que sea diferente de 0
+    $ap = fill_ap($ap);
+
+    $result = array_fill(0, 4, array());
+    for( $i = 0; $i < 4; $i++ ) $result[$i] = array_fill(0, 36, 0);
+    
+    for( $i = 0; $i < 36; $i++ ){
+      for( $j = 0; $j < count($ap); $j++ ){
+        if($ap[$j][$i] == "i") $result[0][$i]++;
+        if($ap[$j][$i] == "ii") $result[1][$i]++;
+        if($ap[$j][$i] == "iii") $result[2][$i]++;
+        if($ap[$j][$i] == "iv") $result[3][$i]++;
+      }
+    }
+
     $exit = false;
-    $serialized_result = implode(",",$func[0])."?".
-                         implode(",",$func[1])."?".
-                         implode(",",$func[2])."?".
-                         implode(",",$func[3]);
+    $serialized_result = implode(",",$result[0])."?".
+                         implode(",",$result[1])."?".
+                         implode(",",$result[2])."?".
+                         implode(",",$result[3]);
     $serialized_result = str_replace(" ", "", $serialized_result);
   }
+  
+  // -------------------------------------------------------------------
+  // -------------------------------------------------------------------
 
   if($exit) $serialized_result = implode(",",$temp);
   echo $serialized_result;
