@@ -53,10 +53,9 @@
         </div>
       </div>
     </div>  
-    <hr style="margin-top: 0px;">
+
     <!--// START Imagenes Carousel-->
-    <center>
-     <div class="row-fluid" style="margin-top: 0px;">
+     <div class="row-fluid" style="margin-top: 20px;">
       <div class="span12" style="margin: 0px auto;">
        <div id="banner">
           <?php include 'modules/includes/carousel.html'; ?>
@@ -65,20 +64,19 @@
      </div>
     <!--// END Imagenes Jquery-->
 
-    <hr>
         
-    <div class="container" style="height: auto; background-image:url('assets/images/debut_light.png');background-repeat:repeat-x;">
+    <div class="container" style="height: auto; background-image:url('assets/images/debut_light.png');background-repeat:repeat-x; margin-top: 30px;">
       
       <div class="row-fluid" style="margin-top: 40px; background-image:url('assets/images/debut_light.png');background-repeat:repeat-x; margin-top: 0px;">
 
-        <div class="span4 alert" style="background: #FAFAFA; color: gray; border-color: white;">
-                  <img src="assets/images/icon-discover.png">
+        <div class="span4 alert" style="background: none; color: gray; border: none;">
+          <img src="assets/images/icon-discover.png">
           <h2 style="color: #4A4C4C;; font-family: 'Oxygen', sans-serif; margin-top: 30px;">Prop&oacute;sito <i style="color: #4A4C4C;" class="icon-time"></i></h2><br>
           <div  style="font-size:14px;font-family: 'Roboto', sans-serif; height: 80px;">Nuevos tratamientos de la <b>Hipertensi&oacute;n Arterial Pulmonar </b> y nuvas herramientas para su analisis</div>
            <br><br>
         </div>
         
-        <div class="span4 alert" style="background: #FAFAFA; color: gray; border-color: white; height: 330px;">
+        <div class="span4 alert" style="background: none; color: gray; border: none; height: 330px;">
           <img src="assets/images/icon-one.png">
           <h2 style="color: #4A4C4C;; font-family: 'Oxygen', sans-serif; margin-top: 30px;">El Registro  <i style="color: #4A4C4C;" class="icon-stethoscope"></i></h2><br>
           <div  style="font-size:1rpx;font-family: 'Roboto', sans-serif;">pretende recopilar la mayor informaci&oacute;n posible 
@@ -86,7 +84,7 @@
            <br><br>
         </div>
 
-        <div class="span4 alert" style="background: #FAFAFA; color: gray; border-color: white; height: 330px;">
+        <div class="span4 alert" style="background: none; color: gray; border: none; height: 330px;">
           <img src="assets/images/icon-organized.png">
           <h2 style="color: #4A4C4C;; font-family: 'Oxygen', sans-serif; margin-top: 30px;">Participe  <i style="color: #4A4C4C;" class="icon-globe"></i></h2><br>
           <div  style="font-size:14px; font-family: 'Roboto', sans-serif;">Perteneces a una instituci&oacute;n que atiende pacientes con la enfermedad, 
