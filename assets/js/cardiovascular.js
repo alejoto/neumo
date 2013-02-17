@@ -81,7 +81,7 @@ $(document).ready(function() {
 (icon positioning) pos_ic_1, pos_ic_2, pos_ic_3,  pos_main,
 (icon titles)      title1,   title2,   title3,    maintitle
 */
-icon_exchanger($(".main_icon"), $("#basic_eval"), $("#blood_test"), $("#clin_images"), $("#performance"), '0  75px', '-92px 75px', '-276px 75px', '-184px 0px', 'Evaluaci&oacute;n <br>cl&iacute;nica', 'Pruebas<br>de sangre', 'Im&aacute;genes diagn&oacute;sticas', 'Desempe&ntilde;o cardiovascular');
+icon_exchanger($(".main_icon"), $("#basic_eval"), $("#blood_test"), $("#clin_images"), $("#performance"), '0  75px', '-92px 75px', '-276px 75px', '-184px 0px', 'Evaluaci&oacute;n <br>cl&iacute;nica', 'Pruebas<br>en sangre', 'Im&aacute;genes diagn&oacute;sticas', 'Desempe&ntilde;o cardiovascular');
 
 
 

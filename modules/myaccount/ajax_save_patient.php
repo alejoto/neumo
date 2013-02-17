@@ -27,16 +27,20 @@
     /// In this part when the patient is add to the data base, also it's recorded the main_eval, to keep the conection between the doctor and the patient 
     
     $digiter_id = $_SESSION['username'];
-    mysql_query("INSERT INTO main_eval (patient_id, digiter_id) VALUES ('$docidnum', '$digiter_id');"); 
+    //$tms=time();
+    mysql_query("INSERT INTO main_eval (patient_id, digiter_id) VALUES ('$docidnum', '$digiter_id' );"); 
     
     // Search for the generated ID
 
-    $search_sql=("SELECT eval_id FROM main_eval WHERE patient_id = '$docidnum' AND digiter_id = '$digiter_id'");
+    $search_sql=("SELECT MAX(eval_id) FROM main_eval WHERE patient_id = '$docidnum' AND digiter_id = '$digiter_id'");
     $search_result = mysql_query($search_sql);
     $eval_id_arr = mysql_fetch_array($search_result);
 
     //Asigning 'evaluation' session as eval_id for foraing keys in health tables
     $_SESSION['evaluation'] = $eval_id_arr[0];
+
+    //Asigning 'hap_patient_id' session as patient for info.php MySQL query
+    $_SESSION['hap_patient_id']=$docidnum;
 
     $patient = $docidnum."-".$name."-".$surname."-";
     $patient .= $gender."-".$birthd."-".$countrybth."-";

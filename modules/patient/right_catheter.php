@@ -1,4 +1,4 @@
-
+<!-- 
 <div id="basal">
   <div CLASS="well well-small">
     <h5>DATOS BASALES </h5>
@@ -223,25 +223,14 @@
           <button class="btn span6">Grabar</button>
         </div>
       </div><br><br>
+    -->
       <!--end of "drugdependant" -->
+      <!--
     </div>
   </div>
 </div>
+-->
 <!--end of main content-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!--main content here-->
@@ -269,23 +258,23 @@
       </div><br>
 
       <!-- anamnesis begin -->
-      <? include '../patient/basic/anamnesis.php'; ?>
+      <? //include '../patient/basic/anamnesis.php'; ?>
       <!-- anamnesis end -->
 
       <!-- examen fisico begin -->
-      <? include '../patient/basic/ex_fc.php'; ?>
+      <? //include '../patient/basic/ex_fc.php'; ?>
       <!-- examen fisico end -->
 
       <!-- hipercoagulabilidad begin -->
-      <? include '../patient/basic/hiperclot.php'; ?>
+      <? //include '../patient/basic/hiperclot.php'; ?>
       <!-- hipercoagulabilidad end -->
 
       <!-- tratamiento begin -->
-      <? include '../patient/basic/treatment.php'; ?>
+      <? //include '../patient/basic/treatment.php'; ?>
       <!-- tratamiento end -->
 
       <!-- fallecido begin -->
-      <? include '../patient/basic/outcome.php'; ?>
+      <? //include '../patient/basic/outcome.php'; ?>
       <!-- fallecido end -->
 
     </div>

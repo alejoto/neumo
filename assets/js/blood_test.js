@@ -28,7 +28,7 @@ hide_show_savebutton([$("#d_citrul_ab"), $("#a_citrul")], $("#citrul_ab_save"));
 (icon positioning) pos_ic_1, pos_ic_2, pos_ic_3,  pos_main,
 (icon titles)      title1,   title2,   title3,    maintitle
 */
-icon_exchanger($(".main_icon"), $("#basic_eval"), $("#performance"), $("#clin_images"), $("#blood_test"), '0  75px', '-184px 75px', '-276px 75px', '-92px 0px', 'Evaluaci&oacute;n <br>cl&iacute;nica', 'Desempe&ntilde;o cardiovascular', 'Im&aacute;genes diagn&oacute;sticas', 'Pruebas<br>de sangre');
+icon_exchanger($(".main_icon"), $("#basic_eval"), $("#performance"), $("#clin_images"), $("#blood_test"), '0  75px', '-184px 75px', '-276px 75px', '-92px 0px', 'Evaluaci&oacute;n <br>cl&iacute;nica', 'Desempe&ntilde;o cardiovascular', 'Im&aacute;genes diagn&oacute;sticas', 'Pruebas<br>en sangre');
 
 $(document).ready(function () {
   $("#art_gasses").hide();

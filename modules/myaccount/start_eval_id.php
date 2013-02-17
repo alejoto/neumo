@@ -12,7 +12,8 @@ $digiter_id = $_SESSION['username'];
 mysql_query("INSERT INTO main_eval (patient_id, digiter_id) VALUES ('$docidnum', '$digiter_id');");
 
 //asjusting session variable for unique main eval id
-$search_sql=("SELECT eval_id FROM main_eval WHERE patient_id = '$docidnum' AND digiter_id = '$digiter_id'");
+$search_sql=("SELECT MAX(eval_id) FROM main_eval WHERE patient_id = '$docidnum' AND digiter_id = '$digiter_id'");
+//select MAX ensueres to select latest eval id entered, filtered by user (digiter) and patient (doc_id)
 $search_result = mysql_query($search_sql);
 $eval_id_arr = mysql_fetch_array($search_result);
 
