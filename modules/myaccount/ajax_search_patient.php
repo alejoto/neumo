@@ -71,7 +71,7 @@
         </div>
       </div>
     </div>
-    <a style="margin-left: 10px;" href="myaccount.php?page=profile" role="button" class="btn btn-success span11">
+    <a style="margin-left: 10px;" href="start_eval_id.php" role="button" class="btn btn-success span11">
       Ingresar datos del paciente
     </a>
     <?php
@@ -82,6 +82,7 @@
         if( $i<9 ) $patient .= "?";
       }
     }
+    $_SESSION['hap_patient_id']=$doc;
     $_SESSION['patient'] = $patient;
   }else echo 'no';
   mysql_close($con);

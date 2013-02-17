@@ -2,20 +2,16 @@
 
 <div class="container">
   <div class="row-fluid">
-
     <form  class="form-horizontal span5" style="text-align: left; margin-top: 30px;" onsubmit="return false">
-
-
       <div style=" height: 300px; margin-top: 40px; margin-bottom: -30px; margin-left: 5px;">
         <img src="../../assets/images/logo_temp.jpg" style="border-radius:25px 25px 25px 25px;">
       </div>
 
+      <!-- ************************ -->
+      <!-- select doc id section    -->
       <blockquote>
         <p>Selecciona tipo y n&uacute;mero de documento:</p>
       </blockquote><br>
-        
-     
-
       <div style="margin-left: 20px;">
         <div class="control-group" style="width: 300px;" >
           <div class="controls" style="margin-left: 0px;">
@@ -32,7 +28,6 @@
             </div>
           </div>
         </div>
-
         <div class="control-group" style="width: 300px;" >
           <label class="control-label" for="idnumber"></label>
           <div class="controls" style="margin-left: 0px;">
@@ -40,19 +35,18 @@
               <span class="add-on"><i class="icon-user"></i></span>
               <input type="text" id="idnumber" placeholder="N&uacute;mero identidad"/>
               <button class="btn" type="button"> <i class="icon-search"></i></button>
-              
             </div>
-            
           </div>
         </div>
       </div>
-
+      <!-- End of select doc id     -->
+      <!-- ************************ -->
     </form>
 
     <div class="span6 offset1" style="border-left: ridge; height: 560px; margin-top: 40px; " >
 
       <!-- ************************ -->
-      <!-- First time patient      -->
+      <!-- First time patient       -->
       <div id="enterpatient">
         <div class="page-header" style="border: none; padding-left: 70px;">
           <!-- <h2>Registrar paciente</h2> -->
@@ -101,21 +95,14 @@
     <script src="../../assets/js/patients.js"></script>
   </div>
 </div>
-
-
-
 <script>
   $("#edit_patient").hide();
-  //$("#docid").hide();
-  
   $(document).ready(function(){
     if ($('#docid').val()=="") {$('#docid').css("color","#CECECE");}
-    //$('#docid').click(function(){$('#docid').css("color","black");});
     $('#docid').change(function(){
       if ($('#docid').val()=="") {$('#docid').css("color","#CECECE");}
       else 
       {$('#docid').css("color","#494949");}
     });
   });
-  
-</script>
+  </script>
