@@ -29,6 +29,16 @@
             echo '<a class="btn  btn-inverse " id="edit_patient">Editar paciente <i class="icon-user icon-white"></i></a>'; 
           }
         ?>
+        <?
+          if( isset($_SESSION['evaluation']) ){
+            ?>
+            <a class="btn btn-inverse " href="">
+              Cambiar paciente &nbsp;&nbsp;
+              <i class="icon-share-alt icon-white"></i><i class="icon-user icon-white"></i>
+            </a>
+            <?php
+          }
+        ?>
         <a href="../myaccount/myaccount.php?page=statistics" class="btn  btn-inverse ">Estadisticas</a>
         <a href="../login/logout.php" class="btn btn-inverse">Salir<i class="icon-share-alt icon-white"></i></a>
       </div>
