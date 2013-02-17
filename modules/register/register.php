@@ -3,7 +3,7 @@
 
     <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-      <h2 id="myModalLabel"><u>Registrarse</u></h2>
+      <h2 id="myModalLabel">Registrarse</h2>
     </div>
   
     <div class="modal-body">
@@ -32,11 +32,10 @@
     </div>
 
     <div class="modal-footer">
-      <a class="btn btn-primary" data-dismiss="modal" aria-hidden="true" >Cerrar</a>
-      <a class="btn btn-success" id="register_button" >Registrarse</a>
+      <a class="btn btn-primary" id="register_button" >Registrarse</a>
+      <a class="btn btn-info" data-dismiss="modal" aria-hidden="true" >Cerrar</a>
     </div>
   </div>
 </form>
 
 <script src="assets/js/login.js"></script>
-

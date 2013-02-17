@@ -3,24 +3,20 @@
 
     <div class="modal-header">
       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-      <h2 id="myModalLabel"><u>Acceder</u></h2>
+      <h2 id="myModalLabel">Acceder</h2>
     </div>
   
     <div class="modal-body">
       <blockquote>
         <p>Ingrese su email y password:</p>
       </blockquote>
-    
       <div class="input-prepend">
         <span class="add-on">@</span>
-        <input class="input-large" id="usr" name="usr" type="text" placeholder="Username">
-        <br><br>
-      
+        <input class="input-large" id="usr" name="usr" type="text" placeholder="Email">
+        <br/><br/>
         <span class="add-on"><i class="icon-user"></i></span>
-        <input class="input-large" id="pwd" name="pwd" type="password" placeholder="Password"><br>
-
-      </div><br>
-    
+        <input class="input-large" id="pwd" name="pwd" type="password" placeholder="Contrase&ntilde;a"><br/>
+      </div><br/>
       <div class="control-group error" id="msg"></div>
       <div  id="loading" style="display:none">
         <img src="assets/images/ajax-loader.gif"/>
@@ -31,15 +27,11 @@
           Olvid&oacute; su contrase&ntilde;a?
         </a>
       </div>
-    
     </div>
-
     <div class="modal-footer">
-      <a class="btn btn-primary" data-dismiss="modal" aria-hidden="true" >Cerrar</a>
-      <a class="btn btn-success" id="login" >Entrar</a>
+      <a class="btn btn-primary" id="login" >Entrar</a>
+      <a class="btn btn-info" data-dismiss="modal" aria-hidden="true" >Cerrar</a>
     </div>
   </div>
 </form>
-
 <script src="assets/js/login.js"></script>
-

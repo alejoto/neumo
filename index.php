@@ -32,19 +32,26 @@
         </div>
         
         <div class="span4">
-          <a href="mailto:marketing@healmydisease.com" class="left_space"> <b style="font-family: 'Oxygen', sans-serif; margin-left: -15px"> Contactanos </b> </a>
+          <!--
+          <a href="mailto:marketing@healmydisease.com" class="left_space">
+            <b style="font-family: 'Oxygen', sans-serif; margin-left: -15px">
+              Contactanos
+            </b>
+          </a>
           &nbsp; | &nbsp;
+        -->
           
           <?php
             if(isset($_SESSION['username'])){ 
               echo '<a href="modules/myaccount/myaccount.php?page=patients"><u>'
                     .$_SESSION['username'].
                     '</u></a>';
-              echo '<a href="modules/login/logout.php" role="button" class="btn btn-primary left_space">Salir</a>';
-            }else{
-              echo '<a href="#modal_login" id="button_modal" role="button" class="btn btn-success" data-toggle="modal">Entrar</a>';
-              echo '<a href="#modal_register" role="button" class="btn btn-primary left_space" data-toggle="modal">Registrate</a>';
-            }
+              echo '<a href="modules/login/logout.php" role="button" class="btn btn-danger left_space">Salir</a>';
+            }else{ ?>
+            <a href="#modal_login" id="button_modal" role="button" style="font-family:'Oxygen',sans-serif;" data-toggle="modal"><b>Entrar </b></a>&nbsp; | &nbsp;
+            <a href="#modal_register" role="button" class="" data-toggle="modal" style="font-family:'Oxygen',sans-serif;"><b>Registrarse</b></a>
+
+            <?php  }
     
             include 'modules/login/login.php';
             include 'modules/register/register.php';
