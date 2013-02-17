@@ -35,7 +35,7 @@ $row = mysql_fetch_array($result);
 
 			if ($birth_month_and_day>$this_month_and_day) {echo $thisyear-$birthyear-1;}
 			else {echo $thisyear-$birthyear;}
-			?> a&ntilde;os
+			?> a&ntilde;os 
 		</p>
 	</div>
 </div>

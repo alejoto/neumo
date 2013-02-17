@@ -32,7 +32,7 @@
         <?
           if( isset($_SESSION['evaluation']) ){
             ?>
-            <a class="btn btn-inverse " href="">
+            <a class="btn btn-inverse " href="change_patient.php">
               Cambiar paciente &nbsp;&nbsp;
               <i class="icon-share-alt icon-white"></i><i class="icon-user icon-white"></i>
             </a>
