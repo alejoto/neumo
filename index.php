@@ -88,7 +88,7 @@
         
         <div class="span4 alert" style="background: none; color: gray; border: none; height: 330px;">
           <img style="opacity: 0.7" src="assets/images/contribucion.png">
-          <p style="color: #4A4C4C;; font-family: 'Oxygen', sans-serif; font-weight: 700; font-size:150%; margin-top: 30px;">Registro Mulric&eacute;trico </p><br>
+          <p style="color: #4A4C4C;; font-family: 'Oxygen', sans-serif; font-weight: 700; font-size:150%; margin-top: 30px;">Registro Multic&eacute;ntrico </p><br>
           <br>
           <div  style="font-size:1rpx;font-family: 'Open Sans', sans-serif;">Es el m&aacute;s grande registro de Hipertensi&oacute;n Arterial Pulmonar del pa&iacute;s. Comprometidos a recopilar la mayor informaci&oacute;n posible 
            para identificar conductas terap&eacute;uticas innovadoras.</div>
@@ -106,19 +106,23 @@
       <hr>
       <div   id="footer_index" class="row-fluid" style="margin-top: 0px; padding-left: 25px;">
         <div class="span4" style="color: #4A4C4C; font-family: 'Oxygen', sans-serif;"><a href="http://www.healmydisease.com/04Spanish/02HMDdescription.php" target="_blank">Con&oacute;cenos</div></a>
-        <div class="span4" style="color: #4A4C4C; font-family: 'Oxygen', sans-serif;">Politica de privacidad</div>
+        <div class="span4" style="color: #4A4C4C; font-family: 'Oxygen', sans-serif;"><a href="#myModal" data-toggle="modal" data-target="#myModal"> Pol&iacute;tica de privacidad</div>
         <div class="span4" style="color: #4A4C4C; font-family: 'Oxygen', sans-serif;"><a href="http://www.healmydisease.com/04Spanish/02sendinfo.php" target="_blank">Conctacto</a></div>
         <br>
+
+    <!-- Start Privacy Policy -->
+    <?php include 'modules/includes/privacy.php';?> 
+    <!--End privacy Policy -->
+
         <br>
        <div class="row-fluid" style="margin-top: 0px;">
-         <div class="span6" style="margin-top: 0px;"><p style="color: #4A4C4C; font-family: 'Oxygen', sans-serif;"><br>
-          RECOLHAP - Copyright 2013, Medell&iacute;n - Colombia.
-            </p>
-          </div>
+         <div class="span6" style="margin-top: 0px;">
+         </div>
           <div class="span6" style="margin-top: 0px;">
             <a href="http://www.healmydisease.com" target="_blank" style="font-family: 'Oxygen', sans-serif; color: #4A4C4C;">
             <br>Heal My Disease &copy; 2013 - Medell&iacute;n - Colombia      <img src="assets/images/hmdlogo.png" style="weight: 56px; height: 29px; opacity: 0.7; margin-top: 0px auto;">
           </a>
+          <br>
           </div>    
         </div>
       </div>
