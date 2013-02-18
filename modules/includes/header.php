@@ -26,15 +26,16 @@
         <a class="btn btn-inverse ">Mi perfil <i class="icon-edit icon-white"></i></a>
         <?
           if( isset($_SESSION['patient']) ){
-            echo '<a class="btn  btn-inverse " id="edit_patient">Editar paciente <i class="icon-user icon-white"></i></a>'; 
+            echo '<a class="btn  btn-inverse " id="edit_patient" href="myaccount.php?page=edit">Editar paciente 
+                  <i class="icon-user icon-white"></i></a>'; 
           }
         ?>
         <?
           if( isset($_SESSION['evaluation']) ){
             echo '<a class="btn btn-inverse" id="change_patient_btn" href="myaccount.php?page=patients">
-              Cambiar paciente &nbsp;&nbsp;
-              <i class="icon-share-alt icon-white"></i><i class="icon-user icon-white"></i>
-            </a>';
+                    Cambiar paciente &nbsp;&nbsp;
+                    <i class="icon-share-alt icon-white"></i><i class="icon-user icon-white"></i>
+                  </a>';
           }
         ?>
         <a href="../myaccount/myaccount.php?page=statistics" class="btn  btn-inverse ">Estadisticas</a>
