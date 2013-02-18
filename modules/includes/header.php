@@ -5,8 +5,9 @@
   <link href="../../assets/stylesheets/bootstrap.min.css" rel="stylesheet" media="screen">
   <link href="../../assets/stylesheets/neumo.css" rel="stylesheet" media="screen">
   <link rel="icon"   type="image/png"  href="../../assets/images/favicon.ico">
-  <link rel="stylesheet" href="assets/fonts/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../assets/fonts/css/font-awesome.min.css">
   <link href='http://fonts.googleapis.com/css?family=Play:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Oxygen:400,700,300' rel='stylesheet' type='text/css'>
 
   <script src="../../assets/js/jquery.min.js"></script>
 
@@ -25,7 +26,7 @@
     <div class="span2"><p style="color: #C6C6AA; font-family: 'Play', cursive; font-weight: 700; font-size:120%;">RECOLHAP <img style="width: 30px; heigth: 23px;" src="../../assets/images/logo-gray.png"></p></div>
     <div class="span5">
       <div class="btn-group">
-        <a href="../../" class="btn btn-inverse">Inicio <img id="header_lung" style="width: 13px; height: 13px;" src="http://www.healmydisease.com/13hiapulco/images/whitelogo%20trpHIAP.gif" /></a>
+        <a href="../../" class="btn btn-inverse">Inicio <img id="header_lung" style="width: 13px; height: 13px;" src="http://www.healmydisease.com/13hiapulco/images/whitelogo%20trpHIAP.gif"/></a>
         <a class="btn btn-inverse ">Mi perfil <i class="icon-edit icon-white"></i></a>
         <?php
           if( isset($_SESSION['patient']) ){
