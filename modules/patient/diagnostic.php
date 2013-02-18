@@ -15,6 +15,7 @@
         <a class="btn span2" id="sel_pulm_arteriography">Arteriograf&iacute;a p</a>
         <a class="btn span2" id="sel_gammagr">Gamagraf&iacute;a V/P</a>
         <a class="btn span2" id="sel_duplex_legs">Doppler MsIs</a>
+        <a class="btn span2" href="myaccount.php?page=right_catheter" id="rt_cth">Cateterismo derecho</a>
       </div>
 
     </div>
