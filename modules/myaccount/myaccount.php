@@ -1,7 +1,9 @@
 <?php
 ob_start();
 session_start();
-$page = $_GET["page"];
+if (isset($_GET["page"])) {$page = $_GET["page"];}
+else {header('Location: myaccount.php?page=patients');}
+
 if(isset($_SESSION['username']))
 {
   include '../includes/header.php';
@@ -19,7 +21,8 @@ if(isset($_SESSION['username']))
   }
   else
   {
-    echo '<div style=" height: 83%;"><img src="../../assets/images/404-not-found.gif"></div>';
+    header('Location: myaccount.php?page=patients');
+    //echo '<div style=" height: 83%;"><img src="../../assets/images/404-not-found.gif"></div>';
   }
   include '../includes/footer.php';
 } 
