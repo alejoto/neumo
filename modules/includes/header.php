@@ -4,6 +4,8 @@
   <title>RECOLHAP</title>
   <link href="../../assets/stylesheets/bootstrap.min.css" rel="stylesheet" media="screen">
   <link href="../../assets/stylesheets/neumo.css" rel="stylesheet" media="screen">
+  <link rel="icon"   type="image/png"  href="../../assets/images/favicon.ico">
+  <link rel="stylesheet" href="assets/fonts/css/font-awesome.min.css">
   <link href='http://fonts.googleapis.com/css?family=Play:400,700' rel='stylesheet' type='text/css'>
 
   <script src="../../assets/js/jquery.min.js"></script>
