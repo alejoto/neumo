@@ -31,12 +31,10 @@
         ?>
         <?
           if( isset($_SESSION['evaluation']) ){
-            ?>
-            <a class="btn btn-inverse " href="change_patient.php">
+            echo '<a class="btn btn-inverse" id="change_patient_btn" href="myaccount.php?page=patients">
               Cambiar paciente &nbsp;&nbsp;
               <i class="icon-share-alt icon-white"></i><i class="icon-user icon-white"></i>
-            </a>
-            <?php
+            </a>';
           }
         ?>
         <a href="../myaccount/myaccount.php?page=statistics" class="btn  btn-inverse ">Estadisticas</a>

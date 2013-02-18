@@ -160,10 +160,10 @@
       }
     }
 
-    $result[0] = array_slice($result[0],0,12);
-    $result[1] = array_slice($result[1],0,12);
-    $result[2] = array_slice($result[2],0,12);
-    $result[3] = array_slice($result[3],0,12);
+    $result[0] = array_slice($result[0],0,12*$y_opt);
+    $result[1] = array_slice($result[1],0,12*$y_opt);
+    $result[2] = array_slice($result[2],0,12*$y_opt);
+    $result[3] = array_slice($result[3],0,12*$y_opt);
 
     $exit = false;
     $serialized_result = implode(",",$result[0])."?".

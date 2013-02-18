@@ -1,4 +1,9 @@
-<? unset( $_SESSION['patient'] ); ?>
+<? 
+  if(isset($_SESSION['patient'])) unset( $_SESSION['patient'] ); 
+  if(isset($_SESSION['evaluation'])) unset($_SESSION['evaluation']);
+  if(isset($_SESSION['patient'])) unset($_SESSION['patient']);
+  if(isset($_SESSION['hap_patient_id'])) unset($_SESSION['hap_patient_id']);
+?>
 
 <div class="container">
   <div class="row-fluid">
@@ -97,12 +102,14 @@
 </div>
 <script>
   $("#edit_patient").hide();
+  $("#change_patient_btn").hide();
+  
+  // ¿Esto funciona?
   $(document).ready(function(){
-    if ($('#docid').val()=="") {$('#docid').css("color","#CECECE");}
+    if ($('#docid').val()=="") { $('#docid').css("color","#CECECE"); }
     $('#docid').change(function(){
-      if ($('#docid').val()=="") {$('#docid').css("color","#CECECE");}
-      else 
-      {$('#docid').css("color","#494949");}
+      if ($('#docid').val()==""){ $('#docid').css("color","#CECECE"); }
+      else{ $('#docid').css("color","#494949"); }
     });
   });
   </script>
