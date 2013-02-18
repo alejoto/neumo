@@ -9,7 +9,22 @@
   <div class="row-fluid">
     <form  class="form-horizontal span5" style="text-align: left; margin-top: 30px;" onsubmit="return false">
       <div style=" height: 300px; margin-top: 40px; margin-bottom: -30px; margin-left: 5px;">
-        <img src="../../assets/images/logo_temp.jpg" style="border-radius:25px 25px 25px 25px;">
+       <center><h1 style="color: #CC0000; font-family: 'Play', sans-serif; font-weight: 700;  ">RECOLHAP</h1>
+       <br>
+       <img src="../../assets/images/logo.png" style="width:150px; height: 125px; opacity:0.7; margin-top:0px auto;">
+       <br>
+       <p style="color: #686868; font-family: 'Oxygen', sans-serif; font-weight: 700;">
+        <!-- <i class="icon-plus"></i> <i class="icon-group icon-2x"></i>-->
+        <br>
+        Registro Multic&eacute;ntrico Colombiano
+        <br>
+        de Hipertensi&oacute;n Arterial Pulmonar
+      </p> 
+
+     </center>
+       <br>
+       
+       
       </div>
 
       <!-- ************************ -->

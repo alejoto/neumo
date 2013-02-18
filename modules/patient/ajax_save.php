@@ -14,7 +14,6 @@
 	$eval_id = $_SESSION['evaluation'];
 	  
   $sql = "INSERT INTO ".$table." (".$pieces[0].",eval_id) VALUES ('" . implode("', '", explode(",", $pieces[1])) . "','$eval_id')";
-  
   if( !mysql_query($sql,$con) ){
     echo 'No';
     die('Error: ' . mysql_error());

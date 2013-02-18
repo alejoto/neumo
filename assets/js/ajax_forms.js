@@ -1,9 +1,8 @@
 function to_database(info,table) {
   $.post("../patient/ajax_save.php",{ info:info, table:table }, function(data) {
-    if(data=='Yes') {
+		if(data=='Yes') {
       alert("Datos guardados exitosamente");
     }else{
-      //alert(data+"en el segundo");
 			alert("Ocurrio un problema al guardar los datos");
     }
   });  
@@ -19,7 +18,6 @@ function get_info(info_id){
   
  
   for(var i=0;i<arr.length;i++){
-        
     if( arr[i].type == "checkbox" ){ 
 
       if( dates != "" ) dates += ",";
@@ -29,24 +27,32 @@ function get_info(info_id){
       dates2 += arr[i].checked;
 
     }else if( arr[i].name != "" ){
-     
-	if($(arr[i]).is(".date1")){
+  
 
-		dates += arr[i].name;
-		dates2 += arr[i].value+"-"+arr[i+1].value+"-"+arr[i+2].value; 
-                i += 3;
-	} 
-
-
+	// This two if's can be put outside, in a function
+			if($(arr[i]).is(".date1")){
+				if (dates != "") dates += ",";
+				if (dates2 != "") dates2 += ","; 
+				dates += arr[i].name;
+				dates2 += arr[i].value+"-"+arr[i+1].value+"-"+arr[i+2].value; 
+    		i += 2;
+				continue;
+			} 
+			if($(arr[i]).is(".join2")){
+			  if(dates != "") dates += ",";
+				if(dates2 != "") dates2 += ",";
+				dates += arr[i].name;
+				dates2 += arr[i].value+"-"+arr[i+1].value;
+				i += 1;
+				continue;
+			}
       if( dates != "" ) dates += ",";
       if( dates2 != "" ) dates2 += ",";
       
       dates += arr[i].name;
       dates2 += arr[i].value;
     }
-
   }
-  
   result = dates+"?"+dates2;
   return result;
 }
@@ -78,10 +84,22 @@ $("#outcome_save").click(function(){
   to_database(info,"table_name");
 });
 
-$("#save_ecg").click(function(){
-  var info = get_info("ecg");
-  //Insert into database the information about the evaluation
-	//insert_eval();
+		////BUTTONS OF DESEMPEÑO CARDIOVASCULAR////
 
+$("#save_ecg").click(function(){
+	var info = get_info("ecg");
   to_database(info,"hap_electrok");
+
 });
+
+
+$("#vo2_save").click(function(){
+	var info = get_info("cpt");
+	to_database(info,"hap_cp_stress_test");
+});
+
+		/// END OF BUTTONS OF DESEMPEÑO CARDIOVASCULAR
+
+
+
+
