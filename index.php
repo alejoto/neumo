@@ -90,7 +90,7 @@
           <img style="opacity: 0.7" src="assets/images/contribucion.png">
           <p style="color: #4A4C4C;; font-family: 'Oxygen', sans-serif; font-weight: 700; font-size:150%; margin-top: 30px;">Registro Multic&eacute;ntrico </p><br>
           <br>
-          <div  style="font-size:1rpx;font-family: 'Open Sans', sans-serif;">Es el m&aacute;s grande registro de Hipertensi&oacute;n Arterial Pulmonar del pa&iacute;s. Comprometidos a recopilar la mayor informaci&oacute;n posible 
+          <div  style="font-size:1rpx;font-family: 'Open Sans', sans-serif;">Es el m&aacute;s grande registro de Hipertensi&oacute;n Arterial Pulmonar de Colombia. Comprometidos a recopilar la mayor informaci&oacute;n posible 
            para identificar conductas terap&eacute;uticas innovadoras.</div>
            <br><br>
         </div>
