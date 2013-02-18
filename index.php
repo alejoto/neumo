@@ -9,6 +9,8 @@
     <link href="assets/stylesheets/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="assets/stylesheets/neumo.css" rel="stylesheet" media="screen">
     <link rel="icon"   type="image/png"  href="assets/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
     <!--CSS Stylysheets ends-->
 
     <!-- Fonts Start -->
@@ -80,31 +82,32 @@
         <div class="span4 alert" style="background: none; color: gray; border: none;">
           <img style="opacity: 0.7"src="assets/images/tiemporeal.png">
           <p style="color: #4A4C4C;; font-family: 'Oxygen', sans-serif; font-weight: 700; font-size:150%; margin-top: 30px;">Resultados en tiempo real </p><br>
-          <div  style="font-size:14px;font-family: 'Open Sans', sans-serif; height: 80px;">Herramientas para el analisis de sus investigaciones de Hipertensi&oacute;n Arterial Pulmonar en tiempo real y de manera r&aacute;pida, f&aacute;cil y flexible</div>
+          <div  style="font-size:14px;font-family: 'Open Sans', sans-serif; height: 80px;">An&aacute;lisis de sus investigaciones de Hipertensi&oacute;n Arterial Pulmonar en tiempo real y de manera r&aacute;pida, f&aacute;cil y flexible</div>
            <br><br>
         </div>
         
         <div class="span4 alert" style="background: none; color: gray; border: none; height: 330px;">
           <img style="opacity: 0.7" src="assets/images/contribucion.png">
-          <p style="color: #4A4C4C;; font-family: 'Oxygen', sans-serif; font-weight: 700; font-size:150%; margin-top: 30px;">Una gran contribuci&oacute;n </p><br>
+          <p style="color: #4A4C4C;; font-family: 'Oxygen', sans-serif; font-weight: 700; font-size:150%; margin-top: 30px;">Registro Mulric&eacute;trico </p><br>
           <br>
           <div  style="font-size:1rpx;font-family: 'Open Sans', sans-serif;">Es el m&aacute;s grande registro de Hipertensi&oacute;n Arterial Pulmonar del pa&iacute;s. Comprometidos a recopilar la mayor informaci&oacute;n posible 
-           sobre la enfermedad para identificar conductas terap&eacute;uticas innovadoras.</div>
+           para identificar conductas terap&eacute;uticas innovadoras.</div>
            <br><br>
         </div>
 
         <div class="span4 alert" style="background: none; color: gray; border: none; height: 330px;">
           <img style="opacity: 0.7" src="assets/images/acceso.png">
           <p style="color: #4A4C4C; font-family: 'Oxygen', sans-serif; font-weight: 700; font-size:150%; margin-top: 30px;">Acceso desde cualquier lugar </p><br>
-          <div  style="font-size:14px; font-family: 'Open Sans', sans-serif;"> Segura y confiable plataforma que puede ser usada desde cualquier lugar del mundo con una conexi&oacute;n de internet para agilizar la investigaci&oacute;n.</div>
+          <div  style="font-size:14px; font-family: 'Open Sans', sans-serif;"> Segura, &aacute;gil y confiable plataforma que puede ser usada desde cualquier lugar del mundo con una conexi&oacute;n de internet.</div>
           <br><br>
         </div>
       </div>
+      <!--Footer-->
       <hr>
       <div   id="footer_index" class="row-fluid" style="margin-top: 0px; padding-left: 25px;">
-        <div class="span4" style="color: #4A4C4C; font-family: 'Oxygen', sans-serif;">Con&oacute;cenos</div>
+        <div class="span4" style="color: #4A4C4C; font-family: 'Oxygen', sans-serif;"><a href="http://www.healmydisease.com/04Spanish/02HMDdescription.php" target="_blank">Con&oacute;cenos</div></a>
         <div class="span4" style="color: #4A4C4C; font-family: 'Oxygen', sans-serif;">Politica de privacidad</div>
-        <div class="span4" style="color: #4A4C4C; font-family: 'Oxygen', sans-serif;">Conctacto</div>
+        <div class="span4" style="color: #4A4C4C; font-family: 'Oxygen', sans-serif;"><a href="http://www.healmydisease.com/04Spanish/02sendinfo.php" target="_blank">Conctacto</a></div>
         <br>
         <br>
        <div class="row-fluid" style="margin-top: 0px;">
@@ -113,7 +116,7 @@
             </p>
           </div>
           <div class="span6" style="margin-top: 0px;">
-            <a href="http://www.healmydisease.com" style="font-family: 'Oxygen', sans-serif; color: #4A4C4C;">
+            <a href="http://www.healmydisease.com" target="_blank" style="font-family: 'Oxygen', sans-serif; color: #4A4C4C;">
             <br>Heal My Disease &copy; 2013 - Medell&iacute;n - Colombia      <img src="assets/images/hmdlogo.png" style="weight: 56px; height: 29px; opacity: 0.7; margin-top: 0px auto;">
           </a>
           </div>    
