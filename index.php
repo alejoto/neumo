@@ -13,7 +13,7 @@
 
     <!-- Fonts Start -->
     <link href='http://fonts.googleapis.com/css?family=Oxygen:400,700,300' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Play:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="assets/fonts/css/font-awesome.min.css">
     <!-- Fonts Ends -->
@@ -23,7 +23,7 @@
   </head>
   
   <body style="background-image:url('assets/images/debut_light.png');background-repeat:repeat;">
-   <div class="container" style="height: auto; background-image:url('assets/images/debut_light.png');background-repeat:repeat-x;">
+   <div class="container" style="height: auto;">
       <br><br>
       <div class="row-fluid">
         
@@ -48,8 +48,8 @@
                     '</u></a>';
               echo '<a href="modules/login/logout.php" role="button" class="btn btn-danger left_space">Salir</a>';
             }else{ ?>
-            <a href="#modal_login" id="button_modal" role="button" style="font-family:'Oxygen',sans-serif;" data-toggle="modal"><b>Entrar </b></a>&nbsp; | &nbsp;
-            <a href="#modal_register" role="button" class="" data-toggle="modal" style="font-family:'Oxygen',sans-serif;"><b>Registrarse</b></a>
+            <a href="#modal_login" id="button_modal" role="button" style="font-family:'Oxygen',sans-serif;" data-toggle="modal"><b style="font-family: 'Oxygen', sans-serif;">Entrar </b></a>&nbsp; | &nbsp;
+            <a href="#modal_register" role="button" class="" data-toggle="modal" style="font-family:'Oxygen',sans-serif;"><b style="font-family: 'Oxygen', sans-serif;">Registrarse</b></a>
 
             <?php  }
     
@@ -60,6 +60,7 @@
         </div>
       </div>
     </div>  
+ 
 
     <!--// START Imagenes Carousel-->
      <div class="row-fluid" style="margin-top: 20px;">
@@ -72,43 +73,51 @@
     <!--// END Imagenes Jquery-->
 
         
-    <div class="container" style="height: auto; background-image:url('assets/images/debut_light.png');background-repeat:repeat-x; margin-top: 30px;">
+    <div class="container" style="height: auto; margin-top: 30px;">
       
-      <div class="row-fluid" style="margin-top: 40px; background-image:url('assets/images/debut_light.png');background-repeat:repeat-x; margin-top: 0px;">
+      <div class="row-fluid" style="margin-top: 40px; margin-top: 0px;">
 
         <div class="span4 alert" style="background: none; color: gray; border: none;">
-          <img src="assets/images/icon-discover.png">
-          <h2 style="color: #4A4C4C;; font-family: 'Oxygen', sans-serif; margin-top: 30px;">Prop&oacute;sito <i style="color: #4A4C4C;" class="icon-time"></i></h2><br>
-          <div  style="font-size:14px;font-family: 'Roboto', sans-serif; height: 80px;">Nuevos tratamientos de la <b>Hipertensi&oacute;n Arterial Pulmonar </b> y nuvas herramientas para su analisis</div>
+          <img style="opacity: 0.7"src="assets/images/tiemporeal.png">
+          <p style="color: #4A4C4C;; font-family: 'Oxygen', sans-serif; font-weight: 700; font-size:150%; margin-top: 30px;">Resultados en tiempo real </p><br>
+          <div  style="font-size:14px;font-family: 'Open Sans', sans-serif; height: 80px;">Herramientas para el analisis de sus investigaciones de Hipertensi&oacute;n Arterial Pulmonar en tiempo real y de manera r&aacute;pida, f&aacute;cil y flexible</div>
            <br><br>
         </div>
         
         <div class="span4 alert" style="background: none; color: gray; border: none; height: 330px;">
-          <img src="assets/images/icon-one.png">
-          <h2 style="color: #4A4C4C;; font-family: 'Oxygen', sans-serif; margin-top: 30px;">El Registro  <i style="color: #4A4C4C;" class="icon-stethoscope"></i></h2><br>
-          <div  style="font-size:1rpx;font-family: 'Roboto', sans-serif;">pretende recopilar la mayor informaci&oacute;n posible 
+          <img style="opacity: 0.7" src="assets/images/contribucion.png">
+          <p style="color: #4A4C4C;; font-family: 'Oxygen', sans-serif; font-weight: 700; font-size:150%; margin-top: 30px;">Una gran contribuci&oacute;n </p><br>
+          <br>
+          <div  style="font-size:1rpx;font-family: 'Open Sans', sans-serif;">Es el m&aacute;s grande registro de Hipertensi&oacute;n Arterial Pulmonar del pa&iacute;s. Comprometidos a recopilar la mayor informaci&oacute;n posible 
            sobre la enfermedad para identificar conductas terap&eacute;uticas innovadoras.</div>
            <br><br>
         </div>
 
         <div class="span4 alert" style="background: none; color: gray; border: none; height: 330px;">
-          <img src="assets/images/icon-organized.png">
-          <h2 style="color: #4A4C4C;; font-family: 'Oxygen', sans-serif; margin-top: 30px;">Participe  <i style="color: #4A4C4C;" class="icon-globe"></i></h2><br>
-          <div  style="font-size:14px; font-family: 'Roboto', sans-serif;">Perteneces a una instituci&oacute;n que atiende pacientes con la enfermedad, 
-          le invitamos a registrarse.</div>
+          <img style="opacity: 0.7" src="assets/images/acceso.png">
+          <p style="color: #4A4C4C; font-family: 'Oxygen', sans-serif; font-weight: 700; font-size:150%; margin-top: 30px;">Acceso desde cualquier lugar </p><br>
+          <div  style="font-size:14px; font-family: 'Open Sans', sans-serif;"> Segura y confiable plataforma que puede ser usada desde cualquier lugar del mundo con una conexi&oacute;n de internet para agilizar la investigaci&oacute;n.</div>
           <br><br>
         </div>
       </div>
       <hr>
-      <div hidden id="footer_index" class="row-fluid" style="margin-top: 0px; padding-left: 25px; background-image:url('assets/images/blackorchid.png')">
-        <div class="span4" style="color: #F2F2EF;">Columna 1</div>
-        <div class="span4" style="color: #F2F2EF;">Columna 2</div>
-        <div class="span4" style="color: #F2F2EF;">Columna 3</div>
+      <div   id="footer_index" class="row-fluid" style="margin-top: 0px; padding-left: 25px;">
+        <div class="span4" style="color: #4A4C4C; font-family: 'Oxygen', sans-serif;">Con&oacute;cenos</div>
+        <div class="span4" style="color: #4A4C4C; font-family: 'Oxygen', sans-serif;">Politica de privacidad</div>
+        <div class="span4" style="color: #4A4C4C; font-family: 'Oxygen', sans-serif;">Conctacto</div>
         <br>
         <br>
-        <h5 style="color: #F2F2EF;"><br>
-          RECOLHAP - Copyright 2012, Medell&iacute;n - Colombia.
-        </h5>
+       <div class="row-fluid" style="margin-top: 0px;">
+         <div class="span6" style="margin-top: 0px;"><p style="color: #4A4C4C; font-family: 'Oxygen', sans-serif;"><br>
+          RECOLHAP - Copyright 2013, Medell&iacute;n - Colombia.
+            </p>
+          </div>
+          <div class="span6" style="margin-top: 0px;">
+            <a href="http://www.healmydisease.com" style="font-family: 'Oxygen', sans-serif; color: #4A4C4C;">
+            <br>Heal My Disease &copy; 2013 - Medell&iacute;n - Colombia      <img src="assets/images/hmdlogo.png" style="weight: 56px; height: 29px; opacity: 0.7; margin-top: 0px auto;">
+          </a>
+          </div>    
+        </div>
       </div>
 
     </div>
