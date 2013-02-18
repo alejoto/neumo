@@ -12,12 +12,12 @@ if(isset($_SESSION['username'])){
   else if($page == "patients") include 'patients_search.php';
   else if($page == "statistics") include '../statistics/statistics.php';
   else if( isset($_SESSION['patient']) ){
-    echo $_SESSION['evaluation'];
     if($page == "basic") include '../patient/basic.php';
     else if($page == "blood") include '../patient/blood.php';
     else if($page == "diagnostic") include '../patient/diagnostic.php';
     else if($page == "cardiovascular" ) include '../patient/cardiovascular.php';
     else if($page == "right_catheter" ) include '../patient/right_catheter.php';
+    else if($page == "edit" ) include '../patient/edit.php';
     else include 'patients_search.php';
   }else include 'patients_search.php';
   
