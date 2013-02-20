@@ -50,3 +50,22 @@
 
 <script src="../../assets/js/ajax_forms.js"></script>
 <script src="../../assets/js/clinic_eval.js"></script>
+<script type="text/javascript">
+$('#btn_add_drug').click(function(){
+  if ($('#drug').val()!=''&&$('#year_ini_d').val()!=''&&$('#month_ini_d').val()!=''&&$('#day_ini_d').val()!='') {
+    var month_dg=$('#month_ini_d').val();
+    if (month_dg.length==1) {month_dg='0'+month_dg;} 
+    var day_drg=$('#day_ini_d').val();
+    if (day_drg.length==1) {day_drg='0'+day_drg;} 
+
+    var drugdate=$('#year_ini_d').val()+'-'+month_dg+'-'+day_drg;
+    $.post('../patient/ajax_new_drug.php',{drugdate:drugdate,drug:$('#drug').val()},function(data){$('#table_drug_result').html(data);});
+    $('#treatment_tb > tbody > tr').eq(1).after('<tr class="span8"><td  class="span3">'+$('#drug').val()+'</td><td class="span2">'+drugdate+'</td><td class="span2">hello3</td><td class="span2">hello4</td></tr>');
+  } else{};
+
+  //Syntax ->id of table, position, insertion
+  
+})
+
+
+</script>

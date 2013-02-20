@@ -7,46 +7,16 @@
   </div>
 
   <div class="row">
-    <table class="table table-hover span8">
-      <tr class="span8">
-        <th class="span3">F&aacute;rmaco</th>
-        <th class="span2">Fecha inicio</th>
-        <th class="span2">Fecha susp</th>
-        <th class="span2">Motivo susp</th>
-      </tr>
-      <tr class="span8">
-        <td class="span3"><a rel="tooltip" title="editar">Iloprost</a></td>
-        <td class="span2">2012-10-10</td>
-        <td class="span2">2012-11-30</td>
-        <td class="span2">Alergia</td>
-      </tr>
-      <tr class="span8">
-        <td class="span3"><a rel="tooltip" title="editar">Sidenalfil</a></td>
-        <td class="span2">2012-10-10</td>
-        <td class="span2"></td>
-        <td class="span2"></td>
-      </tr>
-      <tr class="span8">
-        <td class="span3"><a rel="tooltip" title="editar">Calcioantagonista</a></td>
-        <td class="span2">2012-10-10</td>
-        <td class="span2">2012-11-30</td>
-        <td class="span2">Alergia</td>
-      </tr>
-      <tr class="span8">
-        <td class="span3">
-          <a rel="tooltip" title="agregar medicamento" id="ad_drug">A&ntilde;adir</a>
-        </td>
-        <td class="span2"></td>
-        <td class="span2"></td>
-        <td class="span2"></td>
-      </tr>
-    </table>
+    <?php 
+    include '../patient/basic/table_treatment.php';
+    ?>
+    <div id='table_drug_result'></div>
   </div>
 
   <div id="inputdrug">
     <div class="row">
       <div class="span3">
-        <select id="drug" class="treatment" >
+        <select id="drug" class="treatment span3" >
           <option value="">...Escoger medicamento</option>
           <option value="Epoprostenol">Epoprostenol</option>
           <option value="Treprostinil">Treprostinil</option>
@@ -66,13 +36,36 @@
         </select>
       </div>
       <div class="span1" style="text-align:right">Inicio</div>
-      <div class="span3">
+      <div class="span1">
         <input type="text" id="year_ini_d" class="span1" placeholder="a&ntilde;o"/>
+      </div>
+      <div class="span1">
         <input type="text" id="month_ini_d" class="span1" placeholder="mes"/>
+      </div>
+      <div class="span1">
         <input type="text" id="day_ini_d" class="span1" placeholder="d&iacute;a"/>
       </div>
     </div>
 
+      <!--
+      <div class="row">
+        <div class="span8">
+          <textarea class="span8 treatment" rows="3" id="drug_adv_event">Describir evento adverso
+          </textarea>
+        </div>
+      </div> -->
+
+    <div class="row">
+      <div class="span1">
+        <a id="btn_add_drug" class="btn btn-primary span1">Agregar</a>
+      </div>
+      <div class="offset1 span1">
+        <a id='hide_drug_hap' class="btn btn-info span1">Ocultar</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="hap_suspend" style="display:none">
     <div class="row">
       <div class="span3">
         <select id="suspend_cause" class="treatment" >
@@ -93,19 +86,6 @@
         <input type="text" id="day_end_d" class="span1" placeholder="d&iacute;a"/>
       </div>
     </div>
-
-    <div class="row">
-      <div class="span8">
-        <textarea class="span8 treatment" rows="3" id="drug_adv_event">Describir evento adverso
-        </textarea>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="span3">
-        <a class="btn">Agregar</a>
-      </div>
-    </div>
   </div>
 
   <div class="row">
@@ -113,8 +93,8 @@
   </div>
 
   <div class="row">
-    <div class="span8">
-      <h5>Transplante: diligenciar si paciente fue transplantado o est&aacute; en lista de espera</h5>
+    <div class="span8" style="text-align:left">
+      Dejar sin responder si no aplica.
     </div>
   </div>
 
@@ -134,12 +114,6 @@
       <input type="text" id="day_transp" class="span1" placeholder="d&iacute;a"/>
     </div>
     <div class="span1"></div>
-  </div>
-
-  <div class="row">
-    <div class="span8">
-      <h5>Trombendarterectom&iacute;a y Atrioseptoplastia: marcar si se hicieron estas cirug&iacute;as</h5>
-    </div>
   </div>
 
   <div class="row">

@@ -14,9 +14,14 @@ $(document).ready(function() {
 /*Toggle asociado a texto "Añadir (Fármaco)"*/
 $("#ad_drug").click(function(){
   $("#inputdrug").toggle("fast");
-  if ($("#ad_drug").html()=="Ocultar") {$("#ad_drug").html("Añadir");}
+  if ($("#ad_drug").html()=="Ocultar") {$("#ad_drug").html("A&ntilde;adir");}
   else {$("#ad_drug").html("Ocultar");}
 });
+$('#hide_drug_hap').click(function(){
+  $('#inputdrug').hide('fast');
+  $("#ad_drug").html("A&ntilde;adir");
+});
+
 
 /*Toggle asociado a Evento adverso (opción dentro de "Motivo de suspensión")*/
 $("#suspend_cause").change(function(){
