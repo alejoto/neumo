@@ -6,7 +6,6 @@ LEFT JOIN main_eval
 ON hap_drug_treatment.eval_id=main_eval.eval_id  
 WHERE main_eval.patient_id='".$usr."'";
 $result = mysql_query($sql);
-echo '----'.$usr.'----';
 ?>
 
 <table id='treatment_tb' class="table table-hover span8">

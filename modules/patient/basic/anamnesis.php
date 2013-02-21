@@ -4,25 +4,14 @@
       <h4>ANAMNESIS</h4>
     </div>
   </div>
-  
   <div class="row">
-    <div class="span2" style="text-align:right">Fecha inicio s&iacute;ntomas</div>
-    
-    <div class="span2" style="text-align: left;">
-      <input type="text" id="year" placeholder="a&ntilde;o" class="span1 anamnesis"/>
-      <input type="text" id="month" placeholder="mes" class="span1 anamnesis"/>
-    </div>
-    
-    <div class="span2" style="text-align:left">Raza afroamericana?</div>
-    
-    <div class="span2">
-      <select class="span2 anamnesis">
-        <option value=""></option>
-        <option value="si">S&iacute;</option>
-        <option value="no">No</option>
-      </select>
+    <div class="span7 text-info" style="text-align:left">
+      <b>SOBRE INICIO DE LA ENFERMEDAD ...</b>
     </div>
   </div>
+  <?php  include 'first_eval.php'; ?>
+  
+  
     
   <div class="row">
     <div class="span4">  </div>
@@ -38,6 +27,11 @@
   <div class="row">
     <div class="span8"><hr></div>
   </div>
+  <div class="row">
+    <div class="span7 text-info" style="text-align:left">
+      <h4>EVALUACI&Oacute;N DE SEGUIMIENTO</h4><br/>
+    </div>
+  </div>
     
   <div class="row">
     <div class="span2">FECHA EVALUACI&Oacute;N</div>
@@ -45,29 +39,6 @@
       <input type="text" id="year_ev" class="span1 anamnesis" placeholder="a&ntilde;o"/>
       <input type="text" id="month_ev" class="span1 anamnesis" placeholder="mes"/>
       <input type="text" id="day_ev" class="span1 anamnesis" placeholder="d&iacute;a"/>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="span2" style="text-align:right">Ox&iacute;geno domiciliario?</div>
-    <div class="span2">
-      <select id="homeoxigen" class="span2 anamnesis">
-        <option value=""></option>
-        <option value="si">S&iacute;</option>
-        <option value="no">No</option>
-      </select>
-    </div>
-    
-    <div id="ox_depend">
-      <div class="span2" style="text-align:right">Horas diarias de ox&iacute;geno</div>
-      <div class="span2">
-        <select id="dailyhours_ox" class="span2 anamnesis">
-          <option val=""></option>
-          <option val="ls8">0 - 8 horas</option>
-          <option val="bt8_16">8 - 16 horas</option>
-          <option val="gr16">16 - 24 horas</option>
-        </select>
-      </div>
     </div>
   </div>
 
@@ -85,7 +56,7 @@
   </div>
   
   <div class="row">
-    <div class="span8" style="text-align: left;"><h4>S&iacute;NTOMAS (de inter&eacute;s para HAP)</h4></div>
+    <div class="span8" style="text-align: left;"><h4>S&iacute;ntomas de inter&eacute;s para HAP</h4></div>
   </div>
     
   <div class="row">

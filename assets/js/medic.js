@@ -338,11 +338,16 @@ function vasorreact_test(pulm_s, pulm_d, post_pulm_s, post_pulm_d, coutp, post_c
     if (delta_co == 0) {
         co_criterium = "Gasto cardiaco igual";
     } else {
-        co_criterium = "Gasto cardiaco aumentÃ³";
+        co_criterium = "Gasto cardiaco aument&oacute;";
     }
     if (postpam <= 40 && delta_pam >= 10 && delta_co >= 0) {
         $("#reactivity").attr("class","span4 alert alert-success");
-        $("#reactivity").html("TEST REACTIVO!<br>Criterios:<br> PAM post-test:" + postpam + "mmHg<br>DisminuciÃ³n PAM: " + delta_pam + "mmHg<br>" + co_criterium);
+        $("#reactivity").html("TEST REACTIVO!<br>Criterios:<br> PAM post-test:" 
+            + postpam 
+            + "mmHg<br>Disminuci&oacute;n PAM: " 
+            + delta_pam 
+            + "mmHg<br>" 
+            + co_criterium);
     }
     else {
         $("#reactivity").attr("class","span4 alert alert-error");

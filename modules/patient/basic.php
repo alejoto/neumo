@@ -50,3 +50,15 @@
 
 <script src="../../assets/js/ajax_forms.js"></script>
 <script src="../../assets/js/clinic_eval.js"></script>
+
+
+<script type="text/javascript">
+
+/*
+$('#sympt_save').click(function(){
+  $('#anam').hide('fast');
+})
+/**/
+
+
+</script>
