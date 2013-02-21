@@ -9,12 +9,13 @@
   $table = $_POST['table'];
 
   $pieces = explode("?", $info); // La primera pieza son los nombres, la segunda los grupos de valores unidos por 
-	
+		
 	//// Need to append the value of the new colum (eval_id) and the value of eval_id generated before ////
 	$eval_id = $_SESSION['evaluation'];
 	  
   $sql = "INSERT INTO ".$table." (".$pieces[0].",eval_id) VALUES ('" . implode("', '", explode(",", $pieces[1])) . "','$eval_id')";
-  if( !mysql_query($sql,$con) ){
+  echo $sql;
+	if( !mysql_query($sql,$con) ){
     echo 'No';
     die('Error: ' . mysql_error());
   }

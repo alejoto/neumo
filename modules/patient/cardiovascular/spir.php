@@ -5,25 +5,25 @@
     <div class="row">
         <div class="span2">Fecha realizaci&oacute;n</div>
         <div class="span3">
-            <input type="text" id="y_spir" class="span1" placeholder="a&ntilde;o"/>
-            <input type="text" id="m_spir" class="span1" placeholder="mes"/>
-            <input type="text" id="d_spir" class="span1" placeholder="d&iacute;a"/>
+            <input type="text" id="y_spir" class="span1 spir1 date1" name="spirodate" placeholder="a&ntilde;o"/>
+            <input type="text" id="m_spir" class="span1 spir1" placeholder="mes"/>
+            <input type="text" id="d_spir" class="span1 spir1" placeholder="d&iacute;a"/>
         </div>
     </div>
     <div class="row">
         <div class="span2">
-            <div class="input-append"><input type="text" placeholder="CVF" class="span1" id="cvf_lt">
+            <div class="input-append"><input type="text" placeholder="CVF" class="span1 spir1" id="cvf_lt" name="cvf_lt">
                 <span class="add-on">Lts. CVF</span>
             </div>
         </div>
         <div class="span2">
-            <div class="input-append"><input type="text" placeholder="VEF1" class="span1" id="vef1_lt">
+            <div class="input-append"><input type="text" placeholder="VEF1" class="span1 spir1" id="vef1_lt" name="vef1_lt">
                 <span class="add-on">Lts/1seg.</span>
             </div>
         </div>
         <div class="span3">
             <div class="input-append">
-                <input type="text" placeholder="%" class="span1" id="vef1_cvf" style="text-align:right" disabled>
+                <input type="text" placeholder="%" class="span1 spir1" id="vef1_cvf" name="vef1_cvf" style="text-align:right" disabled>
                 <span class="add-on">% (VEF1/CVF)</span>
             </div>
         </div>
@@ -36,18 +36,18 @@
     </div>
     <div class="row">
         <div class="span2">
-            <div class="input-append"><input type="text" placeholder="CVF" class="span1" id="post_cvf_lt">
+            <div class="input-append"><input type="text" placeholder="CVF" class="span1 spir1" id="post_cvf_lt" name="post_cvf_lt">
                 <span class="add-on">Lts. CVF</span>
             </div>
         </div>
         <div class="span2">
-            <div class="input-append"><input type="text" placeholder="VEF1" class="span1" id="post_vef1_lt">
+            <div class="input-append"><input type="text" placeholder="VEF1" class="span1 spir1" id="post_vef1_lt" name="post_vef1_lt">
                 <span class="add-on">Lts/1seg.</span>
             </div>
         </div>
         <div class="span3">
             <div class="input-append">
-                <input type="text" placeholder="%" class="span1" id="post_vef1_cvf" style="text-align:right" disabled>
+                <input type="text" placeholder="%" class="span1 spir1" id="post_vef1_cvf" name="post_vef1_cvf" style="text-align:right" disabled>
                 <span class="add-on">% (VEF1/CVF)</span>
             </div>
         </div>
@@ -62,13 +62,13 @@
     <div class="row">
         <div class="span2">
             <div class="input-append">
-                <input type="text" class="span1 " id="delta_abs_vef" disabled>
+                <input type="text" class="span1 spir1" id="delta_abs_vef" name="delta_abs_vef" disabled>
                 <span class="add-on">cc(ml)</span>
             </div>
         </div>
         <div class="span2">
             <div class="input-append">
-                <input type="text" class="span1" id="delta_vef1" style="text-align:right" disabled>
+                <input type="text" class="span1 spir1" id="delta_vef1" name="delta_vef1" style="text-align:right" disabled>
                 <span class="add-on">%</span>
             </div>
         </div>
@@ -82,7 +82,7 @@
         <div class="offset1 span1" style="text-align:right">DLCO(%)</div>
         <div class="span2">
             <div class="input-append">
-                <input type="text" class="span1" id="dlco_percent" placeholder="DLCO">
+                <input type="text" class="span1 spir1" id="dlco_percent" name="dlco_percent" placeholder="DLCO">
                 <span class="add-on">%</span>
             </div>
         </div>

@@ -5,9 +5,9 @@
      <div class="row">
          <div class="span1">Fecha</div>
          <div class="span3">
-             <input type="text" id="y_tc" class="span1" placeholder="a&ntilde;o"/>
-             <input type="text" id="m_tc" class="span1" placeholder="mes"/>
-             <input type="text" id="d_tc" class="span1" placeholder="d&iacute;a"/>
+             <input type="text" id="y_tc" class="span1 tcangio date1" name="a_tc_date" placeholder="a&ntilde;o"/>
+             <input type="text" id="m_tc" class="span1 tcangio" placeholder="mes"/>
+             <input type="text" id="d_tc" class="span1 tcangio" placeholder="d&iacute;a"/>
          </div>
      </div>
      <div class="row">
@@ -16,15 +16,15 @@
      <div class="row">
          <div class="span1" style="text-align:right">Tronco</div>
          <div class="span1">
-             <input type="text" id="a_tc_main_pulm_art_diamt" class="span1" placeholder="mm"/>
+             <input type="text" id="a_tc_main_pulm_art_diamt" class="span1 tcangio" name="a_tc_main_pulm_art_diamt" placeholder="mm"/>
          </div>
          <div class="span1" style="text-align:right">Derecha</div>
          <div class="span1">
-             <input type="text" id="a_tc_rt_pulm_art_diamt" class="span1" placeholder="mm"/>
+             <input type="text" id="a_tc_rt_pulm_art_diamt" class="span1 tcangio" name="a_tc_rt_pulm_art_diamt" placeholder="mm"/>
          </div>
          <div class="span1" style="text-align:right">Izquierda</div>
          <div class="span1">
-             <input type="text" id="a_tc_left_pulm_art_diamt" class="span1" placeholder="mm"/>
+             <input type="text" id="a_tc_left_pulm_art_diamt" class="span1 tcangio" name="a_tc_left_pulm_art_diamt" placeholder="mm"/>
          </div>
      </div>
      <div class="row">
@@ -35,31 +35,31 @@
      </div>
      <div class="row">
          <div class="span3">
-             <input type="checkbox" id="a_tc_rt_heart_dilat">Dilataci&oacute;n cavidades derechas
+             <input type="checkbox" id="a_tc_rt_heart_dilat" class="tcangio" name="a_tc_rt_heart_dilat">Dilataci&oacute;n cavidades derechas
          </div>
          <div class="span3">
-             <input type="checkbox" id="a_tc_pulm_thrombos">Presencia de trombos
-         </div>
-     </div>
-     <div class="row">
-         <div class="span3">
-             <input type="checkbox" id="a_tc_inft_interst">Inflitrados intersticiales
-         </div>
-         <div class="span3">
-             <input type="checkbox" id="a_tc_inft_alv">Infiltrados alveolares
+             <input type="checkbox" id="a_tc_pulm_thrombos" class="tcangio" name="a_tc_pulm_thrombos">Presencia de trombos
          </div>
      </div>
      <div class="row">
          <div class="span3">
-             <input type="checkbox" id="a_tc_inft_nodular">Infiltrados nodulares
+             <input type="checkbox" id="a_tc_inft_interst" class="tcangio" name="a_tc_inft_interst">Inflitrados intersticiales
          </div>
          <div class="span3">
-             <input type="checkbox" id="a_tc_inft_retic">Infiltrados reticulares
+             <input type="checkbox" id="a_tc_inft_alv" class="tcangio" name="a_tc_inft_alv">Infiltrados alveolares
          </div>
      </div>
      <div class="row">
          <div class="span3">
-             <input type="checkbox" id="a_tc_inft_honeycomb">Imagen en panal de abeja
+             <input type="checkbox" id="a_tc_inft_nodular" class="tcangio" name="a_tc_inft_nodular">Infiltrados nodulares
+         </div>
+         <div class="span3">
+             <input type="checkbox" id="a_tc_inft_retic" class="tcangio" name="a_tc_inft_retic">Infiltrados reticulares
+         </div>
+     </div>
+     <div class="row">
+         <div class="span3">
+             <input type="checkbox" id="a_tc_inft_honeycomb" class="tcangio" name="a_tc_inft_honeycomb">Imagen en panal de abeja
          </div>
      </div>
      <div class="row">
@@ -67,7 +67,7 @@
      </div>
      <div class="row">
          <div class="span3">
-             <select id="a_tc_tep_pattern" class="span3">
+             <select id="a_tc_tep_pattern" class="span3 tcangio" name="a_tc_tep_pattern">
                  <option value="">TROMBOEMBOLISMO?...</option>
                  <option value="no">Sin signos</option>
                  <option value="central">Central</option>
@@ -76,7 +76,7 @@
              </select>
          </div>
          <div class="span3">
-             <select id="a_tc_congenit" class="span3">
+             <select id="a_tc_congenit" class="span3 tcangio" name="a_tc_congenit" >
                  <option value="">DEFECTOS CARDIACOS...</option>
                  <option value="no">Sin defectos</option>
                  <option value="cia">CIA</option>
@@ -89,7 +89,7 @@
      </div>
      <div class="row" id="other_defects1">
          <div class="offset3 span3">
-             <input type="text" id="a_tc_congenit_otros" class="span3" placeholder="Describir defectos cardiacos"/>
+             <input type="text" id="a_tc_congenit_otros" class="span3 tcangio" name="a_tc_congenit_otros" placeholder="Describir defectos cardiacos"/>
          </div>
      </div>
      <div class="row">

@@ -5,9 +5,9 @@
      <div class="row">
          <div class="span1">Fecha</div>
          <div class="span3">
-             <input type="text" id="y_ecoleg" class="span1" placeholder="a&ntilde;o"/>
-             <input type="text" id="m_ecoleg" class="span1" placeholder="mes"/>
-             <input type="text" id="d_ecoleg" class="span1" placeholder="d&iacute;a"/>
+             <input type="text" id="y_ecoleg" class="span1 du_legs date1" name="legsdoppler_date" placeholder="a&ntilde;o"/>
+             <input type="text" id="m_ecoleg" class="span1 du_legs" placeholder="mes"/>
+             <input type="text" id="d_ecoleg" class="span1 du_legs" placeholder="d&iacute;a"/>
          </div>
      </div>
      <div class="row">
@@ -22,7 +22,7 @@
      </div>
      <div class="row">
          <div class="span3">
-             <select id="legsdoppler_result_right" class="span2">
+             <select id="legsdoppler_result_right" class="span2 du_legs" name="legsdoppler_result_right">
                  <option value=""></option>
                  <option value="negativo">Negativo</option>
                  <option value="proximal">Proximal</option>
@@ -31,7 +31,7 @@
              </select>
          </div>
          <div class="span3">
-             <select id="legsdoppler_result_left" class="span2">
+             <select id="legsdoppler_result_left" class="span2 du_legs" name="legsdoppler_result_left">
                  <option value=""></option>
                  <option value="negativo">Negativo</option>
                  <option value="proximal">Proximal</option>

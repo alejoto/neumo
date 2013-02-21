@@ -5,14 +5,14 @@
      <div class="row">
          <div class="span1">Fecha</div>
          <div class="span3">
-             <input type="text" id="y_artg" class="span1" placeholder="a&ntilde;o"/>
-             <input type="text" id="m_artg" class="span1" placeholder="mes"/>
-             <input type="text" id="d_artg" class="span1" placeholder="d&iacute;a"/>
+             <input type="text" id="y_artg" class="span1 p_art date1" name="artergph_date" iplaceholder="a&ntilde;o"/>
+             <input type="text" id="m_artg" class="span1 p_art" placeholder="mes"/>
+             <input type="text" id="d_artg" class="span1 p_art" placeholder="d&iacute;a"/>
          </div>
      </div>
      <div class="row">
          <div class="span3">
-             <select id="artergph_TEP" class="span3">
+             <select id="artergph_TEP" class="span3 p_art" name="artergph_TEP">
                  <option value="">REPORTE...</option>
                  <option value="normal">Normal</option>
                  <option value="acute_pte">TEP agudo (copa invertida)</option>
@@ -21,7 +21,7 @@
              </select>
          </div>
          <div class="span3">
-             <select id="artergph_location" class="span3">
+             <select id="artergph_location" class="span3 p_art" name="artergph_location">
                  <option value="">LOCALIZACI&Oacute;N...</option>
                  <option value="acute_pte">Central (arts. ppales)</option>
                  <option value="chronic_pte">Perif&eacute;rico (arts. lobares)</option>

@@ -4,9 +4,9 @@
     </div>
     <div class="row">
         <div class="span2" style="text-align:right">Fecha examen:</div>
-        <div class="span1"><input type="text" id="year" placeholder="A&ntilde;o" class="span1"></div>
-        <div class="span1"><input type="text" id="month" placeholder="Mes" class="span1"></div>
-        <div class="span1"><input type="text" id="day" placeholder="D&iacute;a" class="span1"></div>
+        <div class="span1"><input type="text" id="year" name="rt_cat_date" placeholder="a&ntilde;o" class="span1 bas date1"></div>
+        <div class="span1"><input type="text" id="month" placeholder="ces" class="span1 bas"></div>
+        <div class="span1"><input type="text" id="day" placeholder="d&iacute;a" class="span1 bas"></div>
     </div>
     <div class="row">
         <div class="span2" style="text-align:right">Peso (Kg)</div>
@@ -18,10 +18,10 @@
     <div class="row">
         <div class="span2" style="text-align:right">Res. vasc. pulmonar</div>
         <div class="span2">
-            <input type="text" id="res_vasc_pulm" placeholder="res. vsc. pulmonar" class="span2"/>
+            <input type="text" id="res_vasc_pulm" placeholder="res. vsc. pulmonar" class="span2 bas" name="res_vasc_pulm"/>
         </div>
         <div class="span2">
-            <select id="res_vasc_pulm_unit" class="span2">
+            <select id="res_vasc_pulm_unit" class="span2 bas" name="res_vasc_pulm_unit">
                 <option>dinas</option>
                 <option>woods</option>
             </select>
@@ -30,10 +30,10 @@
     <div class="row">
         <div class="span2" style="text-align:right">Res. vasc. sist&eacute;mica</div>
         <div class="span2">
-            <input type="text" id="res_vasc_syst" placeholder="res. vsc. sist&eacute;mica" class="span2">
+            <input type="text" id="res_vasc_syst" placeholder="res. vsc. sist&eacute;mica" class="span2 bas" name="res_vasc_syst">
         </div>
         <div class="span2">
-            <select id="res_vasc_syst_unit" class="span2">
+            <select id="res_vasc_syst_unit" class="span2 bas" name="res_vasc_syst_unit">
                 <option>dinas</option>
                 <option>woods</option>
             </select>
@@ -42,10 +42,10 @@
     <div class="row">
         <div class="span2" style="text-align:right">P.A. <b>pulmonar</b></div>
         <div class="span1">
-            <input type="text" id="pap_sys" placeholder="sist&oacute;l." class="span1">
+            <input type="text" id="pap_sys" placeholder="sist&oacute;l." class="span1 bas" name="pap_sys">
         </div>
         <div class="span1">
-            <input type="text" id="pap_dias" placeholder="diast&oacute;l." class="span1">
+            <input type="text" id="pap_dias" placeholder="diast&oacute;l." class="span1 bas" name="pap_dias">
         </div>
         <div class="span2">
             <b><span id="pam_pulm"></span></b>
@@ -54,10 +54,10 @@
     <div class="row">
         <div class="span2" style="text-align:right">P.A. <b>sist&eacute;mica</b></div>
         <div class="span1">
-            <input type="text" id="pas_sys" placeholder="sist&oacute;l." class="span1">
+            <input type="text" id="pas_sys" placeholder="sist&oacute;l." class="span1 bas" name="pas_sys">
         </div>
         <div class="span1">
-            <input type="text" id="pas_dias" placeholder="diast&oacute;l." class="span1">
+            <input type="text" id="pas_dias" placeholder="diast&oacute;l." class="span1 bas" name="pas_dias">
         </div>
         <div class="span2">
             <b><span id="pam_stm"></span></b>
@@ -67,7 +67,7 @@
         <div class="span2" style="text-align:right">Pres aur&iacute;cula derecha</div>
         <div class="span2">
             <div class="input-append">
-                <input type="text" id="rt_atr_press" placeholder="PAD" class="span2"><span class="add-on">mm/Hg</span>
+                <input type="text" id="rt_atr_press" placeholder="PAD" class="span2 bas" name="rt_atr_press"><span class="add-on">mm/Hg</span>
             </div>
 
         </div>
@@ -76,7 +76,7 @@
         <div class="span2" style="text-align:right">Pres. cu&ntilde;a pulmonar</div>
         <div class="span2">
             <div class="input-append">
-                <input type="text" id="pulm_wedg_press" placeholder="PCP" class="span2"><span class="add-on">mm/Hg</span>
+                <input type="text" id="pulm_wedg_press" placeholder="PCP" class="span2 bas" name="pulm_wedg_press"><span class="add-on">mm/Hg</span>
             </div>
         </div>
     </div>
@@ -84,7 +84,7 @@
         <div class="span2" style="text-align:right">Gradiente transpulmonar</div>
         <div class="span2">
             <div class="input-append">
-                <input type="text" id="pulm_gradient" placeholder="GTP" class="span2" disabled>
+                <input type="text" id="pulm_gradient" placeholder="GTP" class="span2 bas" name="pulm_gradient" disabled>
                 <span class="add-on">mm/Hg</span>
             </div>
         </div>
@@ -93,7 +93,7 @@
         <div class="span2" style="text-align:right">Gasto cardiaco</div>
         <div class="span2">
             <div class="input-append">
-                <input type="text" id="cardiac_outp" placeholder="CO-lt/min" class="span2"><span class="add-on">Lt/min</span>
+                <input type="text" id="cardiac_outp" placeholder="CO-lt/min" class="span2 bas" name="cardiac_outp"><span class="add-on">Lt/min</span>
             </div>
         </div>
     </div>
@@ -101,7 +101,7 @@
         <div class="span2" style="text-align:right">&Iacute;ndice cardiaco</div>
         <div class="span2">
             <div class="input-append">
-                <input type="text" id="cardiac_index" placeholder="L/min/Mt2" class="span2" disabled>
+                <input type="text" id="cardiac_index" placeholder="L/min/Mt2" class="span2 bas" name="cardiac_index" disabled>
                 <span class="add-on">Lt/min/Mt2</span>
             </div>
         </div>
@@ -109,20 +109,20 @@
     <div class="row">
         <div class="span2" style="text-align:right">Oximetr&iacute;a %</div>
         <div class="span1">
-            <input type="text" id="rt_atr_oxim" placeholder="au der." class="span1">
+            <input type="text" id="rt_atr_oxim" placeholder="au der." class="span1 bas" name="rt_atr_oxim">
         </div>
         <div class="span1">
-            <input type="text" id="rt_ventr_oxim" placeholder="vt. der." class="span1">
+            <input type="text" id="rt_ventr_oxim" placeholder="vt. der." class="span1 bas" name="rt_ventr_oxim">
         </div>
         <div class="span1">
-            <input type="text" id="pulm_artery" placeholder="art pulm." class="span1">
+            <input type="text" id="pulm_artery" placeholder="art pulm." class="span1 bas" name="pulm_artery">
         </div>
     </div>
     <div class="row">
         <div class="span2" style="text-align:right">Frecuencia cardiaca</div>
         <div class="span2">
             <div class="input-append">
-                <input type="text" id="heart_rate" placeholder="pulso" class="span2"><span class="add-on">lat/min</span>
+                <input type="text" id="heart_rate" placeholder="pulso" class="span2 bas" name="heart_rate"><span class="add-on">lat/min</span>
             </div>
         </div>
     </div>
@@ -138,7 +138,7 @@
     </div>
     <div class="row">
         <div class="span6">
-            <button class="btn span6" id="save_rt_cath">GRABAR</button>
+            <button class="btn span6" id="save_rt_cath">Guardar</button>
         </div>
     </div>
     <br>

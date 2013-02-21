@@ -5,15 +5,15 @@
      <div class="row">
          <div class="span1">Fecha</div>
          <div class="span3">
-             <input type="text" id="y_rmn" class="span1" placeholder="a&ntilde;o"/>
-             <input type="text" id="m_rmn" class="span1" placeholder="mes"/>
-             <input type="text" id="d_rmn" class="span1" placeholder="d&iacute;a"/>
+             <input type="text" id="y_rmn" class="span1 mri1 date1" name="mri_date" placeholder="a&ntilde;o"/>
+             <input type="text" id="m_rmn" class="span1 mri1" placeholder="mes"/>
+             <input type="text" id="d_rmn" class="span1 mri1" placeholder="d&iacute;a"/>
          </div>
      </div>
      <div class="row">
          <div class="span4" style="text-align:right">Fracci&oacute;n eyecci&oacute;n ventr&iacute;culo derecho</div>
          <div class="span1">
-             <input type="text" id="mri_fevd" class="span1" placeholder="%"/>
+             <input type="text" id="mri_fevd" class="span1 mri1" name="mri_fevd" placeholder="%"/>
          </div>
      </div>
      <div class="row">
@@ -22,15 +22,15 @@
      <div class="row">
          <div class="span1" style="text-align:right">Tronco</div>
          <div class="span1">
-             <input type="text" id="mri_main_art_diam" class="span1" placeholder="mm"/>
+             <input type="text" id="mri_main_art_diam" class="span1 mri1" name="mri_main_art_diam" placeholder="mm"/>
          </div>
          <div class="span1" style="text-align:right">Derecha</div>
          <div class="span1">
-             <input type="text" id="mri_rt_art_diam" class="span1" placeholder="mm"/>
+             <input type="text" id="mri_rt_art_diam" class="span1 mri1" name="mri_rt_art_diam" placeholder="mm"/>
          </div>
          <div class="span1" style="text-align:right">Izquierda</div>
          <div class="span1">
-             <input type="text" id="mri_lt_art_diam" class="span1" placeholder="mm"/>
+             <input type="text" id="mri_lt_art_diam" class="span1 mri1" name="mri_lt_art_diam" placeholder="mm"/>
          </div>
      </div>
      <div class="row">
@@ -40,7 +40,7 @@
      
      <div class="row">
          <div class="span3">
-             <select id="mri_rt_heart_dilat" class="span3">
+             <select id="mri_rt_heart_dilat" class="span3 mri1" name="mri_rt_heart_dilat">
                  <option value="">...</option>
                  <option value="no">No</option>
                  <option value="si_aur_der">Dilataci&oacute;n aur&iacute;cula derecha</option>
@@ -49,7 +49,7 @@
              </select>
          </div>
          <div class="span3">
-             <select id="mri_defects" class="span3">
+             <select id="mri_defects" class="span3 mri1" name="mri_defects">
                  <option value="">...</option>
                  <option value="no">Sin defectos cardiacos</option>
                  <option value="cia">CIA</option>
@@ -64,7 +64,7 @@
      
      <div class="row" id="other_defects3">
          <div class="offset3 span3">
-             <input type="text" id="a_tc_congenit_otros" class="span3" placeholder="Describir defectos cardiacos"/>
+             <input type="text" id="a_tc_congenit_otros" class="span3 mri1" name="mri_other_defects" placeholder="Describir defectos cardiacos"/>
          </div>
      </div>
      <div class="row">

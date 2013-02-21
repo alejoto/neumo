@@ -5,14 +5,14 @@
      <div class="row">
          <div class="span1">Fecha</div>
          <div class="span3">
-             <input type="text" id="y_gamma" class="span1" placeholder="a&ntilde;o"/>
-             <input type="text" id="m_gamma" class="span1" placeholder="mes"/>
-             <input type="text" id="d_gamma" class="span1" placeholder="d&iacute;a"/>
+             <input type="text" id="y_gamma" class="span1 gam date1" name="gamma_date" placeholder="a&ntilde;o"/>
+             <input type="text" id="m_gamma" class="span1 gam" placeholder="mes"/>
+             <input type="text" id="d_gamma" class="span1 gam" placeholder="d&iacute;a"/>
          </div>
      </div>
      <div class="row">
          <div class="span3">
-             <select id="gamma_tep" class="span2">
+             <select id="gamma_tep" class="span2 gam" name="gamma_tep">
                  <option value="">REPORTE...</option>
                  <option value="normal">Normal</option>
                  <option value="low_risk">Riesgo bajo</option>

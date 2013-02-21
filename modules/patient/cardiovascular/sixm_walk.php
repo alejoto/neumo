@@ -9,15 +9,15 @@
       FECHA
     </div>
     <div class="span3">
-      <input type="text" id="y_sixmw" class="span1" placeholder="a&ntilde;o"/>
-      <input type="text" id="m_sixmw" class="span1" placeholder="mes"/>
-      <input type="text" id="d_sixmw" class="span1" placeholder="d&iacute;a"/>
+      <input type="text" id="y_sixmw" class="span1 sixmw date1" name="walk_date" placeholder="a&ntilde;o"/>
+      <input type="text" id="m_sixmw" class="span1 sixmw" placeholder="mes"/>
+      <input type="text" id="d_sixmw" class="span1 sixmw" placeholder="d&iacute;a"/>
     </div>
     <div class="span2" style="text-align:right">
       Metros caminados
     </div>
     <div class="span1">
-      <input type="text" id="walk_meters" class="span1" placeholder="Mts."/>
+      <input type="text" id="walk_meters" class="span1 sixmw" placeholder="Mts." name="walk_meters"/>
     </div>
   </div>
   <div class="row">
@@ -25,20 +25,20 @@
       FI O2
     </div>
     <div class="span1">
-      <input type="text" class="span1" id="walk_fio2" placeholder="%">
+      <input type="text" class="span1 sixmw" id="walk_fio2" placeholder="%" name="walk_fio2">
     </div>
     <div class="span1" style="text-align:right">
       Sat O2
     </div>
     <div class="span1">
-      <input type="text" class="span1" placeholder="inicio %" id="start_sato2">
+      <input type="text" class="span1 sixmw" placeholder="inicio %" id="start_sato2" name="start_sato2">
     </div>
     <div class="span2">
-      <input type="text" class="span1"  placeholder="final %" id="end_sato2">
+      <input type="text" class="span1 sixmw"  placeholder="final %" id="end_sato2" name="end_sato2">
     </div>
     <div class="span1">Disnea:</div>
     <div class="span1">
-      <select id="borg" class="span2">
+      <select id="borg" class="span2 sixmw" name="walk_disnea">
         <option value="">Escala Borg...</option>
         <option value="0">0-  Sin disnea</option>
         <option value="0.5">0.5-  Muy muy leve</option>
@@ -68,13 +68,13 @@
       Lipotimia/S&iacute;ncope
     </div>
     <div class="span1">
-      <input type="checkbox" id="walk_syncope">
+      <input type="checkbox" id="walk_syncope" class="sixmw" name="walk_sinc">
     </div>
-    <div class="span2" style="text-align:right" id="walk_chest_pain">
+    <div class="span2" style="text-align:right" id="walk_chest_pain" >
       Dolor t&oacute;racico
     </div>
     <div class="span1">
-      <input type="checkbox">
+      <input type="checkbox" class="sixmw" name="walk_toracic">
     </div>
   </div>
   <div class="row">
