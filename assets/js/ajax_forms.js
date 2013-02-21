@@ -160,4 +160,35 @@ $("#vreac_test_done").change(function(){
 	}
 });
 
+		////BUTTONS OF PRUEBAS DE SANGRE////
+
+$("#hb_save").click(function(){ 
+	var info = get_info("hemo");
+	to_database(info,"hap_hb");
+});
+
+
+
+
+
+
+$("#bld_gass_save").click(function(){
+	var info = get_info("art_gas");
+	to_database(info,"hap_arterialgasses");
+});
+
+$("#renal_save").click(function(){
+	var info = get_info("ren");
+	to_database(info,"hap_renal");
+});
+
+$("#liver_save").click(function(){
+	var info = get_info("live");
+	to_database(info,"hap_hepatic");
+});
+
+$("#bleed_save").click(function(){
+	var info = get_info("coag");
+	to_database(info,"hap_coag");
+});
 

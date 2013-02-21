@@ -8,10 +8,10 @@
   <div class="row">
     <div class="span1">Fecha</div>
     <div class="span3">
-      <input type="text" id="y_renal" class="span1" placeholder="a&ntilde;o"
+      <input type="text" id="y_renal" class="span1 ren date1" name="renal_date" placeholder="a&ntilde;o"
       />
-      <input type="text" id="m_renal" class="span1" placeholder="mes" />
-      <input type="text" id="d_renal" class="span1" placeholder="d&iacute;a" />
+      <input type="text" id="m_renal" class="span1 ren" placeholder="mes" />
+      <input type="text" id="d_renal" class="span1 ren" placeholder="d&iacute;a" />
     </div>
   </div>
   <div class="row">
@@ -20,10 +20,10 @@
   </div>
   <div class="row">
     <div class="offset1 span2">
-      <input type="text" id="creat" class="span1" placeholder="mg/dL" />
+      <input type="text" id="creat" class="span1 ren" name="creat" placeholder="mg/dL" />
     </div>
     <div class="span1">
-      <input type="text" id="bun" class="span1" placeholder="mg/dL" />
+      <input type="text" id="bun" class="span1 ren" name="bun" placeholder="mg/dL" />
     </div>
   </div>
   <div class="row">

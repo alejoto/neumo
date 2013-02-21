@@ -8,14 +8,14 @@
   <div class="row">
     <div class="span1" style="text-align:right">Fecha</div>
     <div class="span3">
-      <input type="text" id="y_art_gas" class="span1" placeholder="a&ntilde;o"
+      <input type="text" id="y_art_gas" class="span1 art_gas date1" name="bld_gass_date" placeholder="a&ntilde;o"
       />
-      <input type="text" id="m_art_gas" class="span1" placeholder="mes" />
-      <input type="text" id="d_art_gas" class="span1" placeholder="d&iacutea" />
+      <input type="text" id="m_art_gas" class="span1 art_gas" placeholder="mes" />
+      <input type="text" id="d_art_gas" class="span1 art_gas" placeholder="d&iacutea" />
     </div>
     <div class="span1" style="text-align:right">FIO2</div>
     <div class="span1">
-      <input type="text" id="bld_gass_fio2" class="span1" placeholder="%" />
+      <input type="text" id="bld_gass_fio2" class="span1 art_gas" name="bld_gass_fio2" placeholder="%" />
     </div>
   </div>
   <div class="row">
@@ -26,18 +26,18 @@
   </div>
   <div class="row">
     <div class="span1">
-      <input type="text" id="bld_gass_ph" class="span1" placeholder="pH" />
+      <input type="text" id="bld_gass_ph" class="span1 art_gas" name="bld_gass_ph" placeholder="pH" />
     </div>
     <div class="span1">
-      <input type="text" id="bld_gass_paco2" class="span1" placeholder="mmHg"
+      <input type="text" id="bld_gass_paco2" class="span1 art_gas" name="bld_gass_paco2" placeholder="mmHg"
       />
     </div>
     <div class="span1">
-      <input type="text" id="bld_gass_pao2" class="span1" placeholder="mmHg"
+      <input type="text" id="bld_gass_pao2" class="span1 art_gas" name="bld_gass_pao2" placeholder="mmHg"
       />
     </div>
     <div class="span2">
-      <input type="text" id="bld_gass_hco3" class="span1" placeholder="mmol/L"
+      <input type="text" id="bld_gass_hco3" class="span1 art_gas" name="bld_gass_hco3" placeholder="mmol/L"
       />
     </div>
   </div>

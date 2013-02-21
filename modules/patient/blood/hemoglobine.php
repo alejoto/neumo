@@ -13,12 +13,12 @@
   <div class="row">
     <div class="span1">Fecha</div>
     <div class="span3">
-      <input type="text" id="y_hb" class="span1" placeholder="a&ntilde;o" />
-      <input type="text" id="m_hb" class="span1" placeholder="mes" />
-      <input type="text" id="d_hb" class="span1" placeholder="d&iacute;a" />
+      <input type="text" id="y_hb" class="span1 hemo date1" name="hb_date" placeholder="a&ntilde;o" />
+      <input type="text" id="m_hb" class="span1 hemo" placeholder="mes" />
+      <input type="text" id="d_hb" class="span1 hemo" placeholder="d&iacute;a" />
     </div>
     <div class="span1">
-      <input type="text" id="hb_value" class="span1" placeholder="mg/dL" />
+      <input type="text" id="hb_value" class="span1 hemo" name="hb_value" placeholder="mg/dL" />
     </div>
     <div class="span1"> <a class="btn" id="hb_save">Guardar</a>
 
