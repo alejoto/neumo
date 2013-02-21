@@ -18,8 +18,71 @@ $("#ad_drug").click(function(){
   else {$("#ad_drug").html("Ocultar");}
 });
 $('#hide_drug_hap').click(function(){
-  $('#inputdrug').hide('fast');
-  $("#ad_drug").html("A&ntilde;adir");
+  $('#inputdrug').hide();
+  $("#ad_drug").html("A&ntilde;adir f&aacute;rmaco");
+  $('#drug').val('');
+  $('#year_ini_d').val('');
+  $('#month_ini_d').val('');
+  $('#day_ini_d').val('');
+  //           
+});
+
+//.post ajax for saving new drug in DB
+function enter_drug_toDB(confirm){
+  if ($('#drug').val()!=''&&$('#year_ini_d').val()!=''&&$('#month_ini_d').val()!=''&&$('#day_ini_d').val()!='') {
+
+    if (confirm!='yes') {var confirm='';}
+    var drug=$('#drug').val();
+    
+    var month_dg=$('#month_ini_d').val();
+    if (month_dg.length==1) {month_dg='0'+month_dg;} 
+    
+    var day_drg=$('#day_ini_d').val();
+    if (day_drg.length==1) {day_drg='0'+day_drg;}
+    
+    var drugdate=$('#year_ini_d').val()+'-'+month_dg+'-'+day_drg;
+
+    $.post(
+      '../patient/ajax_new_drug.php'
+      ,{drugdate:drugdate,drug:drug,confirm:confirm}
+      ,function(data){
+        if (data=='exist') {
+          $('#drug_already_exist').show('fast');
+        }
+          else {$('#table_drug_result').html(data);
+          $('#treatment_tb > tbody > tr').eq(1).after('<tr class="span8"><td  class="span3">'
+            +$('#drug').val()
+            +'</td><td class="span2">'
+            +drugdate
+            +'</td><td class="span2"></td><td class="span2"></td></tr>');
+          $('#inputdrug').hide();
+          $("#ad_drug").html("A&ntilde;adir f&aacute;rmaco");
+          $('#drug').val('');
+          $('#year_ini_d').val('');
+          $('#month_ini_d').val('');
+          $('#day_ini_d').val('');
+          $('#drug_already_exist').hide('fast');
+        }
+      });
+  } 
+}
+
+$('#btn_add_drug').click(function(){enter_drug_toDB('');});
+$("#day_ini_d").keyup(function(event){if(event.keyCode == 13){enter_drug_toDB('');} });
+
+$('#reconfirm_drugsave').click(function(){
+  var confirm='yes';
+  enter_drug_toDB(confirm);
+});
+
+$('#cancel_duplicated_drug').click(function(){
+  $('#inputdrug').hide();
+  $("#ad_drug").html("A&ntilde;adir f&aacute;rmaco");
+  $('#drug').val('');
+  $('#year_ini_d').val('');
+  $('#month_ini_d').val('');
+  $('#day_ini_d').val('');
+  $('#drug_already_exist').hide();
 });
 
 

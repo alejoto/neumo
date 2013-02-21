@@ -25,7 +25,7 @@ echo '----'.$usr.'----';
     <td class="span2">
       <?php 
       if ($row['drug_end']==null||$row['drug_end']=='') {?>
-      <a href='#'>Fijar fecha </a>
+      <a href='#'>Agregar</a>
       <?php } 
       else {
         echo $row['drug_end'];
@@ -34,7 +34,7 @@ echo '----'.$usr.'----';
     <td class="span2">
       <?php 
       if ($row['suspend_cause']==null||$row['suspend_cause']=='') {?>
-      <a href='#'>Agregar motivo </a>
+      <a href='#'>Agregar</a>
       <?php } 
       else {
         echo $row['suspend_cause'];
@@ -45,7 +45,9 @@ echo '----'.$usr.'----';
   <?php } ?>
   <tr class="span8">
     <td class="span3">
-      <a rel="tooltip" title="agregar medicamento" id="ad_drug">A&ntilde;adir</a>
+      <a rel="tooltip" title="agregar medicamento" id="ad_drug">
+        <i class="icon-plus-sign"></i>
+         A&ntilde;adir f&aacute;rmaco</a>
     </td>
     <td class="span2"></td>
     <td class="span2"></td>

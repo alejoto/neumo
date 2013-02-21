@@ -10,7 +10,16 @@
     <?php 
     include '../patient/basic/table_treatment.php';
     ?>
-    <div id='table_drug_result'></div>
+    <div class="span3" id='table_drug_result'></div>
+  </div>
+  <div class="row" style='display:none' id='drug_already_exist'>
+    <div class="span4 alert" >Medicamento ya existe. Confirmar ingreso</div>
+    <div class='span1'>
+      <a class='btn span1' id='reconfirm_drugsave' href="#">Ingresar</a>
+    </div>
+    <div class='offset1 span1'>
+      <a class='btn  span1' href="#" id='cancel_duplicated_drug'>Cancelar</a>
+    </div>
   </div>
 
   <div id="inputdrug">
@@ -60,7 +69,7 @@
         <a id="btn_add_drug" class="btn btn-primary span1">Agregar</a>
       </div>
       <div class="offset1 span1">
-        <a id='hide_drug_hap' class="btn btn-info span1">Ocultar</a>
+        <a id='hide_drug_hap' class="btn btn-info span1">Cancelar</a>
       </div>
     </div>
   </div>
