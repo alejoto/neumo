@@ -181,9 +181,17 @@ function showmain(btnsw,hid1,hid2,hid3,hid4,shwmain){
     num_ranges($("#breathing"), 50, 0,0);
     num_ranges($("#sat_ox"), 100, 0,0);
 
+    /*
     hide_if_empty($("#homeoxigen"), $("#ox_depend"));
+    $("#homeoxigen").change(function(){
+      if ($("#homeoxigen").val()==''||$("#homeoxigen").val()=='no') {
+        $("#ox_depend").hide();
 
-    show_on_check($("#tendt"), $("#tendt_hide"));
+      } else{$("#ox_depend").show('fast');};
+
+    });/**/
+
+show_on_check($("#tendt"), $("#tendt_hide"));
     show_on_check($("#atr_sept"), $("#atr_sept_hide"));
 
     tiprequired ($("#day_ev"));
