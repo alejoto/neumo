@@ -78,7 +78,7 @@ function hide_show_savebutton(fields,button) {
         else {button.hide("fast");}
     }
     var ii=0;
-    //cars=new Array();
+    
     var typfd;
 
     for (;fields[ii];)

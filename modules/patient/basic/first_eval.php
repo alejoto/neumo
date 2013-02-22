@@ -26,7 +26,7 @@ $sql    = "SELECT * FROM hap_first_eval LEFT JOIN main_eval
 		if ($row['afroamerican']=='si') { $afroamerican='Paciente de raza afroamericana.'; }
 		else {$afroamerican='';}
 		?>
-	<div class="row">
+	<div class="row"  >
 		<div class="span4" style="text-align:left">
 			Inicio de s&iacute;ntomas en 
 			<b>
@@ -42,7 +42,7 @@ $sql    = "SELECT * FROM hap_first_eval LEFT JOIN main_eval
 	
 	<?php } 
 	else {?>
-	<div class="row">
+	<div class="row" id='first_eval_form' style='text-align:left'>
 		<div class="span2" style="text-align:right">Fecha inicio s&iacute;ntomas</div>
 
 		<div class="span2" style="text-align: left;">
@@ -53,7 +53,7 @@ $sql    = "SELECT * FROM hap_first_eval LEFT JOIN main_eval
 		<div class="span2" style="text-align:left">Raza afroamericana?</div>
 
 		<div class="span2">
-		  <select class="span2 ">
+		  <select id='afroamerican' class="span2">
 		    <option value=""></option>
 		    <option value="si">S&iacute;</option>
 		    <option value="no">No</option>

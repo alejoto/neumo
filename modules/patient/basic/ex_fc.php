@@ -7,18 +7,7 @@
     </div>
   </div>
   
-  <div class="row">
-    <div class="span1" style="text-align:right">Peso</div>
-    <div class="span1">
-      <input type="text" placeholder="Kgs" class="span1 ex_fc" id="weight"/>
-    </div>
-    <div class="span1" style="text-align:right">Talla</div>
-    <div class="span1">
-      <input type="text" placeholder="Mts" class="span1 ex_fc" id="height"/>
-    </div>
-    <div class="span2" style="text-align:right">S.C. Mt2</div>
-    <div class="span2" id="bsa"></div>
-  </div>
+  
   
   <div class="row">
     <div class="span1" style="text-align:right">Pulso</div>
@@ -44,6 +33,19 @@
       <input type="text" placeholder="diastol."id="pdiast" class="span1 ex_fc">
     </div>
     <b><div class="span2" id="ef_pam"></div></b>
+  </div>
+  
+  <div class="row">
+    <div class="span1" style="text-align:right">Peso</div>
+    <div class="span1">
+      <input type="text" placeholder="Kgs" class="span1 ex_fc" id="weight"/>
+    </div>
+    <div class="span1" style="text-align:right">Talla</div>
+    <div class="span1">
+      <input type="text" placeholder="Mts" class="span1 ex_fc" id="height"/>
+    </div>
+    <div class="span2" style="text-align:right">S.C. Mt2</div>
+    <div class="span2" id="bsa"></div>
   </div>
   
   <div class="row">

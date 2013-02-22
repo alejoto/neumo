@@ -58,18 +58,6 @@ function get_info(info_id){
   return result;
 }
 
-
-$("#sympt_save").click(function(){
-  var info = get_info("anamnesis");
-  to_database(info,"table_name");
-  //to_update();
-});
-
-$("#ef_save").click(function(){
-  var info = get_info("ex_fc");
-  to_database(info,"table_name");
-});
-
 $("#hiperclot_save").click(function(){
   var info = get_info("hiperclot");
   to_database(info,"table_name");
