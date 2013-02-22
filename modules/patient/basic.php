@@ -54,9 +54,22 @@
 
 <script type="text/javascript">
 
-/*
-$('#sympt_save').click(function(){
+
+$('#sympt_save2').click(function(){
+  //pending to errase sympt_save (without number) from ajax_save
+  var anam_year=$('#year_ev').val();
+  var anam_month=$('#month_ev').val();
+  if (anam_month.length==1) {anam_month='0'+anam_month;}
+  var anam_day=$('#day_ev').val();
+  if (anam_day.length==1) {anam_day='0'+anam_day;}
+  var anam_date=anam_year+'-'+anam_month+'-'+anam_day;
+  $.post('save_anam.php');
+  /*$.post('ajax/test.html', function(data) {
+  $('.result').html(data);});*/
+
+
   $('#anam').hide('fast');
+  $('#ex_fc').show('fast');
 })
 /**/
 

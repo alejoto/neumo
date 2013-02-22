@@ -4,8 +4,7 @@ $docid=$_SESSION['hap_patient_id'];
 $result = mysql_query("SELECT * FROM main_patient WHERE patient_id='$docid' "  );
 $row = mysql_fetch_array($result);
 ?>
-<div class="span3" style="width: 250px; margin-left: 40px;">
-
+<div class='span2'>
 	<?php /*Choosing image for male or female gender*/
 	if ($row['gender']=='male') { ?>
 	<img src="../../assets/images/male.png"/>
@@ -13,11 +12,20 @@ $row = mysql_fetch_array($result);
 	else if ($row['gender']=='female') { ?>
 	<img src="../../assets/images/female.png"/>
 	<?php } ?>
-
-	<div class="pull-right" style="text-align: left; padding-top: 0px; font-size: 12px; ">
-		<b> 			<?php  echo $row['name'].'<br/> '.$row['surn']; ?> </b>
-		<br>Documento 	<?php echo $row['patient_id']; 					?>
-		<p>
+</div>
+<div class='span5' style='text-align:left'>
+	<div class="row">
+		<div class="span5">
+			<b>  <?php  echo $row['name'].' '.$row['surn']; ?> </b>
+		</div>
+	</div>
+	<div class="row">
+		<div class="span5">
+			Documento 	<?php echo $row['patient_id']; ?>
+		</div>
+	</div>
+	<div class="row">
+		<div class="span5">
 			<?php 
 			$now=date('Y-m-d');
 			$thisyear=(int)substr($now,0,4);
@@ -35,7 +43,8 @@ $row = mysql_fetch_array($result);
 
 			if ($birth_month_and_day>$this_month_and_day) {echo $thisyear-$birthyear-1;}
 			else {echo $thisyear-$birthyear;}
-			?> a&ntilde;os 
-		</p>
+			?> a&ntilde;os
+
+		</div>
 	</div>
 </div>

@@ -16,7 +16,7 @@
   <div class="row">
     <div class="span4">  </div>
     <div class="span2">
-      <select class="span2 anamnesis" id="pregnant" style="display:none">
+      <select class="span2" id="pregnant" style="display:none">
         <option value=""></option>
         <option value="si">S&iacute;</option>
         <option value="no">No</option>
@@ -36,16 +36,17 @@
   <div class="row">
     <div class="span2">FECHA EVALUACI&Oacute;N</div>
     <div class="span3" style="text-align: left;">
-      <input type="text" id="year_ev" class="span1 anamnesis" placeholder="a&ntilde;o"/>
-      <input type="text" id="month_ev" class="span1 anamnesis" placeholder="mes"/>
-      <input type="text" id="day_ev" class="span1 anamnesis" placeholder="d&iacute;a"/>
+      <input type="text" id="year_ev" class="span1" placeholder="a&ntilde;o"/>
+      <input type="text" id="month_ev" class="span1" placeholder="mes"/>
+      <input type="text" id="day_ev" class="span1" placeholder="d&iacute;a"/>
     </div>
   </div>
+
 
   <div class="row">
     <div class="span2" style="text-align:left">Clase funcional</div>
     <div class="span6" style="text-align: left; ">
-      <select id="nyha_funct_class" class="span5 anamnesis">
+      <select id="nyha_funct_class" class="span5">
         <option val=""></option>
         <option val="i">I. Asintom&aacute;tico</option>
         <option val="ii">II. Disnea que limita pocas actividades cotidianas</option>
@@ -101,7 +102,7 @@
   <div class="row">
     <div class="offset1 span3" style="text-align:right">S&iacute;ntomas han mejorado?</div>
     <div class="span2">
-      <select id="improved_symts" class="span2 anamnesis">
+      <select id="improved_symts" class="span2">
         <option value=""></option>
         <option value="si">S&iacute;</option>
         <option value="no">No</option>
@@ -112,7 +113,7 @@
   <div class="row">
     <div class="span8" style="text-align: left;">
       <br><br>
-      <a class="btn" id="sympt_save">Guardar</a>
+      <a class="btn" id="sympt_save2">Guardar</a>
       <br><br>
     </div>
   </div>
