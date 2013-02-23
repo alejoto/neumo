@@ -1,6 +1,6 @@
 function to_database(info,table) {
   $.post("../patient/ajax_save.php",{ info:info, table:table }, function(data) {
-		alert(data);
+		//alert(data);
 		if(data=='Yes') {
       alert("Datos guardados exitosamente");
     }else{
