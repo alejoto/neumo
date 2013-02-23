@@ -4,9 +4,12 @@ session_start();
 if (!isset($_SESSION['hap_patient_id'])||!isset($_SESSION['username'])) {
 	header("location:myaccount.php?page=patients");
 }
-else {
+
 $docidnum=$_SESSION['hap_patient_id'];
 $digiter_id = $_SESSION['username'];
+
+
+
 
 //adding event to table main eval
 mysql_query("INSERT INTO main_eval (patient_id, digiter_id) VALUES ('$docidnum', '$digiter_id');");
@@ -20,7 +23,15 @@ $eval_id_arr = mysql_fetch_array($search_result);
 //asigning value to session, same variable as in file 'ajax_save_patient.php' in line 37 or near
 $_SESSION['evaluation'] = $eval_id_arr[0];
 
+//check if user has data on right catheter table
+$result=mysql_query("SELECT * FROM hap_right_cathet LEFT JOIN main_eval 
+	ON hap_right_cathet.eval_id= main_eval.eval_id WHERE main_eval.patient_id = '$docidnum'  ");
+
+//redirect to right catheter if query=0
+if (mysql_num_rows($result)==0) {header('Location: myaccount.php?page=right_catheter'); }
+
 //redirect to the main form
 header('Location: myaccount.php?page=basic'); 
-}
+
+
 ?>

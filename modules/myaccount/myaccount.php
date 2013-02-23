@@ -4,7 +4,22 @@ session_start();
 if (isset($_GET["page"])) {$page = $_GET["page"];}
 else {header('Location: myaccount.php?page=patients');}
 
-if(isset($_SESSION['username'])){
+
+//redirect to right catheter form if this is empty
+if (isset($_SESSION['evaluation'])&&isset($_SESSION['hap_patient_id'])&&$page!='right_catheter') {
+  include '../DB/connect.php';
+  $docidnum=$_SESSION['hap_patient_id'];
+$digiter_id = $_SESSION['username'];
+//check if user has data on right catheter table
+$result=mysql_query("SELECT * FROM hap_right_cathet LEFT JOIN main_eval 
+  ON hap_right_cathet.eval_id= main_eval.eval_id WHERE main_eval.patient_id = '$docidnum'  ");
+if (mysql_num_rows($result)==0) {
+  header('Location: myaccount.php?page=right_catheter')
+  ;}
+}
+
+//load pages according to $page value
+ if(isset($_SESSION['username'])){
   
   include '../includes/header.php';
   

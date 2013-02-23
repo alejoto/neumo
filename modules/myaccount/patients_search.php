@@ -116,15 +116,4 @@
   </div>
 </div>
 <script>
-  $("#edit_patient").hide();
-  $("#change_patient_btn").hide();
-  
-  // ¿Esto funciona?
-  $(document).ready(function(){
-    if ($('#docid').val()=="") { $('#docid').css("color","#CECECE"); }
-    $('#docid').change(function(){
-      if ($('#docid').val()==""){ $('#docid').css("color","#CECECE"); }
-      else{ $('#docid').css("color","#494949"); }
-    });
-  });
   </script>
