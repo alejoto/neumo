@@ -46,7 +46,7 @@ $(document).ready(function() {
   $("#patientexist").hide();
   $("#enterpatient").hide();
   $("#docidnum").hide();
-})
+});
 
 
 function enter_search (){
@@ -92,6 +92,18 @@ if ($("#idnumber").val()!="") {
  	$("#idnumber").blur(function() {
   	enter_search(); 
  	});
+
+//coloring font according to answer
+  $("#edit_patient").hide();
+  $("#change_patient_btn").hide();
+  $(document).ready(function(){
+    if ($('#docid').val()=="") { $('#docid').css("color","#CECECE"); }
+    $('#docid').change(function(){
+      if ($('#docid').val()==""){ $('#docid').css("color","#CECECE"); }
+      else{ $('#docid').css("color","#494949"); }
+    });
+  });
+
 
 function tiprequired (reqfld) {
   $(document).ready(function() {
