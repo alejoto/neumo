@@ -19,4 +19,15 @@
 
   $sql=mysql_query("SELECT pres_art_exfco FROM hap_follow_up");
   if (!$sql){ mysql_query("ALTER TABLE hap_follow_up ADD pres_art_exfco VARCHAR(60) AFTER pulse");}
+
+  $sql=mysql_query("SELECT ing_yu FROM hap_follow_up");
+  if (!$sql){ mysql_query("ALTER TABLE hap_follow_up ADD ing_yu VARCHAR(60) AFTER cyanosis");}
+
+  $sql=mysql_query("SELECT ef_edema FROM hap_follow_up");
+  if (!$sql){ mysql_query("ALTER TABLE hap_follow_up ADD ef_edema VARCHAR(60) AFTER cyanosis");}
+
+  $sql=mysql_query("SELECT hepatomegaly FROM hap_follow_up");
+  if (!$sql){ mysql_query("ALTER TABLE hap_follow_up ADD hepatomegaly VARCHAR(60) AFTER cyanosis");}
+
+  //
 ?>

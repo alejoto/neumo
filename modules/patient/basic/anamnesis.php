@@ -94,10 +94,9 @@
   </div>
   <div class="row">
     <div class="span8" style="text-align: left;">
-      <br><br>
+      
       <a class="btn" id="sympt_save2">Continuar..</a>
-      <br><br>
+      <br><br><br>
     </div>
   </div>
-  <div id='anam_result'></div>
 </div>

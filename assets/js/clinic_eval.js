@@ -27,6 +27,138 @@ $('#hide_drug_hap').click(function(){
   //           
 });
 
+
+// Saving 'anamnesis' and 'ex fco' in DB table
+hide_show_savebutton([$('#day_ev'),$('#nyha_funct_class')],$('#sympt_save2'));
+
+$('#sympt_save2').click(function(){
+  $('#anam').hide('fast');
+  $('#ex_fc').show('fast');
+});
+
+$('#ef_save').click(function(){
+  //pending to errase sympt_save (without number) from ajax_save
+
+  //disease beggining data
+  if ($('#afroamerican').val()) {var afroamerican=$('#afroamerican').val();} else{var afroamerican='';}
+  if ($('#month').val()) {
+    var begin_month=$('#month').val();
+    if (begin_month.length==1) { var begin_month ='0'+ begin_month; }
+    var dxdate=$('#year').val() +'-'+ begin_month +'-01';
+  } else{var dxdate=''};
+
+  //fixing evaluation date
+  var anam_year=$('#year_ev').val();
+  var anam_month=$('#month_ev').val();
+  var anam_day=$('#day_ev').val();
+
+  if (anam_month.length==1) {anam_month='0'+anam_month;}
+  if (anam_day.length==1) {anam_day='0'+anam_day;}
+
+  var eval_date=anam_year+'-'+anam_month+'-'+anam_day;
+
+  var nyha_funct=$('#nyha_funct').val();
+
+  //checkbox values
+  if($("#dyspnea").is(':checked')) { var dyspnea="si";} else {var dyspnea="no";}
+  if($("#cough").is(':checked')) { var cough="si";} else {var cough="no";}
+  if($("#chestpain").is(':checked')) { var chestpain="si";} else {var chestpain="no";}
+  if($("#loweredema").is(':checked')) { var loweredema="si";} else {var loweredema="no";}
+  if($("#hemoptysis").is(':checked')) { var hemoptysis="si";} else {var hemoptysis="no";}
+  if($("#syncope").is(':checked')) { var syncope="si";} else {var syncope="no";}
+
+
+  var improved_symts=$('#improved_symts').val();
+  var pulse=$('#pulse').val();
+  var breathing=$('#breathing').val();
+  var sat_ox=$('#sat_ox').val();
+  var pres_art_exfco=$('#psist').val()+ '/' +$('#pdiast').val();
+  var weight=$('#weight').val();
+  var height=$('#height').val();
+
+
+  if($("#ing_yu").is(':checked')) { var ing_yu="si";} else {var ing_yu="no";}
+  if($("#hepatomegaly").is(':checked')) { var hepatomegaly="si";} else {var hepatomegaly="no";}
+  if($("#cyanosis").is(':checked')) { var cyanosis="si";} else {var cyanosis="no";}
+  if($("#ef_edema").is(':checked')) { var ef_edema="si";} else {var ef_edema="no";}
+  if($("#finger_clubbing").is(':checked')) { var finger_clubbing="si";} else {var finger_clubbing="no";}
+
+if (anam_day==''||nyha_funct=='') {
+  $('#anam').show('fast');
+  $('#ex_fc').hide('fast');
+  $('#year_ev').focus();
+
+} 
+
+else {
+//
+  $.post('../patient/save_anam.php',{
+    afroamerican:afroamerican
+    ,dxdate:dxdate
+    ,eval_date:eval_date
+    ,nyha_funct:nyha_funct
+    ,dyspnea:dyspnea
+    ,cough:cough
+    ,chestpain:chestpain
+    ,loweredema:loweredema
+    ,hemoptysis:hemoptysis
+    ,syncope:syncope
+    ,improved_symts:improved_symts
+    ,pulse:pulse
+    ,breathing:breathing
+    ,sat_ox:sat_ox
+    ,pres_art_exfco:pres_art_exfco
+    ,weight:weight
+    ,height:height
+    ,ing_yu:ing_yu
+    ,hepatomegaly:hepatomegaly
+    ,cyanosis:cyanosis
+    ,ef_edema:ef_edema
+    ,finger_clubbing:finger_clubbing
+},function(data){
+    $('#anam_result').html(data);
+    
+    if ($('#month').val()!=''&& $('#afroamerican').val()!='') {
+      $('#first_eval_form').html('Afroamericano?' 
+        + $('#afroamerican').val() 
+        + ', inicio sintomas en:' 
+        + $('#year').val() + '-' + $('#month').val());
+    }
+    $('#year_ev').val('');
+    $('#month_ev').val('');
+    $('#day_ev').val('');
+    $('#improved_symts').val('');
+    $('#weight').val('');
+    $('#height').val('');
+    $('#nyha_funct').val('');
+    $('#sat_ox').val('');
+    $('#pulse').val('');
+    $('#psist').val('');
+    $('#pdiast').val('');
+    $('#breathing').val('');
+
+    $('#dyspnea').attr('checked', false);
+    $('#cough').attr('checked', false);
+    $('#chestpain').attr('checked', false);
+    $('#loweredema').attr('checked', false);
+    $('#hemoptysis').attr('checked', false);
+    $('#syncope').attr('checked', false);
+    $('#cyanosis').attr('checked', false);
+    $('#hepatomegaly').attr('checked', false);
+    $('#ef_edema').attr('checked', false);
+    $('#ing_yu').attr('checked', false);
+    $('#finger_clubbing').attr('checked', false);
+
+    $('#treatment').show('fast');
+    $('#ex_fc').hide('fast');
+
+
+  });
+}
+
+});
+
+
 //.post ajax for saving new drug in DB
 function enter_drug_toDB(confirm){
   if ($('#drug').val()!=''&&$('#year_ini_d').val()!=''&&$('#month_ini_d').val()!=''&&$('#day_ini_d').val()!='') {
