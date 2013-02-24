@@ -33,6 +33,7 @@
                 <?php  
                 include '../patient/right_catheter/basal.php'; 
                 include '../patient/right_catheter/reactiv.php'; 
+                include '../patient/general_menu.php'; 
                 ?>
             </div>
         </div>

@@ -14,8 +14,7 @@ $digiter_id = $_SESSION['username'];
 $result=mysql_query("SELECT * FROM hap_right_cathet LEFT JOIN main_eval 
   ON hap_right_cathet.eval_id= main_eval.eval_id WHERE main_eval.patient_id = '$docidnum'  ");
 if (mysql_num_rows($result)==0) {
-  header('Location: myaccount.php?page=right_catheter')
-  ;}
+  header('Location: myaccount.php?page=right_catheter');}
 }
 
 //load pages according to $page value

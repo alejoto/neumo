@@ -2,7 +2,7 @@ function to_database(info,table) {
   $.post("../patient/ajax_save.php",{ info:info, table:table }, function(data) {
 		//alert(data);
 		if(data=='Yes') {
-      alert("Datos guardados exitosamente");
+      //alert("Datos guardados exitosamente");
     }else{
 			alert("Ocurrio un problema al guardar los datos");
     }
@@ -134,7 +134,9 @@ $("#legsdoppler_save").click(function(){
 $("#save_rt_cath").click(function(){
 	var info = get_info("bas");
 	to_database(info,"hap_right_cathet");
-	window.location.href = "myaccount.php?page=diagnostic";
+	$('#success_on_save').show('fast');
+	$('#basal').hide('fast');
+	//window.location.href = "myaccount.php?page=diagnostic";
 });
 
 $("#vreac_test_done").change(function(){
@@ -147,7 +149,9 @@ $("#vreac_test_done").change(function(){
 $("#react_save").click(function(){
 	var info = get_info("react");
 	to_database(info,"hap_vasoreact_test");
-	window.location.href = "myaccount.php?page=diagnostic";
+	$('#success_on_save').show('fast');
+	$('#reactiv').hide('fast');
+	//window.location.href = "myaccount.php?page=diagnostic";
 });
 
 		////BUTTONS OF 'PRUEBAS DE SANGRE'////
@@ -156,10 +160,6 @@ $("#hb_save").click(function(){
 	var info = get_info("hemo");
 	to_database(info,"hap_hb");
 });
-
-
-
-
 
 
 $("#bld_gass_save").click(function(){
