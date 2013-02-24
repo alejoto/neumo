@@ -1,6 +1,6 @@
 <div id="basal" >
     <div CLASS="well well-small">
-        <h4>DATOS BASALES </h4>
+        <h4>DATOS BASALES  </h4>
     </div>
     <div class="row">
         <div class="span2" style="text-align:right">Fecha examen:</div>
@@ -125,7 +125,7 @@
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row" id="ask_for_react_test" style="display:none">
         <div class="span2" style="text-align:right">Se hizo test vasorreactividad?</div>
         <div class="span2">
             <select id="vreac_test_done" class="span2">

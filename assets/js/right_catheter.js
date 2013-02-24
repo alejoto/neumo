@@ -16,9 +16,29 @@
         });
     });
 
+function show_react_test_question() {
+    if (
+        $('#day').val()!='' 
+        &&$('#res_vasc_pulm').val()!='' 
+        &&$('#res_vasc_syst').val()!='' 
+        &&$('#pap_sys').val()!='' 
+        &&$('#pap_dias').val()!='' 
+        &&$('#pas_sys').val()!='' 
+        &&$('#pas_dias').val()!='' 
+        &&$('#rt_atr_press').val()!='' 
+        &&$('#pulm_wedg_press').val()!='' 
+        &&$('#cardiac_outp').val()!='' 
+        &&$('#rt_atr_oxim').val()!='' 
+        &&$('#heart_rate').val()!='' 
+        ) 
+    {
+        $('#ask_for_react_test').show('fast');
+    }
+    else {$('#ask_for_react_test').hide('fast');}
+}
 
 
-    /*A PARTIR DE ESTA SECCIÓN SE EJECUTAN LAS FUNCIONES PREVIAS*/
+    /*Next lines execute prevoius functions */
     
     clickhideshow($("#showrt"), $("#basal"), $("#reactiv"));
     clickhideshow($("#showbas"), $("#reactiv"), $("#basal"));
@@ -91,3 +111,16 @@
     trigger_bsa($("#wgt"), $("#hgt"), $("#bsa"));
 
     trigger_v_react_test($("#pap_sys"),$("#pap_dias"),$("#post_pap_sys"),$("#post_pap_dias"),$("#cardiac_outp"),$("#post_cardiac_outp"));
+
+    $('#day').keyup(function(){ show_react_test_question(); });
+    $('#res_vasc_pulm').keyup(function(){ show_react_test_question(); });
+    $('#res_vasc_syst').keyup(function(){ show_react_test_question(); });
+    $('#pap_sys').keyup(function(){ show_react_test_question(); });
+    $('#pap_dias').keyup(function(){ show_react_test_question(); });
+    $('#pas_sys').keyup(function(){ show_react_test_question(); });
+    $('#pas_dias').keyup(function(){ show_react_test_question(); });
+    $('#rt_atr_press').keyup(function(){ show_react_test_question(); });
+    $('#pulm_wedg_press').keyup(function(){ show_react_test_question(); });
+    $('#cardiac_outp').keyup(function(){ show_react_test_question(); });
+    $('#rt_atr_oxim').keyup(function(){ show_react_test_question(); });
+    $('#heart_rate').keyup(function(){ show_react_test_question(); });

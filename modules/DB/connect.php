@@ -29,5 +29,29 @@
   $sql=mysql_query("SELECT hepatomegaly FROM hap_follow_up");
   if (!$sql){ mysql_query("ALTER TABLE hap_follow_up ADD hepatomegaly VARCHAR(60) AFTER cyanosis");}
 
-  //
+  $sql=mysql_query("SELECT cardiac_index FROM hap_right_cathet");
+  if (!$sql){ mysql_query("ALTER TABLE hap_right_cathet ADD cardiac_index VARCHAR(60) AFTER cardiac_outp");}
+
+  $sql=mysql_query("SELECT rt_ventr_oxim FROM hap_right_cathet");
+  if (!$sql){ mysql_query("ALTER TABLE hap_right_cathet ADD rt_ventr_oxim VARCHAR(60) AFTER rt_atr_oxim");}
+
+  $sql=mysql_query("SELECT pulm_artery FROM hap_right_cathet");
+  if (!$sql){ mysql_query("ALTER TABLE hap_right_cathet ADD pulm_artery VARCHAR(60) AFTER rt_ventr_oxim");}
+
+  $sql=mysql_query("SELECT legsdoppler_result_left FROM hap_duplex_legs");
+  if (!$sql){ mysql_query("ALTER TABLE hap_duplex_legs ADD legsdoppler_result_left VARCHAR(60) AFTER legsdoppler_date");}
+
+  $sql=mysql_query("SELECT legsdoppler_result_right FROM hap_duplex_legs");
+  if (!$sql){ mysql_query("ALTER TABLE hap_duplex_legs ADD legsdoppler_result_right VARCHAR(60) AFTER legsdoppler_result_left");}
+
+  $sql=mysql_query("SELECT cardiac_index FROM hap_vasoreact_test");
+  if (!$sql){ mysql_query("ALTER TABLE hap_vasoreact_test ADD post_cardiac_index VARCHAR(60) AFTER post_cardiac_outp");}
+
+  $sql=mysql_query("SELECT rt_ventr_oxim FROM hap_vasoreact_test");
+  if (!$sql){ mysql_query("ALTER TABLE hap_vasoreact_test ADD post_rt_ventr_oxim VARCHAR(60) AFTER post_cardiac_index");}
+
+  $sql=mysql_query("SELECT pulm_artery FROM hap_vasoreact_test");
+  if (!$sql){ mysql_query("ALTER TABLE hap_vasoreact_test ADD post_pulm_artery VARCHAR(60) AFTER post_rt_ventr_oxim");}
+
+
 ?>

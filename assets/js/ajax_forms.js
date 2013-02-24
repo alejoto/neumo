@@ -131,24 +131,26 @@ $("#legsdoppler_save").click(function(){
 	to_database(info,"hap_duplex_legs");
 });
 
-$("#react_save").click(function(){
-	var info = get_info("react");
-	to_database(info,"hap_vasoreact_test");
-});
-
 $("#save_rt_cath").click(function(){
 	var info = get_info("bas");
 	to_database(info,"hap_right_cathet");
+	window.location.href = "myaccount.php?page=diagnostic";
 });
 
 $("#vreac_test_done").change(function(){
 	if (this.value == "si") {
 		var info = get_info("bas");
-		to_database(info,"hap,right_cathet");
+		to_database(info,"hap_right_cathet");
 	}
 });
 
-		////BUTTONS OF PRUEBAS DE SANGRE////
+$("#react_save").click(function(){
+	var info = get_info("react");
+	to_database(info,"hap_vasoreact_test");
+	window.location.href = "myaccount.php?page=diagnostic";
+});
+
+		////BUTTONS OF 'PRUEBAS DE SANGRE'////
 
 $("#hb_save").click(function(){ 
 	var info = get_info("hemo");

@@ -12,16 +12,23 @@ $digiter_id = $_SESSION['username'];
 
 
 //adding event to table main eval
-mysql_query("INSERT INTO main_eval (patient_id, digiter_id) VALUES ('$docidnum', '$digiter_id');");
+$start_main_eval=mysql_query("INSERT INTO main_eval (patient_id, digiter_id) VALUES ('$docidnum', '$digiter_id');");
+
+if ($start_main_eval) {
+	$search_sql=("SELECT MAX(eval_id) FROM main_eval WHERE patient_id = '$docidnum' AND digiter_id = '$digiter_id'");
+	$search_result = mysql_query($search_sql);
+	$eval_id_arr = mysql_fetch_array($search_result);
+	$_SESSION['evaluation'] = $eval_id_arr[0];
+}
 
 //asjusting session variable for unique main eval id
-$search_sql=("SELECT MAX(eval_id) FROM main_eval WHERE patient_id = '$docidnum' AND digiter_id = '$digiter_id'");
+
 //select MAX ensueres to select latest eval id entered, filtered by user (digiter) and patient (doc_id)
-$search_result = mysql_query($search_sql);
-$eval_id_arr = mysql_fetch_array($search_result);
+
+
 
 //asigning value to session, same variable as in file 'ajax_save_patient.php' in line 37 or near
-$_SESSION['evaluation'] = $eval_id_arr[0];
+
 
 //check if user has data on right catheter table
 $result=mysql_query("SELECT * FROM hap_right_cathet LEFT JOIN main_eval 
