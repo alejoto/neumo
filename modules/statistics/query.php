@@ -9,10 +9,10 @@
 
   if($info == "pacientes"){
     $sql    = "SELECT * FROM main_patient";
-    $result = mysql_query($sql); 
+    $result = mysqli_query($con,$sql); 
     
     $temp = array(0,0,0,0,0,0,0,0,0,0,0,0);
-    while( $row = mysql_fetch_array($result) ){
+    while( $row = mysqli_fetch_array($result) ){
       $tales = explode("-", $row['timestamp']);
       if( $tales[0] == $y_opt ){
         $temp[ intval($tales[1])-1 ]++;
@@ -22,10 +22,10 @@
   
   if($info == "genero"){
     $sql    = "SELECT * FROM main_patient";
-    $result = mysql_query($sql);
+    $result = mysqli_query($con,$sql);
     
     $temp = array(0,0);
-    while( $row = mysql_fetch_array($result) ){
+    while( $row = mysqli_fetch_array($result) ){
       if( $row['gender'] == 'rc' ) $temp[0]++;
       else $temp[1]++;
     }
@@ -33,10 +33,10 @@
 
   if($info == "edades"){
     $sql    = "SELECT * FROM main_patient";
-    $result = mysql_query($sql);
+    $result = mysqli_query($con,$sql);
     
     $temp = array(0,0,0,0,0,0,0,0);
-    while( $row = mysql_fetch_array($result) ){
+    while( $row = mysqli_fetch_array($result) ){
       $ti = explode("-", $row['birthd']);
       $ageTime = mktime(0, 0, 0, intval($ti[2]), intval($ti[1]), intval($ti[0]));
       $age = floor( (time() - $ageTime) / (60*60*24*365) );
@@ -46,10 +46,10 @@
   
   if($info == "afroamerican"){
     $sql    = "SELECT * FROM hap_first_eval";
-    $result = mysql_query($sql);
+    $result = mysqli_query($con,$sql);
     
     $temp = array(0,0);
-    while( $row = mysql_fetch_array($result) ){
+    while( $row = mysqli_fetch_array($result) ){
       if($row['afroamerican'] == 'no') $temp[0]++;
       else $temp[1]++;
     }
@@ -57,11 +57,11 @@
 
   if($info == "funcional"){
     $sql    = "SELECT * FROM hap_follow_up";
-    $result = mysql_query($sql);
+    $result = mysqli_query($con,$sql);
     
     //$temp = array_fill(4, 0, 0);
     $temp = array(0,0,0,0);
-    while( $row = mysql_fetch_array($result) ){
+    while( $row = mysqli_fetch_array($result) ){
       $fc = $row['nyha_funct_class']; // functional class
       if( $fc == 'i') $temp[0]++;
       else if( $fc == 'ii') $temp[1]++;
@@ -76,15 +76,15 @@
   function find_patients($year, $pat){
     $inc = 0;
     $sql    = "SELECT * FROM hap_follow_up";
-    $result = mysql_query($sql);
-    while( $row = mysql_fetch_array($result) ){
+    $result = mysqli_query($con,$sql);
+    while( $row = mysqli_fetch_array($result) ){
 
       $act_p = $row['eval_id'];
 
       if( !isset($pat[(string)$act_p]) ){
         $sql2 = "SELECT min(eval_date) FROM hap_follow_up WHERE eval_id='".$act_p."'";
-        $result2 = mysql_query($sql2);
-        $row1 = mysql_fetch_array($result2);
+        $result2 = mysqli_query($con,$sql2);
+        $row1 = mysqli_fetch_array($result2);
         $min_date = $row1[0];
 
         $min_date_arr = explode("-", $min_date );
@@ -103,8 +103,8 @@
   
   function find_month_since_first_eval($p, $eval_date){
     $sql = "SELECT min(eval_date) FROM hap_follow_up WHERE eval_id='".$p."'";
-    $result = mysql_query($sql);
-    $row = mysql_fetch_array($result);
+    $result = mysqli_query($con,$sql);
+    $row = mysqli_fetch_array($result);
     $min_date = $row[0];
     
     $min_date_arr = explode("-", $min_date );
@@ -136,8 +136,8 @@
     
     // llena el arreglo clases funcionales - ap
     $sql    = "SELECT * FROM hap_follow_up";
-    $result = mysql_query($sql);
-    while( $row = mysql_fetch_array($result) ){
+    $result = mysqli_query($con,$sql);
+    while( $row = mysqli_fetch_array($result) ){
       $act_p = $row['eval_id'];
       $eval_date = $row['eval_date'];
       if( isset($pat[(string)$act_p]) ){    
@@ -179,6 +179,6 @@
   if($exit) $serialized_result = implode(",",$temp);
   echo $serialized_result;
 
-  mysql_close($con);
+  mysqli_close($con);
 
 ?>

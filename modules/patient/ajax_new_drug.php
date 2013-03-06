@@ -14,17 +14,18 @@ if (isset($_POST['drug'])&&isset($_POST['drugdate'])) {
 	$sql    = "SELECT * FROM hap_drug_treatment LEFT JOIN main_eval 
 	ON hap_drug_treatment.eval_id=main_eval.eval_id 
 	WHERE hap_drug_treatment.drug='$drug' AND main_eval.patient_id='$ptn'  ";
-	$result = mysql_query($sql);
+	$result = mysqli_query($con,$sql);
+	$row    = mysqli_fetch_array($result);
 	
 
 	//avoid saving data if repeated
-	if (mysql_num_rows($result)>0 &&$confirm=='' ) {
+	if ($row[0] !="" || $row[0] !=null &&$confirm=='' ) {
 		echo 'exist';
 	}
 	else {
-		mysql_query("INSERT INTO hap_drug_treatment (drug, drug_ini, eval_id) VALUES ('".$drug."', '".$drugdate."','$eval_id')");
+		mysqli_query($con,"INSERT INTO hap_drug_treatment (drug, drug_ini, eval_id) VALUES ('".$drug."', '".$drugdate."','$eval_id')");
 	}
-	$row    = mysql_fetch_array($result);
+	$row    = mysqli_fetch_array($result);
 }
 
 

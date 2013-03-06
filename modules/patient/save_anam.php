@@ -30,10 +30,14 @@ $cyanosis=$_POST['cyanosis'];
 $ef_edema=$_POST['ef_edema'];
 $finger_clubbing=$_POST['finger_clubbing'];
 
-if ($_POST['afroamerican']!=''&&$_POST['dxdate']!='') { mysql_query("INSERT INTO hap_first_eval (afroamerican,dxdate,eval_id) values ('$afroamerican','$dxdate','$eval_id')");}
+if ($_POST['afroamerican']!=''&&$_POST['dxdate']!='') 
+{ 
+		mysqli_query($con,"INSERT INTO hap_first_eval (afroamerican,dxdate,eval_id) 
+		values ('$afroamerican','$dxdate','$eval_id')");
+}
 
 
-mysql_query("INSERT INTO hap_follow_up (
+mysqli_query($con,"INSERT INTO hap_follow_up (
 eval_date
 ,dyspnea
 ,cough

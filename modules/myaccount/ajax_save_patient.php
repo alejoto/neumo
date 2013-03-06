@@ -20,7 +20,7 @@
   if( !$gender || !$name || !$surname || !$year || !$month || !$day || !$citybth || !$countrybth ){
     header('Location: ../myaccount/myaccount.php?page=patients'); 
   }else{
-    mysql_query("INSERT INTO main_patient (
+    mysqli_query($con,"INSERT INTO main_patient (
       patient_id, timestamp, name, surn, gender, birthd, countrybth, citybth, statebth, digiter_id) 
       VALUES ('".$docidnum."', '".$actual_date."', '".$name."', '".$surname."', '".$gender."', '".$birthd."', '".$countrybth."', '".$citybth."', '".$statebth."', '".$user_id."')");
 
@@ -28,13 +28,13 @@
     
     $digiter_id = $_SESSION['username'];
     //$tms=time();
-    mysql_query("INSERT INTO main_eval (patient_id, digiter_id) VALUES ('$docidnum', '$digiter_id' );"); 
+    mysqli_query($con,"INSERT INTO main_eval (patient_id, digiter_id) VALUES ('$docidnum', '$digiter_id' );"); 
     
     // Search for the generated ID
 
     $search_sql=("SELECT MAX(eval_id) FROM main_eval WHERE patient_id = '$docidnum' AND digiter_id = '$digiter_id'");
-    $search_result = mysql_query($search_sql);
-    $eval_id_arr = mysql_fetch_array($search_result);
+    $search_result = mysqli_query($con,$search_sql);
+    $eval_id_arr = mysqli_fetch_array($search_result);
 
     //Asigning 'evaluation' session as eval_id for foraing keys in health tables
     $_SESSION['evaluation'] = $eval_id_arr[0];

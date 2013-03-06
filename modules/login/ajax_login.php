@@ -5,22 +5,21 @@
 
   $usr  = htmlspecialchars($_POST['usr'],ENT_QUOTES);
   $pwd  = $_POST['pwd'];
-  $sql    = "SELECT * FROM users WHERE user_id='".$usr."'";
-  $result = mysql_query($sql);
-  $row    = mysql_fetch_array($result);
+  $sql    = "SELECT * FROM users WHERE user_id='joaleto@yahoo.com' ";
+  $result = mysqli_query($con,$sql);
+  $row    = mysqli_fetch_array($result);
 
-  if( mysql_num_rows($result)>0 ) {
+  if ($row[0] !=""|| $row[0] !=null ) {
 
-    if( strcmp($row['pwd'], $pwd )==0){
+    if( $pwd==$row['pwd']){
 
       $_SESSION['username'] = $usr;
       echo "yes";
 
-    }else
-      echo "no";
-  }else
-    echo "no";
+    }else       echo "no";
+  }else     echo "no";
 
-  mysql_close($con);
+mysqli_close($con);
+
 
 ?>

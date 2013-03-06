@@ -5,9 +5,10 @@ $ptn=$_SESSION['hap_patient_id'];
 $sql    = "SELECT * FROM hap_first_eval LEFT JOIN main_eval 
 	ON hap_first_eval.eval_id=main_eval.eval_id 
 	WHERE  main_eval.patient_id='$ptn'  ";
-	$result = mysql_query($sql);
-	if (mysql_num_rows($result)>0) {
-		$row=mysql_fetch_array($result);
+	$result = mysqli_query($con,$sql);
+	$row=mysqli_fetch_array($result);
+	if ($row[0] !="" || $row[0] !=null) {
+		
 		$whole_date=$row['dxdate'];
 		$ini_year=substr($whole_date,0,4);
 		$ini_month=substr($whole_date,5,2);if ($ini_month==01) { $ini_month="enero";}
@@ -33,8 +34,8 @@ $sql    = "SELECT * FROM hap_first_eval LEFT JOIN main_eval
 				<?php echo $ini_month.' de '.$ini_year; ?>
 			</b>.
 		</div>
-		<div class="span3" style="text-align:left">
-			<?php echo $afroamerican; ?>
+		<div class="span4" style="text-align:left">
+			<b><?php echo $afroamerican; ?></b>
 		</div>
 	</div>
 

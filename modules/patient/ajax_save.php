@@ -15,12 +15,12 @@
 	  
   $sql = "INSERT INTO ".$table." (".$pieces[0].",eval_id) VALUES ('" . implode("', '", explode(",", $pieces[1])) . "','$eval_id')";
   //echo $sql;
-	if( !mysql_query($sql,$con) ){
+	if( !mysqli_query($con,$sql) ){
     echo 'No';
     die('Error: ' . mysql_error());
   }
 
-  mysql_close($con);
+  mysqli_close($con);
   echo 'Yes';
   
 ?>

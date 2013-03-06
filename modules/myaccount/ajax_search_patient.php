@@ -3,9 +3,10 @@
   include '../DB/connect.php';
   $doc  = $_POST['doc'];
   $sql    = "SELECT * FROM main_patient WHERE patient_id='".$doc."'";
-  $result = mysql_query($sql);
-  $row    = mysql_fetch_array($result);
-  if (mysql_num_rows($result)>0 ){
+  $result = mysqli_query($con,$sql);
+  $row    = mysqli_fetch_array($result);
+  
+  if ($row[0] !="" || $row[0] !=null){ 
     ?>
     <br/>
     <br/>
@@ -84,5 +85,5 @@
     $_SESSION['hap_patient_id']=$doc;
     $_SESSION['patient'] = $patient;
   }else echo 'no';
-  mysql_close($con);
+  mysqli_close($con);
 ?>

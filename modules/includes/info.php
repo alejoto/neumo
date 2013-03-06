@@ -1,8 +1,8 @@
 <?php 
 include '../DB/connect.php';
 $docid=$_SESSION['hap_patient_id'];
-$result = mysql_query("SELECT * FROM main_patient WHERE patient_id='$docid' "  );
-$row = mysql_fetch_array($result);
+$result = mysqli_query($con,"SELECT * FROM main_patient WHERE patient_id='$docid' "  );
+$row = mysqli_fetch_array($result);
 ?>
 <div class='span2'>
 	<?php /*Choosing image for male or female gender*/

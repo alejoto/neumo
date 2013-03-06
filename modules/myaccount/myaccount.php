@@ -6,15 +6,21 @@ else {header('Location: myaccount.php?page=patients');}
 
 
 //redirect to right catheter form if this is empty
-if (isset($_SESSION['evaluation'])&&isset($_SESSION['hap_patient_id'])&&$page!='right_catheter') {
+if (isset($_SESSION['evaluation'])&&isset($_SESSION['hap_patient_id'])&&$page!='right_catheter') 
+{
   include '../DB/connect.php';
   $docidnum=$_SESSION['hap_patient_id'];
-$digiter_id = $_SESSION['username'];
-//check if user has data on right catheter table
-$result=mysql_query("SELECT * FROM hap_right_cathet LEFT JOIN main_eval 
-  ON hap_right_cathet.eval_id= main_eval.eval_id WHERE main_eval.patient_id = '$docidnum'  ");
-if (mysql_num_rows($result)==0) {
-  header('Location: myaccount.php?page=right_catheter');}
+  $digiter_id = $_SESSION['username'];
+
+  //check if user has data on right catheter table
+  $result=mysqli_query($con,"SELECT * FROM hap_right_cathet LEFT JOIN main_eval  
+    ON hap_right_cathet.eval_id= main_eval.eval_id WHERE main_eval.patient_id = '$docidnum'  ");
+  $row    = mysqli_fetch_array($result);
+
+  // Redirect if right cath is empty
+  if ($row[0] =="" || $row[0] ==null) {
+    header('Location: myaccount.php?page=right_catheter');
+  }
 }
 
 //load pages according to $page value

@@ -8,18 +8,18 @@
   $pwd2  = $_POST['pwd2'];
 
   $sql    = "SELECT * FROM users WHERE user_id='".$mail."'";
-  $result = mysql_query($sql);
-  $row    = mysql_fetch_array($result);
+  $result = mysqli_query($con,$sql);
+  $row    = mysqli_fetch_array($result);
 
   $sql2    = "SELECT * FROM users WHERE status='".$mail."'";
-  $result2 = mysql_query($sql2);
-  $row2   = mysql_fetch_array($result2);
+  $result2 = mysqli_query($con,$sql2);
+  $row2   = mysqli_fetch_array($result2);
 
-  if (mysql_num_rows($result2)>0) {
+  if ($row2[0] !="" || $row2[0] !=null) {
     echo "mmm";
   }
 
-  else if ( mysql_num_rows($result)>0  ) {
+  else if ( $row[0] !="" || $row[0] !=null  ) {
     echo "no";
   } else {
     if( $pwd1 == $pwd2 && $pwd1 != "" ){
@@ -49,7 +49,7 @@
       $content .='<p>Email: <span style="color: #0002a5; ">';
       $content .='<b><a href="mailto:projectmanager@healmydisease.com">projectmanager@healmydisease.com</a></b></span></p></font>';
       $content .='</body></html>';
-      mysql_query("INSERT INTO users (user_id, pwd, rol, status) VALUES ('".$tms."', '".$pwd1."','NN','$mail')");
+      mysqli_query($con,"INSERT INTO users (user_id, pwd, rol, status) VALUES ('".$tms."', '".$pwd1."','NN','$mail')");
       mail($mail,$subject,$content,$headers);
     }
     else
@@ -58,6 +58,6 @@
     }
   }
 
-  mysql_close($con);
+  mysqli_close($con);
 
 ?>

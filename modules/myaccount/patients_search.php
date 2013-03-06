@@ -85,8 +85,13 @@
             <option value="male">Hombre</option>
             <option value="female">Mujer</option>
           </select><br>
+
           <div class="row">
-            
+            <div class="span12" style="padding-left:105px;text-align:left;color:#333333">
+              Fecha nacimiento (aaaa/mm/dd)
+            </div>
+          </div>
+          <div class="row">
             <div class="span12" style="padding-left:105px;text-align:left">
               <input type="text" id="year" name="year" placeholder="A&ntilde;o" class="span3" >
               <input type="text" id="month" name="month" placeholder="Mes" class="span3">

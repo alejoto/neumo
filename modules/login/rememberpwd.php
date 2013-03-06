@@ -2,8 +2,8 @@
 include '../DB/connect.php';
 if (isset($_POST['usr'])) {
 	$usr=$_POST['usr'];
-	$result = mysql_query("SELECT * FROM users WHERE user_id='$usr' ");
-	$row = mysql_fetch_array($result);
+	$result = mysqli_query($con,"SELECT * FROM users WHERE user_id='$usr' ");
+	$row = mysqli_fetch_array($result);
 	if ($row[0]=="") {
 		echo "Usuario no existe, debe registrarse!";
 	}

@@ -12,12 +12,12 @@ $digiter_id = $_SESSION['username'];
 
 
 //adding event to table main eval
-$start_main_eval=mysql_query("INSERT INTO main_eval (patient_id, digiter_id) VALUES ('$docidnum', '$digiter_id');");
+$start_main_eval=mysqli_query($con,"INSERT INTO main_eval (patient_id, digiter_id) VALUES ('$docidnum', '$digiter_id');");
 
 if ($start_main_eval) {
 	$search_sql=("SELECT MAX(eval_id) FROM main_eval WHERE patient_id = '$docidnum' AND digiter_id = '$digiter_id'");
-	$search_result = mysql_query($search_sql);
-	$eval_id_arr = mysql_fetch_array($search_result);
+	$search_result = mysqli_query($con,$search_sql);
+	$eval_id_arr = mysqli_fetch_array($search_result);
 	$_SESSION['evaluation'] = $eval_id_arr[0];
 }
 
@@ -31,11 +31,11 @@ if ($start_main_eval) {
 
 
 //check if user has data on right catheter table
-$result=mysql_query("SELECT * FROM hap_right_cathet LEFT JOIN main_eval 
+$result=mysqli_query($con,"SELECT * FROM hap_right_cathet LEFT JOIN main_eval 
 	ON hap_right_cathet.eval_id= main_eval.eval_id WHERE main_eval.patient_id = '$docidnum'  ");
 
 //redirect to right catheter if query=0
-if (mysql_num_rows($result)==0) {header('Location: myaccount.php?page=right_catheter'); }
+if (mysqli_query($con,$result)==0) {header('Location: myaccount.php?page=right_catheter'); }
 
 //redirect to the main form
 header('Location: myaccount.php?page=basic'); 

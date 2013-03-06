@@ -5,7 +5,7 @@ $sql    = "SELECT * FROM hap_drug_treatment
 LEFT JOIN main_eval 
 ON hap_drug_treatment.eval_id=main_eval.eval_id  
 WHERE main_eval.patient_id='".$usr."'";
-$result = mysql_query($sql);
+$result = mysqli_query($con,$sql);
 ?>
 
 <table id='treatment_tb' class="table table-hover span8">
@@ -16,7 +16,7 @@ $result = mysql_query($sql);
     <th class="span2">Motivo susp</th>
   </tr>
   <?php 
-  while($row = mysql_fetch_array($result)) {?>
+  while($row = mysqli_fetch_array($result)) {?>
   <tr class="span8">
     <tr class="span8">
     <td class="span3"><?php echo $row['drug'] ;?></td>
