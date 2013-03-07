@@ -1,9 +1,9 @@
 <?
   include '../DB/connect.php';
-
   
   $id = $_SESSION['hap_patient_id'];
-  $result3 = mysqli_query($con,"SELECT * FROM add_data_patient WHERE pte_id='$id' "  );  
+  
+  $result3 = mysqli_query($con,"SELECT * FROM add_data_patient WHERE pte_id='$id'");  
   $row3 = mysqli_fetch_array($result3);
   
 
@@ -13,12 +13,12 @@
   $eps = "";
   $countryreside = "";
   $cityreside = "";
-/**/
+
   //Title if complementary data is empty (input data for first time)
   $additionaldata_message='Ingrese datos faltantes del paciente';
 
 
-  if ($row3['add_data_patient_id'] !="" || $row3[0] !=null){ 
+  if ($row3[0] !="" || $row3[0] !=null){ 
     
     $mobile = $row3['mobile'];
     $phone = $row3['phone'];

@@ -71,5 +71,8 @@ $row = mysqli_fetch_array($result);
   $sql=mysqli_query($con,"SELECT patient_id FROM add_data_patient");
   if (!$sql){ mysqli_query($con,"ALTER TABLE add_data_patient ADD patient_id VARCHAR(60) AFTER eval_id");}
 
+  $sql=mysqli_query($con,"SELECT ivt_country FROM main_investigator");
+  if (!$sql){ mysqli_query($con,"ALTER TABLE main_investigator ADD ivt_country VARCHAR(60) AFTER ivt_city");}
+
 
 ?>

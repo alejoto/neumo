@@ -33,9 +33,10 @@ if ($start_main_eval) {
 //check if user has data on right catheter table
 $result=mysqli_query($con,"SELECT * FROM hap_right_cathet LEFT JOIN main_eval 
 	ON hap_right_cathet.eval_id= main_eval.eval_id WHERE main_eval.patient_id = '$docidnum'  ");
+$row    = mysqli_fetch_array($result);
 
 //redirect to right catheter if query=0
-if (mysqli_query($con,$result)==0) {header('Location: myaccount.php?page=right_catheter'); }
+if ($row[0] =="") {header('Location: myaccount.php?page=right_catheter'); }
 
 //redirect to the main form
 header('Location: myaccount.php?page=basic'); 

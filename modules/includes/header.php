@@ -27,7 +27,6 @@
     <div class="span5">
       <div class="btn-group">
         <a href="../../" class="btn btn-inverse">Inicio <img id="header_lung" style="width: 13px; height: 13px;" src="http://www.healmydisease.com/13hiapulco/images/whitelogo%20trpHIAP.gif"/></a>
-        <a class="btn btn-inverse ">Mi perfil <i class="icon-edit icon-white"></i></a>
         <?php
           if( isset($_SESSION['patient']) ){
             echo '<a class="btn  btn-inverse " id="edit_patient" href="myaccount.php?page=edit">Editar paciente 
@@ -46,7 +45,18 @@
         <a href="../login/logout.php" class="btn btn-inverse">Salir<i class="icon-share-alt icon-white"></i></a>
       </div>
     </div>
-    <div class="span5" style="color:gray">Dr. HECTOR ORTEGA</div>
+    <div class="span5" style="color:gray">
+      <?php 
+      include '../DB/connect.php';
+      $user_id=$_SESSION['username'];
+      $result_user = mysqli_query($con,"SELECT * FROM main_investigator WHERE user_id='$user_id'"  );  
+      $row_user    = mysqli_fetch_array($result_user);
+      ?>
+      <a href="myaccount.php?page=user_register" style="color:gray"  data-toggle="tooltip" title="Editar perfil" data-placement="bottom" >
+        <?php echo $row_user['ivt_name'].' '.$row_user['ivt_surname']; ?>
+      </a>
+
+    </div>
   </div>
 </div>
 <!--menu ending-->
