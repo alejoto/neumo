@@ -1,7 +1,6 @@
 <? 
   if(isset($_SESSION['patient'])) unset( $_SESSION['patient'] ); 
   if(isset($_SESSION['evaluation'])) unset($_SESSION['evaluation']);
-  if(isset($_SESSION['patient'])) unset($_SESSION['patient']);
   if(isset($_SESSION['hap_patient_id'])) unset($_SESSION['hap_patient_id']);
 ?>
 
@@ -20,12 +19,9 @@
         <br>
         de Hipertensi&oacute;n Arterial Pulmonar
       </p> 
-
-     </center>
-       <br>
-       
-       
-      </div>
+    </center>
+     <br>
+     </div>
 
       <!-- ************************ -->
       <!-- select doc id section    -->
@@ -120,5 +116,3 @@
     <script src="../../assets/js/patients.js"></script>
   </div>
 </div>
-<script>
-  </script>

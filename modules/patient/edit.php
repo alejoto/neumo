@@ -5,8 +5,6 @@
   
   $result3 = mysqli_query($con,"SELECT * FROM add_data_patient WHERE pte_id='$id'");  
   $row3 = mysqli_fetch_array($result3);
-  
-
 
   $mobile="";
   $phone = "";
@@ -17,7 +15,6 @@
   //Title if complementary data is empty (input data for first time)
   $additionaldata_message='Ingrese datos faltantes del paciente';
 
-
   if ($row3[0] !="" || $row3[0] !=null){ 
     
     $mobile = $row3['mobile'];
@@ -26,15 +23,12 @@
     $countryreside = $row3['countryreside'];
     $cityreside = $row3['cityreside'];
 
-
     //Title if complementary data exist (edit data)
     $additionaldata_message='Edite datos del paciente';
-
   }
   
   if (isset($_GET['saved'] )) {
     $additionaldata_message='Datos exitosamente actualizados';
-
 ?>
 <div class="container " style="text-align:left">
     <div class="row">
@@ -75,7 +69,6 @@
             <div class="span3" style="text-align:right;">Cuidad de residencia</div>
             <div class="span4"> <?php echo  $cityreside; ?> </div>
         </div>
-
       </div>
     </div>
     <div class="row">
@@ -90,10 +83,8 @@
       </div>
     </div>
   </div>
-
   <?php }
   else {  ?>
-
   <div class="container" style="text-align:left">
     <div class="row">
       <br/>
@@ -111,26 +102,26 @@
         <form action="../patient/edit_save.php" method="post">
           <div class="row">
             <div class="span2" style="text-align:right;padding-top:5px">Celular</div>
-            <div class="span7"><input type="text" name='mobile' <?php echo  'value="'.$mobile.'"'; ?> placeholder="Mobile"></div>
+            <div class="span7"><input type="text" id='mobile' name='mobile' <?php echo  'value="'.$mobile.'"'; ?> placeholder="Mobile"></div>
           </div>
           <div class="row">
             <div class="span2" style="text-align:right;padding-top:5px">Tel&eacute;fono</div>
-            <div class="span7"><input type="text" name='phone' <?php echo  'value="'.$phone.'"'; ?> placeholder="Phone number"></div>
+            <div class="span7"><input type="text" id='phone' name='phone' <?php echo  'value="'.$phone.'"'; ?> placeholder="Phone number"></div>
           </div>
           <div class="row">
             <div class="span2" style="text-align:right;padding-top:5px">EPS</div>
-            <div class="span7"><input type="text" name='eps' <?php echo  'value="'.$eps.'"'; ?> Placeholder="Insurance company"></div>
+            <div class="span7"><input type="text" id='eps' name='eps' <?php echo  'value="'.$eps.'"'; ?> Placeholder="Insurance company"></div>
           </div>
           <div class="row">
             <div class="span2" style="text-align:right;padding-top:5px">Pa&iacute;s de residencia</div>
-            <div class="span7"><input type="text" name='countryreside' <?php echo  'value="'.$countryreside.'"'  ; ?> placeholder="Country of residence"></div>
+            <div class="span7"><input type="text" id='countryreside' name='countryreside' <?php echo  'value="'.$countryreside.'"'  ; ?> placeholder="Country of residence"></div>
           </div>
           <div class="row">
             <div class="span2" style="text-align:right;padding-top:5px">Cuidad de residencia</div>
-            <div class="span7"><input type="text" name='cityreside' <?php echo  'value="'.$cityreside.'"'  ; ?> placeholder="City of residence"></div>
+            <div class="span7"><input type="text" id='cityreside' name='cityreside' <?php echo  'value="'.$cityreside.'"'  ; ?> placeholder="City of residence"></div>
           </div>
           <div class="row">
-            <div class="offset2 span7"><button type="submit" class="btn">Salvar</button></div>
+            <div class="offset2 span7"><button id='patient_save_btn' type="submit" class="btn">Salvar</button></div>
           </div>
         </form>
       </div>
@@ -145,14 +136,17 @@
         <a href='myaccount.php?page=diagnostic' class='btn btn-inverse'>IMAGENES CLINICAS</a>
         <a href='myaccount.php?page=cardiovascular' class='btn btn-inverse'>DESEMPENO CARDIOVASCULAR</a>
       </div>
-
     </div>
-
   </div>
   <br/><br/>
-  <?php
-  }
-
+  <?php } 
+  mysqli_close($con); 
   ?>
-  <?php mysqli_close($con); 
-  ?>
+  <script type="text/javascript">
+    up_cas($("#mobile"));
+    up_cas($("#phone"));
+    up_cas($("#eps"));
+    up_cas($("#countryreside"));
+    up_cas($("#cityreside"));
+    hide_show_savebutton([$("#mobile"),$("#phone"),$("#eps"),$("#countryreside"), $("#cityreside")], $("#patient_save_btn"));
+  </script>

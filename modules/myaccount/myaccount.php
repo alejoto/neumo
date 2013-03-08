@@ -1,14 +1,24 @@
 <?php
 ob_start();
 session_start();
+include '../DB/connect.php';
+
+
+
 if (isset($_GET["page"])) {$page = $_GET["page"];}
 else {header('Location: myaccount.php?page=patients');}
 
+//Redirect if doctor data is empty
+$user_id=$_SESSION['username'];
+$result = mysqli_query($con,"SELECT * FROM main_investigator WHERE user_id='$user_id'"  );  
+$row    = mysqli_fetch_array($result);
+if ($row['user_id']==""&&$_GET["page"]!='user_register') { header('Location: myaccount.php?page=user_register'); }
+
 
 //redirect to right catheter form if this is empty
-if (isset($_SESSION['evaluation'])&&isset($_SESSION['hap_patient_id'])&&$page!='right_catheter') 
+ if (isset($_SESSION['evaluation'])&&isset($_SESSION['hap_patient_id'])&&$page!='right_catheter') 
 {
-  include '../DB/connect.php';
+  
   $docidnum=$_SESSION['hap_patient_id'];
   $digiter_id = $_SESSION['username'];
 

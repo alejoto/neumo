@@ -1,23 +1,11 @@
 <?php
-  //$con = mysql_connect("instance33555.db.xeround.com:5852","admin","damabugo");
   
-  //$con = mysql_connect("localhost","root","root");  /*temporary user and pwd attr*/
 
-  $con=mysqli_connect("localhost","root","root","health");
-
-  //$con = mysql_connect("localhost","healmy5_root","laravel");
-
-  //if (!$con) die('Could not connect: ' . mysql_error());
-  //else echo 'connection succesfull', "\n";
-  //mysql_select_db("healmy5_health", $con);
   
-  //mysql_select_db("health", $con);  /*temporary user and pwd attr*/
+//$con=mysqli_connect("localhost","healmy5_root","laravel","healmy5_health");
+$con=mysqli_connect("localhost","root","root","health"); /*temporary user and pwd attr*/
 
-  /*
-$result = mysqli_query($con,"SELECT * FROM main_patient WHERE patient_id='$docid' "  );
-$row = mysqli_fetch_array($result);
 
-  */
 
   if (mysqli_connect_errno())
   {

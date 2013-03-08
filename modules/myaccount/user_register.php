@@ -17,11 +17,12 @@ $ivt_specialty='';
 $ivt_mobile='';
 $ivt_city='';
 
+//search for doctor info
 $user_id=$_SESSION['username'];
 $result = mysqli_query($con,"SELECT * FROM main_investigator WHERE user_id='$user_id'"  );  
 $row    = mysqli_fetch_array($result);
 
-
+//data to be displayed after saving or updating
 if (isset($_GET['saved'])&&$_GET['saved']=='yes') {
 	?>
 	<div class="row">
@@ -70,16 +71,9 @@ if (isset($_GET['saved'])&&$_GET['saved']=='yes') {
    </div>
 </div>
 
+<?php }
 
-
-
-
-	<?php
-
-
-	
-}
-
+//data to be displayed before saving - updating info
 else {?>
 	<div class="row">
 		<div class="span12">
@@ -155,7 +149,8 @@ else {?>
 			</div>
 		</div>
 	</form>
-	<?php } ?>
+	<?php } 
+	if (isset($_SESSION['evaluation'])) { ?>
 	<div class="row">
       <div class="offset4 span5"><h4>Volver a formularios cl&iacute;nicos</h4></div>
     </div>
@@ -167,15 +162,26 @@ else {?>
         <a href='myaccount.php?page=cardiovascular' class='btn btn-inverse'>DESEMPENO CARDIOVASCULAR</a>
       </div>
     </div>
+    <?PHP }
+	else { ?>
+	<HR>
+	<div class="row">
+      <div class="offset4 span5">
+      	<a href='myaccount.php?page=patients' class='btn btn-inverse span5'>
+      		VOLVER A P&Aacute;GINA SELECCI&Oacute;N DE PACIENTES
+      	</a>
+      </div>
+    </div>
+    <?php } ?>	
 	<br/>
 	<br/>
 	<br/>
 </div>
 
-
 <SCRIPT TYPE="text/javascript">
 up_cas($("#ivt_name"));
 up_cas($("#ivt_surname"));
+up_cas($("#ivt_mobile"));
 hide_show_savebutton([$("#ivt_name"),$("#ivt_surname"),$("#ivt_specialty"),$("#ivt_mobile"), $("#ivt_city")], $("#ivt_save_btn"));
 </SCRIPT>
 
