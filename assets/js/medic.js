@@ -208,6 +208,7 @@ function clickhideshow(butn, hd, sw) {
 /**/
 function sprite_imgs(smicon,bicon,pos,base) {
     $(document).ready(function() {
+        bicon.css('background-position', base);
         smicon.mouseover(function() {
             bicon.css('background-position', pos);
         });

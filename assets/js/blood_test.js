@@ -18,11 +18,6 @@ hide_show_savebutton([$("#d_anca_ab")], $("#anca_ab_save"));
 hide_show_savebutton([$("#d_citrul_ab"), $("#a_citrul")], $("#citrul_ab_save"));
 
 
-
-
-
-
-
 /*icon exchanger syntax
     main_i[class], icon_1,   icon_2,   icon_3,    icon_main,
 (icon positioning) pos_ic_1, pos_ic_2, pos_ic_3,  pos_main,

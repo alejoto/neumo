@@ -26,7 +26,10 @@
     <div class="span2"><p style="color: #C6C6AA; font-family: 'Play', cursive; font-weight: 700; font-size:120%;">RECOLHAP <img style="width: 30px; heigth: 23px;" src="../../assets/images/logo-gray.png"></p></div>
     <div class="span5">
       <div class="btn-group">
-        <a href="../../" class="btn btn-inverse">Inicio <img id="header_lung" style="width: 13px; height: 13px;" src="http://www.healmydisease.com/13hiapulco/images/whitelogo%20trpHIAP.gif"/></a>
+        <a href="../../" class="btn btn-inverse">
+          Inicio 
+          <i class="icon-home  icon-white"></i>
+        </a>
         <?php
           if( isset($_SESSION['patient']) ){
             echo '<a class="btn  btn-inverse " id="edit_patient" href="myaccount.php?page=edit">Editar paciente 
