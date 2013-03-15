@@ -105,8 +105,8 @@
       <!--Footer-->
       <hr>
       <div   id="footer_index" class="row-fluid" style="margin-top: 0px; padding-left: 25px;">
-        <div class="span4" style="color: #4A4C4C; font-family: 'Oxygen', sans-serif;"><a href="http://www.healmydisease.com/04Spanish/02HMDdescription.php" target="_blank">Acerca de HMD</div></a>
-        <div class="span4" style="color: #4A4C4C; font-family: 'Oxygen', sans-serif;"><a href="#myModal" data-toggle="modal" data-target="#myModal"> Pol&iacute;tica de privacidad</div>
+        <div class="span4" style="color: #4A4C4C; font-family: 'Oxygen', sans-serif;"><a href="http://www.healmydisease.com/04Spanish/02HMDdescription.php" target="_blank">Acerca de HMD</a></div>
+        <div class="span4" style="color: #4A4C4C; font-family: 'Oxygen', sans-serif;"><a href="#myModal" data-toggle="modal" data-target="#myModal"> Pol&iacute;tica de privacidad</a></div>
         <div class="span4" style="color: #4A4C4C; font-family: 'Oxygen', sans-serif;"><a href="http://www.healmydisease.com/04Spanish/02sendinfo.php" target="_blank">Conctacto</a></div>
         <br>
 
