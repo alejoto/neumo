@@ -1,6 +1,8 @@
 /*Esconder formulario del test de vasorreactividad*/
     $(document).ready(function() { $("#reactiv").hide(); });
     
+
+
     
     $(document).ready(function() {
         $("#save_rt_cath").hide();
@@ -36,6 +38,10 @@ function show_react_test_question() {
     }
     else {$('#ask_for_react_test').hide('fast');}
 }
+
+icon_exchanger($(".main_icon"),$("#basic_eval"),$("#blood_test"),$("#performance"),$("#clin_images")
+              ,'0  75px','-92px 75px','-184px 75px','-276px 0','Evaluaci&oacute;n <br>cl&iacute;nica',
+              'Pruebas<br>en sangre','Desempe&ntilde;o cardiovascular','Im&aacute;genes<br/>diagn&oacute;sticas');
 
 
     /*Next lines execute prevoius functions */

@@ -8,13 +8,14 @@
         <!-- left column-->
         <div class="span3" style="margin-top: 0px;">
             <div class="row">
-                <div class="span3">
+                <div class="span3" style="margin-top: 0px;">
                     <? include '../includes/left_menu.php'; ?>
                 </div>
             </div>
             <div class="row">
                 <div class="span3">
-                    <h3>Cateterismo derecho</h3>
+                    <h3 id="left_title">Im&aacute;genes diagn&oacute;sticas</h3>
+                    <h4>Cateterismo derecho</h4>
                     <a class="btn span2" id="showbas">Datos basales</a>
                     <a class="btn span2" id="showrt" >Test vasorreactividad</a>
                 </div>
