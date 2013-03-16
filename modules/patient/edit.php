@@ -1,12 +1,16 @@
-<?
+<?php
   include '../DB/connect.php';
   
   $id = $_SESSION['hap_patient_id'];
   
-  $result3 = mysqli_query($con,"SELECT * FROM add_data_patient WHERE pte_id='$id'");  
-  $row3 = mysqli_fetch_array($result3);
-
-  $mobile="";
+  $result = mysqli_query($con,"SELECT * FROM add_data_patient WHERE pte_id='$id'");  
+  error_reporting(0); 
+  /* There is an error in the next line because of the input parameter of the 
+   * mysqli_fetch_array
+   */
+  $row3 = mysqli_fetch_array($result);
+	error_reporting(-1);
+	$mobile="";
   $phone = "";
   $eps = "";
   $countryreside = "";
@@ -50,7 +54,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="span3" style="text-align:right;">Celular</div>
+          <div class="span3" style="text-align:right;" >Celular</div>
           <div class="span4"> <?php echo  $mobile; ?> </div>
         </div>
         <div class="row">

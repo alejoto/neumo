@@ -2,7 +2,7 @@
 	<div class="row-fluid">
 		<div class="span6">
 			<p style="font-family: 'Oxygen', sans-serif; color: #C6C6AA;">
-				<img img style="width: 30px; heigth: 23px;" src="../../assets/images/logo-gray.png"> 
+				<img style="width: 30px; heigth: 23px;" src="../../assets/images/logo-gray.png"> 
 				Recolhap &copy; - Registro colombiano de hipertensi&oacute;n arterial pulmonar.
 			</p>
 		</div>

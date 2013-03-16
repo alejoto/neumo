@@ -137,7 +137,7 @@ else {?>
 		</div>
 		<div class="row">
 			<div class="span4" style="text-align:right">
-				Pa&iacute; residencia
+				Pa&iacute;s residencia
 			</div>
 			<div class="span8" style="text-align:left">
 				<input type="text" id="ivt_country" name="ivt_country" placeholder="Country of residence" disabled value="COLOMBIA" />

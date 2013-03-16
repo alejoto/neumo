@@ -41,7 +41,7 @@ if ($row['user_id']==""&&$_GET["page"]!='user_register') { header('Location: mya
   if($page == "user_register") include 'user_register.php';
   else if($page == "patients") include 'patients_search.php';
   else if($page == "statistics") include '../statistics/statistics.php';
-  else if( isset($_SESSION['patient']) ){
+  else if( isset($_SESSION['patient']) ){	
     if($page == "basic") include '../patient/basic.php';
     else if($page == "blood") include '../patient/blood.php';
     else if($page == "diagnostic") include '../patient/diagnostic.php';

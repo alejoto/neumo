@@ -3,7 +3,9 @@
   <div class="row">
     
     <div class="span3" style="margin-top: 0px;">
-      <? include '../includes/left_menu.php'; ?>
+      <?php 
+      include '../includes/left_menu.php'; 
+      ?>
 
       <div style="margin-left: 13px;">
         <h3 id="left_title">Evaluaci&oacute;n<br>cl&iacute;nica</h3>
@@ -19,27 +21,27 @@
     <div class="span9" style="margin-top: 40px;">
 
       <div class="row">
-        <? include '../includes/info.php'; ?>
+        <?php include '../includes/info.php'; ?>
       </div><br>
 
       <!-- anamnesis begin -->
-        <? include '../patient/basic/anamnesis.php'; ?>
+        <?php include '../patient/basic/anamnesis.php'; ?>
       <!-- anamnesis end -->
       
       <!-- examen fisico begin -->
-        <? include '../patient/basic/ex_fc.php'; ?>
+        <?php include '../patient/basic/ex_fc.php'; ?>
       <!-- examen fisico end -->
       
       <!-- hipercoagulabilidad begin -->
-        <? include '../patient/basic/hiperclot.php'; ?>
+        <?php include '../patient/basic/hiperclot.php'; ?>
       <!-- hipercoagulabilidad end -->
 
       <!-- tratamiento begin -->
-        <? include '../patient/basic/treatment.php'; ?>
+        <?php include '../patient/basic/treatment.php'; ?>
       <!-- tratamiento end -->
 
       <!-- fallecido begin -->
-        <? include '../patient/basic/outcome.php'; ?>
+        <?php include '../patient/basic/outcome.php'; ?>
       <!-- fallecido end -->
       
     </div>
