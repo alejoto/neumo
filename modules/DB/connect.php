@@ -3,13 +3,13 @@
 
   
 //$con=mysqli_connect("localhost","healmy5_root","laravel","healmy5_health");
-$con=mysqli_connect("localhost","root","root","health"); /*temporary user and pwd attr*/
+$con=mysqli_connect("localhost","root","","health"); /*temporary user and pwd attr*/
 
 
 
-  if (mysqli_connect_errno())
+  if (mysqli_connect_errno($con))
   {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  	echo "Failed to connect to MySQL: ".mysqli_connect_error();
   }
 
 

@@ -3,12 +3,13 @@
   
   $id = $_SESSION['hap_patient_id'];
   
-  $result = mysqli_query($con,"SELECT * FROM add_data_patient WHERE pte_id='$id'");  
-  error_reporting(0); 
-  /* There is an error in the next line because of the input parameter of the 
+  $result = mysqli_query($con,"SELECT * FROM add_data_patient WHERE patient_id='$id'");  
+  error_reporting(0);
+  /* 
+   * There is an error in the next line because of the input parameter of the 
    * mysqli_fetch_array
    */
-  $row3 = mysqli_fetch_array($result);
+  $row3 = mysql_fetch_array($result);
 	error_reporting(-1);
 	$mobile="";
   $phone = "";

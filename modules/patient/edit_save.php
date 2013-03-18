@@ -1,4 +1,4 @@
-<?
+﻿<?php
   ob_start();
   session_start();
   if (isset($_POST['mobile'])){$mobile=$_POST['mobile'];}
@@ -6,7 +6,9 @@
   if (isset($_POST['eps'])){$eps=$_POST['eps'];}
   if (isset($_POST['countryreside'])){$countryreside=$_POST['countryreside'];}
   if (isset($_POST['cityreside'])){$cityreside=$_POST['cityreside'];}
-
+	
+  
+  //TODO Don't make sense a mobile number with letters!!!
   $mobile=str_replace("Á","A",$mobile);
   $mobile=str_replace("É","E",$mobile);
   $mobile=str_replace("Í","I",$mobile);
@@ -23,7 +25,8 @@
   $mobile=str_replace("Ö","O",$mobile);
   $mobile=str_replace("Ü","U",$mobile);
   $mobile=str_replace("Ñ","N",$mobile);
-
+	
+  //TODO don´t make sense a phone number with letters!!!
   $phone=str_replace("Á","A",$phone);
   $phone=str_replace("É","E",$phone);
   $phone=str_replace("Í","I",$phone);
@@ -95,9 +98,10 @@
   include '../DB/connect.php';
   
   $id=$_SESSION['hap_patient_id'];
-  $result = mysqli_query($con,"SELECT * FROM add_data_patient WHERE pte_id='$id'"  );  
+  $result = mysqli_query($con,"SELECT * FROM add_data_patient WHERE patient_id='$id'"  ); 
   $row    = mysqli_fetch_array($result);
 
+  // if the query returns values
   if ($row[0] !="" || $row[0] !=null) 
   {
     $sql="UPDATE add_data_patient 
@@ -106,14 +110,25 @@
     ,eps='$eps'
     ,countryreside='$countryreside'
     ,cityreside='$cityreside'
-    WHERE pte_id='$id' ";
-    if (!mysqli_query($con,$sql)) { die('Error: ' . mysqli_error()); }
-    else {header("location: ../myaccount/myaccount.php?page=edit&saved=yes ");}
+    WHERE patient_id='$id' ";
+    
+    // if the querry ends in a FAILURE, msqli_query returns FALSE
+    if (!mysqli_query($con,$sql)) { 
+    	die('Error: '.mysqli_error()."first one"); 
+    }
+    else{
+    	header("location: ../myaccount/myaccount.php?page=edit&saved=yes ");
+    }
   }
+  // if there is no values, insert the new ones
   else {
-    $sql="INSERT INTO add_data_patient (mobile,phone,eps,countryreside,cityreside,pte_id)
+    $sql="INSERT INTO add_data_patient (mobile,phone,eps,countryreside,cityreside,patient_id)
     VALUES ('$mobile','$phone','$eps','$countryreside','$cityreside','$id' )";
-    if (!mysqli_query($con,$sql)) { die('Error: ' . mysqli_error()); } 
-    else {header("location: ../myaccount/myaccount.php?page=edit&saved=yes ");}
+    if (!mysqli_query($con,$sql)) { 
+    	die('Error: '.mysqli_error()."Second one"); 
+    } 
+    else{
+    	header("location: ../myaccount/myaccount.php?page=edit&saved=yes ");
+    }
   }
 ?>
