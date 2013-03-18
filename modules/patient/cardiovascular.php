@@ -4,7 +4,7 @@
   <div class="row">
     
     <div class="span3" style="margin-top: 0px;">
-      <? include '../includes/left_menu.php'; ?>
+      <?php include '../includes/left_menu.php'; ?>
 
       <div style="margin-left: 13px;">
         <h3 id="left_title">Desempe&ntilde;o cardiovascular</h3>
@@ -19,23 +19,23 @@
     <div class="span9" style="margin-top: 40px;">
 
       <div class="row">
-        <? include '../includes/info.php'; ?>
+        <?php include '../includes/info.php'; ?>
       </div><br>
 
       <!-- elecg begin -->
-        <? include '../patient/cardiovascular/elecg.php'; ?>
+        <?php include '../patient/cardiovascular/elecg.php'; ?>
       <!-- elecg end -->
       
       <!-- spir begin -->
-        <? include '../patient/cardiovascular/spir.php'; ?>
+        <?php include '../patient/cardiovascular/spir.php'; ?>
       <!-- spir end -->
       
       <!-- sixm_walk begin -->
-        <? include '../patient/cardiovascular/sixm_walk.php'; ?>
+        <?php include '../patient/cardiovascular/sixm_walk.php'; ?>
       <!-- sixm_walk end -->
 
       <!-- cp_test begin -->
-        <? include '../patient/cardiovascular/cp_test.php'; ?>
+        <?php include '../patient/cardiovascular/cp_test.php'; ?>
       <!-- cp_test end -->
       
     </div>

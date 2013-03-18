@@ -3,7 +3,7 @@
   <div class="row">
 
     <div class="span3" style="margin-top: 0px;">
-      <? include '../includes/left_menu.php'; ?>
+      <?php  include '../includes/left_menu.php'; ?>
 
       <div style="margin-left: 13px;">
         <h3 id="left_title">Pruebas en sangre</h3>
@@ -19,27 +19,27 @@
     <div class="span9" style="margin-top: 40px;">
 
       <div class="row">
-        <? include '../includes/info.php'; ?>
+        <?php  include '../includes/info.php'; ?>
       </div><br>      
       
       <!-- hemoglobine begin -->
-        <? include '../patient/blood/hemoglobine.php'; ?>
+        <?php include '../patient/blood/hemoglobine.php'; ?>
       <!-- hemoglobine end -->
 
       <!-- arteries begin -->
-        <? include '../patient/blood/arteries.php'; ?>
+        <?php include '../patient/blood/arteries.php'; ?>
       <!-- arteries end -->
 
       <!-- renal begin -->
-        <? include '../patient/blood/renal.php'; ?>
+        <?php include '../patient/blood/renal.php'; ?>
       <!-- renal end -->
 
       <!-- liver begin -->
-        <? include '../patient/blood/liver.php'; ?>
+        <?php include '../patient/blood/liver.php'; ?>
       <!-- liver end -->
 
       <!-- reuma begin -->
-        <? include '../patient/blood/reuma.php'; ?>
+        <?php include '../patient/blood/reuma.php'; ?>
       <!-- reuma end -->
 
     </div>

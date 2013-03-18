@@ -9,7 +9,7 @@
    * There is an error in the next line because of the input parameter of the 
    * mysqli_fetch_array
    */
-  $row3 = mysql_fetch_array($result);
+  $row3 = mysqli_fetch_array($result);
 	error_reporting(-1);
 	$mobile="";
   $phone = "";
@@ -19,9 +19,7 @@
 
   //Title if complementary data is empty (input data for first time)
   $additionaldata_message='Ingrese datos faltantes del paciente';
-
   if ($row3[0] !="" || $row3[0] !=null){ 
-    
     $mobile = $row3['mobile'];
     $phone = $row3['phone'];
     $eps = $row3['eps'];

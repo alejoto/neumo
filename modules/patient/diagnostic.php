@@ -4,7 +4,7 @@
   <div class="row">
     
     <div class="span3" style="margin-top: 0px;">
-      <? include '../includes/left_menu.php'; ?>
+      <?php include '../includes/left_menu.php'; ?>
 
       <div style="margin-left: 13px;">
         <h3 id="left_title">Im&aacute;genes diagn&oacute;sticas</h3>
@@ -23,35 +23,35 @@
     <div class="span9" style="margin-top: 40px;">
 
       <div class="row">
-        <? include '../includes/info.php'; ?>
+        <?php include '../includes/info.php'; ?>
       </div><br>
 
       <!-- ecocardio begin -->
-        <? include '../patient/diagnostic/ecocardio.php'; ?>
+        <?php include '../patient/diagnostic/ecocardio.php'; ?>
       <!-- ecocardio end -->
       
       <!-- x_ray begin -->
-        <? include '../patient/diagnostic/x_ray.php'; ?>
+        <?php include '../patient/diagnostic/x_ray.php'; ?>
       <!-- x_ray end -->
       
       <!-- tc_angio begin -->
-        <? include '../patient/diagnostic/tc_angio.php'; ?>
+        <?php include '../patient/diagnostic/tc_angio.php'; ?>
       <!-- tc_angio end -->
 
       <!-- mri begin -->
-        <? include '../patient/diagnostic/mri.php'; ?>
+        <?php include '../patient/diagnostic/mri.php'; ?>
       <!-- mri end -->
 
       <!-- pulm_arteriography begin -->
-        <? include '../patient/diagnostic/pulm_arteriography.php'; ?>
+        <?php include '../patient/diagnostic/pulm_arteriography.php'; ?>
       <!-- pulm_arteriography end -->
 
       <!-- gammagr begin -->
-        <? include '../patient/diagnostic/gammagr.php'; ?>
+        <?php include '../patient/diagnostic/gammagr.php'; ?>
       <!-- gammagr end -->
 
       <!-- duplex_legs begin -->
-        <? include '../patient/diagnostic/duplex_legs.php'; ?>
+        <?php include '../patient/diagnostic/duplex_legs.php'; ?>
       <!-- duplex_legs end -->
       
     </div>
