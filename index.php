@@ -82,7 +82,7 @@
         <div class="span4 alert" style="background: none; color: gray; border: none;">
           <img style="opacity: 0.7"src="assets/images/tiemporeal.png">
           <p style="color: #4A4C4C;; font-family: 'Oxygen', sans-serif; font-weight: 700; font-size:150%; margin-top: 30px;">Resultados en tiempo real </p><br>
-          <div  style="font-size:14px;font-family: 'Open Sans', sans-serif; height: 80px;">An&aacute;lisis de sus investigaciones de Hipertensi&oacute;n Arterial Pulmonar en tiempo real y de manera r&aacute;pida, f&aacute;cil y flexible</div>
+          <div  style="font-size:14px;font-family: 'Open Sans', sans-serif; height: 80px;">An&aacute;lisis en tiempo real de los datos ingresados al Registro Colombiano Multic&eacute;ntrico de Hipertensi&oacute;n Arterial Pulmonar </div>
            <br><br>
         </div>
         
