@@ -30,18 +30,14 @@
       <div class="row-fluid">
         
         <div class="span8" style="margin-top: -18px; text-align: left; padding-left: 50px;">
-          <h2 style="color: #5C5C64; font-family: 'Play', cursive;">RECOLHAP <img style="width: 36px; heigth: 29px;" src="assets/images/logo-gray.png"></h2>
+          <h2 style="color: #5C5C64; font-family: 'Play', cursive;">
+            RECOLHAP 
+            <img style="width: 36px; heigth: 29px;" src="assets/images/logo-gray.png">
+          </h2>
         </div>
         
         <div class="span4">
-          <!--
-          <a href="mailto:marketing@healmydisease.com" class="left_space">
-            <b style="font-family: 'Oxygen', sans-serif; margin-left: -15px">
-              Contactanos
-            </b>
-          </a>
-          &nbsp; | &nbsp;
-        -->
+          
           
           <?php
             if(isset($_SESSION['username'])){ 
