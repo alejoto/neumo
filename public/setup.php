@@ -1,34 +1,38 @@
 <?php
   ///$con = mysql_connect("instance33555.db.xeround.com:5852","admin","damabugo");
+
+/*
   $con = mysql_connect("localhost","root","root");
   if (!$con) die('Could not connect: ' . mysql_error());
   else echo 'connection succesfull', "\n";
+
 
   $db = "CREATE DATABASE health";
   if( mysql_query($db,$con) ) echo "Database created";
   else echo "Error creating database: " . mysql_error();
   
   mysql_select_db("health", $con);
-  
+  /**/
+
   $sql = "CREATE TABLE IF NOT EXISTS permissions (page_name VARCHAR (150) PRIMARY KEY
   ,coordinator VARCHAR (50)
   ,digiter VARCHAR (50)
   ,investigator VARCHAR (50)
   ,epidemiologist VARCHAR (50))
   ";
-  mysql_query($sql,$con); 
+  mysqli_query($con,$sql);
 
   $sql = "CREATE TABLE IF NOT EXISTS users (user_id VARCHAR (150) PRIMARY KEY
   ,pwd VARCHAR (50)
   ,rol VARCHAR (50)
   ,status VARCHAR(50))
   ";
-  mysql_query($sql,$con); 
+  mysqli_query($con,$sql); 
   
   $sql = "CREATE TABLE IF NOT EXISTS rol_tables (rol VARCHAR (30) PRIMARY KEY
   ,associated_table VARCHAR (50))
   ";
-  mysql_query($sql,$con); 
+  mysqli_query($con,$sql); 
   
   $sql = "CREATE TABLE IF NOT EXISTS digiter (
   dig_rol VARCHAR (50)
@@ -38,7 +42,7 @@
   ,investigator_id VARCHAR (16),FOREIGN KEY (investigator_id) REFERENCES investigator(user_id)
   ,user_id VARCHAR (30),FOREIGN KEY (user_id) REFERENCES users(user_id))
   ";
-  mysql_query($sql,$con);
+  mysqli_query($con,$sql);
   
   $sql = "CREATE TABLE IF NOT EXISTS investigator (
   ivt_name VARCHAR (50)
@@ -49,12 +53,12 @@
   ,ivt_city VARCHAR (50)
   ,user_id VARCHAR (30),FOREIGN KEY (user_id) REFERENCES users(user_id))
   ";
-  mysql_query($sql,$con);
+  mysqli_query($con,$sql);
   
   $sql = "CREATE TABLE IF NOT EXISTS hospital (hospital_id INT (10) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,hospital_name VARCHAR (50)
   ,hospital_city VARCHAR (50))";
-  mysql_query($sql,$con);
+  mysqli_query($con,$sql);
   
   $sql = "CREATE TABLE IF NOT EXISTS patient (patient_id VARCHAR (50) PRIMARY KEY
   ,timestamp DATE 
@@ -65,16 +69,16 @@
   ,countrybth VARCHAR (50)
   ,citybth VARCHAR (50)
   ,statebth VARCHAR (50)
-  ,user_id VARCHAR (50),FOREIGN KEY (user_id) REFERENCES digiter(user_id))";mysql_query($sql,$con);
+  ,user_id VARCHAR (50),FOREIGN KEY (user_id) REFERENCES digiter(user_id))";mysqli_query($con,$sql);
 
   $sql = "CREATE TABLE IF NOT EXISTS eval (eval_id INT (16) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,patient_id VARCHAR (50),FOREIGN KEY (patient_id) REFERENCES patient(patient_id)
   ,user_id VARCHAR (50),FOREIGN KEY (user_id) REFERENCES digiter(user_id)
   ,hospital_id INT (50),FOREIGN KEY (hospital_id) REFERENCES hospital(hospital_id)
-  ,t_st DATE )";mysql_query($sql,$con);
+  ,t_st DATE )";mysqli_query($con,$sql);
 
   $sql = "CREATE TABLE IF NOT EXISTS add_data_patient (add_data_patient_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
-  ,timestamp DATE 
+  ,timestamp TIMESTAMP
   ,mobile VARCHAR (50)
   ,phone VARCHAR (50)
   ,eps VARCHAR (50)
@@ -83,13 +87,15 @@
   ,cityreside VARCHAR (50)
   ,statereside VARCHAR (50)
   ,clinrecordnum VARCHAR (50)
-  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysql_query($sql,$con);
+  ,eval_id VARCHAR (50))";
+mysqli_query($con,$sql);
+
   $sql = "CREATE TABLE IF NOT EXISTS first_eval (first_eval_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,physician VARCHAR (50)
   ,afroamerican VARCHAR (50)
   ,dxdate DATE 
   ,yearofsymptoms VARCHAR (50)
-  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysql_query($sql,$con);
+  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysqli_query($con,$sql);
 
   $sql = "CREATE TABLE IF NOT EXISTS follow_up (follow_up_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,eval_date DATE 
@@ -118,7 +124,7 @@
   ,finger_clubbing VARCHAR (50)
   ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";
   
-  mysql_query($sql,$con);
+  mysqli_query($con,$sql);
   
   $sql = "CREATE TABLE IF NOT EXISTS hyperclotting (hyperclotting_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,antiphs_syndr VARCHAR (50)
@@ -134,7 +140,7 @@
   ,other_hyperclott_disord VARCHAR (50)
   ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";
   
-  mysql_query($sql,$con);
+  mysqli_query($con,$sql);
   
   $sql = "CREATE TABLE IF NOT EXISTS electrok (
   electrok_id 	INT 	(50) 	PRIMARY KEY  NOT NULL AUTO_INCREMENT
@@ -145,7 +151,7 @@
   ,pattern 	VARCHAR (50)
   ,eval_id	CONSTRAINT	FOREINGN KEY	REFERENCES main_eval(eval_id)";
 
-  mysql_query($sql,$con);
+  mysqli_query($con,$sql);
 
   $sql = "CREATE TABLE IF NOT EXISTS x_ray (x_ray_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,xray_date DATE 
@@ -158,7 +164,7 @@
   ,pulm_cone_evertion VARCHAR (50)
   ,pulm_art_diameter VARCHAR (50)
   ,cardiothrx_index VARCHAR (50)
-  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysql_query($sql,$con);
+  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysqli_query($con,$sql);
   $sql = "CREATE TABLE IF NOT EXISTS tc_angio (tc_angio_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,a_tc_date DATE 
   ,a_tc_main_pulm_art_diamt VARCHAR (50)
@@ -175,26 +181,26 @@
   ,a_tc_infiltr_extent VARCHAR (50)
   ,a_tc_congenit VARCHAR (50)
   ,a_tc_congenit_otros VARCHAR (50)
-  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysql_query($sql,$con);
+  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysqli_query($con,$sql);
   $sql = "CREATE TABLE IF NOT EXISTS dimer_trop (dimer_trop_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,d_dimer_date DATE 
   ,d_dimer_value VARCHAR (50)
   ,trop_date DATE 
   ,trop_result VARCHAR (50)
-  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysql_query($sql,$con);
+  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysqli_query($con,$sql);
   $sql = "CREATE TABLE IF NOT EXISTS pep_natr (pep_natr_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,pep_natr_date DATE 
   ,pep_natr_value VARCHAR (50)
-  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysql_query($sql,$con);
+  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysqli_query($con,$sql);
   $sql = "CREATE TABLE IF NOT EXISTS vih (vih_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,hiv_date DATE 
   ,hiv_result VARCHAR (50)
-  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysql_query($sql,$con);
+  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysqli_query($con,$sql);
   $sql = "CREATE TABLE IF NOT EXISTS renal (renal_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,renal_date DATE 
   ,creat VARCHAR (50)
   ,bun VARCHAR (50)
-  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysql_query($sql,$con);
+  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysqli_query($con,$sql);
   $sql = "CREATE TABLE IF NOT EXISTS hepatic (hepatic_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,hep_date DATE 
   ,hep_albumin VARCHAR (50)
@@ -207,7 +213,7 @@
   ,hep_ggt VARCHAR (50)
   ,bili_tot VARCHAR (50)
   ,bili_dir VARCHAR (50)
-  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysql_query($sql,$con);
+  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysqli_query($con,$sql);
   $sql = "CREATE TABLE IF NOT EXISTS reuma (reuma_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,reuma_date DATE 
   ,reuma_ana VARCHAR (50)
@@ -233,11 +239,11 @@
   ,a_2_cpl VARCHAR (50)
   ,reuma_fr VARCHAR (50)
   ,anticitrul VARCHAR (50)
-  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysql_query($sql,$con);
+  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysqli_query($con,$sql);
   $sql = "CREATE TABLE IF NOT EXISTS hb (hb_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,hb_date DATE 
   ,hb_value VARCHAR (50)
-  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysql_query($sql,$con);
+  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysqli_query($con,$sql);
   $sql = "CREATE TABLE IF NOT EXISTS arterialgasses (arterialgasses_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,bld_gass_date DATE 
   ,bld_gass_fio2 VARCHAR (50)
@@ -245,11 +251,11 @@
   ,bld_gass_paco2 VARCHAR (50)
   ,bld_gass_pao2 VARCHAR (50)
   ,bld_gass_hco3 VARCHAR (50)
-  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysql_query($sql,$con);
+  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysqli_query($con,$sql);
   $sql = "CREATE TABLE IF NOT EXISTS duplex_legs (duplex_legs_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,legsdoppler_date DATE 
   ,legsdoppler_result VARCHAR (50)
-  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysql_query($sql,$con);
+  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysqli_query($con,$sql);
   $sql = "CREATE TABLE IF NOT EXISTS ecocardio (ecocardio_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,doppl_date DATE 
   ,doppl_type VARCHAR (50)
@@ -262,7 +268,7 @@
   ,tapse VARCHAR (50)
   ,doppl_cong_defects VARCHAR (50)
   ,doppl_septum_dev VARCHAR (50)
-  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysql_query($sql,$con);
+  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysqli_query($con,$sql);
   $sql = "CREATE TABLE IF NOT EXISTS mri (mri_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,mri_date DATE 
   ,mri_fevd VARCHAR (50)
@@ -273,16 +279,16 @@
   ,mri_rt_heart_dilat VARCHAR (50)
   ,mri_colat VARCHAR (50)
   ,mri_defects VARCHAR (50)
-  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysql_query($sql,$con);
+  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysqli_query($con,$sql);
   $sql = "CREATE TABLE IF NOT EXISTS gammagr (gammagr_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,gamma_date DATE 
   ,gamma_tep VARCHAR (50)
   ,gamma_defects VARCHAR (50)
-  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysql_query($sql,$con);
+  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysqli_query($con,$sql);
   $sql = "CREATE TABLE IF NOT EXISTS pulm_arteriography (pulm_arteriography_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,artergph_date DATE 
   ,artergph_TEP VARCHAR (50)
-  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysql_query($sql,$con);
+  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysqli_query($con,$sql);
   
   $sql = "CREATE TABLE IF NOT EXISTS right_cathet (right_cathet_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,rt_cat_date DATE 
@@ -312,7 +318,7 @@
   ,heart_rate VARCHAR (50)
   ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";
   
-  mysql_query($sql,$con);
+  mysqli_query($con,$sql);
   
   $sql = "CREATE TABLE IF NOT EXISTS vasoreact_test (vasoreact_test_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,reactivity_date DATE 
@@ -342,7 +348,7 @@
   ,react_result VARCHAR (50)    
   ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";
   
-  mysql_query($sql,$con);
+  mysqli_query($con,$sql);
 
   $sql = "CREATE TABLE IF NOT EXISTS six_mins_walk (six_mins_walk_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,walk_date DATE 
@@ -351,7 +357,7 @@
   ,start_sato2 VARCHAR (50)
   ,end_sato2 VARCHAR (50)
   ,walk_symptoms VARCHAR (50)
-  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysql_query($sql,$con);
+  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysqli_query($con,$sql);
   
 $sql = "CREATE TABLE IF NOT EXISTS spirometry (
    spirometry_id 	INT 	(50) 	PRIMARY KEY  NOT NULL AUTO_INCREMENT
@@ -363,7 +369,7 @@ $sql = "CREATE TABLE IF NOT EXISTS spirometry (
   ,vef1_cvf 		VARCHAR (50)
   ,bronchodil_changes 	VARCHAR (50)
   ,dlco_percent 	VARCHAR (50)
-  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysql_query($sql,$con);
+  ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";mysqli_query($con,$sql);
 
   $sql = "CREATE TABLE IF NOT EXISTS cp_stress_test (cp_stress_test_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,cp_stress_date DATE 
@@ -372,7 +378,7 @@ $sql = "CREATE TABLE IF NOT EXISTS spirometry (
   ,pulse_vo2 VARCHAR (50)
   ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";
   
-  mysql_query($sql,$con);
+  mysqli_query($con,$sql);
 
   $sql = "CREATE TABLE IF NOT EXISTS drug_treatment (drug_treatment_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,drug VARCHAR (50)
@@ -384,7 +390,7 @@ $sql = "CREATE TABLE IF NOT EXISTS spirometry (
   ,drug_adv_event VARCHAR (50)
   ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";
   
-  mysql_query($sql,$con);
+  mysqli_query($con,$sql);
   
   $sql = "CREATE TABLE IF NOT EXISTS hap_surgery (surgery_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,transplant VARCHAR (50)
@@ -395,14 +401,14 @@ $sql = "CREATE TABLE IF NOT EXISTS spirometry (
   ,atr_sept_date DATE
   ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";
   
-  mysql_query($sql,$con);  
+  mysqli_query($con,$sql);  
 
   $sql = "CREATE TABLE IF NOT EXISTS outcome (outcome_id INT (50) PRIMARY KEY  NOT NULL AUTO_INCREMENT
   ,dead_date DATE 
   ,dead_cause VARCHAR (50)
   ,eval_id VARCHAR (50),FOREIGN KEY (eval_id) REFERENCES eval(eval_id))";
   
-  mysql_query($sql,$con);  
+  mysqli_query($con,$sql);  
     
   $sql = "RENAME TABLE
   arterialgasses TO hap_arterialgasses
@@ -437,8 +443,8 @@ $sql = "CREATE TABLE IF NOT EXISTS spirometry (
   ,vih TO hap_vih
   ,x_ray TO hap_x_ray";
   
-  mysql_query($sql,$con);
+  mysqli_query($con,$sql);
     
     
-  mysql_close($con);
+  //mysqli_close($con);
 ?>

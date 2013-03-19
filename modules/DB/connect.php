@@ -1,14 +1,37 @@
 <?php
-  
+// connect to the MySQL server
+$conn = new mysqli('localhost', 'healmy5_root', 'laravel');
+
+// check connection
+if (mysqli_connect_errno()) {
+  exit('Connect failed: '. mysqli_connect_error());
+}
+
+// sql query with CREATE DATABASE
+$sql = "CREATE DATABASE IF NOT EXISTS `healmy5_health` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci";
+
+// Performs the $sql query on the server to create the database
+if ($conn->query($sql) === TRUE) {
+  echo '';
+}
+else {
+ echo 'Error: '. $conn->error;
+}
+
+
 
   
-//$con=mysqli_connect("localhost","healmy5_root","laravel","healmy5_health");
-$con=mysqli_connect("localhost","root","","health"); /*temporary user and pwd attr*/
+$con=mysqli_connect("localhost","healmy5_root","laravel","healmy5_health");
+//$con=mysqli_connect("localhost","root","","health"); /*temporary user and pwd attr*/
+
+
+//include '../../public/setup.php';
 
 
 
   if (mysqli_connect_errno($con))
   {
+    //CREATE DATABASE IF NOT EXISTS DBName;
   	echo "Failed to connect to MySQL: ".mysqli_connect_error();
   }
 
