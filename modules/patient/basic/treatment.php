@@ -110,7 +110,7 @@
   <div class="row">
     <div class="span3">
       <select id="transplant" class="treatment">
-        <option value="">...Tipo de transplante</option>
+        <option>Tipo de transplante</option>
         <option value="en espera">En lista de espera</option>
         <option value="pulmon">Transplantado: pulm&oacute;n</option>
         <option value="corazon pulmon">Transplantado: coraz&oacute;n-pulm&oacute;n</option>
@@ -151,7 +151,7 @@
   <div class="row">
     <div class="span8">
       <hr/>
-      <a class="btn class3" id="treatment_save">GUARDAR</a>
+      <a class="btn class3" id="treatment_save">Guardar</a>
       <br><br>
     </div>
   </div>

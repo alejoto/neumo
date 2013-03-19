@@ -1,5 +1,5 @@
 /*hide/show save button: first parameter is an array, inside [].  Second parameter is the button id*/
-hide_show_savebutton([$("#d_ecg"), $("#axis"), $("#rythm"), $("#pattern")], $("#save_ecg"));
+hide_show_savebutton([$("#d_ecg"), $("#axis"), $("#rythm"), $("#frq"), $("#pattern")], $("#save_ecg"));
 hide_show_savebutton([$("#d_spir"), $("#cvf_lt"), $("#vef1_lt")], $("#save_spir"));
 hide_show_savebutton([$("#d_sixmw"), $("#walk_meters"), $("#walk_fio2"), $("start_sato2"), $("#end_sato2"), $("#borg")], $("#sixmin_save"));
 hide_show_savebutton([$("#d_cpst"), $("#vo2max_peak"), $("#pa_sist"), $("pa_dias"), $("#pulse_vo2")], $("#vo2_save"));

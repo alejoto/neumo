@@ -18,15 +18,15 @@
     <div class="span2">
       <select id="f_reum">
         <option value=""></option>
-        <option value="pos">positivo</option>
-        <option value="neg">negativo / indeterminado</option>
+        <option value="pos">Positivo</option>
+        <option value="neg">Negativo / indeterminado</option>
       </select>
     </div>
   </div>
   <div class="row">
     <div class="span8">
       <a class="btn" id="f_reum_save">
-        guardar
+        Guardar
       </a>
     </div>
   </div>
@@ -49,14 +49,14 @@
     <div class="span2">
       <select id="uns_ana_value">
         <option value=""></option>
-        <option value="pos">positivo</option>
-        <option value="neg">negativo / indeterminado</option>
+        <option value="pos">Positivo</option>
+        <option value="neg">Negativo / indeterminado</option>
       </select>
     </div>
   </div>
   <div class="row">
     <div class="span8">
-      <a class="btn" id="uns_ana_save">guardar</a>
+      <a class="btn" id="uns_ana_save">Guardar</a>
     </div>
   </div>
   <div class="row">
@@ -92,27 +92,27 @@
     <div class="span2">
       <select id="centromere" class="span2">
         <option value=""></option>
-        <option value="pos">positivo</option>
-        <option value="neg">negativo / indeterminado</option>
+        <option value="pos">Positivo</option>
+        <option value="neg">Negativo / indeterminado</option>
       </select>
     </div>
     <div class="span2">
       <select id="anti_rna_polim" class="span2">
         <option value=""></option>
-        <option value="pos">positivo</option>
-        <option value="neg">negativo / indeterminado</option>
+        <option value="pos">Positivo</option>
+        <option value="neg">Negativo / indeterminado</option>
       </select>
     </div>
     <div class="span2">
       <select id="antidsDNA" class="span2">
         <option value=""></option>
-        <option value="pos">positivo</option>
-        <option value="neg">negativo / indeterminado</option>
+        <option value="pos">Positivo</option>
+        <option value="neg">Negativo / indeterminado</option>
       </select>
     </div>
   </div>
   <div class="row">
-    <div class="span8"><a class="btn" id="sp_ana_save">guardar</a>
+    <div class="span8"><a class="btn" id="sp_ana_save">Guardar</a>
     </div>
   </div>
   <div class="row">
@@ -146,22 +146,22 @@
     <div class="span2">
       <select id="anti_ro" class="span2">
         <option value=""></option>
-        <option value="pos">positivo</option>
-        <option value="neg">negativo / indeterminado</option>
+        <option value="pos">Positivo</option>
+        <option value="neg">Negativo / indeterminado</option>
       </select>
     </div>
     <div class="span2">
       <select id="anti_la" class="span2">
         <option value=""></option>
-        <option value="pos">positivo</option>
-        <option value="neg">negativo / indeterminado</option>
+        <option value="pos">Positivo</option>
+        <option value="neg">Negativo / indeterminado</option>
       </select>
     </div>
     <div class="span2">
       <select id="anti_smith" class="span2">
         <option value=""></option>
-        <option value="pos">positivo</option>
-        <option value="neg">negativo / indeterminado</option>
+        <option value="pos">Positivo</option>
+        <option value="neg">Negativo / indeterminado</option>
       </select>
     </div>
   </div>
@@ -181,22 +181,22 @@
     <div class="span2">
       <select id="anti_rnp" class="span2">
         <option value=""></option>
-        <option value="pos">positivo</option>
-        <option value="neg">negativo / indeterminado</option>
+        <option value="pos">Positivo</option>
+        <option value="neg">Negativo / indeterminado</option>
       </select>
     </div>
     <div class="span2">
       <select id="antiRNP70" class="span2">
         <option value=""></option>
-        <option value="pos">positivo</option>
-        <option value="neg">negativo / indeterminado</option>
+        <option value="pos">Positivo</option>
+        <option value="neg">Negativo / indeterminado</option>
       </select>
     </div>
     <div class="span2">
       <select id="anti_u3_rnp" class="span2">
         <option value=""></option>
-        <option value="pos">positivo</option>
-        <option value="neg">negativo / indeterminado</option>
+        <option value="pos">Positivo</option>
+        <option value="neg">Negativo / indeterminado</option>
       </select>
     </div>
   </div>
@@ -212,20 +212,20 @@
     <div class="span2">
       <select id="antijo" class="span2">
         <option value=""></option>
-        <option value="pos">positivo</option>
-        <option value="neg">negativo / indeterminado</option>
+        <option value="pos">Positivo</option>
+        <option value="neg">Negativo / indeterminado</option>
       </select>
     </div>
     <div class="span2">
       <select id="anti_scl" class="span2">
         <option value=""></option>
-        <option value="pos">positivo</option>
-        <option value="neg">negativo / indeterminado</option>
+        <option value="pos">Positivo</option>
+        <option value="neg">Negativo / indeterminado</option>
       </select>
     </div>
   </div>
   <div class="row">
-    <div class="span8"> <a class="btn" id="anti_ENAs_save">guardar</a></div>
+    <div class="span8"> <a class="btn" id="anti_ENAs_save">Guardar</a></div>
   </div>
   <div class="row">
     <div class="span8">
@@ -256,15 +256,15 @@
     <div class="span3">
       <select id="acl_g" class="span3">
         <option value=""></option>
-        <option value="pos">positivo</option>
-        <option value="neg">negativo / indeterminado</option>
+        <option value="pos">Positivo</option>
+        <option value="neg">Negativo / indeterminado</option>
       </select>
     </div>
     <div class="span3">
       <select id="acl_m" class="span3">
         <option value=""></option>
-        <option value="pos">positivo</option>
-        <option value="neg">negativo / indeterminado</option>
+        <option value="pos">Positivo</option>
+        <option value="neg">Negativo / indeterminado</option>
       </select>
     </div>
   </div>
@@ -281,15 +281,15 @@
     <div class="span3">
       <select id="a_coag_lup" class="span3">
         <option value=""></option>
-        <option value="pos">positivo</option>
-        <option value="neg">negativo / indeterminado</option>
+        <option value="pos">Positivo</option>
+        <option value="neg">Negativo / indeterminado</option>
       </select>
     </div>
     <div class="span3">
       <select id="anti_b2gp" class="span3">
         <option value=""></option>
-        <option value="pos">positivo</option>
-        <option value="neg">negativo / indeterminado</option>
+        <option value="pos">Positivo</option>
+        <option value="neg">Negativo / indeterminado</option>
       </select>
     </div>
   </div>
@@ -299,7 +299,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="span8"> <a class="btn" id="anti_ph_lip_save">guardar</a>
+    <div class="span8"> <a class="btn" id="anti_ph_lip_save">Guardar</a>
     </div>
   </div>
   <div class="row">
@@ -331,15 +331,15 @@
     <div class="span3">
       <select id="c_anca" class="span3">
         <option value=""></option>
-        <option value="pos">positivo</option>
-        <option value="neg">negativo / indeterminado</option>
+        <option value="pos">Positivo</option>
+        <option value="neg">Negativo / indeterminado</option>
       </select>
     </div>
     <div class="span3">
       <select id="p_anca" class="span3">
         <option value=""></option>
-        <option value="pos">positivo</option>
-        <option value="neg">negativo / indeterminado</option>
+        <option value="pos">Positivo</option>
+        <option value="neg">Negativo / indeterminado</option>
       </select>
     </div>
   </div>
@@ -349,7 +349,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="span8"> <a class="btn" id="anca_ab_save">guardar</a>
+    <div class="span8"> <a class="btn" id="anca_ab_save">Guardar</a>
     </div>
   </div>
   <div class="row">
@@ -370,8 +370,8 @@
     <div class="span2">
       <select id="a_citrul">
         <option value=""></option>
-        <option value="pos">positivo</option>
-        <option value="neg">negativo / indeterminado</option>
+        <option value="pos">Positivo</option>
+        <option value="neg">Negativo / indeterminado</option>
       </select>
     </div>
   </div>
@@ -383,7 +383,7 @@
   <div class="row">
     <div class="span8">
       <a class="btn" id="citrul_ab_save">
-        guardar
+        Guardar
       </a>
     </div>
   </div>

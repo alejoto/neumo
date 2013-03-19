@@ -6,7 +6,7 @@
   </div>
   <div class="row">
     <div class="span7 text-info" style="text-align:left">
-      <b>SOBRE INICIO DE LA ENFERMEDAD ...</b>
+      <h4>SOBRE INICIO DE LA ENFERMEDAD</h4>
     </div>
   </div>
   <?php  include 'first_eval.php'; ?>
@@ -29,7 +29,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="span2">FECHA EVALUACI&Oacute;N</div>
+    <div class="span2">Fecha evaluaci&oacute;n</div>
     <div class="span3" style="text-align: left;">
       <input type="text" id="year_ev" class="span1" placeholder="a&ntilde;o"/>
       <input type="text" id="month_ev" class="span1" placeholder="mes"/>

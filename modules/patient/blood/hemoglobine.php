@@ -37,10 +37,9 @@
   <div class="row">
     <div class="span1">Fecha</div>
     <div class="span3">
-      <input type="text" id="y_thyr" class="span1" placeholder="a&ntilde;o"
-      />
-      <input type="text" id="m_thyr" class="span1" placeholder="mes" />
-      <input type="text" id="d_thyr" class="span1" placeholder="d&iacutea" />
+      <input type="text" id="y_thyr" class="span1" placeholder="a&ntilde;o"/>
+      <input type="text" id="m_thyr" class="span1" placeholder="mes"/>
+      <input type="text" id="d_thyr" class="span1" placeholder="d&iacute;a"/>
     </div>
   </div>
   <div class="row">

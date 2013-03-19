@@ -31,6 +31,6 @@
   </div>
   
   <div class="row">
-    <div class="span8"><br><br><a class="btn" id="outcome_save">GUARDAR</a><br><br></div>
+    <div class="span8"><br><br><a class="btn" id="outcome_save">Guardar</a><br><br></div>
   </div>
 </div>

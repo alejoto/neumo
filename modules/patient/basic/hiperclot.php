@@ -10,7 +10,7 @@
   <div class="row">
     <div class="span3" style="text-align:right">S. Antifosfol&iacute;pido</div>
     <div class="span1">
-      <input type="checkbox" id="antiphs_syndr" class="hiperclot" />
+      <input type="checkbox" id="antiphs_syndr" class="hiperclot"/>
     </div>
     <div class="span3" style="text-align:right">Mut. gen prot. 20210</div>
     <div class="span1">

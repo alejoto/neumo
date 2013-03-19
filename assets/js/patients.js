@@ -164,11 +164,11 @@ function num_ranges(vale, maxi, mini) {
   })
 }
     
-function up_cas(lwc) {
+/*function up_cas(lwc) {
   lwc.keyup(function() {
     lwc.val($(this).val().toUpperCase());
   });
-}
+}*/
 
 tiprequired ($("#day"));
 tiprequired ($("#name"));

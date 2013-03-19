@@ -14,21 +14,21 @@
   <div class="row">
     <div class="span2">
       <select id="axis" name="axis" class="span2 ecg" >
-        <option valule="">Eje...</option>
-        <option valule="normal">Eje normal</option>
-        <option valule="right">Eje derecho</option>
-        <option valule="left">Eje izq.</option>
-        <option valule="nobody">Tierra de nadie</option>
+        <option value="">Eje...</option>
+        <option value="normal">Eje normal</option>
+        <option value="right">Eje derecho</option>
+        <option value="left">Eje izq.</option>
+        <option value="nobody">Tierra de nadie</option>
       </select>
     </div>
     <div class="span3">
       <select class="span3 ecg" id="rythm" name="rythm">
-        <option valule="">Ritmo...</option>
-        <option valule="sinusal">Sinusal</option>
-        <option valule="supravent">R&iacute;tmico supravent</option>
-        <option valule="ventr_or_BBB">R&iacute;tmico ventr o bloqueo rama</option>
-        <option valule="atr_fibrl">Fibrilaci&oacute;n auricular</option>
-        <option valule="other_rythm">Otra arritmia no mencionada</option>
+        <option value="">Ritmo...</option>
+        <option value="sinusal">Sinusal</option>
+        <option value="supravent">R&iacute;tmico supravent</option>
+        <option value="ventr_or_BBB">R&iacute;tmico ventr o bloqueo rama</option>
+        <option value="atr_fibrl">Fibrilaci&oacute;n auricular</option>
+        <option value="other_rythm">Otra arritmia no mencionada</option>
       </select>
     </div>
     <div class="span2">
@@ -44,10 +44,10 @@
   <div class="row">
     <div class="span4">
       <select class="span4 ecg" id="pattern" name="pattern">
-        <option value=""></option>
+        <option></option>
         <option value="Ninguno">Ninguno</option>
         <option value="SIQIIITIII">SI-QIII-TIII</option>
-        <option value="BRDHH">Bloqueo de Rama derecha Haz de His</option>
+        <option value="BRDHH">Bloqueo de rama derecha haz de his</option>
         <option value="both">Ambos (SIQIIITIII y BRDHH)</option>
       </select>
     </div>
