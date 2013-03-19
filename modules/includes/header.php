@@ -30,12 +30,12 @@
           Inicio 
           <i class="icon-home  icon-white"></i>
         </a>
-        <?php
+        <?php /*
           if( isset($_SESSION['patient']) ){
             echo '<a class="btn  btn-inverse " id="edit_patient" href="myaccount.php?page=edit">Editar paciente 
                   <i class="icon-user icon-white"></i></a>'; 
           }
-        ?>
+        /**/?>
         <?php
           if( isset($_SESSION['evaluation']) ){
             echo '<a class="btn btn-inverse" id="change_patient_btn" href="myaccount.php?page=patients">
