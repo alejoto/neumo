@@ -105,23 +105,23 @@
         <form action="../patient/edit_save.php" method="post">
           <div class="row">
             <div class="span2" style="text-align:right;padding-top:5px">Celular</div>
-            <div class="span7"><input type="text" id='mobile' name='mobile' <?php echo  'value="'.$mobile.'"'; ?> placeholder="Mobile"></div>
+            <div class="span7"><input type="text" id='mobile' name='mobile' maxlength="10" <?php echo  'value="'.$mobile.'"'; ?> placeholder="Celular"></div>
           </div>
           <div class="row">
             <div class="span2" style="text-align:right;padding-top:5px">Tel&eacute;fono</div>
-            <div class="span7"><input type="text" id='phone' name='phone' <?php echo  'value="'.$phone.'"'; ?> placeholder="Phone number"></div>
+            <div class="span7"><input type="text" id='phone' name='phone' <?php echo  'value="'.$phone.'"'; ?> placeholder="Telefono"></div>
           </div>
           <div class="row">
             <div class="span2" style="text-align:right;padding-top:5px">EPS</div>
-            <div class="span7"><input type="text" id='eps' name='eps' <?php echo  'value="'.$eps.'"'; ?> Placeholder="Insurance company"></div>
+            <div class="span7"><input type="text" id='eps' name='eps' <?php echo  'value="'.$eps.'"'; ?> Placeholder="EPS"></div>
           </div>
           <div class="row">
             <div class="span2" style="text-align:right;padding-top:5px">Pa&iacute;s de residencia</div>
-            <div class="span7"><input type="text" id='countryreside' name='countryreside' <?php echo  'value="'.$countryreside.'"'  ; ?> placeholder="Country of residence"></div>
+            <div class="span7"><input type="text" id='countryreside' name='countryreside' <?php echo  'value="'.$countryreside.'"'  ; ?> placeholder="Pa&iacute;s"></div>
           </div>
           <div class="row">
             <div class="span2" style="text-align:right;padding-top:5px">Cuidad de residencia</div>
-            <div class="span7"><input type="text" id='cityreside' name='cityreside' <?php echo  'value="'.$cityreside.'"'  ; ?> placeholder="City of residence"></div>
+            <div class="span7"><input type="text" id='cityreside' name='cityreside' <?php echo  'value="'.$cityreside.'"'  ; ?> placeholder="Ciudad"></div>
           </div>
           <div class="row">
             <div class="offset2 span7"><button id='patient_save_btn' type="submit" class="btn">Salvar</button></div>
