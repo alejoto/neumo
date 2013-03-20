@@ -32,7 +32,8 @@
     <div class="span1">
       <input type="text" placeholder="diastol."id="pdiast" class="span1 ex_fc">
     </div>
-    <b><div class="span2" id="ef_pam"></div></b>
+    <b><div class="span2" id="ef_pam">
+    	</div></b>
   </div>
   
   <div class="row">

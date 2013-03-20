@@ -74,7 +74,7 @@
       Dolor t&oacute;racico
     </div>
     <div class="span1">
-      <input type="checkbox" class="sixmw" name="walk_toracic">
+      <input type="checkbox" class="sixmw" name="walk_toracic" >
     </div>
   </div>
   <div class="row">
