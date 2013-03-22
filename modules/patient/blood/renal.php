@@ -1,4 +1,4 @@
-<div id="renal">
+<div id="renal"  style="text-align:left">
   <div class="row">
     <div class="well well-small span8">
       <h4>FUNCI&Oacute;N RENAL</h4>

@@ -1,4 +1,4 @@
-<div id="gammagr">
+<div id="gammagr" style="text-align:left">
      <div class="row">
          <div class="span8 well well-small">GAMAGRAF&Iacute;A PULMONAR</div>
      </div>

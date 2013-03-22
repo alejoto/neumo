@@ -1,4 +1,4 @@
-<div id="tc_angio">
+<div id="tc_angio" style="text-align:left">
      <div class="row">
          <div class="span8 well well-small">TOMOGRAF&Iacute;A PULMONAR</div>
      </div>

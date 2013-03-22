@@ -1,4 +1,4 @@
-<div id="reuma">
+<div id="reuma"  style="text-align:left">
   <div class="row">
     <div class="well well-small span8">
       <h4>PRUEBAS REUMATOL&Oacute;GICAS</h4>

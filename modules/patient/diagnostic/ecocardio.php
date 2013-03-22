@@ -1,4 +1,4 @@
-<div id="ecocardio">
+<div id="ecocardio" style="text-align:left">
      <div class="row">
          <div class="span8 well well-small">ECOCARDIOGRAF&Iacute;A</div>
      </div>

@@ -1,4 +1,4 @@
-<div id="duplex_legs">
+<div id="duplex_legs" style="text-align:left">
      <div class="row">
          <div class="span8 well well-small">ECOGRAF&Iacute;A DUPLEX MIEMBROS INFERIORES</div>
      </div>

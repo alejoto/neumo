@@ -1,13 +1,13 @@
-<div id="hb_and_others">
+<div id="hb_and_others" style="text-align:left">
   <div class="row">
     <div class="well well-small span8">
       <h4>HEMOGLOBINA - TIROIDES - D&Iacute;MERO D - TROPONINA - P&Eacute;PTIDO NATRIUR&Eacute;TICO - VIH</h4>
 
     </div>
   </div>
-  <div class="row">
-    <div class="span8"> <b>HEMOGLOBINA (mg/dL)</b>
-
+  <div class="row" >
+    <div class="span8">
+      <b>HEMOGLOBINA (mg/dL)</b>
     </div>
   </div>
   <div class="row">

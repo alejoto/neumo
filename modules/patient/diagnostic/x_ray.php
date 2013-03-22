@@ -1,4 +1,4 @@
-<div id="x_ray">
+<div id="x_ray" style="text-align:left">
      <div class="row">
          <div class="span8 well well-small">RAYOS X</div>
      </div>

@@ -1,4 +1,4 @@
-<div id="sixm_walk">
+<div id="sixm_walk"  style="text-align:left">
   <div class="row">
     <div class="span8 well well-small">
       <h4>TEST "CAMINATA DE 6 MINUTOS"</h4>

@@ -1,4 +1,4 @@
-<div id="pulm_arteriography">
+<div id="pulm_arteriography" style="text-align:left">
      <div class="row">
          <div class="span8 well well-small">ARTERIOGRAF&Iacute;A PULMONAR</div>
      </div>
