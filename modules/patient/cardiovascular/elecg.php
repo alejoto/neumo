@@ -1,4 +1,4 @@
-<div id="elecg">
+<div id="elecg"  style="text-align:left">
   <div class="row">
     <div class="span8 well well-small">
 			<h4>ELECTROCARDIOGRAMA</h4></div>
