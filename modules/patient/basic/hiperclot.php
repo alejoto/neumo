@@ -61,11 +61,11 @@
       <input type="checkbox" id="esplenectomy" class="hiperclot" />
     </div>
   </div>
-    
+  <br/>
   <div class="row">
-    <div class="span1" style="text-align:right">Otros trastornos</div>
-    <div class="span7">
-      <input type="text" id="other_hyperclott_disord" class="span7 hiperclot" placeholder="Solo trastornos asociados a hipercoagulabilidad"/>
+    <div class="span2" style="text-align:right">Otros trastornos</div>
+    <div class="span6">
+      <input type="text" id="other_hyperclott_disord" class="span6 hiperclot" placeholder="Solo trastornos asociados a hipercoagulabilidad"/>
     </div>
   </div>
     

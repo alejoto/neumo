@@ -1,4 +1,4 @@
-<div id="liver">
+<div id="liver" style="text-align:left">
   <div class="row">
     <div class="well well-small span8">
       <h4>FUNCI&Oacute;N HEP&Aacute;TICA</h4>

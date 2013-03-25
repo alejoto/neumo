@@ -1,4 +1,4 @@
-<div id="cp_test">
+<div id="cp_test"  style="text-align:left">
   <div class="row">
     <div class="span8 well well-small">
       <h4>PRUEBA DE ESFUERZO CARDIOPULMONAR</h4>

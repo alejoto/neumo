@@ -1,4 +1,4 @@
-<div id="mri">
+<div id="mri" style="text-align:left">
      <div class="row">
          <div class="span8 well well-small">RESONANCIA MAGN&Eacute;TICA NUCLEAR</div>
      </div>
