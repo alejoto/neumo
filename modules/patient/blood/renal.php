@@ -1,6 +1,6 @@
 <div id="renal"  style="text-align:left">
   <div class="row">
-    <div class="well well-small span8">
+    <div class="well well-small span8" style="text-align:center">
       <h4>FUNCI&Oacute;N RENAL</h4>
 
     </div>

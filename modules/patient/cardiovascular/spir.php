@@ -1,6 +1,8 @@
 <div id="spir">
     <div class="row"  style="text-align:left">
-        <div class="span8 well well-small"><h4>ESPIROMETR&Iacute;A</h4></div>
+        <div class="span8 well well-small" style="text-align:center">
+        		<h4>ESPIROMETR&Iacute;A</h4>
+        </div>
     </div>
     <div class="row">
         <div class="span2">Fecha realizaci&oacute;n</div>
@@ -93,7 +95,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="span2">
+        <div class="span8" style="text-align:center">
             <a class="btn" id="save_spir">Guardar</a>
         </div>
     </div>

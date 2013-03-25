@@ -1,6 +1,8 @@
 <div id="duplex_legs" style="text-align:left">
      <div class="row">
-         <div class="span8 well well-small">ECOGRAF&Iacute;A DUPLEX MIEMBROS INFERIORES</div>
+         <div class="span8 well well-small" style="text-align:center">
+         		<h4>ECOGRAF&Iacute;A DUPLEX MIEMBROS INFERIORES</h4>
+         </div>
      </div>
      <div class="row">
          <div class="span1">Fecha</div>
@@ -44,7 +46,9 @@
          <div class="span8"><br></div>
      </div>
      <div class="row">
-         <div class="span8"><a class="btn" id="legsdoppler_save">Guardar</a></div>
+         <div class="span8" style="text-align:center">
+         		<a class="btn" id="legsdoppler_save">Guardar</a>
+         </div>
      </div>
      <div class="row">
          <div class="span8"><br></div>

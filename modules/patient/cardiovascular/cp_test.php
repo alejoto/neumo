@@ -1,6 +1,6 @@
 <div id="cp_test"  style="text-align:left">
   <div class="row">
-    <div class="span8 well well-small">
+    <div class="span8 well well-small" style="text-align:center">
       <h4>PRUEBA DE ESFUERZO CARDIOPULMONAR</h4>
     </div>
   </div>
@@ -39,7 +39,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="span8">
+    <div class="span8" style="text-align:center">
       <a class="btn" id="vo2_save">Guardar</a>
     </div>
   </div>

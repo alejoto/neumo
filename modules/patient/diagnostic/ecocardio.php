@@ -1,6 +1,8 @@
 <div id="ecocardio" style="text-align:left">
      <div class="row">
-         <div class="span8 well well-small">ECOCARDIOGRAF&Iacute;A</div>
+         <div class="span8 well well-small" style="text-align:center">
+         			<h4>ECOCARDIOGRAF&Iacute;A</h4>
+         </div>
      </div>
      <div class="row">
          <div class="span1">Fecha</div>
@@ -14,7 +16,7 @@
              <select id="doppl_type" class="span2 eco" name="doppl_type">
                  <option value="">...</option>
                  <option value="tt">Transtor&aacute;cico</option>
-                 <option value="te">Transesof&aacute;gico</option>>
+                 <option value="te">Transesof&aacute;gico</option>
              </select>
          </div>
      </div>
@@ -96,7 +98,7 @@
      <div class="row">
          <div class="span8"><br></div>
      </div>
-     <div class="row">
+     <div class="row" style="text-align:center">
          <div class="span8"><a class="btn" id="ecoc_save">Guardar</a></div>
      </div>
      <div class="row">

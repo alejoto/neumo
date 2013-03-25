@@ -71,6 +71,6 @@
     
   <div class="row">
     <div class="span8"><br><br>
-    <a id="hiperclot_save" class="btn">GUARDAR</a><br><br></div>
+    <a id="hiperclot_save" class="btn">Guardar</a><br><br></div>
   </div>
 </div>

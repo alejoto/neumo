@@ -1,6 +1,8 @@
 <div id="gammagr" style="text-align:left">
      <div class="row">
-         <div class="span8 well well-small">GAMAGRAF&Iacute;A PULMONAR</div>
+         <div class="span8 well well-small" style="text-align:center">
+         		<h4>GAMAGRAF&Iacute;A PULMONAR</h4>
+         </div>
      </div>
      <div class="row">
          <div class="span1">Fecha</div>
@@ -25,7 +27,9 @@
          <div class="span8"><br></div>
      </div>
      <div class="row">
-         <div class="span8"><a class="btn" id="gamma_save">Guardar</a></div>
+         <div class="span8" style="text-align:center">
+         		<a class="btn" id="gamma_save">Guardar</a>
+         </div>
      </div>
      <div class="row">
          <div class="span8"><br></div>

@@ -1,6 +1,6 @@
 <div id="reactiv">
-    <div CLASS="well well-small">
-        <h5>TEST DE VASOREACTIVIDAD </h5>
+    <div CLASS="well well-small" style="text-align:center">
+        <h4>TEST DE VASOREACTIVIDAD</h4>
     </div>
     <div class="row">
         <div class="span2" style="text-align:right">Fecha examen:</div>

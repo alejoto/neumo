@@ -2,7 +2,7 @@
 /*hide/show save button: first parameter is an array, inside [].  Second parameter is the button id*/
 hide_show_savebutton([$("#day_ev"),$("#nyha_funct_class")], $("#sympt_save"));
 hide_show_savebutton([$("#pulse"),$("#breathing"),$("#psist"),$("#pdiast")], $("#ef_save"));
-hide_show_savebutton([$("#day_death"),$("#dead_cause")], $("#dead_save"));
+hide_show_savebutton([$("#day_death"),$("#dead_cause")], $("#outcome_save"));
 
 /*Hide selected fields when loading page*/
 $(document).ready(function() {

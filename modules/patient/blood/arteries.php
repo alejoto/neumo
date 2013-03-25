@@ -2,7 +2,6 @@
   <div class="row">
     <div class="well well-small span8">
       <h4>GASES ARTERIALES</h4>
-
     </div>
   </div>
   <div class="row">

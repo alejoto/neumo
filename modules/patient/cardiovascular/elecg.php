@@ -1,8 +1,9 @@
 <div id="elecg"  style="text-align:left">
   <div class="row">
-    <div class="span8 well well-small">
-			<h4>ELECTROCARDIOGRAMA</h4></div>
-  	</div>
+    <div class="span8 well well-small" style="text-align:center">
+			<h4>ELECTROCARDIOGRAMA</h4>
+		</div>
+  </div>
   <div class="row">
     <div class="span2">Fecha realizaci&oacute;n</div>
     <div class="span3">
@@ -53,8 +54,8 @@
     </div>
   </div>
   <div class="row">
-    <div class="span8">
-			<a class="btn" id="save_ecg" name="ecg_save">Guardar</a>
+    <div class="span8" style="text-align:center">
+			<a class="btn" id="save_ecg" name="ecg_save" >Guardar</a>
     </div>
   </div>
 </div>

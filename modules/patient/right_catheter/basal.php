@@ -1,6 +1,6 @@
 <div id="basal" >
-    <div CLASS="well well-small">
-        <h4>DATOS BASALES  </h4>
+    <div CLASS="well well-small" style="text-align:center">
+        <h4>DATOS BASALES</h4>
     </div>
     <div class="row">
         <div class="span2" style="text-align:right">Fecha examen:</div>

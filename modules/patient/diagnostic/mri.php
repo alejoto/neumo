@@ -1,6 +1,8 @@
 <div id="mri" style="text-align:left">
      <div class="row">
-         <div class="span8 well well-small">RESONANCIA MAGN&Eacute;TICA NUCLEAR</div>
+         <div class="span8 well well-small" style="text-align:center">
+         		<h4>RESONANCIA MAGN&Eacute;TICA NUCLEAR</h4>
+         </div>
      </div>
      <div class="row">
          <div class="span1">Fecha</div>
@@ -71,7 +73,9 @@
          <div class="span8"><br></div>
      </div>
      <div class="row">
-         <div class="span8"><a class="btn" id="mri_save">Guardar</a></div>
+         <div class="span8" style="text-align:center">
+         		<a class="btn" id="mri_save">Guardar</a>
+         </div>
      </div>
      <div class="row">
          <div class="span8"><br></div>

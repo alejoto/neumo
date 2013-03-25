@@ -1,4 +1,4 @@
-<div id="hb_and_others" style="text-align:left">
+<div id="hb_and_others" style="padding-left: 40px;">
   <div class="row">
     <div class="well well-small span8">
       <h4>HEMOGLOBINA - TIROIDES - D&Iacute;MERO D - TROPONINA - P&Eacute;PTIDO NATRIUR&Eacute;TICO - VIH</h4>

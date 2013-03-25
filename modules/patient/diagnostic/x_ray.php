@@ -1,6 +1,8 @@
 <div id="x_ray" style="text-align:left">
      <div class="row">
-         <div class="span8 well well-small">RAYOS X</div>
+         <div class="span8 well well-small" style="text-align:center">
+         		<h4>RAYOS X</h4>
+         </div>
      </div>
      <div class="row">
          <div class="span1">Fecha</div>
@@ -56,7 +58,7 @@
          <div class="span8"><hr></div>
      </div>
      <div class="row">
-         <div class="span8">Marcar hallazgos presentes</div>
+         <div class="span8"><b>Marcar hallazgos presentes</b></div>
      </div>
      <div class="row">
          <div class="span2">
@@ -73,7 +75,9 @@
          <div class="span8"><br></div>
      </div>
      <div class="row">
-         <div class="span8"><a class="btn" id="xray_save">Guardar</a></div>
+         <div class="span8" style="text-align:center">
+         		<a class="btn" id="xray_save">Guardar</a>
+         	</div>
      </div>
      <div class="row">
          <div class="span8"><br></div>
