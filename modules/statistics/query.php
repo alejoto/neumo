@@ -26,7 +26,7 @@
     
     $temp = array(0,0);
     while( $row = mysqli_fetch_array($result) ){
-      if( $row['gender'] == 'rc' ) $temp[0]++;
+      if( $row['gender'] == 'male' ) $temp[0]++;
       else $temp[1]++;
     }
   }

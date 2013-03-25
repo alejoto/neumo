@@ -75,12 +75,37 @@ function get_info(info_id){
   return result;
 }
 
+function check_date(column_name,table_name,date){
+	$.post("../patient/ajax_check.php",{ column_name:column_name,
+					table_name:table_name, date:date }, function(data) {
+		//alert(data);
+		if(data=='occuped') {
+			alert("Ya se le realizo un examen a ese paciente en esta fecha");
+		}
+	  });  
+	}
+
+
+$(".date3").change(function(){
+	/* Create a variable with the date with jQuery */
+	var date = $(".date3").prev().prev().val() + "-"+ $(".date3").prev().val() 
+				+ "-" + $(".date3").val();
+	/* Find the colum name for the date */
+	var column_name = $(".date3").parent().attr("name");
+	
+	/* Find the table where this date must be persisted */
+	var table_name = "hap_"+$(".date3").parent().parent().attr("name");
+	
+	check_date(column_name, table_name, date);	
+});
+
 		////BUTTONS OF EVALUACION CLINICA////
 //TODO Complete!!!
 
 $("#hiperclot_save").click(function(){
   var info = get_info("hiperclot");
   to_database(info,"table_name");
+  
   reset_fields("hiperclot");
   $("#hiperclot_save").hide();
 });
