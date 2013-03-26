@@ -56,5 +56,8 @@ $con=mysqli_connect("localhost","healmy5_root","laravel","healmy5_health");
   $sql=mysqli_query($con,"SELECT ivt_country FROM main_investigator");
   if (!$sql){ mysqli_query($con,"ALTER TABLE main_investigator ADD ivt_country VARCHAR(60) AFTER ivt_city");}
 
+  $sql=mysqli_query($con,"SELECT esplenectomy FROM hap_hyperclotting");
+  if (!$sql){ mysqli_query($con,"ALTER TABLE hap_hyperclotting ADD esplenectomy VARCHAR(60) AFTER neoplasia");}
 
+//esplenectomy
 ?>

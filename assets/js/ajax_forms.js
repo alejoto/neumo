@@ -102,13 +102,14 @@ $(".date3").change(function(){
 		////BUTTONS OF EVALUACION CLINICA////
 //TODO Complete!!!
 
+/*
 $("#hiperclot_save").click(function(){
   var info = get_info("hiperclot");
   to_database(info,"table_name");
   
   reset_fields("hiperclot");
   $("#hiperclot_save").hide();
-});
+});/**/
 
 $("#treatment_save").click(function(){
   var info = get_info("treatment");
