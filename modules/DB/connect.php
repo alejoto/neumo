@@ -1,12 +1,72 @@
 <?php
 // connect to the MySQL server
 $con=mysqli_connect("localhost","healmy5_root","laravel","healmy5_health");
-
+  
   if (mysqli_connect_errno($con))
   {
   	echo "Failed to connect to MySQL: ".mysqli_connect_error();
   }
-
+  
+  $sql2="CREATE TABLE  IF NOT EXISTS hap_reuma_ana (
+			ana_id				INT (150) PRIMARY KEY NOT NULL AUTO_INCREMENT
+			,ana_date			DATE
+			,ana_result		VARCHAR (150)
+			,eval_id 			VARCHAR (50))";
+   mysqli_query($con,$sql2) or die (mysqli_error($con));
+   	
+   $sql2="CREATE TABLE  IF NOT EXISTS hap_reuma_spana (
+			spana_id				INT (150) PRIMARY KEY NOT NULL AUTO_INCREMENT
+			,spana_date			DATE
+			,spana_ctmere		VARCHAR (150)
+   		,spana_anti_rna VARCHAR (150)
+   		,spana_anti_dna VARCHAR (150)
+			,eval_id 				VARCHAR (50))";
+   mysqli_query($con,$sql2) or die (mysqli_error($con));
+   
+   $sql2="CREATE TABLE  IF NOT EXISTS hap_reuma_enas (
+			enas_id					INT (150) PRIMARY KEY NOT NULL AUTO_INCREMENT
+			,enas_date			DATE
+			,enas_anti_ro		VARCHAR (150)
+   		,enas_anti_la		VARCHAR (150)
+   		,enas_anti_smith VARCHAR (150)
+   		,enas_anti_rnp	VARCHAR (150)
+   		,enas_antiRNP70	VARCHAR (150)
+   		,enas_anti_u3		VARCHAR (150)
+   		,enas_antijo		VARCHAR (150)
+   		,enas_anti_scl	VARCHAR (150)
+			,eval_id 				VARCHAR (50))";
+   mysqli_query($con,$sql2) or die (mysqli_error($con));
+   
+   $sql2="CREATE TABLE  IF NOT EXISTS hap_reuma_antilip (
+			antilip_id			INT (150) PRIMARY KEY NOT NULL AUTO_INCREMENT
+			,antilip_date		DATE
+			,antilip_acl_g	VARCHAR (150)
+   		,antilip_acl_m	VARCHAR (150)
+   		,antilip_a_coag_lup VARCHAR (150)
+   		,antilip_anti_b2gp VARCHAR (150)
+			,eval_id 				VARCHAR (50))";
+   mysqli_query($con,$sql2) or die (mysqli_error($con));
+  
+   $sql2="CREATE TABLE  IF NOT EXISTS hap_reuma_anca (
+			anca_id					INT (150) PRIMARY KEY NOT NULL AUTO_INCREMENT
+			,anca_date			DATE
+			,anca_c_anca		VARCHAR (150)
+   		,anca_p_anca		VARCHAR (150)
+			,eval_id 				VARCHAR (50))";
+   mysqli_query($con,$sql2) or die (mysqli_error($con));
+   
+   $sql2="CREATE TABLE  IF NOT EXISTS hap_reuma_citrul (
+			citrul_id				INT (150) PRIMARY KEY NOT NULL AUTO_INCREMENT
+			,citrul_date		DATE
+			,citrul_a_citrul	VARCHAR (150)
+			,eval_id 				VARCHAR (50))";
+   mysqli_query($con,$sql2) or die (mysqli_error($con));
+    
+   
+   
+   
+   /////////////////////////////////////////////////////////////////////////////
+   
   $sql=mysqli_query($con,"SELECT status FROM users");
   if (!$sql){ mysqli_query($con,"ALTER TABLE users ADD status VARCHAR(60) AFTER rol");}
 
@@ -58,6 +118,28 @@ $con=mysqli_connect("localhost","healmy5_root","laravel","healmy5_health");
 
   $sql=mysqli_query($con,"SELECT esplenectomy FROM hap_hyperclotting");
   if (!$sql){ mysqli_query($con,"ALTER TABLE hap_hyperclotting ADD esplenectomy VARCHAR(60) AFTER neoplasia");}
+ 
+  $sql=mysqli_query($con,"SELECT post_its_right FROM hap_vasoreact_test");
+  if ($sql){ mysqli_query($con,"ALTER TABLE hap_vasoreact_test DROP post_its_right");}
 
-//esplenectomy
+  $sql=mysqli_query($con,"SELECT post_its_left FROM hap_vasoreact_test");
+  if ($sql){ mysqli_query($con,"ALTER TABLE hap_vasoreact_test DROP post_its_left");}
+
+  $sql=mysqli_query($con,"SELECT hep_tpt FROM hap_hepatic");
+  if ($sql){ mysqli_query($con,"ALTER TABLE hap_hepatic DROP hep_tpt");}
+  
+  $sql=mysqli_query($con,"SELECT hep_tp FROM hap_hepatic");
+  if ($sql){ mysqli_query($con,"ALTER TABLE hap_hepatic DROP hep_tp");}
+ 
+  $sql=mysqli_query($con,"SELECT hep_inr FROM hap_hepatic");
+  if ($sql){ mysqli_query($con,"ALTER TABLE hap_hepatic DROP hep_inr");}
+  
+  ////////////////////////REUMA///////////////////////
+  $sql=mysqli_query($con,"SELECT reuma_ana FROM hap_reuma");
+	if ($sql){ mysqli_query($con,"ALTER TABLE hap_reuma DROP reuma_ana, DROP anti_ro, DROP anti_la, DROP anti_smt, DROP anti_rnp, DROP anti_u1rnp, DROP anti_u3rnp, DROP anti_jo, DROP rna_pol_3, DROP topiso_1, DROP centrom, DROP anti_slc, DROP anti_th_t0, DROP ss_dna, DROP ds_dna, DROP c_anca, DROP p_anca, DROP a_cardiolip_g, DROP a_cardiolip_m, DROP anticoag_lup, DROP a_2_cpl");}
+  
+
+
+	
+	//esplenectomy
 ?>

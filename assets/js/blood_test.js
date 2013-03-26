@@ -11,10 +11,10 @@ hide_show_savebutton([$("#d_liver"), $("#hep_ast"), $("#hep_alt"), $("#hep_fal")
 hide_show_savebutton([$("#d_bleed"), $("#hep_tpt"), $("#hep_tp"), $("#hep_inr")], $("#bleed_save"));
 hide_show_savebutton([$("#d_f_reum"), $("#f_reum")], $("#f_reum_save"));
 hide_show_savebutton([$("#d_uns_ana"), $("#uns_ana_value")], $("#uns_ana_save"));
-hide_show_savebutton([$("#d_sp_ana")], $("#sp_ana_save"));
-hide_show_savebutton([$("#d_anti_ENAs")], $("#anti_ENAs_save"));
-hide_show_savebutton([$("#d_anti_ph_lip")], $("#anti_ph_lip_save"));
-hide_show_savebutton([$("#d_anca_ab")], $("#anca_ab_save"));
+hide_show_savebutton([$("#d_sp_ana"), $("#centromere"), $("#anti_rna_polim"), $("#antidsDNA")], $("#sp_ana_save"));
+hide_show_savebutton([$("#d_anti_ENAs"), $("#anti_ro"), $("#anti_la"), $("#anti_smith"), $("#anti_rnp"), $("#antiRNP70"), $("#anti_u3_rnp"), $("#antijo"), $("#anti_scl")], $("#anti_ENAs_save"));
+hide_show_savebutton([$("#d_anti_ph_lip"), $("#acl_g"), $("#acl_m"), $("#a_coag_lup"), $("#anti_b2gp")], $("#anti_ph_lip_save"));
+hide_show_savebutton([$("#d_anca_ab"), $("#c_anca"), $("#p_anca")], $("#anca_ab_save"));
 hide_show_savebutton([$("#d_citrul_ab"), $("#a_citrul")], $("#citrul_ab_save"));
 
 

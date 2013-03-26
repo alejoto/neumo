@@ -5,18 +5,18 @@
     </div>
   </div>
   <div class="row">
-    <div class="span8"> <b>FACTOR REUMATOIDEO</b>
+    <div class="span8"> <b>Factor reumatoideo</b>
     </div>
   </div>
   <div class="row">
     <div class="span1">Fecha</div>
     <div class="span3">
-      <input type="text" id="y_f_reum" class="span1" placeholder="a&ntilde;o"/>
-      <input type="text" id="m_f_reum" class="span1" placeholder="mes" />
-      <input type="text" id="d_f_reum" class="span1" placeholder="d&iacute;a"/>
+      <input type="text" id="y_f_reum" class="span1 date1 reuma" name="reuma_date"  placeholder="a&ntilde;o"/>
+      <input type="text" id="m_f_reum" class="span1 reuma" placeholder="mes" />
+      <input type="text" id="d_f_reum" class="span1 reuma" placeholder="d&iacute;a"/>
     </div>
     <div class="span2">
-      <select id="f_reum">
+      <select id="f_reum" class="reuma" name="reuma_fr">
         <option value=""></option>
         <option value="pos">Positivo</option>
         <option value="neg">Negativo / indeterminado</option>
@@ -42,12 +42,12 @@
   <div class="row">
     <div class="span1">Fecha</div>
     <div class="span3">
-      <input type="text" id="y_uns_ana" class="span1" placeholder="a&ntilde;o"/>
-      <input type="text" id="m_uns_ana" class="span1" placeholder="mes" />
-      <input type="text" id="d_uns_ana" class="span1" placeholder="d&iacute;a"/>
+      <input type="text" id="y_uns_ana" class="span1 date1 ana" name="ana_date" placeholder="a&ntilde;o"/>
+      <input type="text" id="m_uns_ana" class="span1 ana" placeholder="mes" />
+      <input type="text" id="d_uns_ana" class="span1 ana" placeholder="d&iacute;a"/>
     </div>
     <div class="span2">
-      <select id="uns_ana_value">
+      <select id="uns_ana_value" class="ana" name="ana_result">
         <option value=""></option>
         <option value="pos">Positivo</option>
         <option value="neg">Negativo / indeterminado</option>
@@ -71,9 +71,9 @@
   <div class="row">
     <div class="span1">Fecha</div>
     <div class="span3">
-      <input type="text" id="y_sp_ana" class="span1" placeholder="a&ntilde;o"/>
-      <input type="text" id="m_sp_ana" class="span1" placeholder="mes" />
-      <input type="text" id="d_sp_ana" class="span1" placeholder="d&iacute;a"/>
+      <input type="text" id="y_sp_ana" class="span1 spana date1" name="spana_date" placeholder="a&ntilde;o"/>
+      <input type="text" id="m_sp_ana" class="span1 spana" placeholder="mes" />
+      <input type="text" id="d_sp_ana" class="span1 spana" placeholder="d&iacute;a"/>
     </div>
   </div>
   <div class="row">
@@ -90,21 +90,21 @@
 
   <div class="row">
     <div class="span2">
-      <select id="centromere" class="span2">
+      <select id="centromere" class="span2 spana" name="spana_ctmere">
         <option value=""></option>
         <option value="pos">Positivo</option>
         <option value="neg">Negativo / indeterminado</option>
       </select>
     </div>
     <div class="span2">
-      <select id="anti_rna_polim" class="span2">
+      <select id="anti_rna_polim" class="span2 spana" name="spana_anti_rna">
         <option value=""></option>
         <option value="pos">Positivo</option>
         <option value="neg">Negativo / indeterminado</option>
       </select>
     </div>
     <div class="span2">
-      <select id="antidsDNA" class="span2">
+      <select id="antidsDNA" class="span2 spana" name="spana_anti_dna">
         <option value=""></option>
         <option value="pos">Positivo</option>
         <option value="neg">Negativo / indeterminado</option>
@@ -126,9 +126,9 @@
   <div class="row">
     <div class="span1">Fecha</div>
     <div class="span3">
-      <input type="text" id="y_anti_ENAs" class="span1" placeholder="a&ntilde;o"/>
-      <input type="text" id="m_anti_ENAs" class="span1" placeholder="mes" />
-      <input type="text" id="d_anti_ENAs" class="span1" placeholder="d&iacute;a"/>
+      <input type="text" id="y_anti_ENAs" class="span1 enas date1" name="enas_date" placeholder="a&ntilde;o"/>
+      <input type="text" id="m_anti_ENAs" class="span1 enas" placeholder="mes" />
+      <input type="text" id="d_anti_ENAs" class="span1 enas" placeholder="d&iacute;a"/>
     </div>
   </div>
   <div class="row">
@@ -144,21 +144,21 @@
   </div>
   <div class="row">
     <div class="span2">
-      <select id="anti_ro" class="span2">
+      <select id="anti_ro" class="span2 enas" name="enas_anti_ro">
         <option value=""></option>
         <option value="pos">Positivo</option>
         <option value="neg">Negativo / indeterminado</option>
       </select>
     </div>
     <div class="span2">
-      <select id="anti_la" class="span2">
+      <select id="anti_la" class="span2 enas" name="enas_anti_la">
         <option value=""></option>
         <option value="pos">Positivo</option>
         <option value="neg">Negativo / indeterminado</option>
       </select>
     </div>
     <div class="span2">
-      <select id="anti_smith" class="span2">
+      <select id="anti_smith" class="span2 enas" name="enas_anti_smith">
         <option value=""></option>
         <option value="pos">Positivo</option>
         <option value="neg">Negativo / indeterminado</option>
@@ -179,21 +179,21 @@
 
   <div class="row">
     <div class="span2">
-      <select id="anti_rnp" class="span2">
+      <select id="anti_rnp" class="span2 enas" name="enas_anti_rnp">
         <option value=""></option>
         <option value="pos">Positivo</option>
         <option value="neg">Negativo / indeterminado</option>
       </select>
     </div>
     <div class="span2">
-      <select id="antiRNP70" class="span2">
+      <select id="antiRNP70" class="span2 enas" name="enas_antiRNP70">
         <option value=""></option>
         <option value="pos">Positivo</option>
         <option value="neg">Negativo / indeterminado</option>
       </select>
     </div>
     <div class="span2">
-      <select id="anti_u3_rnp" class="span2">
+      <select id="anti_u3_rnp" class="span2 enas" name="enas_anti_u3">
         <option value=""></option>
         <option value="pos">Positivo</option>
         <option value="neg">Negativo / indeterminado</option>
@@ -210,14 +210,14 @@
   </div>
   <div class="row">
     <div class="span2">
-      <select id="antijo" class="span2">
+      <select id="antijo" class="span2 enas" name="enas_antijo">
         <option value=""></option>
         <option value="pos">Positivo</option>
         <option value="neg">Negativo / indeterminado</option>
       </select>
     </div>
     <div class="span2">
-      <select id="anti_scl" class="span2">
+      <select id="anti_scl" class="span2 enas" name="enas_anti_scl">
         <option value=""></option>
         <option value="pos">Positivo</option>
         <option value="neg">Negativo / indeterminado</option>
@@ -238,9 +238,9 @@
   <div class="row">
     <div class="span1">Fecha</div>
     <div class="span3">
-      <input type="text" id="y_anti_ph_lip" class="span1" placeholder="a&ntilde;o"/>
-      <input type="text" id="m_anti_ph_lip" class="span1" placeholder="mes"/>
-      <input type="text" id="d_anti_ph_lip" class="span1" placeholder="d&iacute;a"/>
+      <input type="text" id="y_anti_ph_lip" class="span1 antilip date1" name="antilip_date" placeholder="a&ntilde;o"/>
+      <input type="text" id="m_anti_ph_lip" class="span1 antilip" placeholder="mes"/>
+      <input type="text" id="d_anti_ph_lip" class="span1 antilip" placeholder="d&iacute;a"/>
     </div>
   </div>
   <div class="row">
@@ -254,14 +254,14 @@
 
   <div class="row">
     <div class="span3">
-      <select id="acl_g" class="span3">
+      <select id="acl_g" class="span3 antilip" name="antilip_acl_g">
         <option value=""></option>
         <option value="pos">Positivo</option>
         <option value="neg">Negativo / indeterminado</option>
       </select>
     </div>
     <div class="span3">
-      <select id="acl_m" class="span3">
+      <select id="acl_m" class="span3 antilip" name="antilip_acl_m">
         <option value=""></option>
         <option value="pos">Positivo</option>
         <option value="neg">Negativo / indeterminado</option>
@@ -279,14 +279,14 @@
 
   <div class="row">
     <div class="span3">
-      <select id="a_coag_lup" class="span3">
+      <select id="a_coag_lup" class="span3 antilip" name="antilip_a_coag_lup">
         <option value=""></option>
         <option value="pos">Positivo</option>
         <option value="neg">Negativo / indeterminado</option>
       </select>
     </div>
     <div class="span3">
-      <select id="anti_b2gp" class="span3">
+      <select id="anti_b2gp" class="span3 antilip" name="antilip_anti_b2gp">
         <option value=""></option>
         <option value="pos">Positivo</option>
         <option value="neg">Negativo / indeterminado</option>
@@ -313,9 +313,9 @@
   <div class="row">
     <div class="span1">Fecha</div>
     <div class="span3">
-      <input type="text" id="y_anca_ab" class="span1" placeholder="a&ntilde;o"/>
-      <input type="text" id="m_anca_ab" class="span1" placeholder="mes" />
-      <input type="text" id="d_anca_ab" class="span1" placeholder="d&iacute;a"/>
+      <input type="text" id="y_anca_ab" class="span1 anca date1" name="anca_date" placeholder="a&ntilde;o"/>
+      <input type="text" id="m_anca_ab" class="span1 anca" placeholder="mes" />
+      <input type="text" id="d_anca_ab" class="span1 anca" placeholder="d&iacute;a"/>
     </div>
   </div>
   <div class="row">
@@ -329,14 +329,14 @@
 
   <div class="row">
     <div class="span3">
-      <select id="c_anca" class="span3">
+      <select id="c_anca" class="span3 anca" name="anca_c_anca">
         <option value=""></option>
         <option value="pos">Positivo</option>
         <option value="neg">Negativo / indeterminado</option>
       </select>
     </div>
     <div class="span3">
-      <select id="p_anca" class="span3">
+      <select id="p_anca" class="span3 anca" name="anca_p_anca">
         <option value=""></option>
         <option value="pos">Positivo</option>
         <option value="neg">Negativo / indeterminado</option>
@@ -363,12 +363,12 @@
   <div class="row">
     <div class="span1">Fecha</div>
     <div class="span3">
-      <input type="text" id="y_citrul_ab" class="span1" placeholder="a&ntilde;o"/>
-      <input type="text" id="m_citrul_ab" class="span1" placeholder="mes" />
-      <input type="text" id="d_citrul_ab" class="span1" placeholder="d&iacute;a"/>
+      <input type="text" id="y_citrul_ab" class="span1 citrul date1" name="citrul_date" placeholder="a&ntilde;o"/>
+      <input type="text" id="m_citrul_ab" class="span1 citrul" placeholder="mes" />
+      <input type="text" id="d_citrul_ab" class="span1 citrul" placeholder="d&iacute;a"/>
     </div>
     <div class="span2">
-      <select id="a_citrul">
+      <select id="a_citrul" class="citrul" name="citrul_a_citrul">
         <option value=""></option>
         <option value="pos">Positivo</option>
         <option value="neg">Negativo / indeterminado</option>

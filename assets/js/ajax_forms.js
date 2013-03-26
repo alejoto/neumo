@@ -1,6 +1,6 @@
 function to_database(info,table) {
   $.post("../patient/ajax_save.php",{ info:info, table:table }, function(data) {
-	//alert(data);
+	alert(data);
 	if(data=='Yes') {
 		alert("Datos guardados exitosamente");
 	}else{
@@ -245,6 +245,58 @@ $("#hb_save").click(function(){
 });
 
 //TODO The rest of the Blood!!!
+$("#uns_ana_save").click(function(){
+	var info = get_info("ana");
+	to_database(info,"hap_reuma_ana");
+	reset_fields("ana");
+	$("#uns_ana_save").hide();
+	
+});
+
+$("#f_reum_save").click(function(){
+	var info = get_info("reuma");
+	to_database(info,"hap_reuma");
+	reset_fields("reuma");
+	$("#f_reum_save").hide();	
+});
+
+$("#sp_ana_save").click(function(){
+	var info = get_info("spana");
+	to_database(info, "hap_reuma_spana");
+	reset_fields("spana");
+	$("#sp_ana_save").hide();
+});
+
+$("#anti_ENAs_save").click(function(){
+	var info = get_info("enas");
+	to_database(info, "hap_reuma_enas");
+	reset_fields("enas");
+	$("#anti_ENAs_save").hide();
+});
+
+$("#anti_ph_lip_save").click(function(){
+	var info = get_info("antilip");
+	to_database(info, "hap_reuma_antilip");
+	reset_fields("antilip");
+	$("#anti_ph_lip_save").hide();
+});
+
+$("#anca_ab_save").click(function(){
+	var info = get_info("anca");
+	to_database(info, "hap_reuma_anca");
+	reset_fields("anca");
+	$("#anca_ab_save").hide();
+});
+
+$("#citrul_ab_save").click(function(){
+	var info = get_info("citrul");
+	to_database(info, "hap_reuma_citrul");
+	reset_fields("citrul");
+	$("#citrul_ab_save").hide();
+});
+
+
+
 $("#hiv_save").click(function(){ 
 	var info = get_info("vih");
 	to_database(info,"hap_vih");

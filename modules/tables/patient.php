@@ -56,6 +56,7 @@ $result = mysqli_query($con,$sql);
         </thead>
         <tbody>
             <?php
+            //error_reporting(0);
             while($row = mysqli_fetch_array($result))
             {
             ?>

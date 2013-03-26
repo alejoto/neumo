@@ -73,7 +73,7 @@
                  <option value="">TROMBOEMBOLISMO?...</option>
                  <option value="no">Sin signos</option>
                  <option value="central">Central</option>
-                 <option value="periférico">Perif&eacute;rico</option>
+                 <option value="periferico">Perif&eacute;rico</option>
                  <option value="mosaico">Mosaico</option>
              </select>
          </div>

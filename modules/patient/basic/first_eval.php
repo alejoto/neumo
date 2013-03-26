@@ -11,7 +11,8 @@ $sql    = "SELECT * FROM hap_first_eval LEFT JOIN main_eval
 		
 		$whole_date=$row['dxdate'];
 		$ini_year=substr($whole_date,0,4);
-		$ini_month=substr($whole_date,5,2);if ($ini_month==01) { $ini_month="enero";}
+		$ini_month=substr($whole_date,5,2);
+		if ($ini_month==01) { $ini_month="enero";}
 		if ($ini_month==02) { $ini_month="febrero";}
 		if ($ini_month==03) { $ini_month="marzo";}
 		if ($ini_month==04) { $ini_month="abril";}
