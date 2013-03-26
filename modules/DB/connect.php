@@ -97,6 +97,16 @@ $con=mysqli_connect("localhost","healmy5_root","laravel","healmy5_health");
    
    /////////////////////////////////////////////////////////////////////////////
    
+   $sql2="CREATE TABLE  IF NOT EXISTS hap_surgical (
+			surgical_id			INT (150) PRIMARY KEY NOT NULL AUTO_INCREMENT
+			,surgical_date	DATE
+			,surgical_type  VARCHAR (150)
+			,surgical_tendt_date DATE
+   		,surgical_atr_date DATE
+   		,eval_id				VARCHAR(50))";
+   mysqli_query($con,$sql2) or die (mysqli_error($con));
+   
+   
   $sql=mysqli_query($con,"SELECT status FROM users");
   if (!$sql){ mysqli_query($con,"ALTER TABLE users ADD status VARCHAR(60) AFTER rol");}
 

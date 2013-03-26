@@ -1,7 +1,7 @@
 <div id="outcome" style="text-align:left" >
   <div class="row">
-    <div CLASS="well well-small span8">
-      <center><h4>DATOS ASOCIADOS A MUERTE</h4></center>
+    <div CLASS="well well-small span8" style="text-align: center">
+      <h4>DATOS ASOCIADOS A MUERTE</h4>
     </div>
   </div>
   
@@ -31,7 +31,7 @@
   </div>
   
   <div class="row">
-    <div class="span8">
+    <div class="span8" style="text-align:center">
     		<br><br>
     		<a class="btn" id="outcome_save" >Guardar</a>
     		<br><br>

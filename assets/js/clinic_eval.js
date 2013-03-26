@@ -323,7 +323,7 @@ function showmain(btnsw,hid1,hid2,hid3,hid4,shwmain){
 
     });/**/
 
-show_on_check($("#tendt"), $("#tendt_hide"));
+    show_on_check($("#tendt"), $("#tendt_hide"));
     show_on_check($("#atr_sept"), $("#atr_sept_hide"));
 
     tiprequired ($("#day_ev"));

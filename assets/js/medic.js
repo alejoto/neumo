@@ -52,7 +52,8 @@ function hide_if_empty(n_empty, hid_shw) {
 function show_on_check(chk, shw_c) {
 $(document).ready(function() {shw_c.hide();})
     chk.change(function() {
-        if (chk.attr('checked')) {
+    	alert(chk.name);
+        if (chk.checked) {
             shw_c.show("fast");
         }
         else {

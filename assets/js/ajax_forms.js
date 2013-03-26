@@ -111,10 +111,11 @@ $("#hiperclot_save").click(function(){
   $("#hiperclot_save").hide();
 });/**/
 
+
 $("#treatment_save").click(function(){
-  var info = get_info("treatment");
-  to_database(info,"table_name");
-  reset_fields("treatment");
+  var info = get_info("surgical");
+  to_database(info,"hap_surgical");
+  reset_fields("surgical");
   $("#treatment_save").hide();
 });
 

@@ -82,9 +82,9 @@
           <option value="">No ha habido suspensi&oacute;n</option>
           <option value="Evento adverso">Evento adverso</option>
           <option value="No adherencia al tto">Desersi&oacute;n al tto</option>
-          <option value="Negación EPS">Negaci&oacute;n por asegurador</option>
-          <option value="Negación EPS">Mejor&oacute; con otro tto</option>
-          <option value="Negación EPS">Paciente fallecido</option>
+          <option value="Negacion EPS">Negaci&oacute;n por asegurador</option>
+          <option value="Negacion EPS">Mejor&oacute; con otro tto</option>
+          <option value="Negacion EPS">Paciente fallecido</option>
           <option value="Otras">Otras causas</option>
         </select>
       </div>
@@ -110,7 +110,7 @@
   <div class="row">
     <div class="span3">
       <select id="transplant" class="treatment">
-        <option>Tipo de transplante</option>
+        <option value="">Tipo de transplante</option>
         <option value="en espera">En lista de espera</option>
         <option value="pulmon">Transplantado: pulm&oacute;n</option>
         <option value="corazon pulmon">Transplantado: coraz&oacute;n-pulm&oacute;n</option>
@@ -118,9 +118,9 @@
     </div>
 
     <div class="span3">
-      <input type="text" id="year_transp" class="span1" placeholder="a&ntilde;o"/>
-      <input type="text" id="month_transp" class="span1" placeholder="mes"/>
-      <input type="text" id="day_transp" class="span1" placeholder="d&iacute;a"/>
+      <input type="text" id="year_transp" class="span1 surgical date1" name="surgical_date" placeholder="a&ntilde;o"/>
+      <input type="text" id="month_transp" class="span1 surgical" placeholder="mes"/>
+      <input type="text" id="day_transp" class="span1 surgical" placeholder="d&iacute;a"/>
     </div>
     <div class="span1"></div>
   </div>
@@ -130,9 +130,9 @@
       <input type="checkbox" id="tendt" class="treatment" >
     </div>
     <div class="span3" id="tendt_hide">
-      <input type="text" id="year_tendt" class="span1" placeholder="a&ntilde;o"/>
-      <input type="text" id="month_tendt" class="span1" placeholder="mes"/>
-      <input type="text" id="day_tendt" class="span1" placeholder="d&iacute;a"/>
+      <input type="text" id="year_tendt" class="span1 surgical date1" name="surgical_tendt_date" placeholder="a&ntilde;o"/>
+      <input type="text" id="month_tendt" class="span1 surgical" placeholder="mes"/>
+      <input type="text" id="day_tendt" class="span1 surgical" placeholder="d&iacute;a"/>
     </div>
   </div>
 
@@ -141,9 +141,9 @@
       <input type="checkbox" id="atr_sept" class="treatment">
     </div>
     <div class="span3" id="atr_sept_hide">
-      <input type="text" id="year_atr" class="span1" placeholder="a&ntilde;o"/>
-      <input type="text" id="month_atr" class="span1" placeholder="mes"/>
-      <input type="text" id="day_atr" class="span1" placeholder="d&iacute;a"/>
+      <input type="text" id="year_atr" class="span1 surgical date1" name="surgical_atr_date" placeholder="a&ntilde;o"/>
+      <input type="text" id="month_atr" class="span1 surgical" placeholder="mes"/>
+      <input type="text" id="day_atr" class="span1 surgical" placeholder="d&iacute;a"/>
     </div>
     <div class="span1"></div>
   </div>
