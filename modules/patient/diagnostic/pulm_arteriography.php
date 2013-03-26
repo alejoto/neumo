@@ -7,7 +7,7 @@
      <div class="row">
          <div class="span1">Fecha</div>
          <div class="span3">
-             <input type="text" id="y_artg" class="span1 p_art date1" name="artergph_date" iplaceholder="a&ntilde;o"/>
+             <input type="text" id="y_artg" class="span1 p_art date1" name="artergph_date" placeholder="a&ntilde;o"/>
              <input type="text" id="m_artg" class="span1 p_art" placeholder="mes"/>
              <input type="text" id="d_artg" class="span1 p_art" placeholder="d&iacute;a"/>
          </div>

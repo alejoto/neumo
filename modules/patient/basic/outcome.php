@@ -1,7 +1,7 @@
-<div id="outcome">
+<div id="outcome" style="text-align:left" >
   <div class="row">
     <div CLASS="well well-small span8">
-      <h4>DATOS ASOCIADOS A MUERTE</h4>
+      <center><h4>DATOS ASOCIADOS A MUERTE</h4></center>
     </div>
   </div>
   
