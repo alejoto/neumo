@@ -10,7 +10,7 @@
     <link href="assets/stylesheets/neumo.css" rel="stylesheet" media="screen">
     <link rel="icon"   type="image/png"  href="assets/images/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/stylesheets/bootstrap-responsive.css" rel="stylesheet">
     <!--CSS Stylysheets ends-->
 
     <!-- Fonts Start -->
