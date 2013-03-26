@@ -61,8 +61,38 @@ $con=mysqli_connect("localhost","healmy5_root","laravel","healmy5_health");
 			,citrul_a_citrul	VARCHAR (150)
 			,eval_id 				VARCHAR (50))";
    mysqli_query($con,$sql2) or die (mysqli_error($con));
-    
    
+   $sql2="CREATE TABLE  IF NOT EXISTS hap_hemo_thyro (
+			thyro_id				INT (150) PRIMARY KEY NOT NULL AUTO_INCREMENT
+			,thyro_date			DATE
+			,thyro_tsh			VARCHAR (150)
+   		,thyro_t_4_total VARCHAR (150)
+   		,thyro_t_4_free VARCHAR (150)
+			,eval_id 				VARCHAR (50))";
+   mysqli_query($con,$sql2) or die (mysqli_error($con));
+   
+   $sql2="CREATE TABLE  IF NOT EXISTS hap_hemo_dim (
+			dim_id					INT (150) PRIMARY KEY NOT NULL AUTO_INCREMENT
+			,dim_date				DATE
+			,dim_d_dimer_value VARCHAR (150)
+			,eval_id 				VARCHAR (50))";
+   mysqli_query($con,$sql2) or die (mysqli_error($con));
+   
+   $sql2="CREATE TABLE  IF NOT EXISTS hap_hemo_tropo (
+			tropo_id				INT (150) PRIMARY KEY NOT NULL AUTO_INCREMENT
+			,tropo_date			DATE
+			,tropo_trop_result VARCHAR (150)
+			,eval_id 				VARCHAR (50))";
+   mysqli_query($con,$sql2) or die (mysqli_error($con));
+   
+   $sql2="CREATE TABLE  IF NOT EXISTS hap_hemo_pept (
+			petp_id					INT (150) PRIMARY KEY NOT NULL AUTO_INCREMENT
+			,pept_date			DATE
+			,pept_pep_natr_value VARCHAR (150)
+			,pept_pro_pep_natr_value VARCHAR (50)
+   		,eval_id				VARCHAR(50))";
+   mysqli_query($con,$sql2) or die (mysqli_error($con));
+    
    
    
    /////////////////////////////////////////////////////////////////////////////

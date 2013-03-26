@@ -3,7 +3,7 @@ hide_show_savebutton([$("#d_hb"), $("#hb_value")], $("#hb_save"));
 hide_show_savebutton([$("#d_thyr"), $("#tsh")], $("#thyroid_save"));
 hide_show_savebutton([$("#d_dimer"), $("#d_dimer_value")], $("#d_dimer_save"));
 hide_show_savebutton([$("#d_trop"), $("#trop_result")], $("#trop_save"));
-hide_show_savebutton([$("#d_bpn")], $("#bpn_save"));
+hide_show_savebutton([$("#d_bpn"), $("#pep_natr_value"), $("#pro_pep_natr_value")], $("#bpn_save"));
 hide_show_savebutton([$("#d_vih"), $("#hiv_result")], $("#hiv_save"));
 hide_show_savebutton([$("#d_art_gas"), $("#bld_gass_fio2"), $("#bld_gass_ph"), $("#bld_gass_paco2"), $("#bld_gass_pao2"), $("#bld_gass_hco3")], $("#bld_gass_save"));
 hide_show_savebutton([$("#d_renal"), $("#creat"), $("#bun")], $("#renal_save"));

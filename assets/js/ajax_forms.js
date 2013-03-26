@@ -295,6 +295,40 @@ $("#citrul_ab_save").click(function(){
 	$("#citrul_ab_save").hide();
 });
 
+$("#thyroid_save").click(function() {
+	var info = get_info("thyro");
+	to_database(info, "hap_hemo_thyro");
+	reset_fields("thyro");
+	$("#thyroid_save").hide();
+});
+
+$("#d_dimer_save").click(function() {
+	var info = get_info("dim");
+	to_database(info, "hap_hemo_dim");
+	reset_fields("dim");
+	$("#d_dimer_save").hide();
+});
+
+$("#trop_save").click(function() {
+	var info = get_info("tropo");
+	to_database(info, "hap_hemo_tropo");
+	reset_fields("tropo");
+	$("#trop_save").hide();
+});
+
+$("#bpn_save").click(function() {
+	var info = get_info("pept");
+	to_database(info, "hap_hemo_pept");
+	reset_fields("pept");
+	$("#bpb_save");
+});
+
+
+
+
+
+
+
 
 
 $("#hiv_save").click(function(){ 
