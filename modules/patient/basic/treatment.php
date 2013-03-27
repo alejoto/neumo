@@ -125,8 +125,8 @@
     <div class="span1"></div>
   </div>
 
-  <div class="row">
-    <div class="span3" style="text-align:right">Trombendarterectom&iacute;a? 
+  <div class="row" id="id1">
+    <div class="span3" id="id2" style="text-align:right">Trombendarterectom&iacute;a? 
       <input type="checkbox" id="tendt" class="treatment" >
     </div>
     <div class="span3" id="tendt_hide">
