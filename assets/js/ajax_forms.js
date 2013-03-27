@@ -1,6 +1,18 @@
+/*
+-------------------------------------------------------------------------------------
+*
+*
+* name 			: 	to_database(info,table)
+* Description 	: 	saves data inside choosen table, 
+* 					where 'info' is an array that contains all the values
+* 					to be saved and also the id names of fields.
+*					the id and column names are equal.
+* Depend on 	: 	get_info(info_id)
+* Dependant 	: 	reset_fields(info_id2)
+*/
 function to_database(info,table) {
   $.post("../patient/ajax_save.php",{ info:info, table:table }, function(data) {
-	alert(data);
+	//alert(data);
 	if(data=='Yes') {
 		alert("Datos guardados exitosamente");
 	}else{
@@ -8,9 +20,10 @@ function to_database(info,table) {
 	}
   });  
 }
-
-/** 
- * Name			:	reset_fields()
+/*
+-------------------------------------------------------------------------------------
+* 
+ * Name			:	reset_fields(info_id2)
  * Description	:	Function to reset the values when the persistance to the 
  * 					data base is finish in a form
  **/
@@ -27,6 +40,32 @@ function reset_fields(info_id2){
 	
 }
 
+/*
+-------------------------------------------------------------------------------------
+* Name			:	get_info(info_id)
+* Description	:	Array builder, gets all form fields with class defined in 'info_id' 
+* 					where 'info_id' is the name of a DB table and each id matches with
+*					the column name of the same table.
+* Conditions	: 	The info_id must match with the table name, and all the ids must
+*					match with the column names of the table.  Each input field with
+*					data to be saved (in the same table) must have the class defined
+*					as 'info_id'.
+*
+*					example:
+*					<form action="">
+*						<input type="text" id="i1" class="some_class some_table">
+*						<input type="text" id="i2" class="some_table">
+*					</form>
+*					<script>
+*					get_info("some_table");
+*					</script>
+*					
+*					Result: array with all the ids and some_table as the table name
+*
+* Depend on 	: 	None
+* Dependant		: 	get_info(info_id) (this function needs the get_info array)
+*
+*/
 function get_info(info_id){
   var dates = "";
   var dates2 = "";

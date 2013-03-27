@@ -2,8 +2,6 @@
 
 	include '../DB/connect.php';
   session_start();
-
- 
   
   $info = $_POST['info']; // Ejemplo: patient_id,timestamp,name,etc?'1','1999-12-01 12:00:00','Jhon'
   $table = $_POST['table'];
@@ -14,7 +12,7 @@
 	$eval_id = $_SESSION['evaluation'];
 	  
   $sql = "INSERT INTO ".$table." (".$pieces[0].",eval_id) VALUES ('" . implode("', '", explode(",", $pieces[1])) . "','$eval_id')";
-  echo $sql;
+  //echo $sql;
 	if( !mysqli_query($con,$sql) ){
     echo 'No';
     die('Error: ' . mysql_error());
