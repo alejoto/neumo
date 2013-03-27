@@ -50,17 +50,17 @@ function hide_if_empty(n_empty, hid_shw) {
 }
 
 function show_on_check(chk){
-	alert();
-/*$(document).ready(function() {shw_c.hide();})
-    chk.change(function() {
-    	alert(chk.name);
-        if (chk.checked) {
-            shw_c.show("fast");
-        }
-        else {
-            shw_c.hide("fast");
-        }
-    })*/
+	
+	alert (chk.prev().id);
+	
+	$(document).ready(function() {shw_c.hide();})
+    if (chk.checked == true) {
+    	alert("aca");
+    	shw_c.show("fast");
+    }
+    else {
+        shw_c.hide("fast");
+    }  
 }
 
 /*Show button when "required" are filled out.  NOT WORKING WITH RADIO OR CHECKBOX TAGS!*/
