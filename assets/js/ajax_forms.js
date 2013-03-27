@@ -121,7 +121,7 @@ $("#treatment_save").click(function(){
 
 $("#outcome_save").click(function(){
   var info = get_info("outcome");
-  to_database(info,"table_name");
+  to_database(info,"hap_outcome");
   reset_fields("outcome");
   $("#outcome_save").hide();
 });

@@ -49,8 +49,9 @@ function hide_if_empty(n_empty, hid_shw) {
     })
 }
 
-function show_on_check(chk, shw_c) {
-$(document).ready(function() {shw_c.hide();})
+function show_on_check(chk){
+	alert();
+/*$(document).ready(function() {shw_c.hide();})
     chk.change(function() {
     	alert(chk.name);
         if (chk.checked) {
@@ -59,7 +60,7 @@ $(document).ready(function() {shw_c.hide();})
         else {
             shw_c.hide("fast");
         }
-    })
+    })*/
 }
 
 /*Show button when "required" are filled out.  NOT WORKING WITH RADIO OR CHECKBOX TAGS!*/

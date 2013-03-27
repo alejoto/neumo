@@ -138,7 +138,7 @@
 
   <div class="row">
     <div class="span3" style="text-align:right">Atrioseptostom&iacute;a? 
-      <input type="checkbox" id="atr_sept" class="treatment">
+      <input type="checkbox" id="atr_sept" class="treatment" onchange="show_on_check(this);">
     </div>
     <div class="span3" id="atr_sept_hide">
       <input type="text" id="year_atr" class="span1 surgical date1" name="surgical_atr_date" placeholder="a&ntilde;o"/>

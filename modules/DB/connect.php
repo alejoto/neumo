@@ -180,6 +180,8 @@ $con=mysqli_connect("localhost","healmy5_root","laravel","healmy5_health");
   
 
 
+	$sql=mysqli_query($con,"SELECT outcome_dyspn FROM hap_outcome");
+	if ($sql){ mysqli_query($con,"ALTER TABLE hap_outcome DROP outcome_dyspn, DROP outcome_epid, DROP endart_failure, DROP lung_transplant, DROP dead_place");}
 	
 	//esplenectomy
 ?>
