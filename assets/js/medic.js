@@ -49,38 +49,6 @@ function hide_if_empty(n_empty, hid_shw) {
     })
 }
 
-
-$("#atr_sept").click(function(){
-	alert("ola");
-	
-});/*
-function show_on_check(chk, shw_c) {
-	$(document).ready(function() {shw_c.hide();})
-	    chk.change(function() {
-	    	alert(chk.attr('checked'));/*
-	        if (chk.attr('checked')) {
-	            shw_c.show("fast");
-	        }
-	        else {
-	            shw_c.hide("fast");
-	        }
-	    })
-	}
-/*
-function show_on_check(chk){
-	
-	alert (chk.prev().id);
-	
-	$(document).ready(function() {shw_c.hide();})
-    if (chk.checked == true) {
-    	alert("aca");
-    	shw_c.show("fast");
-    }
-    else {
-        shw_c.hide("fast");
-    }  
-}
-*/
 /*Show button when "required" are filled out.  NOT WORKING WITH RADIO OR CHECKBOX TAGS!*/
 function hide_show_savebutton(fields,button) {
     $(document).ready(function() {

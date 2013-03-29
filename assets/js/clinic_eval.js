@@ -3,13 +3,115 @@
 hide_show_savebutton([$("#day_ev"),$("#nyha_funct_class")], $("#sympt_save"));
 hide_show_savebutton([$("#pulse"),$("#breathing"),$("#psist"),$("#pdiast")], $("#ef_save"));
 hide_show_savebutton([$("#day_death"),$("#dead_cause")], $("#outcome_save"));
+$("#treatment_save").hide('fast');
+$("#transplant").change(function(){
+	if ($("#transplant").val()==""){
+		$("#treatment_save").hide('fast');
+	}else if ($("#transplant").val()=="en espera"){
+		$("#treatment_save").show('fast');
+	}
+	if ($("#transplant").val()=="pulmon"||$("#transplant").val()=="corazon pulmon") {
+	    $("#year_transp").show("fast");
+	    if($("#year_transp").val() == ""){
+	    	hide_show_savebutton([$("#day_transp")], $("#treatment_save"));
+	    }
+	 } else {
+	    $("#year_transp").hide("fast");
+	    $("#year_transp").val("");
+	    $("#month_transp").hide("fast");
+	    $("#month_transp").val("");
+	    $("#day_transp").hide("fast");
+	    $("#day_transp").val("");
+	  }
+});
+	
 
+/*Toggle asociado a opciones de respuesta transplante(select list)
+$("#transplant").change(function(){
+  
+});
+*/
+//hide_show_savebutton([],$("#treatment_save"));
 /*Hide selected fields when loading page*/
 $(document).ready(function() {
   $("#inputdrug").hide();
   $("#drug_adv_event").hide();
   $("#year_transp").hide();
+  $(".susp_date").next().hide();
+  $(".susp_save").hide();
+  
+ 
 });
+/*
+$(".susp_date").click(function(){
+	//alert("cosa");
+
+	$(this).html("");
+	alert($(this).next().show('fast'));
+	//$(this).next().html().style('display:none');
+	//$(this).next().parent().parent().html("oli");
+	//alert(this.id);
+});
+*/
+
+
+
+
+
+$(".susp_cause").click(function(){
+	if($(this).html() == "No ha habido suspensi�n"){
+		$(this).parent().parent().prev().html("Agregar");
+		$(this).parent().parent().parent().parent().prev().children().hide('fast');
+		$(this).parent().parent().parent().parent().next().children().hide('fast');
+		date_pharmac($(this).parent().parent().parent().parent().prev().children().children());
+		//$(this).parent().parent().parent().parent().prev().children().children().val("");
+		//alert ($(this).parent().parent().parent().parent().prev().children().children().val());
+		//$(this).parent().parent().parent().parent().prev().children().children().val("");
+	}else{
+		$(this).parent().parent().prev().html($(this).html());
+		($(this).parent().parent().parent().parent().prev().children().show('fast'));	
+	}
+	//alert($(this).parent().parent().prev().html());
+});
+
+function date_pharmac(input){
+	input.val("");
+	input.next().hide();
+	input.next().next().hide();
+	//alert(input.next().val());
+}
+
+/**
+ * Show the save button if th values of the date are correct
+ */
+$(".susp_date").find("#day_end_d").change(function(){
+	if($(this).val() != "" || $(this).val() != null){
+		$(this).parent().parent().next().next().children().show('fast');
+	}
+	else if($(this).val() == "" || $(this).val() == null){
+		$(this).parent().parent().next().next().children().hide('fast');
+	}
+	
+});
+
+/**
+ * When the click is done to save a suspention date of a pharmac
+ */
+$(".susp_save").click(function(){
+	alert("TODO SAVE"); 
+});
+
+/*
+$(".susp_cause").click(function(){
+	//alert("cosa");
+
+	$(this).html("");
+	alert($(this).next().show('fast'));
+	//$(this).next().html().style('display:none');
+	//$(this).next().parent().parent().html("oli");
+	//alert(this.id);
+});/*
+
 
 /*Toggle asociado a texto "Añadir (Fármaco)"*/
 $("#ad_drug").click(function(){
@@ -33,20 +135,42 @@ $('#hide_drug_hap').click(function(){
 $(document).ready(function() {$("#tendt_hide").hide();})
 $(document).ready(function() {$("#atr_sept_hide").hide();})
 $("#tendt").change(function(){
-	if (this.checked){
+	if (this.checked ){
 		$("#tendt_hide").show('fast');
+		hide_show_savebutton([$("#day_tendt")], $("#treatment_save"));
 	}
 	else{
+		$('#year_tendt').val('');
+		$('#day_tendt').val('');
+		$('#month_tendt').val('');
+		$('#month_tendt').hide('fast');
+		$('#day_tendt').hide('fast');
 		$("#tendt_hide").hide('fast');
+		if($("#day_transp").val() != "" || $("#transplant").val()=="en espera"){
+			$("#treatment_save").show('fast');
+		}else{
+			$("#treatment_save").hide('fast');
+		}
 	}
 });
 
 $("#atr_sept").change(function(){
 	if (this.checked){
 		$("#atr_sept_hide").show('fast');
+		hide_show_savebutton([$("#day_atr")], $("#treatment_save"));
 	}
 	else{
+		$('#year_atr').val('');
+		$('#day_atr').val('');
+		$('#month_atr').val('');
+		$('#month_atr').hide('');
+		$('#day_atr').hide('');
 		$("#atr_sept_hide").hide('fast');
+		if($("#day_transp").val() != "" || $("#transplant").val()=="en espera"){
+			$("#treatment_save").show('fast');
+		}else{
+			$("#treatment_save").hide('fast');
+		}
 	}
 });
 	
@@ -252,14 +376,6 @@ $("#suspend_cause").change(function(){
   else {$("#drug_adv_event").hide("fast");}
 });
 
-/*Toggle asociado a opciones de respuesta transplante(select list)*/
-$("#transplant").change(function(){
-  if ($("#transplant").val()=="pulmon"||$("#transplant").val()=="corazon pulmon") {
-    $("#year_transp").show("fast");
-  } else {
-    $("#year_transp").hide("fast");
-  }
-});
 
 /*anam,ex_fc,hiperclot,outcome */
 $(document).ready(function() {

@@ -37,11 +37,11 @@
           <option value="Riociguat">Riociguat</option>
           <option value="Furosemida">Furosemida</option>
           <option value="Digoxina">Digoxina</option>
-          <option value="warfarina">Warfarina</option>
-          <option value="diltiazem">Diltiazem</option>
-          <option value="nifedipina">Nifedipina</option>
-          <option value="amlodipino">Amlodipino</option>
-          <option value="hbpm">Heparinas BPM</option>
+          <option value="Warfarina">Warfarina</option>
+          <option value="Diltiazem">Diltiazem</option>
+          <option value="Nifedipina">Nifedipina</option>
+          <option value="Amlodipino">Amlodipino</option>
+          <option value="Hbpm">Heparinas BPM</option>
         </select>
       </div>
       <div class="span1" style="text-align:right">Inicio</div>
@@ -97,8 +97,11 @@
     </div>
   </div>
 
+  
+  
+  <!-- BEGIN OF MANEJO QUIRURGICO-->
   <div class="row">
-    <div class="span8"><hr><h4>MANEJO QUIR&Uacute;RGICO</h4></div>
+    <div class="span8"><hr><h4>Manejo quir&uacute;rgico</h4></div>
   </div>
 
   <div class="row">
@@ -109,7 +112,7 @@
 
   <div class="row">
     <div class="span3">
-      <select id="transplant" class="treatment">
+      <select id="transplant" class="surgical" name="surgical_type">
         <option value="">Tipo de transplante</option>
         <option value="en espera">En lista de espera</option>
         <option value="pulmon">Transplantado: pulm&oacute;n</option>
