@@ -46,13 +46,13 @@
       </div>
       <div class="span1" style="text-align:right">Inicio</div>
       <div class="span1">
-        <input type="text" id="year_ini_d" class="span1" placeholder="a&ntilde;o"/>
+        <input type="text" id="year_ini_d" class="span1" placeholder="a&ntilde;o" maxlength="4"/>
       </div>
       <div class="span1">
-        <input type="text" id="month_ini_d" class="span1" placeholder="mes"/>
+        <input type="text" id="month_ini_d" class="span1" placeholder="mes" maxlength="2"/>
       </div>
       <div class="span1">
-        <input type="text" id="day_ini_d" class="span1" placeholder="d&iacute;a"/>
+        <input type="text" id="day_ini_d" class="span1" placeholder="d&iacute;a" maxlength="2"/>
       </div>
     </div>
 
@@ -90,9 +90,9 @@
       </div>
       <div class="span1" style="text-align:right">Suspensi&oacute;n</div>
       <div class="span3">
-        <input type="text" id="year_end_d" class="span1" placeholder="a&ntilde;o"/>
-        <input type="text" id="month_end_d" class="span1" placeholder="mes"/>
-        <input type="text" id="day_end_d" class="span1" placeholder="d&iacute;a"/>
+        <input type="text" id="year_end_d" class="span1" placeholder="a&ntilde;o" maxlength="4"/>
+        <input type="text" id="month_end_d" class="span1" placeholder="mes" maxlength="2"/>
+        <input type="text" id="day_end_d" class="span1" placeholder="d&iacute;a" maxlength="2"/>
       </div>
     </div>
   </div>
@@ -113,7 +113,7 @@
   <div class="row">
     <div class="span3">
       <select id="transplant" class="surgical" name="surgical_type">
-        <option value="">Tipo de transplante</option>
+        <option value="none">Tipo de transplante</option>
         <option value="en espera">En lista de espera</option>
         <option value="pulmon">Transplantado: pulm&oacute;n</option>
         <option value="corazon pulmon">Transplantado: coraz&oacute;n-pulm&oacute;n</option>
@@ -121,9 +121,9 @@
     </div>
 
     <div class="span3">
-      <input type="text" id="year_transp" class="span1 surgical date1" name="surgical_date" placeholder="a&ntilde;o"/>
-      <input type="text" id="month_transp" class="span1 surgical" placeholder="mes"/>
-      <input type="text" id="day_transp" class="span1 surgical" placeholder="d&iacute;a"/>
+      <input type="text" id="year_transp" class="span1 surgical date1" name="surgical_date" placeholder="a&ntilde;o" maxlength="4"/>
+      <input type="text" id="month_transp" class="span1 surgical" placeholder="mes" maxlength="2"/>
+      <input type="text" id="day_transp" class="span1 surgical" placeholder="d&iacute;a" maxlength="2"/>
     </div>
     <div class="span1"></div>
   </div>
@@ -133,20 +133,20 @@
       <input type="checkbox" id="tendt" class="treatment" >
     </div>
     <div class="span3" id="tendt_hide">
-      <input type="text" id="year_tendt" class="span1 surgical date1" name="surgical_tendt_date" placeholder="a&ntilde;o"/>
-      <input type="text" id="month_tendt" class="span1 surgical" placeholder="mes"/>
-      <input type="text" id="day_tendt" class="span1 surgical" placeholder="d&iacute;a"/>
+      <input type="text" id="year_tendt" class="span1 surgical date1" name="surgical_tendt_date" placeholder="a&ntilde;o" maxlength="4"/>
+      <input type="text" id="month_tendt" class="span1 surgical" placeholder="mes" maxlength="2"/>
+      <input type="text" id="day_tendt" class="span1 surgical" placeholder="d&iacute;a" maxlength="2"/>
     </div>
   </div>
 
   <div class="row">
     <div class="span3" style="text-align:right">Atrioseptostom&iacute;a? 
-      <input type="checkbox" id="atr_sept" class="treatment" onchange=show_on_check(this)>
+      <input type="checkbox" id="atr_sept" class="treatment"/>
     </div>
     <div class="span3" id="atr_sept_hide">
-      <input type="text" id="year_atr" class="span1 surgical date1" name="surgical_atr_date" placeholder="a&ntilde;o"/>
-      <input type="text" id="month_atr" class="span1 surgical" placeholder="mes"/>
-      <input type="text" id="day_atr" class="span1 surgical" placeholder="d&iacute;a"/>
+      <input type="text" id="year_atr" class="span1 surgical date1" name="surgical_atr_date" placeholder="a&ntilde;o" maxlength="4"/>
+      <input type="text" id="month_atr" class="span1 surgical" placeholder="mes" maxlength="2"/>
+      <input type="text" id="day_atr" class="span1 surgical" placeholder="d&iacute;a" maxlength="2"/>
     </div>
     <div class="span1"></div>
   </div>
@@ -155,6 +155,10 @@
     <div class="span8">
       <hr/>
       <a class="btn class3" id="treatment_save">Guardar</a>
+      <div class="alert alert-success">
+ 			 	<button type="button" class="close">&times;</button>
+  			<strong></strong>
+			</div>
       <br><br>
     </div>
   </div>

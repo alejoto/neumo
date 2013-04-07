@@ -86,7 +86,7 @@ else {?>
 				NOMBRES
 			</div>
 			<div class="span8" style="text-align:left">
-				<input type="text" id="ivt_name" name="ivt_name" <?php echo "value='".$row['ivt_name']."'"; ?> placeholder="Name" />
+				<input type="text" id="ivt_name" name="ivt_name" <?php echo "value='".$row['ivt_name']."'"; ?> placeholder="Nombre" />
 			</div>
 		</div>
 		<div class="row">
@@ -94,7 +94,7 @@ else {?>
 				APELLIDOS
 			</div>
 			<div class="span8" style="text-align:left">
-				<input type="text" id="ivt_surname" name="ivt_surname" <?php echo "value='".$row['ivt_surname']."'"; ?> placeholder="Surname" />
+				<input type="text" id="ivt_surname" name="ivt_surname" <?php echo "value='".$row['ivt_surname']."'"; ?> placeholder="Apellido" />
 			</div>
 		</div>
 		<div class="row">
@@ -117,7 +117,7 @@ else {?>
 				Tel. celular
 			</div>
 			<div class="span8" style="text-align:left">
-				<input type="text" id="ivt_mobile" name="ivt_mobile" <?php echo "value='".$row['ivt_mobile']."'"; ?> placeholder="Mobile" />
+				<input type="text" id="ivt_mobile" maxlength="10" name="ivt_mobile" <?php echo "value='".$row['ivt_mobile']."'"; ?> placeholder="Celular" />
 			</div>
 		</div>
 		<div class="row">

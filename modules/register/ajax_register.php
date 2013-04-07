@@ -24,9 +24,10 @@
   } else {
     if( $pwd1 == $pwd2 && $pwd1 != "" ){
       echo "yes";
+      $pwd1 = md5($pwd1);
       $tms=time().$mail;
       $cont="<a href='http://www.recolhap.com//modules/register/confirm_register.php?activate=".$tms."'>Acceda a este link para activar su usuario</a>";
-
+			
       
       /*send mail with mime specs*/
       $headers = "MIME-Version: 1.0" . "\r\n";
@@ -35,11 +36,10 @@
       $subject="Activar usuario";
       $content='<html><head><meta content="text/html; charset=ISO-8859-1" http-equiv="Content-Type"><title></title></head><body moz_template="id1" bgcolor="#ffffff" text="#000000">';
       $content .='<font face="Tahoma">';
-
       /*Define content*/
       $content .=$cont;
       /*Define content*/
-
+			
       $content .='</font>';
       $content .='<br/><br/><br/><p><font face="verdana, arial, helvetica, sans-serif"><b>J. ALEJANDRO TORO D.</b></font></p>';
       $content .='<font face="verdana, arial, helvetica, sans-serif" size="2"><p>Project manager HMD&#174</p>';

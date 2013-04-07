@@ -30,6 +30,7 @@ $(document).ready(function () {
   $("#renal").hide();
   $("#liver").hide();
   $("#reuma").hide();
+  $(".alert").hide();
 });
 
 function showmain2(btnsw, hid0, hid1, hid2, hid3, hid4, shwmain) {
@@ -49,57 +50,57 @@ showmain2($("#sel_renal"), $("#hb_and_others"), $("#art_gasses"), $("#liver"), $
 showmain2($("#sel_liver"), $("#hb_and_others"), $("#art_gasses"), $("#renal"), $("#reuma"), $("#othertests"), $("#liver"));
 showmain2($("#sel_reuma"), $("#hb_and_others"), $("#art_gasses"), $("#renal"), $("#liver"), $("#othertests"), $("#reuma"));
 
-
+var d = new Date();
 /*numrange dates*/
-num_ranges($("#y_hb"), 2020, 2010, 0);
+num_ranges($("#y_hb"), d.getFullYear(), 2010, 0);
 num_ranges($("#m_hb"), 12, 1, 0);
 num_ranges($("#d_hb"), 31, 1, 0);
-num_ranges($("#y_thyr"), 2020, 1990, 0);
+num_ranges($("#y_thyr"), d.getFullYear(), 1990, 0);
 num_ranges($("#m_thyr"), 12, 1, 0);
 num_ranges($("#d_thyr"), 31, 1, 0);
-num_ranges($("#y_dimer"), 2020, 2010, 0);
+num_ranges($("#y_dimer"), d.getFullYear(), 2010, 0);
 num_ranges($("#m_dimer"), 12, 1, 0);
 num_ranges($("#d_dimer"), 31, 1, 0);
-num_ranges($("#y_trop"), 2020, 2010, 0);
+num_ranges($("#y_trop"), d.getFullYear(), 2010, 0);
 num_ranges($("#m_trop"), 12, 1, 0);
 num_ranges($("#d_trop"), 31, 1, 0);
-num_ranges($("#y_bpn"), 2020, 2010, 0);
+num_ranges($("#y_bpn"), d.getFullYear(), 2010, 0);
 num_ranges($("#m_bpn"), 12, 1, 0);
 num_ranges($("#d_bpn"), 31, 1, 0);
-num_ranges($("#y_vih"), 2020, 1990, 0);
+num_ranges($("#y_vih"), d.getFullYear(), 1990, 0);
 num_ranges($("#m_vih"), 12, 1, 0);
 num_ranges($("#d_vih"), 31, 1, 0);
-num_ranges($("#y_art_gas"), 2020, 2010, 0);
+num_ranges($("#y_art_gas"), d.getFullYear(), 2010, 0);
 num_ranges($("#m_art_gas"), 12, 1, 0);
 num_ranges($("#d_art_gas"), 31, 1, 0);
-num_ranges($("#y_renal"), 2020, 2010, 0);
+num_ranges($("#y_renal"), d.getFullYear(), 2010, 0);
 num_ranges($("#m_renal"), 12, 1, 0);
 num_ranges($("#d_renal"), 31, 1, 0);
-num_ranges($("#y_liver"), 2020, 2010, 0);
+num_ranges($("#y_liver"), d.getFullYear(), 2010, 0);
 num_ranges($("#m_liver"), 12, 1, 0);
 num_ranges($("#d_liver"), 31, 1, 0);
-num_ranges($("#y_bleed"), 2020, 2010, 0);
+num_ranges($("#y_bleed"), d.getFullYear(), 2010, 0);
 num_ranges($("#m_bleed"), 12, 1, 0);
 num_ranges($("#d_bleed"), 31, 1, 0);
-num_ranges($("#y_f_reum"), 2020, 1990, 0);
+num_ranges($("#y_f_reum"), d.getFullYear(), 1990, 0);
 num_ranges($("#m_f_reum"), 12, 1, 0);
 num_ranges($("#d_f_reum"), 31, 1, 0);
-num_ranges($("#y_uns_ana"), 2020, 1990, 0);
+num_ranges($("#y_uns_ana"), d.getFullYear(), 1990, 0);
 num_ranges($("#m_uns_ana"), 12, 1, 0);
 num_ranges($("#d_uns_ana"), 31, 1, 0);
-num_ranges($("#y_sp_ana"), 2020, 1990, 0);
+num_ranges($("#y_sp_ana"), d.getFullYear(), 1990, 0);
 num_ranges($("#m_sp_ana"), 12, 1, 0);
 num_ranges($("#d_sp_ana"), 31, 1, 0);
-num_ranges($("#y_anti_ENAs"), 2020, 1990, 0);
+num_ranges($("#y_anti_ENAs"), d.getFullYear(), 1990, 0);
 num_ranges($("#m_anti_ENAs"), 12, 1, 0);
 num_ranges($("#d_anti_ENAs"), 31, 1, 0);
-num_ranges($("#y_anca_ab"), 2020, 1990, 0);
+num_ranges($("#y_anca_ab"), d.getFullYear(), 1990, 0);
 num_ranges($("#m_anca_ab"), 12, 1, 0);
 num_ranges($("#d_anca_ab"), 31, 1, 0);
-num_ranges($("#y_citrul_ab"), 2020, 1990, 0);
+num_ranges($("#y_citrul_ab"), d.getFullYear(), 1990, 0);
 num_ranges($("#m_citrul_ab"), 12, 1, 0);
 num_ranges($("#d_citrul_ab"), 31, 1, 0);
-num_ranges($("#y_anti_ph_lip"), 2020, 1990, 0);
+num_ranges($("#y_anti_ph_lip"), d.getFullYear(), 1990, 0);
 num_ranges($("#m_anti_ph_lip"), 12, 1, 0);
 num_ranges($("#d_anti_ph_lip"), 31, 1, 0);
 

@@ -12,9 +12,9 @@
   <div class="row">
     <div class="span2" style="text-align:right">Fecha del deceso</div>
     <div class="span3">
-      <input type="text" id="year_death" class="span1 outcome date1" name="dead_date" placeholder="a&ntilde;o"/>
-      <input type="text" id="month_death" class="span1 outcome" placeholder="mes"/>
-      <input type="text" id="day_death" class="span1 outcome" placeholder="d&iacute;a"/>
+      <input type="text" id="year_death" class="span1 outcome date1" name="dead_date" placeholder="a&ntilde;o" maxlength="4"/>
+      <input type="text" id="month_death" class="span1 outcome" placeholder="mes" maxlength="2"/>
+      <input type="text" id="day_death" class="span1 outcome" placeholder="d&iacute;a" maxlength="2"/>
     </div>
   </div>
     
@@ -34,6 +34,10 @@
     <div class="span8" style="text-align:center">
     		<br><br>
     		<a class="btn" id="outcome_save" >Guardar</a>
+    		<div class="alert alert-success">
+ 			 	<button type="button" class="close">&times;</button>
+  			<strong></strong>
+				</div>
     		<br><br>
     </div>
   </div>

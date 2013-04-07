@@ -4,9 +4,9 @@
     </div>
     <div class="row">
         <div class="span2" style="text-align:right">Fecha examen:</div>
-        <div class="span1"><input type="text" id="year" name="rt_cat_date" placeholder="a&ntilde;o" class="span1 bas date1"></div>
-        <div class="span1"><input type="text" id="month" placeholder="mes" class="span1 bas"></div>
-        <div class="span1"><input type="text" id="day" placeholder="d&iacute;a" class="span1 bas"></div>
+        <div class="span1"><input type="text" id="year" name="rt_cat_date" placeholder="a&ntilde;o" class="span1 bas date1" maxlength="4"></div>
+        <div class="span1"><input type="text" id="month" placeholder="mes" class="span1 bas" maxlength="2"></div>
+        <div class="span1"><input type="text" id="day" placeholder="d&iacute;a" class="span1 bas" maxlength="2"></div>
     </div>
     <div class="row">
         <div class="span2" style="text-align:right">Peso (Kg)</div>

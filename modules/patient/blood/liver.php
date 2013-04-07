@@ -11,9 +11,9 @@
   <div class="row">
     <div class="span1">Fecha</div>
     <div class="span3">
-      <input type="text" id="y_liver" class="span1 live date1" name="hep_date" placeholder="a&ntilde;o"/>
-      <input type="text" id="m_liver" class="span1 live" placeholder="mes" />
-      <input type="text" id="d_liver" class="span1 live" placeholder="d&iacute;a" />
+      <input type="text" id="y_liver" class="span1 live date1" name="hep_date" placeholder="a&ntilde;o" maxlength="4"/>
+      <input type="text" id="m_liver" class="span1 live" placeholder="mes" maxlength="2"/>
+      <input type="text" id="d_liver" class="span1 live" placeholder="d&iacute;a" maxlength="2"/>
     </div>
   </div>
   <div class="row">
@@ -53,7 +53,10 @@
       <input type="text" id="hep_albumin" class="span1 live" name="hep_albumin" placeholder="g/dL" />
     </div>
     <div class="span1"> <a class="btn" id="liver_save">Guardar</a>
-
+			<div class="alert alert-success">
+ 			 	<button type="button" class="close">&times;</button>
+  			<strong></strong>
+			</div>
     </div>
   </div>
   <div class="row">
@@ -67,9 +70,9 @@
   <div class="row">
     <div class="span1">Fecha</div>
     <div class="span3">
-      <input type="text" id="y_bleed" class="span1 coag date1" name="coag_date" placeholder="a&ntilde;o"/>
-      <input type="text" id="m_bleed" class="span1 coag" placeholder="mes" />
-      <input type="text" id="d_bleed" class="span1 coag" placeholder="d&iacute;a" />
+      <input type="text" id="y_bleed" class="span1 coag date1" name="coag_date" placeholder="a&ntilde;o" maxlength="4"/>
+      <input type="text" id="m_bleed" class="span1 coag" placeholder="mes" maxlength="2"/>
+      <input type="text" id="d_bleed" class="span1 coag" placeholder="d&iacute;a" maxlength="2"/>
     </div>
   </div>
   <div class="row">
@@ -88,6 +91,10 @@
   </div>
   <div class="row">
     <div class="offset5 span1"> <a class="btn" id="bleed_save">Guardar</a>
+    	<div class="alert alert-success">
+ 			 	<button type="button" class="close">&times;</button>
+  			<strong></strong>
+			</div>
     </div>
   </div>
 </div>

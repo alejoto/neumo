@@ -26,9 +26,9 @@ $result = mysqli_query($con,$sql);
       <?php 
       if ($row['drug_end']==null||$row['drug_end']=='') {?>
       <div class="span3 susp_date" style="display: none">
-        <input type="text" id="year_end_d" class="span1" placeholder="a&ntilde;o"/>
-        <input type="text" id="month_end_d" class="span1" placeholder="mes"/>
-        <input type="text" id="day_end_d" class="span1" placeholder="d&iacute;a"/>
+        <input type="text" class="span1 supension year_end_d date1" maxlength="4" placeholder="a&ntilde;o"/>
+        <input type="text" class="span1 supension month_end_d" maxlength="2" placeholder="mes"/>
+        <input type="text" class="span1 supension day_end_d"  maxlength="2" placeholder="d&iacute;a"/>
       </div>
       <?php } 
       else {
@@ -41,13 +41,13 @@ $result = mysqli_query($con,$sql);
 			<div class="dropdown">
  				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Agregar</a>
   			<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-  				<li value=""><a class="susp_cause" tabindex="-1">No ha habido suspensi&oacute;n</a></li>
-  				<li value=""><a class="susp_cause" tabindex="-1">Evento adverso</a></li>
-					<li value=""><a class="susp_cause" tabindex="-1">Desersi&oacute;n al tratamiento</a></li>
-  				<li value=""><a class="susp_cause" tabindex="-1">Negaci&oacute;n por asegurador</a></li>
-					<li value=""><a class="susp_cause" tabindex="-1">Mejor&oacute; con otro tratamiento</a></li>
-					<li value=""><a class="susp_cause" tabindex="-1">Paciente fallecido</a></li>
-					<li value=""><a class="susp_cause" tabindex="-1">Otras causas</a></li>
+  				<li value=""><a class="susp_cause supension" tabindex="-1">No ha habido suspensi&oacute;n</a></li>
+  				<li value=""><a class="susp_cause supension" tabindex="-1">Evento adverso</a></li>
+					<li value=""><a class="susp_cause supension" tabindex="-1">Desersi&oacute;n al tratamiento</a></li>
+  				<li value=""><a class="susp_cause supension" tabindex="-1">Negaci&oacute;n por asegurador</a></li>
+					<li value=""><a class="susp_cause supension" tabindex="-1">Mejor&oacute; con otro tratamiento</a></li>
+					<li value=""><a class="susp_cause supension" tabindex="-1">Paciente fallecido</a></li>
+					<li value=""><a class="susp_cause supension" tabindex="-1">Otras causas</a></li>
   			</ul>
 			</div>
 				
@@ -56,9 +56,6 @@ $result = mysqli_query($con,$sql);
         echo $row['suspend_cause'];
       }?>
 
-    </td>
-    <td style="border-width: 0" >
-    	<a class="btn susp_save">Guardar</a>
     </td>
   </tr>
   <?php } ?>
@@ -70,6 +67,8 @@ $result = mysqli_query($con,$sql);
     </td>
     <td class="span2"></td>
     <td class="span2"></td>
-    <td class="span2"></td>
+    <td class="span2">
+    	<a class="btn" id="susp_save">Guardar</a>
+    </td>
   </tr>
 </table>

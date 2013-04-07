@@ -7,10 +7,10 @@
   <div class="row">
     <div class="span1" style="text-align:right">Fecha</div>
     <div class="span3" style="text-align:left">
-      <input type="text" id="y_art_gas" class="span1 art_gas date1" name="bld_gass_date" placeholder="a&ntilde;o"
+      <input type="text" id="y_art_gas" class="span1 art_gas date1" name="bld_gass_date" placeholder="a&ntilde;o" maxlength="4"
       />
-      <input type="text" id="m_art_gas" class="span1 art_gas" placeholder="mes" />
-      <input type="text" id="d_art_gas" class="span1 art_gas" placeholder="d&iacutea" />
+      <input type="text" id="m_art_gas" class="span1 art_gas" placeholder="mes" maxlength="2"/>
+      <input type="text" id="d_art_gas" class="span1 art_gas" placeholder="d&iacute;a" maxlength="2"/>
     </div>
     <div class="span1" style="text-align:right">FIO2</div>
     <div class="span1" style="text-align:left">
@@ -42,7 +42,10 @@
   </div>
   <div class="row" style="text-align:left">
     <div class="offset5 span1"> <a class="btn" id="bld_gass_save">Guardar</a>
-
+    	<div class="alert alert-success">
+ 				<button type="button" class="close">&times;</button>
+  			<strong></strong>
+			</div>
     </div>
   </div>
 </div>

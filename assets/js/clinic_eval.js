@@ -3,6 +3,8 @@
 hide_show_savebutton([$("#day_ev"),$("#nyha_funct_class")], $("#sympt_save"));
 hide_show_savebutton([$("#pulse"),$("#breathing"),$("#psist"),$("#pdiast")], $("#ef_save"));
 hide_show_savebutton([$("#day_death"),$("#dead_cause")], $("#outcome_save"));
+
+
 $("#treatment_save").hide('fast');
 $("#transplant").change(function(){
 	if ($("#transplant").val()==""){
@@ -39,46 +41,104 @@ $(document).ready(function() {
   $("#year_transp").hide();
   $(".susp_date").next().hide();
   $(".susp_save").hide();
-  
- 
+  $(".alert").hide(); 
 });
-/*
-$(".susp_date").click(function(){
-	//alert("cosa");
 
-	$(this).html("");
-	alert($(this).next().show('fast'));
-	//$(this).next().html().style('display:none');
-	//$(this).next().parent().parent().html("oli");
-	//alert(this.id);
-});
-*/
-
-
-
-
-
+/* Change the button of the suspension date */
 $(".susp_cause").click(function(){
 	if($(this).html() == "No ha habido suspensi�n"){
 		$(this).parent().parent().prev().html("Agregar");
 		$(this).parent().parent().parent().parent().prev().children().hide('fast');
 		$(this).parent().parent().parent().parent().next().children().hide('fast');
+		$(".susp_cause").parent().parent().parent().show('fast');
 		date_pharmac($(this).parent().parent().parent().parent().prev().children().children());
-		//$(this).parent().parent().parent().parent().prev().children().children().val("");
-		//alert ($(this).parent().parent().parent().parent().prev().children().children().val());
-		//$(this).parent().parent().parent().parent().prev().children().children().val("");
+		$("#susp_save").hide('fast');
 	}else{
+		$(".susp_cause").parent().parent().parent().hide('fast');
+		$(this).parent().parent().parent().show('fast');
 		$(this).parent().parent().prev().html($(this).html());
-		($(this).parent().parent().parent().parent().prev().children().show('fast'));	
+		$(this).parent().parent().parent().parent().prev().children().show('fast');	
 	}
-	//alert($(this).parent().parent().prev().html());
 });
 
+$(".day_end_d").change(function(){
+	if($(this).val() != "" && $(this).prev().val() != "" && $(this).prev().val() != ""){
+		$("#susp_save").show('fast');
+	}else{
+		$("#susp_save").hide('fast');
+	}
+});
+
+$("#susp_save").click(function(){
+	arr = $(".supension");
+	var dates = "";
+	  var dates2 = "";
+	  var result = "";
+	for(var i=0;i<arr.length;i++){
+		
+	  if( arr[i].value != "" && arr[i].value != undefined ){	  
+
+		// This two if's can be put outside, in a function
+				if($(arr[i]).is(".date1")){
+					if (dates != "") dates += ",";
+					if (dates2 != "") dates2 += ","; 
+					dates += $(arr[i]).prev();
+					dates2 += arr[i].value+"-"+arr[i+1].value+"-"+arr[i+2].value; 
+					i += 2;
+					continue;
+				} 
+				if($(arr[i]).is(".join2")){
+				  if(dates != "") dates += ",";
+					if(dates2 != "") dates2 += ",";
+					dates += arr[i].name;
+					dates2 += arr[i].value+"-"+arr[i+1].value;
+					i += 1;
+					continue;
+				}
+	      if( dates != "" ) dates += ",";
+	      if( dates2 != "" ) dates2 += ",";
+	      
+	      dates += arr[i].name;
+	      dates2 += arr[i].value;
+	    }
+	  }
+	
+	var table = document.getElementById('treatment_tb'), 
+    rows = table.rows,
+    i, j, cells, customerId;
+	//alert (rows.length);
+	 // alert (rows.length);
+
+for (i = 0, j = rows.length; i < j; ++i) {
+    cells = rows[i].getElementsByTagName('td');
+    //cells[i];
+    if(i=5){
+    	//alert(cells[2].getAttribute(value));    	
+    }
+    //alert(cells.length);
+   // for (h = 0, p = cells.length, h < p){
+   // if (cells[3] != undefined) {
+    //	alert(cells.item(3));
+    	//alert(j);
+    	//continue;
+    //}
+    //customerId = cells[0].innerHTML;
+}
+	
+	  result = dates+"?"+dates2;
+	  //alert (result);
+
+	//alert($("#treatment_tb").html());
+	//alert($(".month_end_d").val());
+	//alert($(".day_end_d").val());
+});
+
+
+/* Erase the values of the dates and hide the inputs */
 function date_pharmac(input){
 	input.val("");
 	input.next().hide();
 	input.next().next().hide();
-	//alert(input.next().val());
 }
 
 /**
@@ -370,11 +430,11 @@ $('#cancel_duplicated_drug').click(function(){
 
 
 /*Toggle asociado a Evento adverso (opción dentro de "Motivo de suspensión")*/
-$("#suspend_cause").change(function(){
+/*$("#suspend_cause").change(function(){
   if ($("#suspend_cause").val()=="Evento adverso")
   {$("#drug_adv_event").show("fast");}
   else {$("#drug_adv_event").hide("fast");}
-});
+});*/
 
 
 /*anam,ex_fc,hiperclot,outcome */
@@ -383,6 +443,7 @@ $(document).ready(function() {
   $("#hiperclot").hide();
   $("#treatment").hide();
   $("#outcome").hide();
+  $("#susp_save").hide();
 });
 
 /*Función para mostrar segmento seleccionado*/
@@ -426,28 +487,28 @@ function showmain(btnsw,hid1,hid2,hid3,hid4,shwmain){
     show_ifnoempty($("#month_atr"),$("#day_atr"));
     show_ifnoempty($("#year_death"),$("#month_death"));
     show_ifnoempty($("#month_death"),$("#day_death"));
-
-    num_ranges($("#year"), 2020, 1990,0);
-    num_ranges($("#month"), 12, 1,0);
-    num_ranges($("#year_ev"), 2020, 1990,0);
+    var d = new Date(); /* Used to calculate the actual year */
+    num_ranges($("#year"), d.getFullYear(), 1990,0);
+    num_ranges($("#month"), 31, 1,0);
+    num_ranges($("#year_ev"), d.getFullYear(), 1990,0);
     num_ranges($("#month_ev"), 12, 1,0);
     num_ranges($("#day_ev"), 31, 1,0);
-    num_ranges($("#year_ini_d"), 2020, 1990,0);
+    num_ranges($("#year_ini_d"), d.getFullYear()+5, 1990,0);
     num_ranges($("#month_ini_d"), 12, 1,0);
     num_ranges($("#day_ini_d"), 31, 1,0);
-    num_ranges($("#year_end_d"), 2020, 1990,0);
+    num_ranges($("#year_end_d"), d.getFullYear(), 1990,0);
     num_ranges($("#month_end_d"), 12, 1,0);
     num_ranges($("#day_end_d"), 31, 1,0);
-    num_ranges($("#year_transp"), 2020, 1990,0);
+    num_ranges($("#year_transp"), d.getFullYear(), 1990,0);
     num_ranges($("#month_transp"), 12, 1,0);
     num_ranges($("#day_transp"), 31, 1,0);
-    num_ranges($("#year_tendt"), 2020, 1990,0);
+    num_ranges($("#year_tendt"), d.getFullYear(), 1990,0);
     num_ranges($("#month_tendt"), 12, 1,0);
     num_ranges($("#day_tendt"), 31, 1,0);
-    num_ranges($("#year_atr"), 2020, 1990,0);
+    num_ranges($("#year_atr"), d.getFullYear(), 1990,0);
     num_ranges($("#month_atr"), 12, 1,0);
     num_ranges($("#day_atr"), 31, 1,0);
-    num_ranges($("#year_death"), 2020, 1990,0);
+    num_ranges($("#year_death"), d.getFullYear(), 1990,0);
     num_ranges($("#month_death"), 12, 1,0);
     num_ranges($("#day_death"), 31, 1,0);
     num_ranges($("#weight"), 200, 1,0);
@@ -469,6 +530,16 @@ function showmain(btnsw,hid1,hid2,hid3,hid4,shwmain){
     //show_on_check($("#tendt"), $("#tendt_hide"));
     //show_on_check($("#atr_sept"), $("#atr_sept_hide"));
 
+    /* Magic of the pharmac suspention*/
+    //day_end_d
+    
+    
+    
+    
+    
+
+   
+    
     tiprequired ($("#day_ev"));
 
     trigger_bsa($("#weight"), $("#height"), $("#bsa"));

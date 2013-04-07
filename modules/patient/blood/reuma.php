@@ -11,9 +11,9 @@
   <div class="row">
     <div class="span1">Fecha</div>
     <div class="span3">
-      <input type="text" id="y_f_reum" class="span1 date1 reuma" name="reuma_date"  placeholder="a&ntilde;o"/>
-      <input type="text" id="m_f_reum" class="span1 reuma" placeholder="mes" />
-      <input type="text" id="d_f_reum" class="span1 reuma" placeholder="d&iacute;a"/>
+      <input type="text" id="y_f_reum" class="span1 date1 reuma" name="reuma_date"  placeholder="a&ntilde;o" maxlength="4"/>
+      <input type="text" id="m_f_reum" class="span1 reuma" placeholder="mes" maxlength="2"/>
+      <input type="text" id="d_f_reum" class="span1 reuma" placeholder="d&iacute;a" maxlength="2"/>
     </div>
     <div class="span2">
       <select id="f_reum" class="reuma" name="reuma_fr">
@@ -28,6 +28,10 @@
       <a class="btn" id="f_reum_save">
         Guardar
       </a>
+      <div class="alert alert-success">
+ 			 	<button type="button" class="close">&times;</button>
+  			<strong></strong>
+			</div>
     </div>
   </div>
   <div class="row">
@@ -42,9 +46,9 @@
   <div class="row">
     <div class="span1">Fecha</div>
     <div class="span3">
-      <input type="text" id="y_uns_ana" class="span1 date1 ana" name="ana_date" placeholder="a&ntilde;o"/>
-      <input type="text" id="m_uns_ana" class="span1 ana" placeholder="mes" />
-      <input type="text" id="d_uns_ana" class="span1 ana" placeholder="d&iacute;a"/>
+      <input type="text" id="y_uns_ana" class="span1 date1 ana" name="ana_date" placeholder="a&ntilde;o" maxlength="4"/>
+      <input type="text" id="m_uns_ana" class="span1 ana" placeholder="mes" maxlength="2"/>
+      <input type="text" id="d_uns_ana" class="span1 ana" placeholder="d&iacute;a" maxlength="2"/>
     </div>
     <div class="span2">
       <select id="uns_ana_value" class="ana" name="ana_result">
@@ -57,6 +61,10 @@
   <div class="row">
     <div class="span8">
       <a class="btn" id="uns_ana_save">Guardar</a>
+      <div class="alert alert-success">
+ 			 	<button type="button" class="close">&times;</button>
+  			<strong></strong>
+			</div>
     </div>
   </div>
   <div class="row">
@@ -71,9 +79,9 @@
   <div class="row">
     <div class="span1">Fecha</div>
     <div class="span3">
-      <input type="text" id="y_sp_ana" class="span1 spana date1" name="spana_date" placeholder="a&ntilde;o"/>
-      <input type="text" id="m_sp_ana" class="span1 spana" placeholder="mes" />
-      <input type="text" id="d_sp_ana" class="span1 spana" placeholder="d&iacute;a"/>
+      <input type="text" id="y_sp_ana" class="span1 spana date1" name="spana_date" placeholder="a&ntilde;o" maxlength="4"/>
+      <input type="text" id="m_sp_ana" class="span1 spana" placeholder="mes" maxlength="2"/>
+      <input type="text" id="d_sp_ana" class="span1 spana" placeholder="d&iacute;a" maxlength="2"/>
     </div>
   </div>
   <div class="row">
@@ -113,6 +121,10 @@
   </div>
   <div class="row">
     <div class="span8"><a class="btn" id="sp_ana_save">Guardar</a>
+    <div class="alert alert-success">
+ 			 	<button type="button" class="close">&times;</button>
+  			<strong></strong>
+			</div>
     </div>
   </div>
   <div class="row">
@@ -126,9 +138,9 @@
   <div class="row">
     <div class="span1">Fecha</div>
     <div class="span3">
-      <input type="text" id="y_anti_ENAs" class="span1 enas date1" name="enas_date" placeholder="a&ntilde;o"/>
-      <input type="text" id="m_anti_ENAs" class="span1 enas" placeholder="mes" />
-      <input type="text" id="d_anti_ENAs" class="span1 enas" placeholder="d&iacute;a"/>
+      <input type="text" id="y_anti_ENAs" class="span1 enas date1" name="enas_date" placeholder="a&ntilde;o" maxlength="4"/>
+      <input type="text" id="m_anti_ENAs" class="span1 enas" placeholder="mes" maxlength="2"/>
+      <input type="text" id="d_anti_ENAs" class="span1 enas" placeholder="d&iacute;a" maxlength="2"/>
     </div>
   </div>
   <div class="row">
@@ -225,7 +237,13 @@
     </div>
   </div>
   <div class="row">
-    <div class="span8"> <a class="btn" id="anti_ENAs_save">Guardar</a></div>
+    <div class="span8"> 
+	    <a class="btn" id="anti_ENAs_save">Guardar</a>
+	    <div class="alert alert-success">
+ 			 	<button type="button" class="close">&times;</button>
+  			<strong></strong>
+			</div>
+    </div>
   </div>
   <div class="row">
     <div class="span8">
@@ -238,9 +256,9 @@
   <div class="row">
     <div class="span1">Fecha</div>
     <div class="span3">
-      <input type="text" id="y_anti_ph_lip" class="span1 antilip date1" name="antilip_date" placeholder="a&ntilde;o"/>
-      <input type="text" id="m_anti_ph_lip" class="span1 antilip" placeholder="mes"/>
-      <input type="text" id="d_anti_ph_lip" class="span1 antilip" placeholder="d&iacute;a"/>
+      <input type="text" id="y_anti_ph_lip" class="span1 antilip date1" name="antilip_date" placeholder="a&ntilde;o" maxlength="4"/>
+      <input type="text" id="m_anti_ph_lip" class="span1 antilip" placeholder="mes" maxlength="2"/>
+      <input type="text" id="d_anti_ph_lip" class="span1 antilip" placeholder="d&iacute;a" maxlength="2"/>
     </div>
   </div>
   <div class="row">
@@ -300,6 +318,10 @@
   </div>
   <div class="row">
     <div class="span8"> <a class="btn" id="anti_ph_lip_save">Guardar</a>
+    	<div class="alert alert-success">
+ 			 	<button type="button" class="close">&times;</button>
+  			<strong></strong>
+			</div>
     </div>
   </div>
   <div class="row">
@@ -313,9 +335,9 @@
   <div class="row">
     <div class="span1">Fecha</div>
     <div class="span3">
-      <input type="text" id="y_anca_ab" class="span1 anca date1" name="anca_date" placeholder="a&ntilde;o"/>
-      <input type="text" id="m_anca_ab" class="span1 anca" placeholder="mes" />
-      <input type="text" id="d_anca_ab" class="span1 anca" placeholder="d&iacute;a"/>
+      <input type="text" id="y_anca_ab" class="span1 anca date1" name="anca_date" placeholder="a&ntilde;o" maxlength="4"/>
+      <input type="text" id="m_anca_ab" class="span1 anca" placeholder="mes" maxlength="2"/>
+      <input type="text" id="d_anca_ab" class="span1 anca" placeholder="d&iacute;a" maxlength="2"/>
     </div>
   </div>
   <div class="row">
@@ -350,6 +372,10 @@
   </div>
   <div class="row">
     <div class="span8"> <a class="btn" id="anca_ab_save">Guardar</a>
+    	<div class="alert alert-success">
+ 			 	<button type="button" class="close">&times;</button>
+  			<strong></strong>
+			</div>
     </div>
   </div>
   <div class="row">
@@ -363,9 +389,9 @@
   <div class="row">
     <div class="span1">Fecha</div>
     <div class="span3">
-      <input type="text" id="y_citrul_ab" class="span1 citrul date1" name="citrul_date" placeholder="a&ntilde;o"/>
-      <input type="text" id="m_citrul_ab" class="span1 citrul" placeholder="mes" />
-      <input type="text" id="d_citrul_ab" class="span1 citrul" placeholder="d&iacute;a"/>
+      <input type="text" id="y_citrul_ab" class="span1 citrul date1" name="citrul_date" placeholder="a&ntilde;o" maxlength="4"/>
+      <input type="text" id="m_citrul_ab" class="span1 citrul" placeholder="mes" maxlength="2"/>
+      <input type="text" id="d_citrul_ab" class="span1 citrul" placeholder="d&iacute;a" maxlength="2"/>
     </div>
     <div class="span2">
       <select id="a_citrul" class="citrul" name="citrul_a_citrul">
@@ -385,6 +411,10 @@
       <a class="btn" id="citrul_ab_save">
         Guardar
       </a>
+      <div class="alert alert-success">
+ 			 	<button type="button" class="close">&times;</button>
+  			<strong></strong>
+			</div>
     </div>
   </div>
   <div class="row">

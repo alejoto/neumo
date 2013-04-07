@@ -6,6 +6,7 @@ hide_show_savebutton([$("#d_cpst"), $("#vo2max_peak"), $("#pa_sist"), $("pa_dias
 
 /*Cálculo automático del delta de VEF1 (Volumen espiratorio forzado del 1er segundo)*/
 
+
 function delta_vef1(pre_vef, post_vef, dif_vef_val) {
     function delta_vef(pre_vef, post_vef, dif_vef_val) {
         if (pre_vef.val() !== "" && post_vef.val() !== "") {
@@ -73,6 +74,7 @@ $(document).ready(function() {
     $("#spir").hide();
     $("#sixm_walk").hide();
     $("#cp_test").hide();
+    $(".alert").hide();
 });
 
 
@@ -99,17 +101,17 @@ show_ifnoempty($("#y_sixmw"), $("#m_sixmw"));
 show_ifnoempty($("#m_sixmw"), $("#d_sixmw"));
 show_ifnoempty($("#y_cpst"), $("#m_cpst"));
 show_ifnoempty($("#m_cpst"), $("#d_cpst"));
-
-num_ranges($("#y_ecg"), 2020, 2010, 0);
+var d = new Date();
+num_ranges($("#y_ecg"), d.getFullYear(), 2010, 0);
 num_ranges($("#m_ecg"), 12, 1, 0);
 num_ranges($("#d_ecg"), 31, 1, 0);
-num_ranges($("#y_spir"), 2020, 2010, 0);
+num_ranges($("#y_spir"), d.getFullYear(), 2010, 0);
 num_ranges($("#m_spir"), 12, 1, 0);
 num_ranges($("#d_spir"), 31, 1, 0);
-num_ranges($("#y_sixmw"), 2020, 2010, 0)
+num_ranges($("#y_sixmw"), d.getFullYear(), 2010, 0)
 num_ranges($("#m_sixmw"), 12, 1, 0);
 num_ranges($("#d_sixmw"), 31, 1, 0);
-num_ranges($("#y_cpst"), 2020, 2010, 0);
+num_ranges($("#y_cpst"), d.getFullYear(), 2010, 0);
 num_ranges($("#m_cpst"), 12, 1, 0);
 num_ranges($("#d_cpst"), 31, 1, 0);
 num_ranges($("#cvf_lt"), 10, 0, 1);

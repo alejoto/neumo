@@ -1,8 +1,8 @@
-/*
+/**
 -------------------------------------------------------------------------------------
 *
 *
-* name 			: 	to_database(info,table)
+* name 			: 	var result = to_database(info,table)
 * Description 	: 	saves data inside choosen table, 
 * 					where 'info' is an array that contains all the values
 * 					to be saved and also the id names of fields.
@@ -11,16 +11,22 @@
 * Dependant 	: 	reset_fields(info_id2)
 */
 function to_database(info,table) {
-  $.post("../patient/ajax_save.php",{ info:info, table:table }, function(data) {
+	$.ajaxSetup({async: false});
+	var result = null;
+	
+	$.post("../patient/ajax_save.php",{ info:info, table:table }, function(data) {
 	//alert(data);
 	if(data=='Yes') {
-		alert("Datos guardados exitosamente");
+		result = "Datos guardados exitosamente";
 	}else{
-		alert("Ocurrio un problema al guardar los datos");
+		result = "Ocurrio un problema al guardar los datos";
 	}
   });  
+	return result;
+	$.ajaxSetup({async: true});
 }
-/*
+
+/**
 -------------------------------------------------------------------------------------
 * 
  * Name			:	reset_fields(info_id2)
@@ -37,10 +43,11 @@ function reset_fields(info_id2){
 			 arr2[item].value = "";
 		 }
 	}
-	
+	$(".date1").next().hide('fast');
+	$(".date1").next().next().hide('fast');
 }
 
-/*
+/**
 -------------------------------------------------------------------------------------
 * Name			:	get_info(info_id)
 * Description	:	Array builder, gets all form fields with class defined in 'info_id' 
@@ -92,7 +99,7 @@ function get_info(info_id){
 				if (dates2 != "") dates2 += ","; 
 				dates += arr[i].name;
 				dates2 += arr[i].value+"-"+arr[i+1].value+"-"+arr[i+2].value; 
-    		i += 2;
+				i += 2;
 				continue;
 			} 
 			if($(arr[i]).is(".join2")){
@@ -138,59 +145,91 @@ $(".date3").change(function(){
 	check_date(column_name, table_name, date);	
 });
 
+/* Function to show the alert */
+function show_alert(result, button){
+	$(button).next().children().next().html(result);
+	if(result[0] == 'O'){
+		$(button).next().removeClass("alert-success");
+		$(button).next().addClass("alert-error");
+	}
+	$(button).next().show('fast');
+}
+
+/* This is use for the new alert, when the 'x' is click hide the alert */
+$(".close").click(function(){
+	$(this).parent().hide("fast");
+});
+
+
+
+
 		////BUTTONS OF EVALUACION CLINICA////
 //TODO Complete!!!
 
 /*
 $("#hiperclot_save").click(function(){
   var info = get_info("hiperclot");
-  to_database(info,"table_name");
+  var result = to_database(info,"table_name");
   
   reset_fields("hiperclot");
   $("#hiperclot_save").hide();
 });/**/
 
-
 $("#treatment_save").click(function(){
   var info = get_info("surgical");
-  to_database(info,"hap_surgical");
+  var result = to_database(info,"hap_surgical");
+  show_alert(result,$(this));
   reset_fields("surgical");
   $("#treatment_save").hide();
 });
 
 $("#outcome_save").click(function(){
   var info = get_info("outcome");
-  to_database(info,"hap_outcome");
+  var result = to_database(info,"hap_outcome");
+  show_alert(result,$(this));
   reset_fields("outcome");
   $("#outcome_save").hide();
+});
+
+$("#susp_save").click(function(){
+	 var info = get_info("outcome");
+	 var result = to_database(info,"hap_outcome");
+	 show_alert(result,$(this));
+	 reset_fields("outcome");
+	 $("#susp_save").hide();
 });
 
 		////BUTTONS OF DESEMPENO CARDIOVASCULAR////
 
 $("#save_ecg").click(function(){
-	var info = get_info("ecg");
-  to_database(info,"hap_electrok");
+  var info = get_info("ecg");
+  var result = to_database(info,"hap_electrok", this);
+  show_alert(result,$(this));
   reset_fields("ecg");
   $("#save_ecg").hide();
 });
 
+
 $("#save_spir").click(function(){
 	var info = get_info("spir1");
-	to_database(info,"hap_spirometry");
+	var result = to_database(info,"hap_spirometry");
+	show_alert(result,$(this));
 	reset_fields("spir1");
 	$("#save_spir").hide();
 });
 
 $("#vo2_save").click(function(){
 	var info = get_info("cpt");
-	to_database(info,"hap_cp_stress_test");
+	var result = to_database(info,"hap_cp_stress_test");
+	show_alert(result,$(this));
 	reset_fields("cpt");
 	$("#vo2_save").hide();
 });
 
 $("#sixmin_save").click(function(){
 	var info = get_info("sixmw");
-	to_database(info,"hap_six_mins_walk");
+	var result = to_database(info,"hap_six_mins_walk");
+	show_alert(result,$(this));
 	reset_fields("sixmw");
 	$("#sixmin_save").hide();
 	
@@ -199,56 +238,63 @@ $("#sixmin_save").click(function(){
 
 $("#xray_save").click(function(){
 	var info = get_info("xray");
-	to_database(info,"hap_x_ray");
+	var result = to_database(info,"hap_x_ray");
+	show_alert(result,$(this));
 	reset_fields("xray");
 	$("#xray_save").hide();
 });
 
 $("#tc_save").click(function(){
 	var info = get_info("tcangio");
-	to_database(info,"hap_tc_angio");
+	var result = to_database(info,"hap_tc_angio");
+	show_alert(result,$(this));
 	reset_fields("tcangio");
 	$("#tc_save").hide();
 });
 
 $("#gamma_save").click(function(){
 	var info = get_info("gam");
-	to_database(info,"hap_gammagr");
+	var result = to_database(info,"hap_gammagr");
+	show_alert(result,$(this));
 	reset_fields("gam");
 	$("#gamma_save").hide();
 });
 
 $("#artergph_save").click(function(){
 	var info = get_info("p_art");
-	to_database(info,"hap_pulm_arteriography");
+	var result = to_database(info,"hap_pulm_arteriography");
+	show_alert(result,$(this));
 	reset_fields("p_art");
 	$("#artergph_save").hide();
 });
 
 $("#mri_save").click(function(){
 	var info = get_info("mri1");
-	to_database(info,"hap_mri");
+	var result = to_database(info,"hap_mri");
+	show_alert(result,$(this));
 	reset_fields("mri1");
 	$("#mri_save").hide();
 });
 
 $("#ecoc_save").click(function(){
 	var info = get_info("eco");
-	to_database(info,"hap_ecocardio");
+	var result = to_database(info,"hap_ecocardio");
+	show_alert(result,$(this));
 	reset_fields("eco");
 	$("#ecoc_save").hide();
 });
 
 $("#legsdoppler_save").click(function(){
 	var info = get_info("du_legs");
-	to_database(info,"hap_duplex_legs");
+	var result = to_database(info,"hap_duplex_legs");
+	show_alert(result,$(this));
 	reset_fields("du_legs");
 	$("#legsdoppler_save").hide();
 });
 
 $("#save_rt_cath").click(function(){
 	var info = get_info("bas");
-	to_database(info,"hap_right_cathet");
+	var result = to_database(info,"hap_right_cathet");
 	$('#success_on_save').show('fast');
 	$('#basal').hide('fast');
 	reset_fields("bas");
@@ -259,7 +305,7 @@ $("#save_rt_cath").click(function(){
 $("#vreac_test_done").change(function(){
 	if (this.value == "si") {
 		var info = get_info("bas");
-		to_database(info,"hap_right_cathet");
+		var result = to_database(info,"hap_right_cathet");
 		reset_fields("bas");
 		$("#vreac_test_done").hide();
 	}
@@ -267,7 +313,7 @@ $("#vreac_test_done").change(function(){
 
 $("#react_save").click(function(){
 	var info = get_info("react");
-	to_database(info,"hap_vasoreact_test");
+	var result = to_database(info,"hap_vasoreact_test");
 	$('#success_on_save').show('fast');
 	$('#reactiv').hide('fast');
 	reset_fields("react");
@@ -279,7 +325,8 @@ $("#react_save").click(function(){
 
 $("#hb_save").click(function(){ 
 	var info = get_info("hemo");
-	to_database(info,"hap_hb");
+	var result = to_database(info,"hap_hb");
+	show_alert(result,$(this));
 	reset_fields("hemo");
 	$("#hb_save").hide();
 });
@@ -287,7 +334,8 @@ $("#hb_save").click(function(){
 //TODO The rest of the Blood!!!
 $("#uns_ana_save").click(function(){
 	var info = get_info("ana");
-	to_database(info,"hap_reuma_ana");
+	var result = to_database(info,"hap_reuma_ana");
+	show_alert(result,$(this));
 	reset_fields("ana");
 	$("#uns_ana_save").hide();
 	
@@ -295,70 +343,80 @@ $("#uns_ana_save").click(function(){
 
 $("#f_reum_save").click(function(){
 	var info = get_info("reuma");
-	to_database(info,"hap_reuma");
+	var result = to_database(info,"hap_reuma");
+	show_alert(result,$(this));
 	reset_fields("reuma");
 	$("#f_reum_save").hide();	
 });
 
 $("#sp_ana_save").click(function(){
 	var info = get_info("spana");
-	to_database(info, "hap_reuma_spana");
+	var result = to_database(info, "hap_reuma_spana");
+	show_alert(result,$(this));
 	reset_fields("spana");
 	$("#sp_ana_save").hide();
 });
 
 $("#anti_ENAs_save").click(function(){
 	var info = get_info("enas");
-	to_database(info, "hap_reuma_enas");
+	var result = to_database(info, "hap_reuma_enas");
+	show_alert(result,$(this));
 	reset_fields("enas");
 	$("#anti_ENAs_save").hide();
 });
 
 $("#anti_ph_lip_save").click(function(){
 	var info = get_info("antilip");
-	to_database(info, "hap_reuma_antilip");
+	var result = to_database(info, "hap_reuma_antilip");
+	show_alert(result,$(this));
 	reset_fields("antilip");
 	$("#anti_ph_lip_save").hide();
 });
 
 $("#anca_ab_save").click(function(){
 	var info = get_info("anca");
-	to_database(info, "hap_reuma_anca");
+	var result = to_database(info, "hap_reuma_anca");
+	show_alert(result,$(this));
 	reset_fields("anca");
 	$("#anca_ab_save").hide();
 });
 
 $("#citrul_ab_save").click(function(){
 	var info = get_info("citrul");
-	to_database(info, "hap_reuma_citrul");
+	var result = to_database(info, "hap_reuma_citrul");
+	show_alert(result,$(this));
 	reset_fields("citrul");
 	$("#citrul_ab_save").hide();
 });
 
 $("#thyroid_save").click(function() {
 	var info = get_info("thyro");
-	to_database(info, "hap_hemo_thyro");
+	var result = to_database(info, "hap_hemo_thyro");
+	show_alert(result,$(this));
 	reset_fields("thyro");
 	$("#thyroid_save").hide();
 });
 
 $("#d_dimer_save").click(function() {
 	var info = get_info("dim");
-	to_database(info, "hap_hemo_dim");
+	var result = to_database(info, "hap_hemo_dim");
+	show_alert(result,$(this));
 	reset_fields("dim");
 	$("#d_dimer_save").hide();
 });
 
 $("#trop_save").click(function() {
 	var info = get_info("tropo");
-	to_database(info, "hap_hemo_tropo");
+	var result = to_database(info, "hap_hemo_tropo");
+	show_alert(result,$(this));
 	reset_fields("tropo");
 	$("#trop_save").hide();
 });
 
 $("#bpn_save").click(function() {
 	var info = get_info("pept");
-	to_database(info, "hap_hemo_pept");
+	var result = to_database(info, "hap_hemo_pept");
+	show_alert(result,$(this));
 	reset_fields("pept");
 	$("#bpb_save");
 });
@@ -373,35 +431,40 @@ $("#bpn_save").click(function() {
 
 $("#hiv_save").click(function(){ 
 	var info = get_info("vih");
-	to_database(info,"hap_vih");
+	var result = to_database(info,"hap_vih");
+	show_alert(result,$(this));
 	reset_fields("vih");
 	$("#hiv_save").hide();
 });
 
 $("#bld_gass_save").click(function(){
 	var info = get_info("art_gas");
-	to_database(info,"hap_arterialgasses");
+	var result = to_database(info,"hap_arterialgasses");
+	show_alert(result,$(this));
 	reset_fields("art_gas");
 	$("#bld_gass_save").hide();
 });
 
 $("#renal_save").click(function(){
 	var info = get_info("ren");
-	to_database(info,"hap_renal");
+	var result = to_database(info,"hap_renal");
+	show_alert(result,$(this));
 	reset_fields("ren");
 	$("#renal_save").hide();
 });
 
 $("#liver_save").click(function(){
 	var info = get_info("live");
-	to_database(info,"hap_hepatic");
+	var result = to_database(info,"hap_hepatic");
+	show_alert(result,$(this));
 	reset_fields("live");
 	$("#liver_save").hide();
 });
 
 $("#bleed_save").click(function(){
 	var info = get_info("coag");
-	to_database(info,"hap_coag");
+	var result = to_database(info,"hap_coag");
+	show_alert(result,$(this));
 	reset_fields("coag");
 	$("#bleed_save").hide();
 });

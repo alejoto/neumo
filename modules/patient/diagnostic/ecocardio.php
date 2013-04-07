@@ -7,9 +7,9 @@
      <div class="row">
          <div class="span1">Fecha</div>
          <div class="span3">
-             <input type="text" id="y_ecoc" class="span1 eco date1" name="doppl_date" placeholder="a&ntilde;o"/>
-             <input type="text" id="m_ecoc" class="span1 eco" placeholder="mes"/>
-             <input type="text" id="d_ecoc" class="span1 eco" placeholder="d&iacute;a"/>
+             <input type="text" id="y_ecoc" class="span1 eco date1" name="doppl_date" placeholder="a&ntilde;o" maxlength="4"/>
+             <input type="text" id="m_ecoc" class="span1 eco" placeholder="mes" maxlength="2"/>
+             <input type="text" id="d_ecoc" class="span1 eco" placeholder="d&iacute;a" maxlength="2"/>
          </div>
          <div class="span2" style="text-align:right">V&iacute;a transductor</div>
          <div class="span2">
@@ -99,7 +99,13 @@
          <div class="span8"><br></div>
      </div>
      <div class="row" style="text-align:center">
-         <div class="span8"><a class="btn" id="ecoc_save">Guardar</a></div>
+         <div class="span8">
+         		<a class="btn" id="ecoc_save">Guardar</a>
+         		<div class="alert alert-success">
+ 			 				<button type="button" class="close">&times;</button>
+  						<strong></strong>
+						</div>
+         </div>
      </div>
      <div class="row">
          <div class="span8"><br></div>

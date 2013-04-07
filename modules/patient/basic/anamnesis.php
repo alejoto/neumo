@@ -31,9 +31,9 @@
   <div class="row">
     <div class="span2">Fecha evaluaci&oacute;n</div>
     <div class="span3" style="text-align: left;">
-      <input type="text" id="year_ev" class="span1" placeholder="a&ntilde;o"/>
-      <input type="text" id="month_ev" class="span1" placeholder="mes"/>
-      <input type="text" id="day_ev" class="span1" placeholder="d&iacute;a"/>
+      <input type="text" id="year_ev" class="span1" placeholder="a&ntilde;o" maxlength="4"/>
+      <input type="text" id="month_ev" class="span1" placeholder="mes" maxlength="2"/>
+      <input type="text" id="day_ev" class="span1" placeholder="d&iacute;a" maxlength="2"/>
     </div>
   </div>
   <div class="row">

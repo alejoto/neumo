@@ -39,7 +39,15 @@ function showmain_img(btnsw,hid1,hid2,hid3,hid4,hid5,hid6,shwmain){
     });
 }
 
-$(document).ready(function() {$("#x_ray").hide();$("#tc_angio").hide();$("#mri").hide();$("#pulm_arteriography").hide();$("#gammagr").hide();$("#duplex_legs").hide();});
+$(document).ready(function() {
+	$("#x_ray").hide();
+	$("#tc_angio").hide();
+	$("#mri").hide();
+	$("#pulm_arteriography").hide();
+	$("#gammagr").hide();
+	$("#duplex_legs").hide();
+	$(".alert").hide();
+});
 
 
 
@@ -60,26 +68,26 @@ showmain_img($("#sel_mri"),$("#ecocardio"),$("#x_ray"),$("#tc_angio"),$("#pulm_a
 showmain_img($("#sel_pulm_arteriography"),$("#ecocardio"),$("#x_ray"),$("#tc_angio"),$("#mri"),$("#gammagr"),$("#duplex_legs"),$("#pulm_arteriography"))
 showmain_img($("#sel_gammagr"),$("#ecocardio"),$("#x_ray"),$("#tc_angio"),$("#mri"),$("#pulm_arteriography"),$("#duplex_legs"),$("#gammagr"))
 showmain_img($("#sel_duplex_legs"),$("#ecocardio"),$("#x_ray"),$("#tc_angio"),$("#mri"),$("#pulm_arteriography"),$("#gammagr"),$("#duplex_legs"))
-
-num_ranges($("#y_xray"), 2020, 2010,0);
+var d = new Date();
+num_ranges($("#y_xray"), d.getFullYear(), 2010,0);
 num_ranges($("#m_xray"), 12, 1,0);
 num_ranges($("#d_xray"), 31, 1,0);
-num_ranges($("#y_tc"), 2020, 2010,0);
+num_ranges($("#y_tc"), d.getFullYear(), 2010,0);
 num_ranges($("#m_tc"), 12, 1,0);
 num_ranges($("#d_tc"), 31, 1,0);
-num_ranges($("#y_ecoc"), 2020, 2010,0);
+num_ranges($("#y_ecoc"), d.getFullYear(), 2010,0);
 num_ranges($("#m_ecoc"), 12, 1,0);
 num_ranges($("#d_ecoc"), 31, 1,0);
-num_ranges($("#y_ecoleg"), 2020, 2010,0);
+num_ranges($("#y_ecoleg"), d.getFullYear(), 2010,0);
 num_ranges($("#m_ecoleg"), 12, 1,0);
 num_ranges($("#d_ecoleg"), 31, 1,0);
-num_ranges($("#y_rmn"), 2020, 2010,0);
+num_ranges($("#y_rmn"), d.getFullYear(), 2010,0);
 num_ranges($("#m_rmn"), 12, 1,0);
 num_ranges($("#d_rmn"), 31, 1,0);
-num_ranges($("#y_artg"), 2020, 2010,0);
+num_ranges($("#y_artg"), d.getFullYear(), 2010,0);
 num_ranges($("#m_artg"), 12, 1,0);
 num_ranges($("#d_artg"), 31, 1,0);
-num_ranges($("#y_gamma"), 2020, 2010,0);
+num_ranges($("#y_gamma"), d.getFullYear(), 2010,0);
 num_ranges($("#m_gamma"), 12, 1,0);
 num_ranges($("#d_gamma"), 31, 1,0);
 num_ranges($("#cardiothrx_index"), 1, 0,1);

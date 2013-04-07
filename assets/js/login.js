@@ -33,7 +33,7 @@ function hap_login_method (){
     $('#usr').focus();
   }
 
-  //Error message when both user field is empty
+  //Error message when user field is empty
   else if ($('#usr').val()=="") {
     $("#msg").html("<label class='control-label' for='inputError'>ingrese su email.</label>");
     $('#usr').focus();
@@ -117,23 +117,22 @@ function hap_registration() {
 {
   $("#loading_reg").show();
   $("#msg_register").html("");
-
+  
   $.post("modules/register/ajax_register.php",{ mail:$('#mail').val(), pwd1:$('#pwd1').val(), pwd2:$('#pwd2').val() }, function(data) {
-    if(data=='yes') {
-      
-      $("#msg_register").html("<div class='alert alert-success'>Muy bien! Ahora ingrese a su email para activar su cuenta.</div>");
-
-    }
-    else if (data=='mmm') {
-      $("#msg_register").html("<div class='alert alert-error'>Usuario ya inici&oacute; proceso de registro.  Verifique bandeja de entrada de su email para terminar de activar cuenta.</div>");
-    } 
-    else
-    {
-      $("#msg_register").html("<div class='alert alert-error'>Usuario ya existe.  Use el bot&oacute;n Entrar.  All&iacute; podr&aacute; recuperar su contrase&ntilde;a</div>");
-    }
-    $("#loading_reg").hide();
-    
-  });}
+	  /*The data variable has some garbage, that's why y just compare the 3 first character*/
+	  if(data.substring(0,3) == "yes") {
+		  $("#msg_register").html("<div class='alert alert-success'>Muy bien! Ahora ingrese a su email para activar su cuenta.</div>");
+	  }
+	  else if (data=='mmm') {
+		  $("#msg_register").html("<div class='alert alert-error'>Usuario ya inici&oacute; proceso de registro.  Verifique bandeja de entrada de su email para terminar de activar cuenta.</div>");
+	  } 
+	  else
+	  {
+		  $("#msg_register").html("<div class='alert alert-error'>Usuario ya existe.  Use el bot&oacute;n Entrar.  All&iacute; podr&aacute; recuperar su contrase&ntilde;a</div>");
+	  }
+	  $("#loading_reg").hide();
+  	});
+  }
 }
 
 //Trigger user registration
