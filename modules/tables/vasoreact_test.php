@@ -18,8 +18,6 @@ main_eval.t_st
 ,hap_vasoreact_test.post_rt_atr_press
 ,hap_vasoreact_test.post_pulm_wedg_press
 ,hap_vasoreact_test.post_pulm_gradient
-,hap_vasoreact_test.post_its_right
-,hap_vasoreact_test.post_its_left
 ,hap_vasoreact_test.post_cardiac_outp
 ,hap_vasoreact_test.post_cardiac_index
 ,hap_vasoreact_test.post_rt_ventr_oxim
@@ -30,7 +28,7 @@ main_eval.t_st
 ,main_patient.surn
 ,main_investigator.ivt_name
 ,main_investigator.ivt_surname
-FROM hap_vasoreact_test LEFT JOIN  main_eval ON  main_eval.eval_id = hap_arterialgasses.eval_id
+FROM hap_vasoreact_test LEFT JOIN  main_eval ON  main_eval.eval_id = hap_vasoreact_test.eval_id
 LEFT JOIN main_investigator on main_investigator.user_id = main_eval.digiter_id
 LEFT JOIN main_patient on main_patient.patient_id = main_eval.patient_id
 ORDER BY main_patient.patient_id asc, t_st asc";

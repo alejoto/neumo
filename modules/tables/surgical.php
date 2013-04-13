@@ -12,7 +12,7 @@ main_eval.t_st
 ,main_patient.surn
 ,main_investigator.ivt_name
 ,main_investigator.ivt_surname
-FROM hap_surgical LEFT JOIN  main_eval ON  main_eval.eval_id = hap_arterialgasses.eval_id
+FROM hap_surgical LEFT JOIN  main_eval ON  main_eval.eval_id = hap_surgical.eval_id
 LEFT JOIN main_investigator on main_investigator.user_id = main_eval.digiter_id
 LEFT JOIN main_patient on main_patient.patient_id = main_eval.patient_id
 ORDER BY main_eval.eval_id asc, t_st asc";

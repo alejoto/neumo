@@ -4,18 +4,13 @@ include '../DB/connect.php';
 // Data in table main_patient left join add_data_patient
 $sql    = "SELECT 
 main_eval.t_st
-,hap_outcome.outcome_dyspn
-,hap_outcome.outcome_epid
-,hap_outcome.endart_failure
-,hap_outcome.lung_transplant
 ,hap_outcome.dead_date
 ,hap_outcome.dead_cause
-,hap_outcome.dead_place
 ,main_patient.name
 ,main_patient.surn
 ,main_investigator.ivt_name
 ,main_investigator.ivt_surname
-FROM hap_outcome LEFT JOIN  main_eval ON  main_eval.eval_id = hap_arterialgasses.eval_id
+FROM hap_outcome LEFT JOIN  main_eval ON  main_eval.eval_id = hap_outcome.eval_id
 LEFT JOIN main_investigator on main_investigator.user_id = main_eval.digiter_id
 LEFT JOIN main_patient on main_patient.patient_id = main_eval.patient_id
 ORDER BY main_patient.patient_id asc, t_st asc";

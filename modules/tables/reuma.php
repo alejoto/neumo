@@ -5,34 +5,13 @@ include '../DB/connect.php';
 $sql    = "SELECT 
 main_eval.t_st
 ,hap_reuma.reuma_date
-,hap_reuma.reuma_ana
-,hap_reuma.anti_ro
-,hap_reuma.anti_la
-,hap_reuma.anti_smt
-,hap_reuma.anti_rnp
-,hap_reuma.anti_u1rnp
-,hap_reuma.anti_u3rnp
-,hap_reuma.anti_jo
-,hap_reuma.rna_pol_3
-,hap_reuma.topiso_1
-,hap_reuma.centrom
-,hap_reuma.anti_slc
-,hap_reuma.anti_th_t0
-,hap_reuma.ss_dna
-,hap_reuma.ds_dna
-,hap_reuma.c_anca
-,hap_reuma.p_anca
-,hap_reuma.a_cardiolip_g
-,hap_reuma.a_cardiolip_m
-,hap_reuma.anticoag_lup
-,hap_reuma.a_2_cpl
 ,hap_reuma.reuma_fr
 ,hap_reuma.anticitrul
 ,main_patient.name
 ,main_patient.surn
 ,main_investigator.ivt_name
 ,main_investigator.ivt_surname
-FROM hap_reuma LEFT JOIN  main_eval ON  main_eval.eval_id = hap_arterialgasses.eval_id
+FROM hap_reuma LEFT JOIN  main_eval ON  main_eval.eval_id = hap_reuma.eval_id
 LEFT JOIN main_investigator on main_investigator.user_id = main_eval.digiter_id
 LEFT JOIN main_patient on main_patient.patient_id = main_eval.patient_id
 ORDER BY main_patient.patient_id asc, t_st asc";

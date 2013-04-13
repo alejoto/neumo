@@ -28,7 +28,7 @@ main_patient.patient_id as doc_id
 
  FROM main_patient LEFT JOIN add_data_patient 
             ON main_patient.patient_id = add_data_patient.patient_id
-ORDER BY main_patient.patient_id asc, t_st asc";
+ORDER BY main_patient.patient_id asc";
 $result = mysqli_query($con,$sql);
 ?>
 <!--main content here-->
