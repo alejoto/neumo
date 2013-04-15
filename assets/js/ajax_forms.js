@@ -312,7 +312,10 @@ $("#vreac_test_done").change(function(){
 	if (this.value == "si") {
 		var info = get_info("bas");
 		var result = to_database(info,"hap_right_cathet");
-		reset_fields("bas");
+		//reset_fields("bas");  
+		/*data cannot be reseted: needed for react_test 
+		*calculations
+		*/
 		$("#vreac_test_done").hide();
 	}
 });
