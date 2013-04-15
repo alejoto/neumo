@@ -41,8 +41,7 @@ if ($row['user_id']==""&&$_GET["page"]!='user_register') { header('Location: mya
   if($page == "user_register") include 'user_register.php';
   else if($page == "patients") include 'patients_search.php';
   else if($page == "statistics") include '../statistics/statistics.php';
-  else if( isset($_SESSION['patient']) ){	
-    if($page == "basic") include '../patient/basic.php';
+  else if($page == "basic") include '../patient/basic.php';
     else if($page == "blood") include '../patient/blood.php';
     else if($page == "diagnostic") include '../patient/diagnostic.php';
     else if($page == "cardiovascular" ) include '../patient/cardiovascular.php';
@@ -86,10 +85,7 @@ if ($row['user_id']==""&&$_GET["page"]!='user_register') { header('Location: mya
     else if($page == "t_vasoreact_test" ) include '../tables/vasoreact_test.php';
     else if($page == "t_vih" ) include '../tables/vih.php';
     else if($page == "t_x_ray" ) include '../tables/x_ray.php';
-    
-    
     else include 'patients_search.php';
-  }else include 'patients_search.php';
   
   include '../includes/footer.php';
 }else{ 
