@@ -141,7 +141,6 @@ $(".date3").change(function(){
 	
 	/* Find the table where this date must be persisted */
 	var table_name = "hap_"+$(".date3").parent().parent().attr("name");
-	
 	check_date(column_name, table_name, date);	
 });
 
@@ -160,12 +159,12 @@ $(".close").click(function(){
 	$(this).parent().hide("fast");
 });
 
-
-
-
-		////BUTTONS OF EVALUACION CLINICA////
-//TODO Complete!!!
-
+/**
+* ---------------------------------------------------------------------
+* 'EVALUACION CLINICA' BUTTONS
+* @author: HMD team
+*
+*/
 /*
 $("#hiperclot_save").click(function(){
   var info = get_info("hiperclot");
@@ -199,7 +198,10 @@ $("#susp_save").click(function(){
 	 $("#susp_save").hide();
 });
 
-		////BUTTONS OF DESEMPENO CARDIOVASCULAR////
+/**
+*'DESEMPENO CARDIOVASCULAR' BUTTONS
+*/
+
 
 $("#save_ecg").click(function(){
   var info = get_info("ecg");
@@ -234,7 +236,11 @@ $("#sixmin_save").click(function(){
 	$("#sixmin_save").hide();
 	
 });
-		//// BUTTONS OF IMAGENES DIAGNOSTICAS///
+
+/**
+* 'IMAGENES DIAGNOSTICAS' BUTTONS
+*/
+
 
 $("#xray_save").click(function(){
 	var info = get_info("xray");
@@ -420,13 +426,6 @@ $("#bpn_save").click(function() {
 	reset_fields("pept");
 	$("#bpb_save");
 });
-
-
-
-
-
-
-
 
 
 $("#hiv_save").click(function(){ 

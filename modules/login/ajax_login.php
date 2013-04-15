@@ -3,7 +3,7 @@
   include '../DB/connect.php';
   $usr  = htmlspecialchars($_POST['usr'],ENT_QUOTES);
   $pwd2  = $_POST['pwd'];
-  $pwd		= md5($pwd2);
+  $pwd		= $pwd2;
   $sql    = "SELECT * FROM users WHERE user_id='$usr' ";
   $result = mysqli_query($con,$sql);
   $row    = mysqli_fetch_array($result);
