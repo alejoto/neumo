@@ -1,5 +1,13 @@
- 
-/* Recordatorio "requerido" para campos formulario utilizando Tooltip de TwitterBootstrap*/
+/* 
+*
+*
+-------------------------------------------------------------------------
+* name          :   tiprequired(reqfld)
+* Description   :   Displays a 'tooltip-type' message (TwitterBootstrap format), 
+*                   when required fields are left empty.
+* Depend on     :   Twitterboostrap tooltip function (bootstrap.js file)
+* Dependant     :   clinic_eval.js, patients.js, right_catheter.js, 
+*/
 
 function tiprequired(reqfld) {
     $(document).ready(function() {
@@ -14,8 +22,17 @@ function tiprequired(reqfld) {
         });
     });
 }
-
-/* Mostrar/esconder campos si el previo estÃ¡ vacÃ­o o con datos*/
+/* 
+*
+*
+-------------------------------------------------------------------------
+* name          :   hideshow1(main, second)
+* Description   :   Hides 'second' tag while 'first' is empty, 
+*                   'second' tag is displayed when 'first' is filled.
+* Depend on     :   jquery
+* Dependant     :   show_ifnoempty(one, two) , hide_if_empty(n_empty, hid_shw) 
+*                   
+*/
 
 function hideshow1(main, second) {
     if (main.val() != "") {
@@ -26,7 +43,18 @@ function hideshow1(main, second) {
     }
 }
 
-/* FunciÃ³n hideshow enlazada con mÃ©todo keyup (jquery)*/
+/* 
+*
+*
+-------------------------------------------------------------------------
+* name          :   show_ifnoempty(one, two)
+* Description   :   Keeps 'two' tag hidden while 'one' is empty, 
+*                   'two' tag is displayed when keyup on 'one'.
+* Depend on     :   hideshow1(main, second)
+* Dependant     :   blood_test.js, cardiovascular.js, clinic_eval.js,
+*               :   diagnostic.js, right_catheter.js 
+*                   hmd_dateformat(dr_y, dr_m, dr_d, join_date)
+*/
 
 function show_ifnoempty(one, two) {
     $(document).ready(function() {
@@ -37,7 +65,17 @@ function show_ifnoempty(one, two) {
     })
 }
 
-/* FunciÃ³n hideshow enlazada con mÃ©todo change (jquery)*/
+/*
+*
+*
+-------------------------------------------------------------------------
+* Name          :   hide_if_empty(n_empty, hid_shw)
+* Description   :   Useful in select list fields. Keeps 'hid_shw' hidden  
+*                   while 'n_empty' select field is empty. 'hid_shw' tag  
+*                   is displayed when 'n_empty' is changed with no-empty value.
+* Depend on     :   hideshow1(main, second)
+* Dependant     :   clinic_eval.js, right_catheter.js
+*/
 
 function hide_if_empty(n_empty, hid_shw) {
     $(document).ready(function() {
@@ -49,7 +87,16 @@ function hide_if_empty(n_empty, hid_shw) {
     })
 }
 
-/*Show button when "required" are filled out.  NOT WORKING WITH RADIO OR CHECKBOX TAGS!*/
+/*
+*
+*
+-------------------------------------------------------------------------
+* Name          :   hide_show_savebutton(fields,button)
+* Description   :   Hides the 'save' button until all 'required' fields
+*                   are completed. DOES NOT WORK WITH RADIO BUTTONS AND CHECKBOXES
+* Depend on     :   jquery
+* Dependant     :   blood_test.js, cardiovascular.js, clinic_eval.js, diagnostic.js
+*/
 function hide_show_savebutton(fields,button) {
     $(document).ready(function() {
         button.hide();
@@ -84,8 +131,16 @@ function hide_show_savebutton(fields,button) {
 }
 
 
-/*bloqueo de teclado alfabÃ©tico, solo permite nÃºmeros ENTEROS*/
-
+/*
+*
+*
+-------------------------------------------------------------------------
+* Name          :   onlynumber(o_nb)
+* Description   :   Allows only number keys to be used.
+*                   Only integer numbers can be entered.
+* Depend on     :   jquery
+* Dependant     :   num_ranges(vale, maxi, mini, int_float)
+*/
 function onlynumber(o_nb) {
     o_nb.keydown(function(event) {
     	if (o_nb.val() == "" && (event.keyCode == 48 || event.keyCode == 96)){
@@ -97,22 +152,35 @@ function onlynumber(o_nb) {
     					event.ctrlKey === true) || (event.keyCode >= 35 && 
     							event.keyCode <= 39)) {} 
     		else {
-    			if (event.shiftKey || (event.keyCode < 48 || event.keyCode > 57) && (event.keyCode < 96 || event.keyCode > 105)) {
+    			if (event.shiftKey || (event.keyCode < 48 || event.keyCode > 57) 
+                    && (event.keyCode < 96 || event.keyCode > 105)) 
+                {
     				event.preventDefault();
     			}
     		}
         }
     });
 }
-
-/*Solo nÃºmeros decimales*/
-
+/*
+*
+*
+-------------------------------------------------------------------------
+* Name          :   floatnb(fltnum)
+* Description   :   Enables only number keys and decimal separator 
+*                   (comma or dot depending on system config).  The
+*                   remaining keyboard keys get disabled.
+* Depend on     :   jquery
+* Dependant     :   num_ranges(vale, maxi, mini, int_float)
+*/
 function floatnb(fltnum) {
     fltnum.keypress(function(eve) {
-        if ((eve.which != 46 || $(this).val().indexOf('.') != -1) && (eve.which < 48 || eve.which > 57) || (eve.which == 46 && $(this).caret().start == 0)) {
+        if ((eve.which != 46 || $(this).val().indexOf('.') != -1) 
+            && (eve.which < 48 || eve.which > 57) 
+            || (eve.which == 46 && $(this).caret().start == 0)) {
             eve.preventDefault();
         }
-        // this part is when left part of number is deleted and leaves a . in the leftmost position. For example, 33.25, then 33 is deleted
+        // Next function: if left digits are deleted until decimal separator, 
+        // function adds a zero '0' at left position before the decimal separator.
         fltnum.keyup(function(eve) {
             if ($(this).val().indexOf('.') == 0) {
                 $(this).val($(this).val().substring(1));
@@ -120,10 +188,20 @@ function floatnb(fltnum) {
         });
     });
 }
-
-/*bloqueo de valores por fuera de rango predefinido. 
-    Ãšltimo atributo "int_float" si=0 solo permite enteros, de lo contrario permite decimales*/
-
+/*
+*
+*
+-------------------------------------------------------------------------
+* Name          :   num_ranges(vale, maxi, mini, int_float)
+* Description   :   Alert when data number is out of range.
+*                   It also blocks all keyboard except numeric
+*                   keys and decimal separator key.
+* Depend on     :   bootstrap.js (popover function), jquery.
+*                   onlynumber(o_nb), floatnb(fltnum)
+* Dependant     :   blood_test.js, cardiovascular.js, clinic_eval.js,
+*                   diagnostic.js, right_catheter.js
+*                   hmd_dateformat(dr_y, dr_m, dr_d, join_date)
+*/
 function num_ranges(vale, maxi, mini, int_float) {
     $(document).ready(function() {
         if (int_float == 0) {
@@ -164,7 +242,19 @@ function num_ranges(vale, maxi, mini, int_float) {
     })
 }
 
-/*Function only right date values*/
+/*
+*
+*
+-------------------------------------------------------------------------
+* Name          :   hmd_dateformat(dr_y, dr_m, dr_d, join_date)
+* Description   :   Limits days according to the month and bisester year,
+*                   displays month fields if year is no-empty, same with
+*                   day field with month.  Also limits month to 1-12 values. 
+*                   Keyboard is disabled except number keys.
+* Depend on     :   show_ifnoempty(one, two), num_ranges(vale, maxi, mini, int_float),
+*                   date_range(dr_y, dr_m, dr_d).
+* Dependant     :   None
+*/
 function hmd_dateformat(dr_y, dr_m, dr_d, join_date) {
   show_ifnoempty(dr_y, dr_m);
   show_ifnoempty(dr_m, dr_d);
@@ -182,26 +272,37 @@ function hmd_dateformat(dr_y, dr_m, dr_d, join_date) {
       num_ranges(dr_d, 29, 1, 0);
     } else if (dr_m.val() == "2") {
       num_ranges(dr_d, 28, 1, 0);
-    } else if (dr_m.val() == "1" || dr_m.val() == "3" || dr_m.val() == "5" || dr_m.val() == "7" || dr_m.val() == "8" || dr_m.val() == "10" || dr_m.val() == "12") {
+    } else if (dr_m.val() == "1" || dr_m.val() == "3" || dr_m.val() == "5" || dr_m.val() == "7" 
+        || dr_m.val() == "8" || dr_m.val() == "10" || dr_m.val() == "12") {
       num_ranges(dr_d, 31, 1, 0);
     } else {
       num_ranges(dr_d, 30, 1, 0);
     }
   }
 }
-
-
-
-/*lowercase to uppercase*/
+/*
+*
+*
+-------------------------------------------------------------------------
+* Name          :   up_cas(lwc)
+* Description   :   Changes all text inside field to uppercase while writing
+* Depend on     :   jquery
+* Dependant     :   patients.js
+*/
 function up_cas(lwc) {
     lwc.keyup(function() {
         lwc.val($(this).val().toUpperCase());
     });
 }
-
-
-/*Toggle asociado a botÃ³n*/
-
+/*
+*
+*
+-------------------------------------------------------------------------
+* Name          :   clickhideshow(butn, hd, sw)
+* Description   :   Hides 'hd' tag while displaying 'sw' tag
+* Depend on     :   jquery
+* Dependant     :   right_catheter.js
+*/
 function clickhideshow(butn, hd, sw) {
     butn.click(function() {
         hd.hide("fast");
@@ -209,7 +310,25 @@ function clickhideshow(butn, hd, sw) {
     })
 }
 
-/**/
+/* 
+*
+*
+-------------------------------------------------------------------------
+* Name          :   sprite_imgs(smicon,bicon,pos,base)
+* Description   :   Load multi-icon image, displays only desired
+*                   coordinates (x_axis - y_axis) and desired size
+*                   in order to change image without loading a new file.
+*                   The reason is for fast-display purpose.
+*                   Whith "mouse over" image changes, and "mouse out"
+*                   displays base image.
+*                   Other methods are delayed and sometimes do not work
+*                   properly.
+* Depend on     :   jquery
+* Dependant     :   cardiovascular.js, neumo.js
+*                   icon_exchanger(main_i,icon_1,icon_2,icon_3,icon_main,
+*                   pos_ic_1,pos_ic_2,pos_ic_3,pos_main,title1,title2,
+*                   title3,maintitle)
+*/
 function sprite_imgs(smicon,bicon,pos,base) {
     $(document).ready(function() {
         bicon.css('background-position', base);
@@ -222,6 +341,17 @@ function sprite_imgs(smicon,bicon,pos,base) {
     });
 }
 
+/*
+*
+*
+-------------------------------------------------------------------------
+* Name          :   change_title(smicon,title,maintext,text2)
+* Description   :   set icon title as gray and change text when mouse
+*                   is over another-subject icon.  On mouse out
+*                   title gets back to original black color
+* Depend on     :   jquery
+* Dependant     :   icon_exchanger(main_i,icon_1...)     
+*/
 function change_title(smicon,title,maintext,text2) {
     $(document).ready(function() {
         smicon.mouseover(function() {
@@ -235,6 +365,17 @@ function change_title(smicon,title,maintext,text2) {
     });
 }
 
+/*
+*
+*
+-------------------------------------------------------------------------
+* Name          :   icon_exchanger(...)
+* Description   :   Changes big icon and main title when hover on small
+*                   icon.
+* Depend on     :   sprite_imgs(smicon,bicon,pos,base)
+* Dependant     :   blood_test.js, cardiovascular.js, clinic_eval.js,
+*                   diagnostic.js, right_catheter.js
+*/
 function icon_exchanger(main_i,icon_1,icon_2,icon_3,icon_main,pos_ic_1,pos_ic_2,pos_ic_3,pos_main,title1,title2,title3,maintitle){
 sprite_imgs(icon_1,main_i,pos_ic_1, pos_main);
 sprite_imgs(icon_2,main_i,pos_ic_2, pos_main);
@@ -246,10 +387,17 @@ change_title(icon_2,$("#left_title"),maintitle,title2);
 change_title(icon_3,$("#left_title"),maintitle,title3);
 }
 
-
-
-/*FÃ³rmula del Ã¡rea de superficie corporal*/
-
+/*
+*
+*
+-------------------------------------------------------------------------
+* Name          :   body_surf_area(weight, height, result)
+* Description   :   Math formula of body surface area according to
+*                   Mosteller's formula
+* Depend on     :   jquery
+* Dependant     :   trigger_bsa(weight, height, result)
+*                   
+*/
 function body_surf_area(weight, height, result) {
     if (weight != "" && height != "") {
         var bsa = Math.sqrt(weight.val() * height.val() / 36);
@@ -258,7 +406,16 @@ function body_surf_area(weight, height, result) {
         result.html(messg_bsa);
     }
 }
-
+/*
+*
+*
+-------------------------------------------------------------------------
+* Name          :   trigger_bsa(weight, height, result)
+* Description   :   Executes body surface area calculation
+* Depend on     :   body_surf_area(weight, height, result)
+* Dependant     :   clinic_eval.js, right_catheter.js
+*                   
+*/
 function trigger_bsa(weight, height, result) {
     weight.keyup(function() {
         body_surf_area(weight, height, result)
@@ -267,9 +424,15 @@ function trigger_bsa(weight, height, result) {
         body_surf_area(weight, height, result)
     });
 }
-        
-/*fÃ³rmula matemÃ¡tica estÃ¡ndar para calcular la PAM*/
-
+/*
+*
+*
+-------------------------------------------------------------------------
+* Name          :   pamformula(sist, diast, pamtag)
+* Description   :   Mean Arterial Blood Pressure formula
+* Depend on     :   jquery
+* Dependant     :   p_a_m(sist, diast, pamtag) 
+*/
 function pamformula(sist, diast, pamtag) {
     if (diast.val() != "" && sist.val() != "") {
         var pam = Math.round((sist.val() - diast.val()) / 3 + diast.val() * 1);
@@ -280,6 +443,15 @@ function pamformula(sist, diast, pamtag) {
     }
 }
 
+/*
+*
+*
+-------------------------------------------------------------------------
+* Name          :   p_a_m(sist, diast, pamtag)
+* Description   :   Executes mean arterial blood pressure formula
+* Depend on     :   pamformula(sist, diast, pamtag)
+* Dependant     :   clinic_eval.js, right_catheter.js
+*/
 function p_a_m(sist, diast, pamtag) {
     $(document).ready(function() {
         sist.blur(function() {
@@ -291,8 +463,15 @@ function p_a_m(sist, diast, pamtag) {
     });
 }
 
-/*TPG formula*/
-
+/*
+*
+*
+-------------------------------------------------------------------------
+* Name          :   tgp_formula(pulmwedg, html_pam, pulmgrad)
+* Description   :   Transpulmonary gradient formula.
+* Depend on     :   jquery
+* Dependant     :   right_catheter.js
+*/
 function tgp_formula(pulmwedg, html_pam, pulmgrad) {
     pulmwedg.keyup(function() {
         var pam_pulm = html_pam.html();
@@ -303,14 +482,32 @@ function tgp_formula(pulmwedg, html_pam, pulmgrad) {
     });
 }
 
-/*FÃ³rmula del Ã­ndice cardÃ­aco*/
-
+/*
+*
+*
+-------------------------------------------------------------------------
+* Name          :   c_idx(wg, hg, co, tg)
+* Description   :   cardiac index formula
+* Depend on     :   jquery
+* Dependant     :   trigger_c_idx(wg, hg, co, tg)
+*/
 function c_idx(wg, hg, co, tg) {
     var bsa = Math.sqrt(wg.val() * hg.val() / 36);
     var cardiac_index = co.val() / bsa;
     cardiac_index = Math.round(cardiac_index * 100) / 100;
     tg.val(cardiac_index);
     }
+/*
+*
+*
+-------------------------------------------------------------------------
+* Name          :   trigger_c_idx(wg, hg, co, tg)
+* Description   :   Executes cardiac index formula
+*                   
+* Depend on     :   c_idx(wg, hg, co, tg)
+* Dependant     :   right_catheter.js,
+*                   
+*/
 function trigger_c_idx(wg, hg, co, tg) {
     wg.keyup(function() {
         c_idx(wg, hg, co, tg);
@@ -322,14 +519,21 @@ function trigger_c_idx(wg, hg, co, tg) {
         c_idx(wg, hg, co, tg);
     })
 }
-    
-/*Criterios de reactividad*/
-/*Resultado test vasorreactividad: debe cumplir tres criterios simultÃ¡neamente:
+/*
+*
+*
+-------------------------------------------------------------------------
+* Name          :   vasorreact_test(pulm_s, pulm_d, post_pulm_s, post_pulm_d, coutp, post_coutp)
+* Description   :   Applies vasoreactivity test criteria and displays if, 
+*                   according to criteria, test is reactive or not.
+* Depend on     :   jquery
+* Dependant     :   trigger_v_react_test(syst,diast,p_syst,p_diast,pre_co,post_co)
+* Criterios de reactividad:
+* Resultado test vasorreactividad: debe cumplir tres criterios simultÃ¡neamente:
 - dism 10mmHg PAM pulm pre y post
 - PAM pulm por debajo de 40
 - Gasto cardiaco igual o mayor.
 */
-
 function vasorreact_test(pulm_s, pulm_d, post_pulm_s, post_pulm_d, coutp, post_coutp) {
     var prepam = (2 * pulm_d.val() + 1 * pulm_s.val()) / 3;
     prepam = Math.round(prepam);
@@ -359,17 +563,31 @@ function vasorreact_test(pulm_s, pulm_d, post_pulm_s, post_pulm_d, coutp, post_c
         $("#reactivity").html("no reactivo");
     }
 }
-
-/*vasoreactivity test trigger*/
+/*
+*
+*
+-------------------------------------------------------------------------
+* Name          :   trigger_v_react_test(syst,diast,p_syst,p_diast,pre_co,post_co)
+* Description   :   Triggers vasoreactivity test criteria
+* Depend on     :   vasorreact_test(pulm_s, pulm_d, post_pulm_s, post_pulm_d, coutp, post_coutp)
+* Dependant     :   right_catheter.js
+*                   
+*/
 function trigger_v_react_test(syst,diast,p_syst,p_diast,pre_co,post_co){
     p_syst.keyup(function() {vasorreact_test(syst, diast, p_syst, p_diast, pre_co, post_co);});
     p_diast.keyup(function() {vasorreact_test(syst, diast, p_syst, p_diast, pre_co, post_co);});
     post_co.keyup(function() {vasorreact_test(syst, diast, p_syst, p_diast, pre_co, post_co);});
 }
-
-
-/*Relleno automÃ¡tico de campo correspondiente a valor exactamente igual de otro campo*/
-
+/*
+*
+*
+-------------------------------------------------------------------------
+* Name          :   samevalue(origin, targeted)
+* Description   :   Rewrites same value entered in a specific text field
+*                   with keyup trigger
+* Depend on     :   jquery
+* Dependant     :   right_catheter.js
+*/
 function samevalue(origin, targeted) {
     origin.keyup(function() {
         targeted.val(origin.val());
