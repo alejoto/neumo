@@ -73,20 +73,19 @@
   // ------------------------------------------------------------------
   // ------------------------------------------------------------------
   
-  function find_patients($year, $pat){
+  function find_patients($year, $pat, $con){
     $inc = 0;
     $sql    = "SELECT * FROM hap_follow_up";
     $result = mysqli_query($con,$sql);
     while( $row = mysqli_fetch_array($result) ){
-
-      $act_p = $row['eval_id'];
+      $act_p = $row['eval_id'];      
 
       if( !isset($pat[(string)$act_p]) ){
         $sql2 = "SELECT min(eval_date) FROM hap_follow_up WHERE eval_id='".$act_p."'";
         $result2 = mysqli_query($con,$sql2);
         $row1 = mysqli_fetch_array($result2);
         $min_date = $row1[0];
-
+        
         $min_date_arr = explode("-", $min_date );
         $act_date_arr = explode("-", $row['eval_date'] );
         $miliseconds_min = mktime(0,0,0,intval($min_date_arr[1]),intval($min_date_arr[2]),intval($min_date_arr[0]));
@@ -101,7 +100,7 @@
     return $pat;
   }
   
-  function find_month_since_first_eval($p, $eval_date){
+  function find_month_since_first_eval($p, $eval_date, $con){
     $sql = "SELECT min(eval_date) FROM hap_follow_up WHERE eval_id='".$p."'";
     $result = mysqli_query($con,$sql);
     $row = mysqli_fetch_array($result);
@@ -128,10 +127,12 @@
   if($info == "funcional_tiempo"){
     // crea arreglo pacientes
     $pat = array();
-    $pat = find_patients($y_opt,$pat);
-     
+    $pat = find_patients($y_opt,$pat,$con);
+    
     // crea arreglo clases functionales asociadas a pacientes
-    $ap = array_fill(0, count($pat), array());
+    if(count($pat)>0)
+        $ap = array_fill(0, count($pat), array());
+    
     for( $i=0; $i<count($pat); $i++ ) $ap[$i] = array_fill(0, 36, ".");
     
     // llena el arreglo clases funcionales - ap
@@ -141,7 +142,7 @@
       $act_p = $row['eval_id'];
       $eval_date = $row['eval_date'];
       if( isset($pat[(string)$act_p]) ){    
-        $month = find_month_since_first_eval($act_p, $eval_date);
+        $month = find_month_since_first_eval($act_p, $eval_date, $con);
         $ap[$pat[(string)$act_p]][$month] = $row['nyha_funct_class'];
       }
     }
