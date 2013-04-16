@@ -23,7 +23,18 @@ $('#usr').blur(function(){
   }
 })
 
-/*Next function displays multiple error messages when loggin in*/
+/*
+*
+*
+* ------------------------------------------------------------------------------
+* Function name:          hap_login_method ()
+* Description:            Excecutes filters before ajax user validation
+*                         If validation is right, executes ajax user
+*                         validation.
+* Depend on:              jquery
+* Dependant:              modules/login/ajax_login.php (iniciates 
+*                         $_SESSION['username'] php variable)
+*/
 function hap_login_method (){
   $("#msg").text("");
 
@@ -60,7 +71,20 @@ function hap_login_method (){
   }
 };
 
-/*Triggering login function when clicking button (first line) or pressing  enter key (second line)*/
+
+/*
+*
+*
+* ------------------------------------------------------------------------------
+* Function name:          No name
+* Description:            Trigghers "hap_login_method()" with enter key or 
+*                         #login button (modules/login/login.php)
+*                         If validation is right, executes ajax user
+*                         validation.
+* Depend on:              hap_login_method(), #login button on 
+*                         modules/login/login.php
+* Dependant:              
+*/
 $("#login").click(function(){hap_login_method();});
 $("#pwd").keyup(function(event){if(event.keyCode == 13){hap_login_method();} });
 

@@ -59,18 +59,24 @@
       <!-- ************************ -->
     </form>
 
-    <div class="span6 offset1" style="border-left: ridge; height: 560px; margin-top: 40px; " >
-
+    <div class="span6 offset1" style="border-left: ridge; height: 560px; " >
       <!-- ************************ -->
       <!-- First time patient       -->
       <div id="enterpatient">
         <div class="page-header" style="border: none; padding-left: 70px;">
           <!-- <h2>Registrar paciente</h2> -->
         </div>
-        <h4 class="alert  fade in" style="margin-left: 70px; margin-top: -15px;">
+        <div class="alert alert-info fade in" style="margin-left: 30px; margin-top: -15px;">
           <button type="button" class="close" data-dismiss="alert">&times;</button>
-          Documento no existe.  Ingrese PACIENTE NUEVO o verifique documento ingresado.
-        </h4>
+          Ingrese PACIENTE NUEVO o verifique documento.
+          <h5>
+            Es obligatorio ingresar los resultados del CATETERISMO 
+            CARDIACO DERECHO para poder ingresar cualquier otro dato cl&iacute;nico
+          </h5>
+        </div>
+        <div class="" style="margin-left:0px">
+          
+        </div>
         <form action="ajax_save_patient.php" method="post" style="padding-left: 70px; text-align: center; margin-top: 40px;">
           <input type="text" id="docidnum" name="docidnum">        
           <input type="text" id="name" name="name" placeholder="Nombre completo"><br>
@@ -97,9 +103,18 @@
           <input type="text" id="citybth" name="citybth" placeholder="Ciudad nacimiento"><br>  
           <input type="text" id="statebth" name="statebth" placeholder="Departamento"><br>
           <input type="text" id="countrybth" name="countrybth" placeholder="Pa&iacute;s de origen"><br><br>
+          <div class="btn-group" id="group_save_patient" >
+            <button type="submit" class="btn btn-info " id="save_patient" style="margin-left: 0px;">
+              Guardar datos de paciente
+              <i class="icon-circle-arrow-down"></i>
+            </button>
+            <!-- <button href="#" role="button" class="btn btn-info" style="">
+             Datos adicionales 
+             <i class="icon-plus-sign"></i>
+           </button> -->
 
-          <button type="submit" class="btn btn-primary" id="save_patient" style="margin-left: 0px;">Guardar</button>
-          <a href="#" role="button" class="btn btn-success" style=""> Datos adicionales </a>
+          </div>
+            
         </form>
       </div>
       <!-- End of First time patient-->
@@ -113,6 +128,8 @@
       <!-- ************************ -->
 
     </div>
+    <script src="../../assets/js/medics.js"></script>
     <script src="../../assets/js/patients.js"></script>
+
   </div>
 </div>

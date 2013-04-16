@@ -34,7 +34,7 @@
             * during one unique register
             */
             ?>
-            <a class="btn btn-inverse" id="change_patient_btn" href="myaccount.php?page=patient">
+            <a class="btn btn-inverse" id="change_patient_btn" href="myaccount.php?page=patients">
                     Cambiar paciente 
                     <i class="icon-user icon-white"></i>
                   </a>
@@ -61,7 +61,7 @@
             * during one unique register
             */
             ?>
-            <a class="btn btn-inverse" id="choose_pt_btn" href="myaccount.php?page=patient">
+            <a class="btn btn-inverse" id="choose_pt_btn" href="myaccount.php?page=patients">
                     Seleccionar paciente 
                     <i class="icon-user icon-white"></i>
                   </a>

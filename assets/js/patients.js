@@ -191,3 +191,15 @@ num_ranges($("#year"),2020,1913);
 num_ranges($("#month"),12,1);
 num_ranges($("#day"),31,1);
 hide_if_empty($("#docid"), $("#idnumberctr"));
+
+hide_show_savebutton([
+   $('#name')
+  ,$('#surname')
+  ,$('#gender')
+  ,$('#year')
+  ,$('#month')
+  ,$('#day')
+  ,$('#citybth')
+  ,$('#statebth')
+  ,$('#countrybth')
+  ],$('#group_save_patient'));

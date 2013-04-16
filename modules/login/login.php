@@ -30,6 +30,10 @@
     </div>
     <div class="modal-footer">
       <a class="btn btn-primary" id="login" >Entrar</a>
+      <!-- 
+      button executes function in assets/js/login.js
+      -->
+
       <a class="btn btn-info" data-dismiss="modal" aria-hidden="true" >Cerrar</a>
     </div>
   </div>

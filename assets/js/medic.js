@@ -96,6 +96,7 @@ function hide_if_empty(n_empty, hid_shw) {
 *                   are completed. DOES NOT WORK WITH RADIO BUTTONS AND CHECKBOXES
 * Depend on     :   jquery
 * Dependant     :   blood_test.js, cardiovascular.js, clinic_eval.js, diagnostic.js
+*               :   patients.js
 */
 function hide_show_savebutton(fields,button) {
     $(document).ready(function() {
