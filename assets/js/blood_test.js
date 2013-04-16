@@ -1,4 +1,16 @@
-/*hide/show save button: first parameter is an array, inside [].  Second parameter is the button id*/
+
+/**
+-------------------------------------------------------------------------------------
+*
+*
+* name      	: 	No name (execution of previous js function)
+* Description  : 	Execution of hide_show_savebutton(),
+*           		which hides save button until all required
+*           		fields are displayed
+* Depend on   :   	medic.js
+* Dependant   :   	this file
+*/
+
 hide_show_savebutton([$("#d_hb"), $("#hb_value")], $("#hb_save"));
 hide_show_savebutton([$("#d_thyr"), $("#tsh")], $("#thyroid_save"));
 hide_show_savebutton([$("#d_dimer"), $("#d_dimer_value")], $("#d_dimer_save"));
@@ -17,13 +29,36 @@ hide_show_savebutton([$("#d_anti_ph_lip"), $("#acl_g"), $("#acl_m"), $("#a_coag_
 hide_show_savebutton([$("#d_anca_ab"), $("#c_anca"), $("#p_anca")], $("#anca_ab_save"));
 hide_show_savebutton([$("#d_citrul_ab"), $("#a_citrul")], $("#citrul_ab_save"));
 
-
+/**
+-------------------------------------------------------------------------------------
+*
+*
+* name      	: 	No name (execution of previous js function)
+* Description  : 	Execution of icon_exchanger(...),
+*           		which changes big icon according to 
+*           		small icons hovering
+* Depend on   :   	medic.js
+* Dependant   :   	this file
+*/
 /*icon exchanger syntax
     main_i[class], icon_1,   icon_2,   icon_3,    icon_main,
 (icon positioning) pos_ic_1, pos_ic_2, pos_ic_3,  pos_main,
 (icon titles)      title1,   title2,   title3,    maintitle
 */
-icon_exchanger($(".main_icon"), $("#basic_eval"), $("#performance"), $("#clin_images"), $("#blood_test"), '0  75px', '-184px 75px', '-276px 75px', '-92px 0px', 'Evaluaci&oacute;n <br>cl&iacute;nica', 'Desempe&ntilde;o cardiovascular', 'Im&aacute;genes diagn&oacute;sticas', 'Pruebas<br>en sangre');
+icon_exchanger($(".main_icon")
+	, $("#basic_eval")
+	, $("#performance")
+	, $("#clin_images")
+	, $("#blood_test")
+	, '0  75px'
+	, '-184px 75px'
+	, '-276px 75px'
+	, '-92px 0px'
+	, 'Evaluaci&oacute;n <br>cl&iacute;nica'
+	, 'Desempe&ntilde;o cardiovascular'
+	, 'Im&aacute;genes diagn&oacute;sticas'
+	, 'Pruebas<br>en sangre');
+
 
 $(document).ready(function () {
   $("#art_gasses").hide();
@@ -33,6 +68,16 @@ $(document).ready(function () {
   $(".alert").hide();
 });
 
+/**
+-------------------------------------------------------------------------------------
+*
+*
+* name      	: 	showmain2(...)
+* Description  : 	When clicking button, displays only one form
+*           		while hidding the other ones
+* Depend on   :   	jquery.js
+* Dependant   :   	this file
+*/
 function showmain2(btnsw, hid0, hid1, hid2, hid3, hid4, shwmain) {
   btnsw.click(function () {
     hid0.hide("fast");
@@ -51,6 +96,17 @@ showmain2($("#sel_liver"), $("#hb_and_others"), $("#art_gasses"), $("#renal"), $
 showmain2($("#sel_reuma"), $("#hb_and_others"), $("#art_gasses"), $("#renal"), $("#liver"), $("#othertests"), $("#reuma"));
 
 var d = new Date();
+
+/**
+-------------------------------------------------------------------------------------
+*
+*
+* name      	: 	No name (execution of previous js function)
+* Description  : 	Execution of num_ranges(...),
+*           		which limits value between specified range 
+* Depend on   :   	medic.js
+* Dependant   :   	this file
+*/
 /*numrange dates*/
 num_ranges($("#y_hb"), d.getFullYear(), 2010, 0);
 num_ranges($("#m_hb"), 12, 1, 0);
@@ -134,7 +190,17 @@ num_ranges($("#hep_inr"), 999999, 0, 1);
 
 
 
-
+/**
+-------------------------------------------------------------------------------------
+*
+*
+* name      	: 	No name (execution of previous js function)
+* Description  : 	Execution of show_ifnoempty(...),
+*           		which displays second value if first is filled with data.
+* 				and while first field keeps empty second will be hidden
+* Depend on   :   	medic.js
+* Dependant   :   	this file
+*/
 show_ifnoempty($("#y_hb"), $("#m_hb"));
 show_ifnoempty($("#m_hb"), $("#d_hb"));
 show_ifnoempty($("#y_thyr"), $("#m_thyr"));
