@@ -196,7 +196,7 @@ num_ranges($("#hep_inr"), 999999, 0, 1);
 *
 * name      	: 	No name (execution of previous js function)
 * Description  : 	Execution of show_ifnoempty(...),
-*           		which displays second value if first is filled with data.
+*           		which displays second field if first is filled with data.
 * 				and while first field keeps empty second will be hidden
 * Depend on   :   	medic.js
 * Dependant   :   	this file
