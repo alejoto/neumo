@@ -50,12 +50,10 @@ icon_exchanger($(".main_icon"),$("#basic_eval"),$("#blood_test"),$("#performance
     clickhideshow($("#showbas"), $("#reactiv"), $("#basal"));
 
 
-    show_ifnoempty($("#year"), $("#month"));
-    show_ifnoempty($("#month"), $("#day"));
+
+hmd_dateformat($("#year"),$("#month"),$("#day"));
 
     num_ranges($("#year"), 2020, 2010, 0);
-    num_ranges($("#month"), 12, 1, 0);
-    num_ranges($("#day"), 31, 1, 0);
     num_ranges($("#wgt"), 250, 0, 0);
     num_ranges($("#hgt"), 3, 0, 1);
     num_ranges($("#res_vasc_pulm"), 5000, 0, 0);
@@ -74,9 +72,7 @@ icon_exchanger($(".main_icon"),$("#basic_eval"),$("#blood_test"),$("#performance
     num_ranges($("#pulm_artery"), 100, 0, 0);
     num_ranges($("#heart_rate"), 550, 0, 0);
 
-    num_ranges($("#year2"), 2020, 2010, 0);
-    num_ranges($("#month2"), 12, 1, 0);
-    num_ranges($("#day2"), 31, 1, 0);
+    
     num_ranges($("#post_res_vasc_pulm"), 5000, 0, 0);
     num_ranges($("#post_res_vasc_syst"), 5000, 0, 0);
     num_ranges($("#post_pap_sys"), 300, 0, 0);
@@ -99,7 +95,7 @@ icon_exchanger($(".main_icon"),$("#basic_eval"),$("#blood_test"),$("#performance
     samevalue($("#day"), $("#day2"));
 
     tiprequired($("#day"));
-    tiprequired($("#day2"));
+    //tiprequired($("#day2"));
 
     hide_if_empty($("#test_drug"), $("#drugdependant"));
 

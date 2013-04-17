@@ -110,3 +110,5 @@ html,body {
 a{
   color: black;
 }
+
+.hide_me {display:none;}

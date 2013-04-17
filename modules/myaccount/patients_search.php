@@ -98,8 +98,12 @@
               <input type="text" id="year" name="year" placeholder="A&ntilde;o" class="span3" >
               <input type="text" id="month" name="month" placeholder="Mes" class="span3">
               <input type="text" id="day" name="day" placeholder="D&iacute;a" class="span3">
+              <input type="text" id="wholedate" name="wholedate"  style="display:none">
+
+
             </div>
           </div>
+          
           <input type="text" id="citybth" name="citybth" placeholder="Ciudad nacimiento"><br>  
           <input type="text" id="statebth" name="statebth" placeholder="Departamento"><br>
           <input type="text" id="countrybth" name="countrybth" placeholder="Pa&iacute;s de origen"><br><br>

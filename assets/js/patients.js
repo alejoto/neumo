@@ -163,12 +163,6 @@ function num_ranges(vale, maxi, mini) {
     });
   })
 }
-    
-/*function up_cas(lwc) {
-  lwc.keyup(function() {
-    lwc.val($(this).val().toUpperCase());
-  });
-}*/
 
 tiprequired ($("#day"));
 tiprequired ($("#name"));
@@ -178,8 +172,8 @@ tiprequired ($("#citybth"));
 tiprequired ($("#statebth"));
 tiprequired ($("#countrybth"));
 
-show_ifnoempty($("#year"),$("#month"));
-show_ifnoempty($("#month"),$("#day"));
+hmd_dateformat($("#year"), $("#month"), $("#day"));
+
 
 up_cas($('#name'));
 up_cas($('#surname'));
@@ -188,8 +182,8 @@ up_cas($('#statebth'));
 up_cas($('#countrybth'));
 
 num_ranges($("#year"),2020,1913);
-num_ranges($("#month"),12,1);
-num_ranges($("#day"),31,1);
+
+
 hide_if_empty($("#docid"), $("#idnumberctr"));
 
 hide_show_savebutton([

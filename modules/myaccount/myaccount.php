@@ -4,29 +4,35 @@ session_start();
 include '../DB/connect.php';
 
 
-
+/*First redirect: if $page not set, redirecto to patients*/
 if (isset($_GET["page"])) {$page = $_GET["page"];}
 else {header('Location: myaccount.php?page=patients');}
 
-//Redirect if doctor data is empty
+
 $user_id=$_SESSION['username'];
 /*
 * $_SESSION['username'] starts:        login/ajax_login.php
 */
 $result = mysqli_query($con,"SELECT * FROM main_investigator WHERE user_id='$user_id'"  );  
 $row    = mysqli_fetch_array($result);
-if ($row['user_id']==""&&$_GET["page"]!='user_register') { header('Location: myaccount.php?page=user_register'); }
+
+/*Second redirect: if user is not set, send to user register page*/
+if ($row['user_id']==""&&$_GET["page"]!='user_register') 
+	{ header('Location: myaccount.php?page=user_register'); }
 
 
-//redirect to right catheter form if this is empty
+
+/*Third redirect: if right catheter data is empty send to 'right catheter' form*/
  if (isset($_SESSION['evaluation'])&&isset($_SESSION['hap_patient_id'])&&$page!='right_catheter')
 /*
-* $_SESSION['evaluation'] starts:      myaccount/ajax_save_patient.php
-*                                      myaccount/start_eval_id.php 
-* $_SESSION['hap_patient_id'] starts:  myaccount/ajax_search_patient.php 
+* $_SESSION['evaluation'] starts: 		'myaccount/ajax_save_patient.php'
+*								'myaccount/start_eval_id.php' 
+* $_SESSION['hap_patient_id'] starts:  	'myaccount/ajax_search_patient.php' 
+*								and 'myaccount/ajax_save_patient.php'
 */ 
 {
   
+
   $docidnum=$_SESSION['hap_patient_id'];
   $digiter_id = $_SESSION['username'];
 

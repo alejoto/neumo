@@ -1,5 +1,8 @@
 <?php 
 include '../DB/connect.php';
+if (!isset($_SESSION['hap_patient_id'])) {
+	header('Location: myaccount.php?page=patients');
+}
 $docid=$_SESSION['hap_patient_id'];
 $result = mysqli_query($con,"SELECT * FROM main_patient WHERE patient_id='$docid' "  );
 $row = mysqli_fetch_array($result);

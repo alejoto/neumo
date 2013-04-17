@@ -168,6 +168,7 @@ icon_exchanger($(".main_icon")
 * Depend on   :     medic.js
 * Dependant   :     this file
 */
+/*
 show_ifnoempty($("#y_ecg"), $("#m_ecg"));
 show_ifnoempty($("#m_ecg"), $("#d_ecg"));
 show_ifnoempty($("#y_spir"), $("#m_spir"));
@@ -176,6 +177,14 @@ show_ifnoempty($("#y_sixmw"), $("#m_sixmw"));
 show_ifnoempty($("#m_sixmw"), $("#d_sixmw"));
 show_ifnoempty($("#y_cpst"), $("#m_cpst"));
 show_ifnoempty($("#m_cpst"), $("#d_cpst"));
+*/
+
+
+hmd_dateformat($("#y_ecg"),$("#m_ecg"),$("#d_ecg"));
+hmd_dateformat($("#y_spir"),$("#m_spir"),$("#d_spir"));
+hmd_dateformat($("#y_sixmw"),$("#m_sixmw"),$("#d_sixmw"));
+hmd_dateformat($("#y_cpst"),$("#m_cpst"),$("#d_cpst"));
+
 
 /**
 -------------------------------------------------------------------------------------
@@ -187,19 +196,14 @@ show_ifnoempty($("#m_cpst"), $("#d_cpst"));
 * Depend on   :     medic.js
 * Dependant   :     this file
 */
+
+
 var d = new Date();
 num_ranges($("#y_ecg"), d.getFullYear(), 2010, 0);
-num_ranges($("#m_ecg"), 12, 1, 0);
-num_ranges($("#d_ecg"), 31, 1, 0);
 num_ranges($("#y_spir"), d.getFullYear(), 2010, 0);
-num_ranges($("#m_spir"), 12, 1, 0);
-num_ranges($("#d_spir"), 31, 1, 0);
-num_ranges($("#y_sixmw"), d.getFullYear(), 2010, 0)
-num_ranges($("#m_sixmw"), 12, 1, 0);
-num_ranges($("#d_sixmw"), 31, 1, 0);
+num_ranges($("#y_sixmw"), d.getFullYear(), 2010, 0);
 num_ranges($("#y_cpst"), d.getFullYear(), 2010, 0);
-num_ranges($("#m_cpst"), 12, 1, 0);
-num_ranges($("#d_cpst"), 31, 1, 0);
+
 num_ranges($("#cvf_lt"), 10, 0, 1);
 num_ranges($("#vef1_lt"), 10, 0, 1);
 num_ranges($("#post_cvf_lt"), 10, 0, 1);

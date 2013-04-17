@@ -14,7 +14,7 @@
   <div class="row">
     <div class="span1">Fecha</div>
     <div class="span3">
-      <input type="text" id="y_hb" class="span1 hemo date1" name="hb_date" placeholder="d&iacute;a" maxlength="4" maxlength="4"/>
+      <input type="text" id="y_hb" class="span1 hemo date1" name="hb_date" placeholder="a&ntilde;o" maxlength="4" maxlength="4"/>
       <input type="text" id="m_hb" class="span1 hemo" placeholder="mes" maxlength="2"  />
       <input type="text" id="d_hb" class="span1 hemo" placeholder="d&iacute;a" maxlength="2" />
     </div>
@@ -40,7 +40,7 @@
   <div class="row">
     <div class="span1">Fecha</div>
     <div class="span3">
-      <input type="text" id="y_thyr" class="span1 thyro date1" name="thyro_date" placeholder="d&iacute;a" maxlength="4"/>
+      <input type="text" id="y_thyr" class="span1 thyro date1" name="thyro_date" placeholder="a&ntilde;o" maxlength="4"/>
       <input type="text" id="m_thyr" class="span1 thyro" placeholder="mes" maxlength="2"/>
       <input type="text" id="d_thyr" class="span1 thyro" placeholder="d&iacute;a" maxlength="2"/>
     </div>
@@ -80,7 +80,7 @@
   <div class="row">
     <div class="span1">Fecha</div>
     <div class="span3">
-      <input type="text" id="y_dimer" class="span1 dim date1" name="dim_date" placeholder="d&iacute;a" maxlength="4"/>
+      <input type="text" id="y_dimer" class="span1 dim date1" name="dim_date" placeholder="a&ntilde;o" maxlength="4"/>
       <input type="text" id="m_dimer" class="span1 dim" placeholder="mes" maxlength="2"/>
       <input type="text" id="d_dimer" class="span1 dim" placeholder="d&iacute;a" maxlength="2"/>
     </div>
@@ -107,7 +107,7 @@
   <div class="row">
     <div class="span1">Fecha</div>
     <div class="span3">
-      <input type="text" id="y_trop" class="span1 tropo date1" name="tropo_date" placeholder="d&iacute;a" maxlength="4"
+      <input type="text" id="y_trop" class="span1 tropo date1" name="tropo_date" placeholder="a&ntilde;o" maxlength="4"
       />
       <input type="text" id="m_trop" class="span1 tropo" placeholder="mes" maxlength="2" />
       <input type="text" id="d_trop" class="span1 tropo" placeholder="d&iacute;a" maxlength="2" />
@@ -136,7 +136,7 @@
   <div class="row">
     <div class="span1">Fecha</div>
     <div class="span3">
-      <input type="text" id="y_bpn" class="span1 pept date1" name="pept_date" placeholder="d&iacute;a" maxlength="4" />
+      <input type="text" id="y_bpn" class="span1 pept date1" name="pept_date" placeholder="a&ntilde;o" maxlength="4" />
       <input type="text" id="m_bpn" class="span1 pept" placeholder="mes" maxlength="2" />
       <input type="text" id="d_bpn" class="span1 pept" placeholder="d&iacute;a" maxlength="2" />
     </div>
@@ -172,7 +172,7 @@
   <div class="row">
     <div class="span1">Fecha</div>
     <div class="span3">
-      <input type="text" id="y_vih" class="span1 vih date1" name="hiv_date" placeholder="d&iacute;a" maxlength="4" />
+      <input type="text" id="y_vih" class="span1 vih date1" name="hiv_date" placeholder="a&ntilde;o" maxlength="4" />
       <input type="text" id="m_vih" class="span1 vih" placeholder="mes" maxlength="2" />
       <input type="text" id="d_vih" class="span1 vih" placeholder="d&iacute;a" maxlength="2" />
     </div>

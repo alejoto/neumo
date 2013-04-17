@@ -119,28 +119,25 @@ icon_exchanger($(".main_icon"),$("#basic_eval"),$("#blood_test"),$("#performance
 * Depend on   :     medic.js
 * Dependant   :     this file
 */
+
+hmd_dateformat($("#y_xray"),$("#m_xray"),$("#d_xray"));
+hmd_dateformat($("#y_tc"),$("#m_tc"),$("#d_tc"));
+hmd_dateformat($("#y_ecoc"),$("#m_ecoc"),$("#d_ecoc"));
+hmd_dateformat($("#y_ecoleg"),$("#m_ecoleg"),$("#d_ecoleg"));
+hmd_dateformat($("#y_rmn"),$("#m_rmn"),$("#d_rmn"));
+hmd_dateformat($("#y_artg"),$("#m_artg"),$("#d_artg"));
+hmd_dateformat($("#y_gamma"),$("#m_gamma"),$("#d_gamma"));
+
+
 var d = new Date();
 num_ranges($("#y_xray"), d.getFullYear(), 2010,0);
-num_ranges($("#m_xray"), 12, 1,0);
-num_ranges($("#d_xray"), 31, 1,0);
 num_ranges($("#y_tc"), d.getFullYear(), 2010,0);
-num_ranges($("#m_tc"), 12, 1,0);
-num_ranges($("#d_tc"), 31, 1,0);
 num_ranges($("#y_ecoc"), d.getFullYear(), 2010,0);
-num_ranges($("#m_ecoc"), 12, 1,0);
-num_ranges($("#d_ecoc"), 31, 1,0);
 num_ranges($("#y_ecoleg"), d.getFullYear(), 2010,0);
-num_ranges($("#m_ecoleg"), 12, 1,0);
-num_ranges($("#d_ecoleg"), 31, 1,0);
 num_ranges($("#y_rmn"), d.getFullYear(), 2010,0);
-num_ranges($("#m_rmn"), 12, 1,0);
-num_ranges($("#d_rmn"), 31, 1,0);
 num_ranges($("#y_artg"), d.getFullYear(), 2010,0);
-num_ranges($("#m_artg"), 12, 1,0);
-num_ranges($("#d_artg"), 31, 1,0);
 num_ranges($("#y_gamma"), d.getFullYear(), 2010,0);
-num_ranges($("#m_gamma"), 12, 1,0);
-num_ranges($("#d_gamma"), 31, 1,0);
+
 num_ranges($("#cardiothrx_index"), 1, 0,1);
 num_ranges($("#a_tc_main_pulm_art_diamt"), 120, 0,0);
 num_ranges($("#a_tc_rt_pulm_art_diamt"), 120, 0,0);
@@ -164,20 +161,7 @@ num_ranges($("#tapse"), 9, 0,1);
 * Depend on   :     medic.js
 * Dependant   :     this file
 */
-show_ifnoempty($("#y_xray"),$("#m_xray"));
-show_ifnoempty($("#m_xray"),$("#d_xray"));
-show_ifnoempty($("#y_tc"),$("#m_tc"));
-show_ifnoempty($("#m_tc"),$("#d_tc"));
-show_ifnoempty($("#y_ecoc"),$("#m_ecoc"));
-show_ifnoempty($("#m_ecoc"),$("#d_ecoc"));
-show_ifnoempty($("#y_ecoleg"),$("#m_ecoleg"));
-show_ifnoempty($("#m_ecoleg"),$("#d_ecoleg"));
-show_ifnoempty($("#y_rmn"),$("#m_rmn"));
-show_ifnoempty($("#m_rmn"),$("#d_rmn"));
-show_ifnoempty($("#y_artg"),$("#m_artg"));
-show_ifnoempty($("#m_artg"),$("#d_artg"));
-show_ifnoempty($("#y_gamma"),$("#m_gamma"));
-show_ifnoempty($("#m_gamma"),$("#d_gamma"));
+
 
 /*Execution of "other_cardiac" function, created at the beginning of this file*/
 other_cardiac($("#a_tc_congenit"),$("#other_defects1"));

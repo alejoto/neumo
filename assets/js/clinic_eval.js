@@ -517,21 +517,6 @@ icon_exchanger($(".main_icon"),$("#blood_test"),$("#performance"),$("#clin_image
 * Dependant   :   	this file
 */
 show_ifnoempty($("#year"),$("#month"));
-show_ifnoempty($("#month"),$("#day"));
-show_ifnoempty($("#year_ev"),$("#month_ev"));
-show_ifnoempty($("#month_ev"),$("#day_ev"));
-show_ifnoempty($("#year_ini_d"),$("#month_ini_d"));
-show_ifnoempty($("#month_ini_d"),$("#day_ini_d"));
-show_ifnoempty($("#year_end_d"),$("#month_end_d"));
-show_ifnoempty($("#month_end_d"),$("#day_end_d"));
-show_ifnoempty($("#year_transp"),$("#month_transp"));
-show_ifnoempty($("#month_transp"),$("#day_transp"));
-show_ifnoempty($("#year_tendt"),$("#month_tendt"));
-show_ifnoempty($("#month_tendt"),$("#day_tendt"));
-show_ifnoempty($("#year_atr"),$("#month_atr"));
-show_ifnoempty($("#month_atr"),$("#day_atr"));
-show_ifnoempty($("#year_death"),$("#month_death"));
-show_ifnoempty($("#month_death"),$("#day_death"));
 
 /**
 -------------------------------------------------------------------------------------
@@ -545,28 +530,28 @@ show_ifnoempty($("#month_death"),$("#day_death"));
 */
 var d = new Date(); /* Used to calculate the actual year */
 num_ranges($("#year"), d.getFullYear(), 1990,0);
-num_ranges($("#month"), 31, 1,0);
+num_ranges($("#month"), 12, 1,0);
+
+/*Anammnesis (also applies to "examen fisico") date*/
+hmd_dateformat($("#year_ev"),$("#month_ev"),$("#day_ev"));
+
+/*treatment and trasplantation dates*/
+hmd_dateformat($("#year_ini_d"),$("#month_ini_d"),$("#day_ini_d"));
+hmd_dateformat($("#year_end_d"),$("#month_end_d"),$("#day_end_d"));
+hmd_dateformat($("#year_transp"),$("#month_transp"),$("#day_transp"));
+hmd_dateformat($("#year_tendt"),$("#month_tendt"),$("#day_tendt"));
+hmd_dateformat($("#year_atr"),$("#month_atr"),$("#day_atr"));
+hmd_dateformat($("#year_death"),$("#month_death"),$("#day_death"));
+
+/*Ranges for years*/
 num_ranges($("#year_ev"), d.getFullYear(), 1990,0);
-num_ranges($("#month_ev"), 12, 1,0);
-num_ranges($("#day_ev"), 31, 1,0);
 num_ranges($("#year_ini_d"), d.getFullYear()+5, 1990,0);
-num_ranges($("#month_ini_d"), 12, 1,0);
-num_ranges($("#day_ini_d"), 31, 1,0);
 num_ranges($("#year_end_d"), d.getFullYear(), 1990,0);
-num_ranges($("#month_end_d"), 12, 1,0);
-num_ranges($("#day_end_d"), 31, 1,0);
 num_ranges($("#year_transp"), d.getFullYear(), 1990,0);
-num_ranges($("#month_transp"), 12, 1,0);
-num_ranges($("#day_transp"), 31, 1,0);
 num_ranges($("#year_tendt"), d.getFullYear(), 1990,0);
-num_ranges($("#month_tendt"), 12, 1,0);
-num_ranges($("#day_tendt"), 31, 1,0);
 num_ranges($("#year_atr"), d.getFullYear(), 1990,0);
-num_ranges($("#month_atr"), 12, 1,0);
-num_ranges($("#day_atr"), 31, 1,0);
 num_ranges($("#year_death"), d.getFullYear(), 1990,0);
-num_ranges($("#month_death"), 12, 1,0);
-num_ranges($("#day_death"), 31, 1,0);
+
 num_ranges($("#weight"), 200, 1,0);
 num_ranges($("#height"), 3, 0,1);
 num_ranges($("#pulse"), 300, 0,0);

@@ -95,7 +95,25 @@ showmain2($("#sel_renal"), $("#hb_and_others"), $("#art_gasses"), $("#liver"), $
 showmain2($("#sel_liver"), $("#hb_and_others"), $("#art_gasses"), $("#renal"), $("#reuma"), $("#othertests"), $("#liver"));
 showmain2($("#sel_reuma"), $("#hb_and_others"), $("#art_gasses"), $("#renal"), $("#liver"), $("#othertests"), $("#reuma"));
 
-var d = new Date();
+
+hmd_dateformat($("#y_hb"),$("#m_hb"),$("#d_hb"));
+hmd_dateformat($("#y_thyr"),$("#m_thyr"),$("#d_thyr"));
+hmd_dateformat($("#y_dimer"),$("#m_dimer"),$("#d_dimer"));
+hmd_dateformat($("#y_trop"),$("#m_trop"),$("#d_trop"));
+hmd_dateformat($("#y_bpn"),$("#m_bpn"),$("#d_bpn"));
+hmd_dateformat($("#y_vih"),$("#m_vih"),$("#d_vih"));
+hmd_dateformat($("#y_art_gas"),$("#m_art_gas"),$("#d_art_gas"));
+hmd_dateformat($("#y_renal"),$("#m_renal"),$("#d_renal"));
+hmd_dateformat($("#y_liver"),$("#m_liver"),$("#d_liver"));
+hmd_dateformat($("#y_bleed"),$("#m_bleed"),$("#d_bleed"));
+hmd_dateformat($("#y_f_reum"),$("#m_f_reum"),$("#d_f_reum"));
+hmd_dateformat($("#y_uns_ana"),$("#m_uns_ana"),$("#d_uns_ana"));
+hmd_dateformat($("#y_sp_ana"),$("#m_sp_ana"),$("#d_sp_ana"));
+hmd_dateformat($("#y_anti_ENAs"),$("#m_anti_ENAs"),$("#d_anti_ENAs"));
+hmd_dateformat($("#y_anca_ab"),$("#m_anca_ab"),$("#d_anca_ab"));
+hmd_dateformat($("#y_citrul_ab"),$("#m_citrul_ab"),$("#d_citrul_ab"));
+hmd_dateformat($("#y_anti_ph_lip"),$("#m_anti_ph_lip"),$("#d_anti_ph_lip"));
+
 
 /**
 -------------------------------------------------------------------------------------
@@ -107,58 +125,28 @@ var d = new Date();
 * Depend on   :   	medic.js
 * Dependant   :   	this file
 */
+
+
+
+var d = new Date();
 /*numrange dates*/
 num_ranges($("#y_hb"), d.getFullYear(), 2010, 0);
-num_ranges($("#m_hb"), 12, 1, 0);
-num_ranges($("#d_hb"), 31, 1, 0);
 num_ranges($("#y_thyr"), d.getFullYear(), 1990, 0);
-num_ranges($("#m_thyr"), 12, 1, 0);
-num_ranges($("#d_thyr"), 31, 1, 0);
 num_ranges($("#y_dimer"), d.getFullYear(), 2010, 0);
-num_ranges($("#m_dimer"), 12, 1, 0);
-num_ranges($("#d_dimer"), 31, 1, 0);
 num_ranges($("#y_trop"), d.getFullYear(), 2010, 0);
-num_ranges($("#m_trop"), 12, 1, 0);
-num_ranges($("#d_trop"), 31, 1, 0);
 num_ranges($("#y_bpn"), d.getFullYear(), 2010, 0);
-num_ranges($("#m_bpn"), 12, 1, 0);
-num_ranges($("#d_bpn"), 31, 1, 0);
 num_ranges($("#y_vih"), d.getFullYear(), 1990, 0);
-num_ranges($("#m_vih"), 12, 1, 0);
-num_ranges($("#d_vih"), 31, 1, 0);
 num_ranges($("#y_art_gas"), d.getFullYear(), 2010, 0);
-num_ranges($("#m_art_gas"), 12, 1, 0);
-num_ranges($("#d_art_gas"), 31, 1, 0);
 num_ranges($("#y_renal"), d.getFullYear(), 2010, 0);
-num_ranges($("#m_renal"), 12, 1, 0);
-num_ranges($("#d_renal"), 31, 1, 0);
 num_ranges($("#y_liver"), d.getFullYear(), 2010, 0);
-num_ranges($("#m_liver"), 12, 1, 0);
-num_ranges($("#d_liver"), 31, 1, 0);
 num_ranges($("#y_bleed"), d.getFullYear(), 2010, 0);
-num_ranges($("#m_bleed"), 12, 1, 0);
-num_ranges($("#d_bleed"), 31, 1, 0);
 num_ranges($("#y_f_reum"), d.getFullYear(), 1990, 0);
-num_ranges($("#m_f_reum"), 12, 1, 0);
-num_ranges($("#d_f_reum"), 31, 1, 0);
 num_ranges($("#y_uns_ana"), d.getFullYear(), 1990, 0);
-num_ranges($("#m_uns_ana"), 12, 1, 0);
-num_ranges($("#d_uns_ana"), 31, 1, 0);
 num_ranges($("#y_sp_ana"), d.getFullYear(), 1990, 0);
-num_ranges($("#m_sp_ana"), 12, 1, 0);
-num_ranges($("#d_sp_ana"), 31, 1, 0);
 num_ranges($("#y_anti_ENAs"), d.getFullYear(), 1990, 0);
-num_ranges($("#m_anti_ENAs"), 12, 1, 0);
-num_ranges($("#d_anti_ENAs"), 31, 1, 0);
 num_ranges($("#y_anca_ab"), d.getFullYear(), 1990, 0);
-num_ranges($("#m_anca_ab"), 12, 1, 0);
-num_ranges($("#d_anca_ab"), 31, 1, 0);
 num_ranges($("#y_citrul_ab"), d.getFullYear(), 1990, 0);
-num_ranges($("#m_citrul_ab"), 12, 1, 0);
-num_ranges($("#d_citrul_ab"), 31, 1, 0);
 num_ranges($("#y_anti_ph_lip"), d.getFullYear(), 1990, 0);
-num_ranges($("#m_anti_ph_lip"), 12, 1, 0);
-num_ranges($("#d_anti_ph_lip"), 31, 1, 0);
 
 
 
@@ -201,7 +189,7 @@ num_ranges($("#hep_inr"), 999999, 0, 1);
 * Depend on   :   	medic.js
 * Dependant   :   	this file
 */
-show_ifnoempty($("#y_hb"), $("#m_hb"));
+/*show_ifnoempty($("#y_hb"), $("#m_hb"));
 show_ifnoempty($("#m_hb"), $("#d_hb"));
 show_ifnoempty($("#y_thyr"), $("#m_thyr"));
 show_ifnoempty($("#m_thyr"), $("#d_thyr"));
@@ -234,4 +222,4 @@ show_ifnoempty($("#m_anti_ph_lip"), $("#d_anti_ph_lip"));
 show_ifnoempty($("#y_anca_ab"), $("#m_anca_ab"));
 show_ifnoempty($("#m_anca_ab"), $("#d_anca_ab"));
 show_ifnoempty($("#y_citrul_ab"), $("#m_citrul_ab"));
-show_ifnoempty($("#m_citrul_ab"), $("#d_citrul_ab"));
+show_ifnoempty($("#m_citrul_ab"), $("#d_citrul_ab"));*/

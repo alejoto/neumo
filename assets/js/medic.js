@@ -247,40 +247,60 @@ function num_ranges(vale, maxi, mini, int_float) {
 *
 *
 -------------------------------------------------------------------------
-* Name          :   hmd_dateformat(dr_y, dr_m, dr_d, join_date)
+* Name          :   hmd_dateformat(year,month,day)
 * Description   :   Limits days according to the month and bisester year,
 *                   displays month fields if year is no-empty, same with
 *                   day field with month.  Also limits month to 1-12 values. 
 *                   Keyboard is disabled except number keys.
-* Depend on     :   show_ifnoempty(one, two), num_ranges(vale, maxi, mini, int_float),
-*                   date_range(dr_y, dr_m, dr_d).
-* Dependant     :   None
+* Depend on     :   jquery, bootstrap.js (tooltip and popover),
+*                   .
+* Dependant     :   patients.js, clinic_eval.js, blood_test.js, cardiovascular.js,
+*                   right_catheter.js,
 */
-function hmd_dateformat(dr_y, dr_m, dr_d, join_date) {
-  show_ifnoempty(dr_y, dr_m);
-  show_ifnoempty(dr_m, dr_d);
-  num_ranges(dr_m, 12, 1, 0);
-  dr_y.keyup(function () {dr_d.val("")});
-  dr_m.keyup(function () {dr_d.val("")});
-  dr_d.keyup(function () {
-    date_range(dr_y, dr_m, dr_d);
-    join_date.val(dr_y.val() + '-' + dr_m.val() + '-' + dr_d.val());
-  });
+function hmd_dateformat(year,month,day) {
+    show_ifnoempty(year, month);
+    show_ifnoempty(month, day);
+    num_ranges(month, 12, 1, 0);
+    onlynumber(day);
 
-  function date_range(dr_y, dr_m, dr_d) {
-    var bisester = dr_y.val() % 4;
-    if (dr_m.val() == "2" && bisester == 0) {
-      num_ranges(dr_d, 29, 1, 0);
-    } else if (dr_m.val() == "2") {
-      num_ranges(dr_d, 28, 1, 0);
-    } else if (dr_m.val() == "1" || dr_m.val() == "3" || dr_m.val() == "5" || dr_m.val() == "7" 
-        || dr_m.val() == "8" || dr_m.val() == "10" || dr_m.val() == "12") {
-      num_ranges(dr_d, 31, 1, 0);
-    } else {
-      num_ranges(dr_d, 30, 1, 0);
+        function month_nm_days() {
+        var bisester = year.val() % 4;
+        /*pending to set inside function in order to activate with blur in addition to keyup*/
+        if (month.val() == "2" && bisester == 0&& day.val()>29)
+        {
+            day.popover('destroy');
+            day.popover({title:'valor maximo permitido 29',placement: 'top'});
+            day.popover('show');
+            day.focus();
+        }
+        else if (month.val() == "2" &&  bisester!= 0 && day.val()>28) {
+            day.popover('destroy');
+            day.popover({title:'valor maximo permitido 28',placement: 'top'});
+            day.popover('show');
+            day.focus();
+        }
+        else if ((month.val() == "1"||month.val() == "3"||month.val() == "5"
+            ||month.val() == "7"||month.val() == "8"||month.val() == "10"
+            ||month.val() == "12") &&  day.val()>31) {
+            day.popover('destroy');
+            day.popover({title:'valor maximo permitido 31',placement: 'top'});
+            day.popover('show');
+            day.focus();
+        }
+        else if ((month.val() == "4"||month.val() == "6"||month.val() == "9"
+            ||month.val() == "11") &&  day.val()>30) {
+            day.popover('destroy');
+            day.popover({title:'valor maximo permitido 30',placement: 'top'});
+            day.popover('show');
+            day.focus();
+        }
+        else {day.popover('destroy');}
     }
-  }
+    day.keyup(function(){month_nm_days() ;});
+    day.blur(function(){month_nm_days() ;});
+    month.blur(function(){month_nm_days() ;});
 }
+
 /*
 *
 *
