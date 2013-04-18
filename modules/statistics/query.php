@@ -20,6 +20,30 @@
     }
   }
   
+  // First diagnosis
+  if($info == "primer"){
+      // Search in all diagnosis register and take just the firstone (deteceted by date) for each user. 
+      // Result is filtered by rt_cat_date year greater than the selected value
+    $sql    = "SELECT min(rt_cat_date) as date, patient_id FROM hap_right_cathet 
+                inner join main_eval on main_eval.eval_id = hap_right_cathet.eval_id 
+                group by main_eval.patient_id
+                having date >= '$y_opt-01-01'";
+    $result = mysqli_query($con,$sql); 
+    
+    $temp = array(0,0,0,0,0,0,0,0,0,0,0,0);
+    while( $row = mysqli_fetch_array($result) ){
+      $tales = explode("-", $row['date']);
+      $year = $tales[0]; // rt_cat_date year
+      $month = $tales[1]; // rt_cat_date month
+      $yDif = (int)$year - (int)$y_opt;
+      $mDif = (int)$month-1;
+      // Dynamic calculation of rt_cat_date in each 3 months period during 3 years
+      $period = (4*$yDif) + floor($mDif/3);
+      $temp[ $period ]++;
+      
+    }
+  }
+  
   if($info == "genero"){
     $sql    = "SELECT * FROM main_patient";
     $result = mysqli_query($con,$sql);
@@ -62,7 +86,7 @@
     //$temp = array_fill(4, 0, 0);
     $temp = array(0,0,0,0);
     while( $row = mysqli_fetch_array($result) ){
-      $fc = $row['nyha_funct_class']; // functional class
+      $fc = $row['nyha_funct']; // functional class
       if( $fc == 'i') $temp[0]++;
       else if( $fc == 'ii') $temp[1]++;
       else if( $fc == 'iii') $temp[2]++;
@@ -143,7 +167,7 @@
       $eval_date = $row['eval_date'];
       if( isset($pat[(string)$act_p]) ){    
         $month = find_month_since_first_eval($act_p, $eval_date, $con);
-        $ap[$pat[(string)$act_p]][$month] = $row['nyha_funct_class'];
+        $ap[$pat[(string)$act_p]][$month] = $row['nyha_funct'];
       }
     }
     

@@ -174,6 +174,10 @@ function content(info_type){
                     'November', 'December' ];
     content_v[1] = "Pacientes";
     content_v[2] = "Pacientes registrados por fecha";
+  }else if(info_type == "primer"){
+    content_v[0] = ['1', '2', '3', '4', '6','6', '7', '8', '9', '10','11', '12' ];
+    content_v[1] = "Diagnosticos";
+    content_v[2] = "Primer diagnostico por periodo";
   }else if(info_type == "genero"){
     content_v[0] = ['Hombres', 'Mujeres'];
     content_v[1] = "Pacientes";
@@ -206,10 +210,10 @@ $("#graph").click(function(){
     return ;
   }
   
-  if( info_type == "pacientes") graph_name = combo;
+  if( info_type == "pacientes" || info_type == "primer" ) graph_name = combo;
   else if( info_type == "funcional_tiempo") graph_name = spline;
   else graph_name = pie;
-  
+    
   $.post( "../statistics/query.php" ,{ info:info_type, y_opt:year_option }, function(data) {
     graph_name( content(info_type), data );
   });
@@ -223,12 +227,17 @@ $(document).ready( function(){
   $('#info_type').on('change', function() {  
 
     var opt2 = "";    
+    var opt3 = "";    
     var opt1 = "<option value='1'>1</option><option value='2'>2</option><option value='3'>3</option>";
     for(var i=2013;i<2016;++i) opt2 += "<option value='"+i+"'>"+i+"</option>";
+    for(var i=2010;i<2013;++i) opt3 += "<option value='"+i+"'>"+i+"</option>";
     
     if( this.value=="pacientes" ){ 
       $('#year_opt').show();
       $('#year_stat').show().html(opt2);
+    }else if( this.value=="primer" ){ 
+      $('#year_opt').show();
+      $('#year_stat').show().html(opt3);
     }else if( this.value=="funcional_tiempo" ){ 
       $('#year_opt').show();
       $('#year_stat').show().html(opt1);
