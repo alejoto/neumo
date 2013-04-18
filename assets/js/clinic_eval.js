@@ -11,9 +11,9 @@
 * Dependant   :   this file
 */
 /*hide/show save button: first parameter is an array, inside [].  Second parameter is the button id*/
-hide_show_savebutton([$("#day_ev"),$("#nyha_funct_class")], $("#sympt_save"));
+hide_show_savebutton([$("#year_ev"),$("#month_ev"),$("#day_ev"),$("#nyha_funct_class")], $("#sympt_save"));
 hide_show_savebutton([$("#pulse"),$("#breathing"),$("#psist"),$("#pdiast")], $("#ef_save"));
-hide_show_savebutton([$("#day_death"),$("#dead_cause")], $("#outcome_save"));
+hide_show_savebutton([$("#year_death"),$("#month_death"),$("#day_death"),$("#dead_cause")], $("#outcome_save"));
 
 
 $("#treatment_save").hide('fast');
@@ -27,7 +27,7 @@ $("#transplant").change(function(){
 	if ($("#transplant").val()=="pulmon"||$("#transplant").val()=="corazon pulmon") {
 	    $("#year_transp").show("fast");
 	    if($("#year_transp").val() == ""){
-	    	hide_show_savebutton([$("#day_transp")], $("#treatment_save"));
+	    	hide_show_savebutton([$("#year_transp"),$("#month_transp"),$("#day_transp")], $("#treatment_save"));
 	    }
 	 } else {
 	    $("#year_transp").hide("fast");
@@ -45,7 +45,7 @@ $("#transplant").change(function(){
   
 });
 */
-//hide_show_savebutton([],$("#treatment_save"));
+
 /*Hide selected fields when loading page*/
 $(document).ready(function() {
   $("#inputdrug").hide();
@@ -209,7 +209,7 @@ $(document).ready(function() {$("#atr_sept_hide").hide();})
 $("#tendt").change(function(){
 	if (this.checked ){
 		$("#tendt_hide").show('fast');
-		hide_show_savebutton([$("#day_tendt")], $("#treatment_save"));
+		hide_show_savebutton([$("#year_tendt"),$("#month_tendt"),$("#day_tendt")], $("#treatment_save"));
 	}
 	else{
 		$('#year_tendt').val('');
@@ -229,7 +229,7 @@ $("#tendt").change(function(){
 $("#atr_sept").change(function(){
 	if (this.checked){
 		$("#atr_sept_hide").show('fast');
-		hide_show_savebutton([$("#day_atr")], $("#treatment_save"));
+		hide_show_savebutton([$("#year_atr"),$("#month_atr"),$("#day_atr")], $("#treatment_save"));
 	}
 	else{
 		$('#year_atr').val('');
@@ -252,7 +252,7 @@ $("#atr_sept").change(function(){
 
 
 // Saving 'anamnesis' and 'ex fco' in DB table
-hide_show_savebutton([$('#day_ev'),$('#nyha_funct_class')],$('#sympt_save2'));
+hide_show_savebutton([$('#year_ev'),$('#month_ev'),$('#day_ev'),$('#nyha_funct_class')],$('#sympt_save2'));
 
 $('#sympt_save2').click(function(){
   $('#anam').hide('fast');
@@ -280,7 +280,7 @@ $('#ef_save').click(function(){
 
   var eval_date=anam_year+'-'+anam_month+'-'+anam_day;
 
-  var nyha_funct=$('#nyha_funct').val();
+  var nyha_funct_class=$('#nyha_funct_class').val();
 
   //checkbox values
   if($("#dyspnea").is(':checked')) { var dyspnea="si";} else {var dyspnea="no";}
@@ -306,7 +306,7 @@ $('#ef_save').click(function(){
   if($("#ef_edema").is(':checked')) { var ef_edema="si";} else {var ef_edema="no";}
   if($("#finger_clubbing").is(':checked')) { var finger_clubbing="si";} else {var finger_clubbing="no";}
 
-if (anam_day==''||nyha_funct=='') {
+if (anam_day==''||nyha_funct_class=='') {
   $('#anam').show('fast');
   $('#ex_fc').hide('fast');
   $('#year_ev').focus();
@@ -319,7 +319,7 @@ else {
     afroamerican:afroamerican
     ,dxdate:dxdate
     ,eval_date:eval_date
-    ,nyha_funct:nyha_funct
+    ,nyha_funct_class:nyha_funct_class
     ,dyspnea:dyspnea
     ,cough:cough
     ,chestpain:chestpain
@@ -353,7 +353,7 @@ else {
     $('#improved_symts').val('');
     $('#weight').val('');
     $('#height').val('');
-    $('#nyha_funct').val('');
+    $('#nyha_funct_class').val('');
     $('#sat_ox').val('');
     $('#pulse').val('');
     $('#psist').val('');
@@ -522,16 +522,13 @@ show_ifnoempty($("#year"),$("#month"));
 -------------------------------------------------------------------------------------
 *
 *
-* name      	: 	No name (execution of previous js function)
-* Description  : 	Execution of num_ranges(...),
-*           		which limits value between specified range 
-* Depend on   :   	medic.js
-* Dependant   :   	this file
+* name         :    No name (execution of previous js function)
+* Description  :    Execution of hmd_dateformat(...),
+*                   which limits months and days inputs
+*                   to valid dates.
+* Depend on   :     medic.js
+* Dependant   :     this file
 */
-var d = new Date(); /* Used to calculate the actual year */
-num_ranges($("#year"), d.getFullYear(), 1990,0);
-num_ranges($("#month"), 12, 1,0);
-
 /*Anammnesis (also applies to "examen fisico") date*/
 hmd_dateformat($("#year_ev"),$("#month_ev"),$("#day_ev"));
 
@@ -542,6 +539,21 @@ hmd_dateformat($("#year_transp"),$("#month_transp"),$("#day_transp"));
 hmd_dateformat($("#year_tendt"),$("#month_tendt"),$("#day_tendt"));
 hmd_dateformat($("#year_atr"),$("#month_atr"),$("#day_atr"));
 hmd_dateformat($("#year_death"),$("#month_death"),$("#day_death"));
+
+/**
+-------------------------------------------------------------------------------------
+*
+*
+* name      	: 	No name (execution of previous js function)
+* Description  : 	Execution of num_ranges(...),
+*           		which limits value between specified range 
+* Depend on   :   	medic.js
+* Dependant   :   	this file
+*/
+var d = new Date(); /* Used to calculate the actual year */
+num_ranges($("#year"), d.getFullYear(), 1990,0);
+num_ranges($("#month"), 12, 1,0);
+
 
 /*Ranges for years*/
 num_ranges($("#year_ev"), d.getFullYear(), 1990,0);

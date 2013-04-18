@@ -19,13 +19,13 @@ $("#artergph_TEP").change(function() {
 * Dependant    :    this file
 */
 /*hide/show save button: first parameter is an array, inside [].  Second parameter is the button id*/
-hide_show_savebutton([$("#d_ecoc"), $("#doppl_type"), $("#doppl_syst_press"), $("#eject_fract")], $("#ecoc_save"));
-hide_show_savebutton([$("#d_xray"), $("#alveolar_infiltrates"), $("#hypoperfusion_areas"), $("#right_heart_cardiomegs")], $("#xray_save"));
-hide_show_savebutton([$("#d_tc"), $("#a_tc_main_pulm_art_diamt"), $("#a_tc_rt_pulm_art_diamt"), $("#a_tc_left_pulm_art_diamt"), $("#a_tc_tep_pattern"), $("#a_tc_congenit")], $("#tc_save"));
-hide_show_savebutton([$("#d_rmn"), $("#mri_fevd"), $("#mri_main_art_diam"), $("#mri_rt_art_diam"), $("#mri_lt_art_diam"), $("#mri_rt_heart_dilat"), $("#mri_defects")], $("#mri_save"));
-hide_show_savebutton([$("#d_artg"), $("#artergph_TEP"), ], $("#artergph_save"));
-hide_show_savebutton([$("#d_gamma"), $("#gamma_tep")], $("#gamma_save"));
-hide_show_savebutton([$("#d_ecoleg"), $("#legsdoppler_result_right"), $("#legsdoppler_result_left")], $("#legsdoppler_save"));
+hide_show_savebutton([$("#y_ecoc"),$("#m_ecoc"),$("#d_ecoc"), $("#doppl_type"), $("#doppl_syst_press"), $("#eject_fract")], $("#ecoc_save"));
+hide_show_savebutton([$("#y_xray"),$("#m_xray"),$("#d_xray"), $("#alveolar_infiltrates"), $("#hypoperfusion_areas"), $("#right_heart_cardiomegs")], $("#xray_save"));
+hide_show_savebutton([$("#y_tc"),$("#m_tc"),$("#d_tc"), $("#a_tc_main_pulm_art_diamt"), $("#a_tc_rt_pulm_art_diamt"), $("#a_tc_left_pulm_art_diamt"), $("#a_tc_tep_pattern"), $("#a_tc_congenit")], $("#tc_save"));
+hide_show_savebutton([$("#y_rmn"),$("#m_rmn"),$("#d_rmn"), $("#mri_fevd"), $("#mri_main_art_diam"), $("#mri_rt_art_diam"), $("#mri_lt_art_diam"), $("#mri_rt_heart_dilat"), $("#mri_defects")], $("#mri_save"));
+hide_show_savebutton([$("#y_artg"),$("#m_artg"),$("#d_artg"), $("#artergph_TEP"), ], $("#artergph_save"));
+hide_show_savebutton([$("#y_gamma"),$("#m_gamma"),$("#d_gamma"), $("#gamma_tep")], $("#gamma_save"));
+hide_show_savebutton([$("#y_ecoleg"),$("#m_ecoleg"),$("#d_ecoleg"), $("#legsdoppler_result_right"), $("#legsdoppler_result_left")], $("#legsdoppler_save"));
 
 /**
 -------------------------------------------------------------------------------------
@@ -109,6 +109,26 @@ icon_exchanger($(".main_icon"),$("#basic_eval"),$("#blood_test"),$("#performance
               ,'0  75px','-92px 75px','-184px 75px','-276px 0','Evaluaci&oacute;n <br>cl&iacute;nica',
               'Pruebas<br>en sangre','Desempe&ntilde;o cardiovascular','Im&aacute;genes diagn&oacute;sticas');
 
+
+/**
+-------------------------------------------------------------------------------------
+*
+*
+* name         :    No name (execution of previous js function)
+* Description  :    Execution of hmd_dateformat(...),
+*                   which limits months and days inputs
+*                   to valid dates.
+* Depend on   :     medic.js
+* Dependant   :     this file
+*/
+hmd_dateformat($("#y_xray"),$("#m_xray"),$("#d_xray"));
+hmd_dateformat($("#y_tc"),$("#m_tc"),$("#d_tc"));
+hmd_dateformat($("#y_ecoc"),$("#m_ecoc"),$("#d_ecoc"));
+hmd_dateformat($("#y_ecoleg"),$("#m_ecoleg"),$("#d_ecoleg"));
+hmd_dateformat($("#y_rmn"),$("#m_rmn"),$("#d_rmn"));
+hmd_dateformat($("#y_artg"),$("#m_artg"),$("#d_artg"));
+hmd_dateformat($("#y_gamma"),$("#m_gamma"),$("#d_gamma"));
+
 /**
 -------------------------------------------------------------------------------------
 *
@@ -119,15 +139,6 @@ icon_exchanger($(".main_icon"),$("#basic_eval"),$("#blood_test"),$("#performance
 * Depend on   :     medic.js
 * Dependant   :     this file
 */
-
-hmd_dateformat($("#y_xray"),$("#m_xray"),$("#d_xray"));
-hmd_dateformat($("#y_tc"),$("#m_tc"),$("#d_tc"));
-hmd_dateformat($("#y_ecoc"),$("#m_ecoc"),$("#d_ecoc"));
-hmd_dateformat($("#y_ecoleg"),$("#m_ecoleg"),$("#d_ecoleg"));
-hmd_dateformat($("#y_rmn"),$("#m_rmn"),$("#d_rmn"));
-hmd_dateformat($("#y_artg"),$("#m_artg"),$("#d_artg"));
-hmd_dateformat($("#y_gamma"),$("#m_gamma"),$("#d_gamma"));
-
 
 var d = new Date();
 num_ranges($("#y_xray"), d.getFullYear(), 2010,0);

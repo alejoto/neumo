@@ -83,7 +83,18 @@
   </div>
   
   <div class="row">
-    <div class="span8"><br><br><a class="btn" id="ef_save">Guardar</a><br><br></div>
+    <div class="span8"><br><br>
+      <a class="btn" id="ef_save">
+        Guardar
+      </a><br><br>
+    </div>
+    <!-- 
+
+    ========================================================================
+    button linked to
+
+    ========================================================================
+    -->
     <div id='anam_result'></div>
   </div>
 </div>

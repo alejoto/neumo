@@ -101,13 +101,21 @@ function hide_if_empty(n_empty, hid_shw) {
 function hide_show_savebutton(fields,button) {
     $(document).ready(function() {
         button.hide();
+        prefield=fields;
+        for (var i = 0; i < prefield.length; i++) {
+            prefield[i].css('background-color','#F0FAFF');
+        };
     });
     function filled_fields(){
         filledfields=0;
         var i=0;
         for (;fields[i];)
         {
-            if(fields[i].val()!=="") {filledfields=filledfields+1;}
+            if(fields[i].val()!=="") {
+                fields[i].css('background-color','#fff');
+                filledfields=filledfields+1;
+            }
+            else {fields[i].css('background-color','#F0FAFF');}
             i++;
         }
         if (fields.length==filledfields) {button.show("fast");}

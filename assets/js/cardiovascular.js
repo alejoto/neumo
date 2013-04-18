@@ -12,10 +12,10 @@
 * Dependant   :     this file
 */
 /*hide/show save button: first parameter is an array inside [].  Second parameter is the button id*/
-hide_show_savebutton([$("#d_ecg"), $("#axis"), $("#rythm"), $("#frq"), $("#pattern")], $("#save_ecg"));
-hide_show_savebutton([$("#d_spir"), $("#cvf_lt"), $("#vef1_lt")], $("#save_spir"));
-hide_show_savebutton([$("#d_sixmw"), $("#walk_meters"), $("#walk_fio2"), $("start_sato2"), $("#end_sato2"), $("#borg")], $("#sixmin_save"));
-hide_show_savebutton([$("#d_cpst"), $("#vo2max_peak"), $("#pa_sist"), $("pa_dias"), $("#pulse_vo2")], $("#vo2_save"));
+hide_show_savebutton([$("#y_ecg"),$("#m_ecg"),$("#d_ecg"), $("#axis"), $("#rythm"), $("#frq"), $("#pattern")], $("#save_ecg"));
+hide_show_savebutton([$("#y_spir"), $("#m_spir"), $("#d_spir"), $("#cvf_lt"), $("#vef1_lt")], $("#save_spir"));
+hide_show_savebutton([$("#y_sixmw"),$("#m_sixmw"),$("#d_sixmw"), $("#walk_meters"), $("#walk_fio2"), $("start_sato2"), $("#end_sato2"), $("#borg")], $("#sixmin_save"));
+hide_show_savebutton([$("#y_cpst"),$("#m_cpst"),$("#d_cpst"), $("#vo2max_peak"), $("#pa_sist"), $("pa_dias"), $("#pulse_vo2")], $("#vo2_save"));
 
 /**
 -------------------------------------------------------------------------------------
@@ -156,30 +156,17 @@ icon_exchanger($(".main_icon")
 
 
 
-
 /**
 -------------------------------------------------------------------------------------
 *
 *
-* name          :   No name (execution of previous js function)
-* Description  :    Execution of show_ifnoempty(...),
-*                   which displays second value if first is filled with data.
-*               and while first field keeps empty second will be hidden
+* name         :    No name (execution of previous js function)
+* Description  :    Execution of hmd_dateformat(...),
+*                   which limits months and days inputs
+*                   to valid dates.
 * Depend on   :     medic.js
 * Dependant   :     this file
 */
-/*
-show_ifnoempty($("#y_ecg"), $("#m_ecg"));
-show_ifnoempty($("#m_ecg"), $("#d_ecg"));
-show_ifnoempty($("#y_spir"), $("#m_spir"));
-show_ifnoempty($("#m_spir"), $("#d_spir"));
-show_ifnoempty($("#y_sixmw"), $("#m_sixmw"));
-show_ifnoempty($("#m_sixmw"), $("#d_sixmw"));
-show_ifnoempty($("#y_cpst"), $("#m_cpst"));
-show_ifnoempty($("#m_cpst"), $("#d_cpst"));
-*/
-
-
 hmd_dateformat($("#y_ecg"),$("#m_ecg"),$("#d_ecg"));
 hmd_dateformat($("#y_spir"),$("#m_spir"),$("#d_spir"));
 hmd_dateformat($("#y_sixmw"),$("#m_sixmw"),$("#d_sixmw"));
@@ -196,8 +183,6 @@ hmd_dateformat($("#y_cpst"),$("#m_cpst"),$("#d_cpst"));
 * Depend on   :     medic.js
 * Dependant   :     this file
 */
-
-
 var d = new Date();
 num_ranges($("#y_ecg"), d.getFullYear(), 2010, 0);
 num_ranges($("#y_spir"), d.getFullYear(), 2010, 0);

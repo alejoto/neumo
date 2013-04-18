@@ -11,23 +11,23 @@
 * Dependant   :   	this file
 */
 
-hide_show_savebutton([$("#d_hb"), $("#hb_value")], $("#hb_save"));
-hide_show_savebutton([$("#d_thyr"), $("#tsh")], $("#thyroid_save"));
-hide_show_savebutton([$("#d_dimer"), $("#d_dimer_value")], $("#d_dimer_save"));
-hide_show_savebutton([$("#d_trop"), $("#trop_result")], $("#trop_save"));
-hide_show_savebutton([$("#d_bpn"), $("#pep_natr_value"), $("#pro_pep_natr_value")], $("#bpn_save"));
-hide_show_savebutton([$("#d_vih"), $("#hiv_result")], $("#hiv_save"));
-hide_show_savebutton([$("#d_art_gas"), $("#bld_gass_fio2"), $("#bld_gass_ph"), $("#bld_gass_paco2"), $("#bld_gass_pao2"), $("#bld_gass_hco3")], $("#bld_gass_save"));
-hide_show_savebutton([$("#d_renal"), $("#creat"), $("#bun")], $("#renal_save"));
-hide_show_savebutton([$("#d_liver"), $("#hep_ast"), $("#hep_alt"), $("#hep_fal")], $("#liver_save"));
-hide_show_savebutton([$("#d_bleed"), $("#hep_tpt"), $("#hep_tp"), $("#hep_inr")], $("#bleed_save"));
-hide_show_savebutton([$("#d_f_reum"), $("#f_reum")], $("#f_reum_save"));
-hide_show_savebutton([$("#d_uns_ana"), $("#uns_ana_value")], $("#uns_ana_save"));
-hide_show_savebutton([$("#d_sp_ana"), $("#centromere"), $("#anti_rna_polim"), $("#antidsDNA")], $("#sp_ana_save"));
-hide_show_savebutton([$("#d_anti_ENAs"), $("#anti_ro"), $("#anti_la"), $("#anti_smith"), $("#anti_rnp"), $("#antiRNP70"), $("#anti_u3_rnp"), $("#antijo"), $("#anti_scl")], $("#anti_ENAs_save"));
-hide_show_savebutton([$("#d_anti_ph_lip"), $("#acl_g"), $("#acl_m"), $("#a_coag_lup"), $("#anti_b2gp")], $("#anti_ph_lip_save"));
-hide_show_savebutton([$("#d_anca_ab"), $("#c_anca"), $("#p_anca")], $("#anca_ab_save"));
-hide_show_savebutton([$("#d_citrul_ab"), $("#a_citrul")], $("#citrul_ab_save"));
+hide_show_savebutton([$("#y_hb"),$("#m_hb"),$("#d_hb"), $("#hb_value")], $("#hb_save"));
+hide_show_savebutton([$("#y_thyr"),$("#m_thyr"),$("#d_thyr"), $("#tsh")], $("#thyroid_save"));
+hide_show_savebutton([$("#y_dimer"),$("#m_dimer"),$("#d_dimer"), $("#d_dimer_value")], $("#d_dimer_save"));
+hide_show_savebutton([$("#y_trop"),$("#m_trop"),$("#d_trop"), $("#trop_result")], $("#trop_save"));
+hide_show_savebutton([$("#y_bpn"),$("#m_bpn"),$("#d_bpn"), $("#pep_natr_value"), $("#pro_pep_natr_value")], $("#bpn_save"));
+hide_show_savebutton([$("#y_vih"),$("#m_vih"),$("#d_vih"), $("#hiv_result")], $("#hiv_save"));
+hide_show_savebutton([$("#y_art_gas"),$("#m_art_gas"),$("#d_art_gas"), $("#bld_gass_fio2"), $("#bld_gass_ph"), $("#bld_gass_paco2"), $("#bld_gass_pao2"), $("#bld_gass_hco3")], $("#bld_gass_save"));
+hide_show_savebutton([$("#y_renal"),$("#m_renal"),$("#d_renal"), $("#creat"), $("#bun")], $("#renal_save"));
+hide_show_savebutton([$("#y_liver"),$("#m_liver"),$("#d_liver"), $("#hep_ast"), $("#hep_alt"), $("#hep_fal")], $("#liver_save"));
+hide_show_savebutton([$("#y_bleed"),$("#m_bleed"),$("#d_bleed"), $("#hep_tpt"), $("#hep_tp"), $("#hep_inr")], $("#bleed_save"));
+hide_show_savebutton([$("#y_f_reum"),$("#m_f_reum"),$("#d_f_reum"), $("#f_reum")], $("#f_reum_save"));
+hide_show_savebutton([$("#y_uns_ana"),$("#m_uns_ana"),$("#d_uns_ana"), $("#uns_ana_value")], $("#uns_ana_save"));
+hide_show_savebutton([$("#y_sp_ana"),$("#m_sp_ana"),$("#d_sp_ana"), $("#centromere"), $("#anti_rna_polim"), $("#antidsDNA")], $("#sp_ana_save"));
+hide_show_savebutton([$("#y_anti_ENAs"),$("#m_anti_ENAs"),$("#d_anti_ENAs"), $("#anti_ro"), $("#anti_la"), $("#anti_smith"), $("#anti_rnp"), $("#antiRNP70"), $("#anti_u3_rnp"), $("#antijo"), $("#anti_scl")], $("#anti_ENAs_save"));
+hide_show_savebutton([$("#y_anti_ph_lip"),$("#m_anti_ph_lip"),$("#d_anti_ph_lip"), $("#acl_g"), $("#acl_m"), $("#a_coag_lup"), $("#anti_b2gp")], $("#anti_ph_lip_save"));
+hide_show_savebutton([$("#y_anca_ab"),$("#m_anca_ab"),$("#d_anca_ab"), $("#c_anca"), $("#p_anca")], $("#anca_ab_save"));
+hide_show_savebutton([$("#y_citrul_ab"),$("#m_citrul_ab"),$("#d_citrul_ab"), $("#a_citrul")], $("#citrul_ab_save"));
 
 /**
 -------------------------------------------------------------------------------------
@@ -95,7 +95,17 @@ showmain2($("#sel_renal"), $("#hb_and_others"), $("#art_gasses"), $("#liver"), $
 showmain2($("#sel_liver"), $("#hb_and_others"), $("#art_gasses"), $("#renal"), $("#reuma"), $("#othertests"), $("#liver"));
 showmain2($("#sel_reuma"), $("#hb_and_others"), $("#art_gasses"), $("#renal"), $("#liver"), $("#othertests"), $("#reuma"));
 
-
+/**
+-------------------------------------------------------------------------------------
+*
+*
+* name         :    No name (execution of previous js function)
+* Description  :    Execution of hmd_dateformat(...),
+*                   which limits months and days inputs
+*                   to valid dates.
+* Depend on   :     medic.js
+* Dependant   :     this file
+*/
 hmd_dateformat($("#y_hb"),$("#m_hb"),$("#d_hb"));
 hmd_dateformat($("#y_thyr"),$("#m_thyr"),$("#d_thyr"));
 hmd_dateformat($("#y_dimer"),$("#m_dimer"),$("#d_dimer"));
@@ -125,9 +135,6 @@ hmd_dateformat($("#y_anti_ph_lip"),$("#m_anti_ph_lip"),$("#d_anti_ph_lip"));
 * Depend on   :   	medic.js
 * Dependant   :   	this file
 */
-
-
-
 var d = new Date();
 /*numrange dates*/
 num_ranges($("#y_hb"), d.getFullYear(), 2010, 0);
@@ -178,48 +185,3 @@ num_ranges($("#hep_inr"), 999999, 0, 1);
 
 
 
-/**
--------------------------------------------------------------------------------------
-*
-*
-* name      	: 	No name (execution of previous js function)
-* Description  : 	Execution of show_ifnoempty(...),
-*           		which displays second field if first is filled with data.
-* 				and while first field keeps empty second will be hidden
-* Depend on   :   	medic.js
-* Dependant   :   	this file
-*/
-/*show_ifnoempty($("#y_hb"), $("#m_hb"));
-show_ifnoempty($("#m_hb"), $("#d_hb"));
-show_ifnoempty($("#y_thyr"), $("#m_thyr"));
-show_ifnoempty($("#m_thyr"), $("#d_thyr"));
-show_ifnoempty($("#y_dimer"), $("#m_dimer"));
-show_ifnoempty($("#m_dimer"), $("#d_dimer"));
-show_ifnoempty($("#y_trop"), $("#m_trop"));
-show_ifnoempty($("#m_trop"), $("#d_trop"));
-show_ifnoempty($("#y_bpn"), $("#m_bpn"));
-show_ifnoempty($("#m_bpn"), $("#d_bpn"));
-show_ifnoempty($("#y_vih"), $("#m_vih"));
-show_ifnoempty($("#m_vih"), $("#d_vih"));
-show_ifnoempty($("#y_renal"), $("#m_renal"));
-show_ifnoempty($("#m_renal"), $("#d_renal"));
-show_ifnoempty($("#y_art_gas"), $("#m_art_gas"));
-show_ifnoempty($("#m_art_gas"), $("#d_art_gas"));
-show_ifnoempty($("#y_liver"), $("#m_liver"));
-show_ifnoempty($("#m_liver"), $("#d_liver"));
-show_ifnoempty($("#y_bleed"), $("#m_bleed"));
-show_ifnoempty($("#m_bleed"), $("#d_bleed"));
-show_ifnoempty($("#y_f_reum"), $("#m_f_reum"));
-show_ifnoempty($("#m_f_reum"), $("#d_f_reum"));
-show_ifnoempty($("#y_uns_ana"), $("#m_uns_ana"));
-show_ifnoempty($("#m_uns_ana"), $("#d_uns_ana"));
-show_ifnoempty($("#y_sp_ana"), $("#m_sp_ana"));
-show_ifnoempty($("#m_sp_ana"), $("#d_sp_ana"));
-show_ifnoempty($("#y_anti_ENAs"), $("#m_anti_ENAs"));
-show_ifnoempty($("#m_anti_ENAs"), $("#d_anti_ENAs"));
-show_ifnoempty($("#y_anti_ph_lip"), $("#m_anti_ph_lip"));
-show_ifnoempty($("#m_anti_ph_lip"), $("#d_anti_ph_lip"));
-show_ifnoempty($("#y_anca_ab"), $("#m_anca_ab"));
-show_ifnoempty($("#m_anca_ab"), $("#d_anca_ab"));
-show_ifnoempty($("#y_citrul_ab"), $("#m_citrul_ab"));
-show_ifnoempty($("#m_citrul_ab"), $("#d_citrul_ab"));*/
