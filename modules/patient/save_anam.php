@@ -15,7 +15,7 @@ $loweredema=$_POST['loweredema'];
 $hemoptysis=$_POST['hemoptysis'];
 $syncope=$_POST['syncope'];
 $improved_symts=$_POST['improved_symts'];
-$nyha_funct=$_POST['nyha_funct'];
+$nyha_funct_class=$_POST['nyha_funct_class'];
 
 //exf foc data
 $pulse=$_POST['pulse'];
@@ -46,7 +46,7 @@ eval_date
 ,hemoptysis
 ,syncope
 ,improved_symts
-,nyha_funct
+,nyha_funct_class
 ,eval_id
 ,pulse
 ,breathing
@@ -68,7 +68,7 @@ eval_date
 ,'$hemoptysis'
 ,'$syncope'
 ,'$improved_symts'
-,'$nyha_funct'
+,'$nyha_funct_class'
 ,'$eval_id'
 ,'$pulse'
 ,'$breathing'

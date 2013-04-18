@@ -39,7 +39,7 @@
   <div class="row">
     <div class="span2" style="text-align:left">Clase funcional</div>
     <div class="span6" style="text-align: left; ">
-      <select id="nyha_funct" class="span5">
+      <select id="nyha_funct_class" class="span5 ex_fc">
         <option value=""></option>
         <option value="i">I. Asintom&aacute;tico</option>
         <option value="ii">II. Disnea que limita pocas actividades cotidianas</option>
@@ -85,7 +85,7 @@
   <div class="row">
     <div class="offset1 span3" style="text-align:right">S&iacute;ntomas han mejorado?</div>
     <div class="span2">
-      <select id="improved_symts" class="span2">
+      <select id="improved_symts" class="span2 ex_fc">
         <option value=""></option>
         <option value="si">S&iacute;</option>
         <option value="no">No</option>

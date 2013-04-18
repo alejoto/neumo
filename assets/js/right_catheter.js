@@ -50,7 +50,17 @@ icon_exchanger($(".main_icon"),$("#basic_eval"),$("#blood_test"),$("#performance
     clickhideshow($("#showbas"), $("#reactiv"), $("#basal"));
 
 
-
+/**
+-------------------------------------------------------------------------------------
+*
+*
+* name         :    No name (execution of previous js function)
+* Description  :    Execution of hmd_dateformat(...),
+*                   which limits months and days inputs
+*                   to valid dates.
+* Depend on   :     medic.js
+* Dependant   :     this file
+*/
 hmd_dateformat($("#year"),$("#month"),$("#day"));
 
     num_ranges($("#year"), 2020, 2010, 0);
