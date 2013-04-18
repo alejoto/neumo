@@ -7,20 +7,44 @@
   $y_opt  = $_POST['y_opt'];
   $exit = true;
 
+  // Data for graph 'pacientes'
   if($info == "pacientes"){
     $sql    = "SELECT * FROM main_patient";
     $result = mysqli_query($con,$sql); 
     
+    // Initialize array with value 0 in each register for sum dynamically 1 value if the condition is true in each iteration inside the cycle
+    // Each register represents a month in one year
     $temp = array(0,0,0,0,0,0,0,0,0,0,0,0);
     while( $row = mysqli_fetch_array($result) ){
       $tales = explode("-", $row['timestamp']);
       if( $tales[0] == $y_opt ){
-        $temp[ intval($tales[1])-1 ]++;
+        $temp[ intval($tales[1])-1 ]++; // Sum 1 to this month if is in selected year
       }
     }
   }
   
-  // First diagnosis
+   // Data for graph 'pacientes_periodo'
+   if($info == "pacientes_period"){
+    $sql    = "SELECT * FROM main_patient";
+    $result = mysqli_query($con,$sql); 
+    
+    // Initialize array with value 0 in each register for sum dynamically 1 value if the condition is true in each iteration inside the cycle
+    // Each register represents a period in one year
+    $temp = array(0,0,0,0);
+    while( $row = mysqli_fetch_array($result) ){
+      $tales = explode("-", $row['timestamp']);     
+      $year = $tales[0]; // register date year
+      $month = $tales[1]; // register date month
+      $yDif = (int)$year - (int)$y_opt;
+      $mDif = (int)$month-1;
+      // Dynamic calculation of rt_cat_date in each 3 months period during 3 years
+      $period = (4*$yDif) + floor($mDif/3);
+      $temp[ $period ]++; // Sum 1 to this period
+      
+    }
+  }
+  
+  // Data for graph 'Primer diagnostico'
   if($info == "primer"){
       // Search in all diagnosis register and take just the firstone (deteceted by date) for each user. 
       // Result is filtered by rt_cat_date year greater than the selected value
@@ -30,6 +54,8 @@
                 having date >= '$y_opt-01-01'";
     $result = mysqli_query($con,$sql); 
     
+    // Initialize array with value 0 in each register for sum dynamically 1 value if the condition is true in each iteration inside the cycle
+    // Each register represents a period in three years
     $temp = array(0,0,0,0,0,0,0,0,0,0,0,0);
     while( $row = mysqli_fetch_array($result) ){
       $tales = explode("-", $row['date']);
@@ -44,10 +70,13 @@
     }
   }
   
+  // Data for graph 'Genero'
   if($info == "genero"){
     $sql    = "SELECT * FROM main_patient";
     $result = mysqli_query($con,$sql);
     
+    // Initialize array with value 0 in each register for sum dynamically 1 value if the condition is true in each iteration inside the cycle
+    // Each register represents a geneder: Male or female
     $temp = array(0,0);
     while( $row = mysqli_fetch_array($result) ){
       if( $row['gender'] == 'male' ) $temp[0]++;
@@ -55,10 +84,12 @@
     }
   }
 
+  // Data for graph 'Edades'
   if($info == "edades"){
     $sql    = "SELECT * FROM main_patient";
     $result = mysqli_query($con,$sql);
-    
+    // Initialize array with value 0 in each register for sum dynamically 1 value if the condition is true in each iteration inside the cycle
+    // Each register represents a range : 
     $temp = array(0,0,0,0,0,0,0,0);
     while( $row = mysqli_fetch_array($result) ){
       $ti = explode("-", $row['birthd']);
@@ -68,10 +99,12 @@
     }
   }
   
+  // Data for graph 'Raza afroamericana'
   if($info == "afroamerican"){
     $sql    = "SELECT * FROM hap_first_eval";
     $result = mysqli_query($con,$sql);
-    
+    // Initialize array with value 0 in each register for sum dynamically 1 value if the condition is true in each iteration inside the cycle
+    // Each register represents a percent of afroamerican patients
     $temp = array(0,0);
     while( $row = mysqli_fetch_array($result) ){
       if($row['afroamerican'] == 'no') $temp[0]++;
@@ -79,14 +112,20 @@
     }
   }
 
+  // Data for graph 'Clase funcional'
   if($info == "funcional"){
-    $sql    = "SELECT * FROM hap_follow_up";
+    //$sql    = "SELECT * FROM hap_follow_up";
+    $sql = "SELECT min(eval_date) as date, nyha_funct_class, patient_id FROM hap_follow_up 
+                inner join main_eval on main_eval.eval_id = hap_follow_up.eval_id 
+                group by main_eval.patient_id";
     $result = mysqli_query($con,$sql);
     
     //$temp = array_fill(4, 0, 0);
+    // Initialize array with value 0 in each register for sum dynamically 1 value if the condition is true in each iteration inside the cycle
+    // Each register represents a functional class
     $temp = array(0,0,0,0);
     while( $row = mysqli_fetch_array($result) ){
-      $fc = $row['nyha_funct']; // functional class
+      $fc = $row['nyha_funct_class']; // functional class
       if( $fc == 'i') $temp[0]++;
       else if( $fc == 'ii') $temp[1]++;
       else if( $fc == 'iii') $temp[2]++;
@@ -148,6 +187,7 @@
     return $ap;
   }
   
+  // Data for graph 'Funcional en el tiempo'
   if($info == "funcional_tiempo"){
     // crea arreglo pacientes
     $pat = array();
@@ -167,7 +207,7 @@
       $eval_date = $row['eval_date'];
       if( isset($pat[(string)$act_p]) ){    
         $month = find_month_since_first_eval($act_p, $eval_date, $con);
-        $ap[$pat[(string)$act_p]][$month] = $row['nyha_funct'];
+        $ap[$pat[(string)$act_p]][$month] = $row['nyha_funct_class'];
       }
     }
     

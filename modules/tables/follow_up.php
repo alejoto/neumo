@@ -17,7 +17,7 @@ main_eval.t_st
 ,hap_follow_up.pregnant
 ,hap_follow_up.weight
 ,hap_follow_up.height
-,hap_follow_up.nyha_funct
+,hap_follow_up.nyha_funct_class
 ,hap_follow_up.sat_ox
 ,hap_follow_up.pulse
 ,hap_follow_up.pres_art_exfco
@@ -97,7 +97,7 @@ $result = mysqli_query($con,$sql);
                     <td class="span2"><?php echo $row['pregnant']; ?></td>
                     <td class="span2"><?php echo $row['weight']; ?></td>
                     <td class="span2"><?php echo $row['height']; ?></td>
-                    <td class="span2"><?php echo $row['nyha_funct']; ?></td>
+                    <td class="span2"><?php echo $row['nyha_funct_class']; ?></td>
                     <td class="span2"><?php echo $row['sat_ox']; ?></td>
                     <td class="span2"><?php echo $row['pulse']; ?></td>
                     <td class="span2"><?php echo $row['pres_art_exfco']; ?></td>

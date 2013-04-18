@@ -1,7 +1,7 @@
 var chart;
 
-function combo( all_content, graph_dates ){
-  
+// +++++ GRAPHIC FUNCTIONS: COMBO, SPLINE AND PIE +++++
+function combo( all_content, graph_dates ){  
   var x_axis = all_content[0],
       tooltip_label = all_content[1],
       style_v = { left: '60px', top: '-30px', color: 'black' },
@@ -164,7 +164,9 @@ function pie( all_content, graph_dates ){
     
   }); // Highcharts end
 }
+// +++++ END OF GRAPHIC FUNCTIONS +++++
 
+// Set the general graphic information: axis x, result names and title
 function content(info_type){
   var content_v = new Array();
   
@@ -210,16 +212,19 @@ $("#graph").click(function(){
     return ;
   }
   
+  // Set type of graphic for select options
   if( info_type == "pacientes" || info_type == "primer" ) graph_name = combo;
   else if( info_type == "funcional_tiempo") graph_name = spline;
   else graph_name = pie;
     
   $.post( "../statistics/query.php" ,{ info:info_type, y_opt:year_option }, function(data) {
+    // Call set grpahic with its paremeters
     graph_name( content(info_type), data );
   });
 
 });
 
+// Set the value for dependent select for year data
 $(document).ready( function(){
   $('#year_stat').hide();
   $('#year_opt').hide();
