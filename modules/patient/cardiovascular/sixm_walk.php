@@ -25,16 +25,16 @@
       FI O2
     </div>
     <div class="span1">
-      <input type="text" class="span1 sixmw" id="walk_fio2" placeholder="%" name="walk_fio2">
+      <input type="text" class="span1 sixmw" id="walk_fio2" placeholder="%" name="walk_fio2" maxlength="2">
     </div>
     <div class="span1" style="text-align:right">
       Sat O2
     </div>
     <div class="span1">
-      <input type="text" class="span1 sixmw" placeholder="inicio %" id="start_sato2" name="start_sato2">
+      <input type="text" class="span1 sixmw" placeholder="inicio %" id="start_sato2" name="start_sato2" maxlength="2">
     </div>
     <div class="span2">
-      <input type="text" class="span1 sixmw"  placeholder="final %" id="end_sato2" name="end_sato2">
+      <input type="text" class="span1 sixmw"  placeholder="final %" id="end_sato2" name="end_sato2" maxlength="2">
     </div>
     <div class="span1">Disnea:</div>
     <div class="span1">

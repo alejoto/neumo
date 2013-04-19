@@ -24,7 +24,7 @@
   } else {
     if( $pwd1 == $pwd2 && $pwd1 != "" ){
       echo "yes";
-      $pwd1 = md5($pwd1);
+      //$pwd1 = md5($pwd1);
       $tms=time().$mail;
       $cont="<a href='http://www.recolhap.com//modules/register/confirm_register.php?activate=".$tms."'>Acceda a este link para activar su usuario</a>";
 			

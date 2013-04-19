@@ -579,8 +579,9 @@ function vasorreact_test(pulm_s, pulm_d, post_pulm_s, post_pulm_d, coutp, post_c
         co_criterium = "Gasto cardiaco aument&oacute;";
     }
     if (postpam <= 40 && delta_pam >= 10 && delta_co >= 0) {
-        $("#reactivity").attr("class","span4 alert alert-success");
-        $("#reactivity").html("TEST REACTIVO!<br>Criterios:<br> PAM post-test:" 
+        $("#reactivity").val("si");
+        $("#reactivity_display").attr("class","span4 alert alert-success");
+        $("#reactivity_display").html("TEST REACTIVO!<br>Criterios:<br> PAM post-test:" 
             + postpam 
             + "mmHg<br>Disminuci&oacute;n PAM: " 
             + delta_pam 
@@ -588,8 +589,9 @@ function vasorreact_test(pulm_s, pulm_d, post_pulm_s, post_pulm_d, coutp, post_c
             + co_criterium);
     }
     else {
-        $("#reactivity").attr("class","span4 alert alert-error");
-        $("#reactivity").html("no reactivo");
+        $("#reactivity").val("no");
+        $("#reactivity_display").attr("class","span4 alert alert-error");
+        $("#reactivity_display").html("no reactivo");
     }
 }
 /*

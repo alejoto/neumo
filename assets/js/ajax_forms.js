@@ -7,6 +7,7 @@
 * 					where 'info' is an array that contains all the values
 * 					to be saved and also the id names of fields.
 *					the id and column names are equal.
+*					THIS FUNCTION GETS THE "NAME" D.O.M. ATTRIBUTE INSTEAD OF "ID"
 * Depend on 	: 	get_info(info_id)
 * Dependant 	: 	reset_fields(info_id2)
 */

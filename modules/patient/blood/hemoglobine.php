@@ -19,7 +19,7 @@
       <input type="text" id="d_hb" class="span1 hemo" placeholder="d&iacute;a" maxlength="2" />
     </div>
     <div class="span1">
-      <input type="text" id="hb_value" class="span1 hemo" name="hb_value" placeholder="mg/dL" />
+      <input type="text" id="hb_value" class="span1 hemo" name="hb_value" placeholder="mg/dL"  maxlength="2"/>
     </div>
     <div class="span1"> <a class="btn" id="hb_save">Guardar</a>
     <div class="alert alert-success span2">

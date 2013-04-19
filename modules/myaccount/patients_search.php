@@ -95,9 +95,9 @@
           </div>
           <div class="row">
             <div class="span12" style="padding-left:105px;text-align:left">
-              <input type="text" id="year" name="year" placeholder="A&ntilde;o" class="span3" >
-              <input type="text" id="month" name="month" placeholder="Mes" class="span3">
-              <input type="text" id="day" name="day" placeholder="D&iacute;a" class="span3">
+              <input type="text" id="year" name="year" placeholder="A&ntilde;o" class="span3"  maxlength="4">
+              <input type="text" id="month" name="month" placeholder="Mes" class="span3" maxlength="2">
+              <input type="text" id="day" name="day" placeholder="D&iacute;a" class="span3" maxlength="2">
               <input type="text" id="wholedate" name="wholedate"  style="display:none">
 
 

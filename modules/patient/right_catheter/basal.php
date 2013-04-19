@@ -11,7 +11,7 @@
     </div>
     <div class="row">
         <div class="span2" style="text-align:right">Peso (Kg)</div>
-        <div class="span1"><input type="text" id="wgt" placeholder="Kgs" class="span1"></div>
+        <div class="span1"><input type="text" id="wgt" placeholder="Kgs" class="span1" maxlength="3"></div>
         <div class=" span1" style="text-align:right">Talla (M.)</div>
         <div class="span1"><input type="text" id="hgt" placeholder="Mts" class="span1"></div>
         <div class="span3" id="bsa"></div>
@@ -43,10 +43,10 @@
     <div class="row">
         <div class="span2" style="text-align:right">P.A. <b>pulmonar</b></div>
         <div class="span1">
-            <input type="text" id="pap_sys" placeholder="sist&oacute;l." class="span1 bas" name="pap_sys">
+            <input type="text" id="pap_sys" placeholder="sist&oacute;l." class="span1 bas" name="pap_sys" maxlength="3">
         </div>
         <div class="span1">
-            <input type="text" id="pap_dias" placeholder="diast&oacute;l." class="span1 bas" name="pap_dias">
+            <input type="text" id="pap_dias" placeholder="diast&oacute;l." class="span1 bas" name="pap_dias" maxlength="3">
         </div>
         <div class="span2">
             <b><span id="pam_pulm"></span></b>
@@ -55,10 +55,10 @@
     <div class="row">
         <div class="span2" style="text-align:right">P.A. <b>sist&eacute;mica</b></div>
         <div class="span1">
-            <input type="text" id="pas_sys" placeholder="sist&oacute;l." class="span1 bas" name="pas_sys">
+            <input type="text" id="pas_sys" placeholder="sist&oacute;l." class="span1 bas" name="pas_sys" maxlength="3">
         </div>
         <div class="span1">
-            <input type="text" id="pas_dias" placeholder="diast&oacute;l." class="span1 bas" name="pas_dias">
+            <input type="text" id="pas_dias" placeholder="diast&oacute;l." class="span1 bas" name="pas_dias" maxlength="3">
         </div>
         <div class="span2">
             <b><span id="pam_stm"></span></b>
@@ -109,20 +109,21 @@
     <div class="row">
         <div class="span2" style="text-align:right">Oximetr&iacute;a %</div>
         <div class="span1">
-            <input type="text" id="rt_atr_oxim" placeholder="au der." class="span1 bas" name="rt_atr_oxim">
+            <input type="text" id="rt_atr_oxim" placeholder="au der." class="span1 bas" name="rt_atr_oxim" maxlength="2">
         </div>
         <div class="span1">
-            <input type="text" id="rt_ventr_oxim" placeholder="vt. der." class="span1 bas" name="rt_ventr_oxim">
+            <input type="text" id="rt_ventr_oxim" placeholder="vt. der." class="span1 bas" name="rt_ventr_oxim" maxlength="2">
         </div>
         <div class="span1">
-            <input type="text" id="pulm_artery" placeholder="art pulm." class="span1 bas" name="pulm_artery">
+            <input type="text" id="pulm_artery" placeholder="art pulm." class="span1 bas" name="pulm_artery" maxlength="2">
         </div>
     </div>
     <div class="row">
         <div class="span2" style="text-align:right">Frecuencia cardiaca</div>
         <div class="span2">
             <div class="input-append">
-                <input type="text" id="heart_rate" placeholder="pulso" class="span2 bas" name="heart_rate"><span class="add-on">lat/min</span>
+                <input type="text" id="heart_rate" placeholder="pulso" class="span2 bas" name="heart_rate" maxlength="3">
+                <span class="add-on">lat/min</span>
             </div>
         </div>
     </div>

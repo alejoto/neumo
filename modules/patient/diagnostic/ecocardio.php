@@ -24,14 +24,14 @@
          <div class="span3" style="text-align:right">Presi&oacute;n sist&oacute;lica arteria pulmonar</div>
          <div class="span1">
              <div class="input-append">
-                 <input type="text" id="doppl_syst_press" class="span1 eco" name="doppl_syst_press" placeholder="mmHg"/>
+                 <input type="text" id="doppl_syst_press" class="span1 eco" name="doppl_syst_press" placeholder="mmHg" maxlength="3"/>
                  <span class="add-on">mmHg</span>
              </div>
          </div>
          <div class="span2" style="text-align:right">Frc. eyec. VI</div>
          <div class="span2">
              <div class="input-append">
-                 <input type="text" id="eject_fract" class="span1 eco" name="eject_fract" placeholder="FEVI"/>
+                 <input type="text" id="eject_fract" class="span1 eco" name="eject_fract" placeholder="FEVI"  maxlength="2"/>
                  <span class="add-on">%</span>
              </div>
          </div>

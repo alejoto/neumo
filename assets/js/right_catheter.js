@@ -18,26 +18,18 @@
         });
     });
 
-function show_react_test_question() {
-    if (
-        $('#day').val()!='' 
-        &&$('#res_vasc_pulm').val()!='' 
-        &&$('#res_vasc_syst').val()!='' 
-        &&$('#pap_sys').val()!='' 
-        &&$('#pap_dias').val()!='' 
-        &&$('#pas_sys').val()!='' 
-        &&$('#pas_dias').val()!='' 
-        &&$('#rt_atr_press').val()!='' 
-        &&$('#pulm_wedg_press').val()!='' 
-        &&$('#cardiac_outp').val()!='' 
-        &&$('#rt_atr_oxim').val()!='' 
-        &&$('#heart_rate').val()!='' 
-        ) 
-    {
-        $('#ask_for_react_test').show('fast');
-    }
-    else {$('#ask_for_react_test').hide('fast');}
-}
+
+hide_show_savebutton([$("#year"),$("#month"),$("#day"), $("#res_vasc_pulm")
+    ,$('#res_vasc_syst'),$('#pap_sys'),$('#pap_dias'),$('#pas_sys')
+    ,$('#pas_dias'),$('#rt_atr_press'),$('#pulm_wedg_press')
+    ,$('#cardiac_outp'),$('#rt_atr_oxim'),$('#heart_rate')], $('#ask_for_react_test'));
+
+hide_show_savebutton([  $("#post_res_vasc_pulm")
+    ,$('#post_res_vasc_syst'),$('#post_pap_sys'),$('#post_pap_dias'),$('#post_pas_sys')
+    ,$('#post_pas_dias'),$('#post_rt_atr_press'),$('#post_pulm_wedg_press')
+    ,$('#post_cardiac_outp'),$('#post_rt_atr_oxim'),$('#post_heart_rate')], $('#react_save'));
+
+
 
 icon_exchanger($(".main_icon"),$("#basic_eval"),$("#blood_test"),$("#performance"),$("#clin_images")
               ,'0  75px','-92px 75px','-184px 75px','-276px 0','Evaluaci&oacute;n <br>cl&iacute;nica',
@@ -49,7 +41,9 @@ icon_exchanger($(".main_icon"),$("#basic_eval"),$("#blood_test"),$("#performance
     clickhideshow($("#showrt"), $("#basal"), $("#reactiv"));
     clickhideshow($("#showbas"), $("#reactiv"), $("#basal"));
 
-
+/*hmd_dateformat(...) limits number of days acconding to month and bisester years, also limits
+number of months until 12*/
+hmd_dateformat($("#year"),$("#month"),$("#day"));
 /**
 -------------------------------------------------------------------------------------
 *
@@ -61,7 +55,7 @@ icon_exchanger($(".main_icon"),$("#basic_eval"),$("#blood_test"),$("#performance
 * Depend on   :     medic.js
 * Dependant   :     this file
 */
-hmd_dateformat($("#year"),$("#month"),$("#day"));
+
 
     num_ranges($("#year"), 2020, 2010, 0);
     num_ranges($("#wgt"), 250, 0, 0);

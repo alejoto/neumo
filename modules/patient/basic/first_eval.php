@@ -48,8 +48,8 @@ $sql    = "SELECT * FROM hap_first_eval LEFT JOIN main_eval
 		<div class="span2" style="text-align:right">Fecha inicio s&iacute;ntomas</div>
 
 		<div class="span2" style="text-align: left;">
-		  <input type="text" id="year" placeholder="a&ntilde;o" class="span1 "/>
-		  <input type="text" id="month" placeholder="mes" class="span1 "/>
+		  <input type="text" id="year" placeholder="a&ntilde;o" class="span1 " maxlength="4"/>
+		  <input type="text" id="month" placeholder="mes" class="span1 " maxlength="2"/>
 		</div>
 
 		<div class="span2" style="text-align:left">Raza afroamericana?</div>

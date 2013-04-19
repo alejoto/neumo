@@ -14,7 +14,7 @@
     </div>
     <div class="span1" style="text-align:right">FIO2</div>
     <div class="span1" style="text-align:left">
-      <input type="text" id="bld_gass_fio2" class="span1 art_gas" name="bld_gass_fio2" placeholder="%" />
+      <input type="text" id="bld_gass_fio2" class="span1 art_gas" name="bld_gass_fio2" placeholder="%"  maxlength="2"/>
     </div>
   </div>
   <div class="row" style="text-align:left">
@@ -28,16 +28,16 @@
       <input type="text" id="bld_gass_ph" class="span1 art_gas" name="bld_gass_ph" placeholder="pH" />
     </div>
     <div class="span1">
-      <input type="text" id="bld_gass_paco2" class="span1 art_gas" name="bld_gass_paco2" placeholder="mmHg"
-      />
+      <input type="text" id="bld_gass_paco2" class="span1 art_gas" name="bld_gass_paco2" 
+      placeholder="mmHg"  maxlength="2"/>
     </div>
     <div class="span1">
       <input type="text" id="bld_gass_pao2" class="span1 art_gas" name="bld_gass_pao2" placeholder="mmHg"
-      />
+       maxlength="3"/>
     </div>
     <div class="span2">
       <input type="text" id="bld_gass_hco3" class="span1 art_gas" name="bld_gass_hco3" placeholder="mmol/L"
-      />
+       maxlength="2"/>
     </div>
   </div>
   <div class="row" style="text-align:left">

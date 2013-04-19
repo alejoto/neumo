@@ -19,7 +19,7 @@
             <option value="afroamerican">Raza afroamericana</option>
             <option value="funcional">Clase funcional</option>
             <option value="funcional_tiempo">Funcional en el tiempo</option>
-            <option value="primer">Primer diagn&oacute;stico</option>
+            <!-- <option value="primer">Primer diagn&oacute;stico</option> -->
           </select>
         </div>
 

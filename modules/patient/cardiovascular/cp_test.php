@@ -21,16 +21,16 @@
       PA en VO2max
     </div>
     <div class="span1">
-      <input type="text" class="span1 cpt join2" id="pa_sist" placeholder="sist" name="art_press_vo2">
+      <input type="text" class="span1 cpt join2" id="pa_sist" placeholder="sist" name="art_press_vo2" maxlength="3">
     </div>
     <div class="span1">
-      <input type="text" class="span1 cpt join2" id="pa_dias" placeholder="diast">
+      <input type="text" class="span1 cpt join2" id="pa_dias" placeholder="diast" maxlength="3">
     </div>
     <div class="span2" style="text-align:right">
       Pulso en VO2max
     </div>
     <div class="span1">
-      <input type="text" class="span1 cpt" id="pulse_vo2" placeholder="lat/min" name="pulse_vo2">
+      <input type="text" class="span1 cpt" id="pulse_vo2" placeholder="lat/min" name="pulse_vo2" maxlength="3">
     </div>
   </div>
   <div class="row">

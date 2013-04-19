@@ -33,7 +33,7 @@
       </select>
     </div>
     <div class="span2">
-      <input type="text" placeholder="frec."class="span1 ecg" id="frq" name="frq">/min
+      <input type="text" placeholder="frec."class="span1 ecg" id="frq" name="frq" maxlength="3">/min
     </div>
   </div>
   <div class="row">

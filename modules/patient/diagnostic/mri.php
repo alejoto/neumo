@@ -15,7 +15,7 @@
      <div class="row">
          <div class="span4" style="text-align:right">Fracci&oacute;n eyecci&oacute;n ventr&iacute;culo derecho</div>
          <div class="span1">
-             <input type="text" id="mri_fevd" class="span1 mri1" name="mri_fevd" placeholder="%"/>
+             <input type="text" id="mri_fevd" class="span1 mri1" name="mri_fevd" placeholder="%"  maxlength="2"/>
          </div>
      </div>
      <div class="row">
