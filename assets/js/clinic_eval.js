@@ -13,6 +13,7 @@
 /*hide/show save button: first parameter is an array, inside [].  Second parameter is the button id*/
 hide_show_savebutton([$("#year_ev"),$("#month_ev"),$("#day_ev"),$("#nyha_funct_class")], $("#sympt_save"));
 hide_show_savebutton([$("#pulse"),$("#breathing"),$("#psist"),$("#pdiast")], $("#ef_save"));
+hide_show_savebutton([$("#drug"),$("#year_ini_d"),$("#month_ini_d"),$("#day_ini_d")], $("#save_cancel_drug"));
 hide_show_savebutton([$("#year_death"),$("#month_death"),$("#day_death"),$("#dead_cause")], $("#outcome_save"));
 
 
@@ -185,15 +186,15 @@ $(".susp_cause").click(function(){
 });/*
 
 
-/*Toggle asociado a texto "Añadir (Fármaco)"*/
+/* "Add drug" toggle effect */
 $("#ad_drug").click(function(){
   $("#inputdrug").toggle("fast");
-  if ($("#ad_drug").html()=="Ocultar") {$("#ad_drug").html("A&ntilde;adir");}
+  if ($("#ad_drug").html()=="Ocultar") {$("#ad_drug").html("<i class='icon-plus-sign'></i> A&ntilde;adir");}
   else {$("#ad_drug").html("Ocultar");}
 });
 $('#hide_drug_hap').click(function(){
   $('#inputdrug').hide();
-  $("#ad_drug").html("A&ntilde;adir f&aacute;rmaco");
+  $("#ad_drug").html("<i class='icon-plus-sign'></i> A&ntilde;adir");
   $('#drug').val('');
   $('#year_ini_d').val('');
   $('#month_ini_d').val('');
@@ -416,7 +417,7 @@ function enter_drug_toDB(confirm){
           $('#drug_already_exist').show('fast');
         }
           else {$('#table_drug_result').html(data);
-          $('#treatment_tb > tbody > tr').eq(1).after('<tr class="span8"><td  class="span3">'
+          $('#treatment_tb > tbody > tr').eq(1).after('<tr class="span8"><td  class="span2">'
             +$('#drug').val()
             +'</td><td class="span2">'
             +drugdate
@@ -557,7 +558,7 @@ num_ranges($("#month"), 12, 1,0);
 
 /*Ranges for years*/
 num_ranges($("#year_ev"), d.getFullYear(), 1990,0);
-num_ranges($("#year_ini_d"), d.getFullYear()+5, 1990,0);
+num_ranges($("#year_ini_d"), d.getFullYear(), 1990,0);
 num_ranges($("#year_end_d"), d.getFullYear(), 1990,0);
 num_ranges($("#year_transp"), d.getFullYear(), 1990,0);
 num_ranges($("#year_tendt"), d.getFullYear(), 1990,0);

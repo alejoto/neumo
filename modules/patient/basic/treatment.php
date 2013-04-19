@@ -12,16 +12,14 @@
     ?>
     <div class="span3" id='table_drug_result'></div>
   </div>
-  <div class="row" style='display:none' id='drug_already_exist'>
-    <div class="span4 alert" >Medicamento ya existe. Confirmar ingreso</div>
-    <div class='span1'>
-      <a class='btn span1' id='reconfirm_drugsave' href="#">Ingresar</a>
+  <div id="drug_already_exist" style='display:none ;text-align:left'>
+    <div class="span4">Medicamento ya existe. Confirmar ingreso</div>
+    <div class="btn-group" >
+      <a class='btn ' id='reconfirm_drugsave' href="#"><i class="icon-ok"></i> Ingresar</a>
+      <a class='btn  ' href="#" id='cancel_duplicated_drug'><i class="icon-remove"></i> Cancelar</a>
     </div>
-    <div class='offset1 span1'>
-      <a class='btn  span1' href="#" id='cancel_duplicated_drug'>Cancelar</a>
-    </div>
+    <br>
   </div>
-
   <div id="inputdrug">
     <div class="row">
       <div class="span3">
@@ -55,26 +53,21 @@
         <input type="text" id="day_ini_d" class="span1" placeholder="d&iacute;a" maxlength="2"/>
       </div>
     </div>
-
-      <!--
-      <div class="row">
-        <div class="span8">
-          <textarea class="span8 treatment" rows="3" id="drug_adv_event">Describir evento adverso
-          </textarea>
-        </div>
-      </div> -->
-
     <div class="row">
       <div class="span1">
-        <a id="btn_add_drug" class="btn btn-primary span1">Agregar</a>
+        <div class="btn-group" id="save_cancel_drug">
+          <a id="btn_add_drug" class="btn "><i class="icon-ok"></i> Agregar </a>
+          <a id='hide_drug_hap' class="btn "><i class="icon-remove"></i> Cancelar </a>
+        </div>
+        
       </div>
       <div class="offset1 span1">
-        <a id='hide_drug_hap' class="btn btn-info span1">Cancelar</a>
+        
       </div>
     </div>
   </div>
 
-  <div id="hap_suspend" style="display:none">
+  <!-- <div id="hap_suspend" style="display:none">
     <div class="row">
       <div class="span3">
         <select id="suspend_cause" class="treatment" >
@@ -95,7 +88,7 @@
         <input type="text" id="day_end_d" class="span1" placeholder="d&iacute;a" maxlength="2"/>
       </div>
     </div>
-  </div>
+  </div> -->
 
   
   
