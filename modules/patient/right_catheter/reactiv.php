@@ -55,10 +55,10 @@
         <div class="row">
             <div class="span2" style="text-align:right">P.A. <b>Pulmonar</b></div>
             <div class="span1">
-                <input type="text" id="post_pap_sys" placeholder="sist&oacute;l." class="span1 react" name="post_pap_sys">
+                <input type="text" id="post_pap_sys" placeholder="sist&oacute;l." class="span1 react" name="post_pap_sys"  maxlength="3">
             </div>
             <div class="span1">
-                <input type="text" id="post_pap_dias" placeholder="diast&oacute;l." class="span1 react" name="post_pap_dias">
+                <input type="text" id="post_pap_dias" placeholder="diast&oacute;l." class="span1 react" name="post_pap_dias" maxlength="3">
             </div>
             <div class="span2">
                 <b><span id="post_pam_pulm"></span></b>
@@ -67,10 +67,10 @@
         <div class="row">
             <div class="span2" style="text-align:right">P.A. <b>Sist&eacute;mica</b></div>
             <div class="span1">
-                <input type="text" id="post_pas_sys" placeholder="sist&oacute;l." class="span1 react" name="post_pas_sys">
+                <input type="text" id="post_pas_sys" placeholder="sist&oacute;l." class="span1 react" name="post_pas_sys" maxlength="3">
             </div>
             <div class="span1">
-                <input type="text" id="post_pas_dias" placeholder="diast&oacute;l." class="span1 react" name="post_pas_dias">
+                <input type="text" id="post_pas_dias" placeholder="diast&oacute;l." class="span1 react" name="post_pas_dias" maxlength="3">
             </div>
             <div class="span2">
                 <b><span id="post_pam_stm"></span></b>
@@ -80,7 +80,7 @@
             <div class="span2" style="text-align:right">Pres. aur&iacute;cula derecha</div>
             <div class="span2">
                 <div class="input-append">
-                    <input type="text" id="post_rt_atr_press" placeholder="PAD" class="span2 react" name="post_rt_atr_press">
+                    <input type="text" id="post_rt_atr_press" placeholder="PAD" class="span2 react" name="post_rt_atr_press" maxlength="3">
                     <span class="add-on">mmHg</span>
                 </div>
             </div>
@@ -124,33 +124,37 @@
         <div class="row">
             <div class="span2" style="text-align:right">Oximetr&iacute;a %</div>
             <div class="span1">
-                <input type="text" id="post_rt_atr_oxim" placeholder="aur der" class="span1 react" name="post_rt_atr_oxim">
+                <input type="text" id="post_rt_atr_oxim" placeholder="aur der" class="span1 react" name="post_rt_atr_oxim" maxlength="2">
             </div>
             <div class="span1">
-                <input type="text" id="post_rt_ventr_oxim" placeholder="vt der" class="span1 react" name="post_rt_ventr_oxim">
+                <input type="text" id="post_rt_ventr_oxim" placeholder="vt der" class="span1 react" name="post_rt_ventr_oxim" maxlength="2">
             </div>
             <div class="span1">
-                <input type="text" id="post_pulm_artery" placeholder="at pulm." class="span1 react" name="post_pulm_artery">
+                <input type="text" id="post_pulm_artery" placeholder="at pulm." class="span1 react" name="post_pulm_artery" maxlength="2">
             </div>
         </div>
         <div class="row">
             <div class="span2" style="text-align:right">Frecuencia cardiaca</div>
             <div class="span2">
                 <div class="input-append">
-                    <input type="text" id="post_heart_rate" placeholder="pulso" class="span2 react" name="post_heart_rate">
+                    <input type="text" id="post_heart_rate" placeholder="pulso" class="span2 react" name="post_heart_rate" maxlength="3">
                     <span class="add-on">lat/min</span>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="span2" style="text-align:right">RESULTADO</div>
-            <div class="span4"  id="reactivity">
+            <div class="span4"  id="reactivity_display">
                 No se hizo test
+            </div>
+            <div style="display:none">
+                <input type="text" id="reactivity" name="reactivity" class="react">
             </div>
         </div>
         <div class="row">
             <div class="span6">
                 <button class="btn span6" id="react_save">Guardar</button>
+
             </div>
         </div>
         <br>
