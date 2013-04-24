@@ -21,8 +21,8 @@
     <div class="span1">
       <input type="text" id="hb_value" class="span1 hemo" name="hb_value" placeholder="mg/dL"  maxlength="2"/>
     </div>
-    <div class="span1"> <a class="btn" id="hb_save">Guardar</a>
-    <div class="alert alert-success span2">
+    <div class="span4"> <a class="btn span1" id="hb_save">Guardar</a>
+    <div class="alert alert-success span4">
  			 	<button type="button" class="close">&times;</button>
   			<strong></strong>
 			</div>
@@ -61,8 +61,8 @@
     <div class="span2">
       <input type="text" id="t_4_free" class="span1 thyro" name="thyro_t_4_free" placeholder="ng/dL" />
     </div>
-    <div class="span1"> <a class="btn" id="thyroid_save">Guardar</a>
-   		<div class="alert alert-success span2">
+    <div class="span4"> <a class="btn span1" id="thyroid_save">Guardar</a>
+   		<div class="alert alert-success span4">
  			 	<button type="button" class="close">&times;</button>
   			<strong></strong>
 			</div>
@@ -87,8 +87,8 @@
     <div class="span1">
       <input type="text" id="d_dimer_value" class="span1 dim" name="dim_d_dimer_value" placeholder="ng/mL"/>
     </div>
-    <div class="span1"> <a class="btn" id="d_dimer_save">Guardar</a>
-	    <div class="alert alert-success span2">
+    <div class="span4"> <a class="btn span1" id="d_dimer_save">Guardar</a>
+	    <div class="alert alert-success span4">
 	 			 	<button type="button" class="close">&times;</button>
 	  			<strong></strong>
 				</div>
@@ -116,8 +116,8 @@
       <input type="text" id="trop_result" class="span1 tropo" name="tropo_trop_result" placeholder="ng/ml"
       />
     </div>
-    <div class="span1"> <a class="btn" id="trop_save">Guardar</a>
-    	<div class="alert alert-success span2">
+    <div class="span4"> <a class="btn span1" id="trop_save">Guardar</a>
+    	<div class="alert alert-success span4">
  			 	<button type="button" class="close">&times;</button>
   			<strong></strong>
 			</div>
@@ -152,8 +152,8 @@
       <input type="text" id="pro_pep_natr_value" class="span1 pept" name="pept_pro_pep_natr_value" placeholder="pg/mL"
       />
     </div>
-    <div class="span1"> <a class="btn" id="bpn_save">Guardar</a>
-			<div class="alert alert-success span2">
+    <div class="span4"> <a class="btn span1" id="bpn_save">Guardar</a>
+			<div class="alert alert-success span4">
  			 	<button type="button" class="close">&times;</button>
   			<strong></strong>
 			</div>
@@ -185,8 +185,8 @@
         <option value="ddu">Negativo</option>
       </select>
     </div>
-    <div class="span1"> <a class="btn" id="hiv_save">Guardar</a>
-			<div class="alert alert-success span2">
+    <div class="span4"> <a class="btn span1" id="hiv_save">Guardar</a>
+			<div class="alert alert-success span4">
  			 	<button type="button" class="close">&times;</button>
   			<strong></strong>
 			</div>

@@ -191,13 +191,7 @@ $("#outcome_save").click(function(){
   $("#outcome_save").hide();
 });
 
-$("#susp_save").click(function(){
-	 var info = get_info("outcome");
-	 var result = to_database(info,"hap_outcome");
-	 show_alert(result,$(this));
-	 reset_fields("outcome");
-	 $("#susp_save").hide();
-});
+
 
 /**
 *'DESEMPENO CARDIOVASCULAR' BUTTONS

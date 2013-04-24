@@ -61,7 +61,10 @@ function show_ifnoempty(one, two) {
         two.hide();
         one.keyup(function() {
             hideshow1(one, two)
-        })
+        });
+        one.blur(function() {
+            hideshow1(one, two)
+        });
     })
 }
 
@@ -103,7 +106,7 @@ function hide_show_savebutton(fields,button) {
         button.hide();
         prefield=fields;
         for (var i = 0; i < prefield.length; i++) {
-            prefield[i].css('background-color','#F0FAFF');
+            prefield[i].css('background-color','#F0FAFF');/*coloring required empty fields with soft blue*/
         };
     });
     function filled_fields(){
@@ -135,10 +138,34 @@ function hide_show_savebutton(fields,button) {
             fields[ii].keyup(function(){filled_fields();});
         }
         
+        fields[ii].blur(function(){filled_fields();});
         ii++;
     }
 }
 
+/*
+*
+*
+-------------------------------------------------------------------------
+* Name          :   cancel_updaterow(cancel,reset,hide)
+* Description   :   Clear all text input field contents and hide those.
+*                   required after clicking "cancel" button.
+* Depend on     :   jquery
+* Dependant     :   PENDING TO UPDATE
+*/
+function cancel_updaterow(cancel,reset,hide) {
+    cancel.click(function(){
+        
+        for (var i = 0; i < reset.length; i++) {
+            reset[i].val('');
+        };
+        
+        for (var i = 0; i < hide.length; i++) {
+            hide[i].hide();
+        };
+        
+    });
+}
 
 /*
 *
@@ -250,7 +277,30 @@ function num_ranges(vale, maxi, mini, int_float) {
         });
     })
 }
-
+/*
+*
+*
+-------------------------------------------------------------------------
+* Name          :   concatenate_y_m_d(year,month,day,input)
+* Description   :   Concatenates separated date fields in hidden client-side
+*                   input field, in order to send dates with ajax or submit
+*                   methods. 
+* Depend on     :   jquery
+* Dependant     :   clinic_eval.js
+*/
+function concatenate_y_m_d(year,month,day,input) {
+    day.keyup(function(){
+        var month_v=month.val();
+        var day_v=day.val();
+        if (month_v.length==1) {month_v='0'+month_v;}
+        if (day_v.length==1) {day_v='0'+day_v;}
+        var concatdate=
+        year.val()+"-"+
+        month_v+"-"+
+        day_v;
+        input.val(concatdate);
+    });
+}
 /*
 *
 *

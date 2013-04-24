@@ -145,7 +145,9 @@ function hap_registration() {
   $.post("modules/register/ajax_register.php",{ mail:$('#mail').val(), pwd1:$('#pwd1').val(), pwd2:$('#pwd2').val() }, function(data) {
 	  /*The data variable has some garbage, that's why y just compare the 3 first character*/
 	  if(data.substring(0,3) == "yes") {
-		  $("#msg_register").html("<div class='alert alert-success'>Muy bien! Ahora ingrese a su email para activar su cuenta.</div>");
+		  $("#msg_register").html("<div class='alert alert-success'>Muy bien!"
+        +" Ahora ingrese a su email para activar su cuenta."
+        +" VERIFIQUE SU CARPETA SPAM si no encuentra el mensaje de activacion </div>");
 	  }
 	  else if (data=='mmm') {
 		  $("#msg_register").html("<div class='alert alert-error'>Usuario ya inici&oacute; proceso de registro.  Verifique bandeja de entrada de su email para terminar de activar cuenta.</div>");
@@ -160,5 +162,16 @@ function hap_registration() {
 }
 
 //Trigger user registration
+/*
+*
+*
+* ------------------------------------------------------------------------------
+* Function name:          No name
+* Description:            Trigghers "hap_registration()" with enter key or 
+*                         #register_button button (modules/login/login.php)
+* Depend on:              hap_registration(), #register_button 
+*                         modules/login/login.php
+* Dependant:              
+*/
 $("#register_button").click(function(){hap_registration()});
 $("#pwd2").keyup(function(event){if(event.keyCode == 13){hap_registration();} });

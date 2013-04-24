@@ -41,11 +41,7 @@ $("#transplant").change(function(){
 });
 	
 
-/*Toggle asociado a opciones de respuesta transplante(select list)
-$("#transplant").change(function(){
-  
-});
-*/
+
 
 /*Hide selected fields when loading page*/
 $(document).ready(function() {
@@ -53,98 +49,9 @@ $(document).ready(function() {
   $("#drug_adv_event").hide();
   $("#year_transp").hide();
   $(".susp_date").next().hide();
-  $(".susp_save").hide();
   $(".alert").hide(); 
 });
 
-/* Change the button of the suspension date */
-$(".susp_cause").click(function(){
-	if($(this).html() == "No ha habido suspensión"){
-		$(this).parent().parent().prev().html("Agregar");
-		$(this).parent().parent().parent().parent().prev().children().hide('fast');
-		$(this).parent().parent().parent().parent().next().children().hide('fast');
-		$(".susp_cause").parent().parent().parent().show('fast');
-		date_pharmac($(this).parent().parent().parent().parent().prev().children().children());
-		$("#susp_save").hide('fast');
-	}else{
-		$(".susp_cause").parent().parent().parent().hide('fast');
-		$(this).parent().parent().parent().show('fast');
-		$(this).parent().parent().prev().html($(this).html());
-		$(this).parent().parent().parent().parent().prev().children().show('fast');	
-	}
-});
-
-$(".day_end_d").change(function(){
-	if($(this).val() != "" && $(this).prev().val() != "" && $(this).prev().val() != ""){
-		$("#susp_save").show('fast');
-	}else{
-		$("#susp_save").hide('fast');
-	}
-});
-
-$("#susp_save").click(function(){
-	arr = $(".supension");
-	var dates = "";
-	  var dates2 = "";
-	  var result = "";
-	for(var i=0;i<arr.length;i++){
-		
-	  if( arr[i].value != "" && arr[i].value != undefined ){	  
-
-		// This two if's can be put outside, in a function
-				if($(arr[i]).is(".date1")){
-					if (dates != "") dates += ",";
-					if (dates2 != "") dates2 += ","; 
-					dates += $(arr[i]).prev();
-					dates2 += arr[i].value+"-"+arr[i+1].value+"-"+arr[i+2].value; 
-					i += 2;
-					continue;
-				} 
-				if($(arr[i]).is(".join2")){
-				  if(dates != "") dates += ",";
-					if(dates2 != "") dates2 += ",";
-					dates += arr[i].name;
-					dates2 += arr[i].value+"-"+arr[i+1].value;
-					i += 1;
-					continue;
-				}
-	      if( dates != "" ) dates += ",";
-	      if( dates2 != "" ) dates2 += ",";
-	      
-	      dates += arr[i].name;
-	      dates2 += arr[i].value;
-	    }
-	  }
-	
-	var table = document.getElementById('treatment_tb'), 
-    rows = table.rows,
-    i, j, cells, customerId;
-	//alert (rows.length);
-	 // alert (rows.length);
-
-for (i = 0, j = rows.length; i < j; ++i) {
-    cells = rows[i].getElementsByTagName('td');
-    //cells[i];
-    if(i=5){
-    	//alert(cells[2].getAttribute(value));    	
-    }
-    //alert(cells.length);
-   // for (h = 0, p = cells.length, h < p){
-   // if (cells[3] != undefined) {
-    //	alert(cells.item(3));
-    	//alert(j);
-    	//continue;
-    //}
-    //customerId = cells[0].innerHTML;
-}
-	
-	  result = dates+"?"+dates2;
-	  //alert (result);
-
-	//alert($("#treatment_tb").html());
-	//alert($(".month_end_d").val());
-	//alert($(".day_end_d").val());
-});
 
 
 /* Erase the values of the dates and hide the inputs */
@@ -167,23 +74,7 @@ $(".susp_date").find("#day_end_d").change(function(){
 	
 });
 
-/**
- * When the click is done to save a suspention date of a pharmac
- */
-$(".susp_save").click(function(){
-	alert("TODO SAVE"); 
-});
 
-/*
-$(".susp_cause").click(function(){
-	//alert("cosa");
-
-	$(this).html("");
-	alert($(this).next().show('fast'));
-	//$(this).next().html().style('display:none');
-	//$(this).next().parent().parent().html("oli");
-	//alert(this.id);
-});/*
 
 
 /* "Add drug" toggle effect */
@@ -459,9 +350,77 @@ $(document).ready(function() {
   $("#hiperclot").hide();
   $("#treatment").hide();
   $("#outcome").hide();
-  $("#susp_save").hide();
 });
 
+/*
+updating table with suspended drug cause and date
+*/
+var suspension= new Array();
+suspension= $('.suspension').map(function() {return this.id;});
+
+function update_in_line() {
+	var d = new Date();
+	var real_id=new Array();
+	for (var i = 0; i < suspension.length; i++) 
+	{
+	  real_id[i]=suspension[i].replace("suspend_cause_","");
+	  show_in_table_button($('#suspend_cause_'+real_id[i]),$('#date_'+real_id[i]));
+	  num_ranges($("#year_end_"+real_id[i]), d.getFullYear(), 1990,0);
+	  hmd_dateformat($("#year_end_"+real_id[i]),$("#month_end_"+real_id[i]),$("#day_end_"+real_id[i]));
+	  hide_show_savebutton([  $("#year_end_"+real_id[i]) ,$("#month_end_"+real_id[i]) ,$("#day_end_"+real_id[i])] ,$("#drg_"+real_id[i]));
+	  cancel_updaterow(
+	  	/* button id: */ $('#cancel_'+real_id[i])
+	  	/* reset array: */ ,[$('#day_end_'+real_id[i]) ,$('#month_end_'+real_id[i]) ,$('#year_end_'+real_id[i]) ,$('#drug_end_'+real_id[i]) ]
+	  	/* hide array: */ ,[ $('#date_'+real_id[i]) ,$('#day_end_'+real_id[i]) ,$('#month_end_'+real_id[i]) ,$('#drg_'+real_id[i]) ] );
+	  concatenate_y_m_d($('#year_end_'+real_id[i]),$('#month_end_'+real_id[i]),$('#day_end_'+real_id[i]),$('#drug_end_'+real_id[i]));
+	  update_row_in_table(
+	  	/* button id: */$('#update_'+real_id[i])
+	  	/* row id: */,real_id[i]
+	  	/* update id: */,$('#suspend_cause_'+real_id[i]),$('#drug_end_'+real_id[i])
+	  	/* td id: */,$('#td_suspend_cause_'+real_id[i]),$('#td_drug_end_'+real_id[i])
+	  	/* table: */,'hap_drug_treatment'
+	  	);
+	}
+
+
+	/*NEXT FUNCTION SHOULD BE REPLACED BY ONE THAT
+	APPLIES SAME EFFECT BOTH FOR TEXT OR SELECT INPUT
+	FIELD*/
+	function show_in_table_button(changing,display) {
+	  changing.change(function(){
+	    if (changing.val()!="") {display.show();} 
+	    else{display.hide();};
+	  });
+	}
+
+
+	//pending to loop with cols and td
+	function update_row_in_table(button,rowid,col1,col2,td1,td2,table){
+		button.click(function(){
+			col1val=col1.val();
+			col2val=col2.val();
+			$.post('../patient/basic/ajax_update_drug.php'
+				,{
+					rowid:rowid
+					,col1val:col1val
+					,col2val:col2val
+					,table:table}
+				,function(data){
+					//$('#temporaryid').html(data);
+					td1.html(col1val);
+					td2.html(col2val);
+					//button.hide();
+				}
+				);
+		});
+	}
+
+}
+	
+
+
+
+update_in_line();
 /**
 -------------------------------------------------------------------------------------
 *

@@ -45,7 +45,7 @@ $sql    = "SELECT * FROM hap_first_eval LEFT JOIN main_eval
 	<?php } 
 	else {?>
 	<div class="row" id='first_eval_form' style='text-align:left'>
-		<div class="span2" style="text-align:right">Fecha inicio s&iacute;ntomas</div>
+		<div class="span2" style="text-align:right">Fecha inicio s&iacute;ntomas antes del diagnostico</div>
 
 		<div class="span2" style="text-align: left;">
 		  <input type="text" id="year" placeholder="a&ntilde;o" class="span1 " maxlength="4"/>

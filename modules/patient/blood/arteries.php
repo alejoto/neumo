@@ -41,8 +41,8 @@
     </div>
   </div>
   <div class="row" style="text-align:left">
-    <div class="offset5 span1"> <a class="btn" id="bld_gass_save">Guardar</a>
-    	<div class="alert alert-success">
+    <div class="offset5 span3"> <a class="btn span1" id="bld_gass_save">Guardar</a>
+    	<div class="alert alert-success span3">
  				<button type="button" class="close">&times;</button>
   			<strong></strong>
 			</div>

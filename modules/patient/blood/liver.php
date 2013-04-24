@@ -2,7 +2,6 @@
   <div class="row">
     <div class="well well-small span8" style="text-align:center">
       <h4>FUNCI&Oacute;N HEP&Aacute;TICA</h4>
-
     </div>
   </div>
   <div class="row">
@@ -52,8 +51,8 @@
     <div class="span2">
       <input type="text" id="hep_albumin" class="span1 live" name="hep_albumin" placeholder="g/dL" />
     </div>
-    <div class="span1"> <a class="btn" id="liver_save">Guardar</a>
-			<div class="alert alert-success">
+    <div class="span4"> <a class="btn span1" id="liver_save">Guardar</a>
+			<div class="alert alert-success span4">
  			 	<button type="button" class="close">&times;</button>
   			<strong></strong>
 			</div>
@@ -90,8 +89,8 @@
     </div>
   </div>
   <div class="row">
-    <div class="offset5 span1"> <a class="btn" id="bleed_save">Guardar</a>
-    	<div class="alert alert-success">
+    <div class="offset3 span4"> <a class="btn span1" id="bleed_save">Guardar</a>
+    	<div class="alert alert-success span4">
  			 	<button type="button" class="close">&times;</button>
   			<strong></strong>
 			</div>

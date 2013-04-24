@@ -8,67 +8,73 @@ WHERE main_eval.patient_id='".$usr."'";
 $result = mysqli_query($con,$sql);
 ?>
 
-<table id='treatment_tb' class="table table-hover span8">
-  <tr class="span8">
+<table id='treatment_tb' class="table table-hover span10">
+  <tr class="span10">
     <th class="span2">F&aacute;rmaco</th>
     <th class="span2">Fecha inicio</th>
-    <th class="span3">Fecha susp</th>
-    <th class="span2">Motivo susp</th>
+    <th class="span3">Motivo suspensi&oacute;n</th>
+    <th class="span3">Fecha suspensi&oacute;n</th>
   </tr>
   
   <?php 
   while($row = mysqli_fetch_array($result)) {?>
-  <tr class="span9">
-    <tr class="span8">
+  
+    <tr class="span10">
     <td class="span2"><?php echo $row['drug'] ;?></td>
     <td class="span2"><?php echo $row['drug_ini'] ;?></td>
-    <td class="span3">
+    <td class="span3" <?php echo 'id="td_suspend_cause_'.$row['drug_treatment_id'].'"';?>  >
+
+      <?php 
+      if ($row['suspend_cause']==null||$row['suspend_cause']=='') {?>
+      <select name="" <?php echo 'id="suspend_cause_'.$row['drug_treatment_id'].'"';?> class="suspension " >
+        <option value="">...</option>
+        <option value="evento adverso">Evento adverso</option>
+        <option value="falla terapeutica">Falla terap&eacute;utica (no mejor&iacute;a)</option>
+        <option value="desersion">Desersi&oacute;n al tratamiento</option>
+        <option value="negacion asegurador">Negaci&oacute;n por asegurador</option>
+        <option value="mejora con otro tratamiento">Mejor&oacute; con otro tratamiento</option>
+        <option value="fallece">Fallecido</option>
+        <option value="otras">Otras causas</option>
+      </select>
+      <div <?php echo 'id="drg_'.$row['drug_treatment_id'].'"';   ?>  style="display:none" class="btn-group" >
+        <button class="btn" <?php echo 'id="update_'.$row['drug_treatment_id'].'"';?>><i class="icon-ok"></i> Actualizar</button>
+        <button class="btn" <?php echo 'id="cancel_'.$row['drug_treatment_id'].'"';?>><i class="icon-remove"></i> Borrar</button>
+      </div>
+      <?php } 
+      else {
+        echo $row['suspend_cause'];
+      }?>
+      
+
+    </td>
+    <td class="span3" <?php echo 'id="td_drug_end_'.$row['drug_treatment_id'].'"';?>>
       <?php 
       if ($row['drug_end']==null||$row['drug_end']=='') {?>
-      <div class="span3 susp_date" style="display:none">
-        <input type="text" id="year_end_d" class="span1 supension year_end_d date1 " maxlength="4" placeholder="a&ntilde;o"/>
-        <input type="text" id="month_end_d" class="span1 supension month_end_d " maxlength="2" placeholder="mes"/>
-        <input type="text" id="day_end_d"  class="span1 supension day_end_d "  maxlength="2" placeholder="d&iacute;a"/>
+      <div <?php echo 'id="date_'.$row['drug_treatment_id'].'"'; ?> class=" susp_date" style="display:none">
+        <input type="text" <?php echo 'id="year_end_'.$row['drug_treatment_id'].'"'; ?> 
+         class="span1 supension year_end_d date1 " maxlength="4" placeholder="a&ntilde;o"/>
+        <input type="text" <?php echo 'id="month_end_'.$row['drug_treatment_id'].'"'; ?> 
+         class="span1 supension month_end_d " maxlength="2" placeholder="mes"/>
+        <input type="text"  <?php echo 'id="day_end_'.$row['drug_treatment_id'].'"'; ?>
+          class="span1 supension day_end_d"  maxlength="2" placeholder="d&iacute;a"/>
+          <input type="text" <?php echo 'id="drug_end_'.$row['drug_treatment_id'].'"'; ?> style="display:none">
       </div>
       <?php } 
       else {
         echo $row['drug_end'];
       }?>
     </td>
-    <td class="span2">
-      <?php 
-      if ($row['suspend_cause']==null||$row['suspend_cause']=='') {?>					
-			<div class="dropdown">
- 				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Agregar</a>
-  			<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-  				<li value=""><a class="susp_cause supension" tabindex="-1">No ha habido suspensi&oacute;n</a></li>
-  				<li value="adverse_event"><a class="susp_cause supension" tabindex="-1">Evento adverso</a></li>
-					<li value="treatment_desertion"><a class="susp_cause supension" tabindex="-1">Desersi&oacute;n al tratamiento</a></li>
-  				<li value="insurance_company_rejection"><a class="susp_cause supension" tabindex="-1">Negaci&oacute;n por asegurador</a></li>
-					<li value="improved_with_other_drug"><a class="susp_cause supension" tabindex="-1">Mejor&oacute; con otro tratamiento</a></li>
-					<li value="dead_patient"><a class="susp_cause supension" tabindex="-1">Paciente fallecido</a></li>
-					<li value="other_causes"><a class="susp_cause supension" tabindex="-1">Otras causas</a></li>
-  			</ul>
-			</div>
-				
-		 <?php } 
-      else {
-        echo $row['suspend_cause'];
-      }?>
-
-    </td>
   </tr>
   <?php } ?>
-  <tr class="span8">
-    <td class="span3">
+  <tr class="span10">
+    <td class="span2">
       <a rel="tooltip" title="agregar medicamento" id="ad_drug" >
         <i class="icon-plus-sign"></i>
          A&ntilde;adir f&aacute;rmaco</a>
     </td>
     <td class="span2"></td>
-    <td class="span2"></td>
-    <td class="span2">
-    	<a class="btn" id="susp_save">Guardar</a>
-    </td>
+    <td class="span3"></td>
+    <td class="span3"></td>
   </tr>
 </table>
+<div id="temporaryid"></div>
