@@ -355,10 +355,11 @@ $(document).ready(function() {
 /*
 updating table with suspended drug cause and date
 */
-var suspension= new Array();
-suspension= $('.suspension').map(function() {return this.id;});
+
 
 function update_in_line() {
+  var suspension= new Array();
+  suspension= $('.suspension').map(function() {return this.id;});
 	var d = new Date();
 	var real_id=new Array();
 	for (var i = 0; i < suspension.length; i++) 

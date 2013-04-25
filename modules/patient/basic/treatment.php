@@ -93,17 +93,35 @@
   
   
   <!-- BEGIN OF MANEJO QUIRURGICO-->
+<?php
+$sql    = "SELECT * FROM hap_surgical 
+LEFT JOIN main_eval 
+ON hap_surgical.eval_id=main_eval.eval_id  
+WHERE hap_surgical.surgical_type<>'' AND main_eval.patient_id='".$usr."' ";
+$result = mysqli_query($con,$sql);
+$row = mysqli_fetch_array($result);
+?>
   <div class="row">
     <div class="span8"><hr><h4>Manejo quir&uacute;rgico</h4></div>
   </div>
-
-  <div class="row">
+  <?php 
+    if ($row['surgical_id']!="") {
+      ?>
+      <div class="row">
+        <div class="span5" style="text-align:left">
+          <?php echo "Transplantado de ".$row['surgical_type']."en la fecha ".$row['surgical_date'] ; ?>
+        </div>
+      </div>
+        
+      <?php
+    } else {
+      ?>
+      <div class="row">
     <div class="span8" style="text-align:left">
       Dejar sin responder si no aplica.
     </div>
   </div>
-
-  <div class="row">
+  <div class="row" style="text-align:left">
     <div class="span3">
       <select id="transplant" class="surgical" name="surgical_type">
         <option value="none">Tipo de transplante</option>
@@ -112,7 +130,6 @@
         <option value="corazon pulmon">Transplantado: coraz&oacute;n-pulm&oacute;n</option>
       </select>
     </div>
-
     <div class="span3">
       <input type="text" id="year_transp" class="span1 surgical date1" name="surgical_date" placeholder="a&ntilde;o" maxlength="4"/>
       <input type="text" id="month_transp" class="span1 surgical" placeholder="mes" maxlength="2"/>
@@ -121,28 +138,78 @@
     <div class="span1"></div>
   </div>
 
+      <?php
+    }
+     ?>
+
+  
+<?php
+$sql    = "SELECT * FROM hap_surgical 
+LEFT JOIN main_eval 
+ON hap_surgical.eval_id=main_eval.eval_id  
+WHERE hap_surgical.surgical_tendt_date<>'' AND hap_surgical.surgical_tendt_date<>'0000-00-00' AND main_eval.patient_id='".$usr."' ";
+$result = mysqli_query($con,$sql);
+$row = mysqli_fetch_array($result);
+if ($row['surgical_tendt_date']!='') {
+  ?>
+  <div class="row">
+    <div class="span5" style="text-align:left">
+      Trombarterectomia realizada el 
+      <?php echo $row['surgical_tendt_date']; ?>
+    </div>
+  </div>
+
+  <?php
+  
+} else {?>
   <div class="row" id="id1">
     <div class="span3" id="id2" style="text-align:right">Trombendarterectom&iacute;a? 
       <input type="checkbox" id="tendt" class="treatment" >
     </div>
-    <div class="span3" id="tendt_hide">
+    <div class="span3" id="tendt_hide" style="text-align:left">
       <input type="text" id="year_tendt" class="span1 surgical date1" name="surgical_tendt_date" placeholder="a&ntilde;o" maxlength="4"/>
       <input type="text" id="month_tendt" class="span1 surgical" placeholder="mes" maxlength="2"/>
       <input type="text" id="day_tendt" class="span1 surgical" placeholder="d&iacute;a" maxlength="2"/>
     </div>
   </div>
+  <?php
+}
+?>
 
+  
+<?php 
+$sql    = "SELECT * FROM hap_surgical 
+LEFT JOIN main_eval 
+ON hap_surgical.eval_id=main_eval.eval_id  
+WHERE hap_surgical.surgical_atr_date<>'' AND hap_surgical.surgical_atr_date<>'0000-00-00' AND main_eval.patient_id='".$usr."' ";
+$result = mysqli_query($con,$sql);
+$row = mysqli_fetch_array($result);
+if ($row['surgical_atr_date']!="") {
+  ?>
   <div class="row">
+    <div class="span5" style="text-align:left">
+      Atrioseptostom&iacute;a realizada el 
+      <?php echo $row['surgical_atr_date']; ?>
+    </div>
+  </div>
+  <?php
+} else { ?>
+<div class="row">
     <div class="span3" style="text-align:right">Atrioseptostom&iacute;a? 
       <input type="checkbox" id="atr_sept" class="treatment"/>
     </div>
-    <div class="span3" id="atr_sept_hide">
+    <div class="span3" id="atr_sept_hide" style="text-align:left">
       <input type="text" id="year_atr" class="span1 surgical date1" name="surgical_atr_date" placeholder="a&ntilde;o" maxlength="4"/>
       <input type="text" id="month_atr" class="span1 surgical" placeholder="mes" maxlength="2"/>
       <input type="text" id="day_atr" class="span1 surgical" placeholder="d&iacute;a" maxlength="2"/>
     </div>
     <div class="span1"></div>
   </div>
+<?php
+
+}
+ ?>
+  
 
   <div class="row">
     <div class="span8">
