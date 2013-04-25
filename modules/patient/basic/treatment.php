@@ -124,8 +124,8 @@ $row = mysqli_fetch_array($result);
   <div class="row" style="text-align:left">
     <div class="span3">
       <select id="transplant" class="surgical" name="surgical_type">
-        <option value="none">Tipo de transplante</option>
-        <option value="en espera">En lista de espera</option>
+        <option value="">Tipo de transplante</option>
+        <option value="">En lista de espera</option>
         <option value="pulmon">Transplantado: pulm&oacute;n</option>
         <option value="corazon pulmon">Transplantado: coraz&oacute;n-pulm&oacute;n</option>
       </select>

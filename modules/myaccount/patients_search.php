@@ -7,10 +7,10 @@
 <div class="container">
   <div class="row-fluid">
     <form  class="form-horizontal span5" style="text-align: left; margin-top: 30px;" onsubmit="return false">
-      <div style=" height: 300px; margin-top: 40px; margin-bottom: -30px; margin-left: 5px;">
-       <center><h1 style="color: #CC0000; font-family: 'Play', sans-serif; font-weight: 700;  ">RECOLHAP</h1>
+      <div style=" height: 250px; margin-top: 10px; margin-bottom: -30px; margin-left: 5px;">
+       <center><h2 style="color: #CC0000; font-family: 'Play', sans-serif; font-weight: 700;  ">RECOLHAP</h2>
        <br>
-       <img src="../../assets/images/logo.png" style="width:150px; height: 125px; opacity:0.7; margin-top:0px auto;">
+       <img src="../../assets/images/logo.png" style="width:100px; height: 82px; opacity:0.7; margin-top:0px auto;">
        <br>
        <p style="color: #686868; font-family: 'Oxygen', sans-serif; font-weight: 700;">
         <!-- <i class="icon-plus"></i> <i class="icon-group icon-2x"></i>-->
@@ -19,6 +19,7 @@
         <br>
         de Hipertensi&oacute;n Arterial Pulmonar
       </p> 
+      <!-- <div class="h3"></div> -->
     </center>
      <br>
      </div>
@@ -26,6 +27,13 @@
       <!-- ************************ -->
       <!-- select doc id section    -->
       <blockquote>
+        
+          <h5 class=" alert">
+            Aviso: no podr&aacute; ingresar ning&uacute;n dato cl&iacute;nico hasta no registrar el CATETERISMO
+            DERECHO con diagn&oacute;stico de HIPERTENSI&Oacute;N ARTERIAL PULMONAR!
+          </h5>
+        
+        
         <p>Selecciona tipo y n&uacute;mero de documento:</p>
       </blockquote><br>
       <div style="margin-left: 20px;">
@@ -70,8 +78,8 @@
           <button type="button" class="close" data-dismiss="alert">&times;</button>
           Ingrese PACIENTE NUEVO o verifique documento.
           <h5>
-            Es obligatorio ingresar los resultados del CATETERISMO 
-            CARDIACO DERECHO para poder ingresar cualquier otro dato cl&iacute;nico
+            Luego de registrar paciente es obligatorio ingresar los resultados del CATETERISMO 
+            CARDIACO DERECHO para ingresar cualquier dato cl&iacute;nico
           </h5>
         </div>
         <div class="" style="margin-left:0px">

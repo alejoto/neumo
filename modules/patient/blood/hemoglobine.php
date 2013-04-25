@@ -165,11 +165,32 @@
     </div>
   </div>
   <div class="row">
-    <div class="span8"> <b>Infecci&oacute;n VIH </b>
-
+    <div class="span8"> 
+      <b>Infecci&oacute;n VIH </b>
     </div>
   </div>
-  <div class="row">
+  <?php
+  $usr=$_SESSION['hap_patient_id'];
+  $sql    = "SELECT * FROM hap_vih 
+  LEFT JOIN main_eval 
+  ON hap_vih.eval_id=main_eval.eval_id  
+  WHERE hap_vih.hiv_result='positivo' AND main_eval.patient_id='".$usr."' ";
+  $result = mysqli_query($con,$sql);
+  $row = mysqli_fetch_array($result);
+  if ($row['hiv_result']!="") {
+    ?>
+    <div class="row">
+      <div class="span7">
+        VIH positivo seg&uacute;n prueba realizada en la fecha
+        <?php echo $row['hiv_date'] ?>
+      </div>
+    </div>
+
+    <?php
+    
+  } else {
+    ?>
+    <div class="row">
     <div class="span1">Fecha</div>
     <div class="span3">
       <input type="text" id="y_vih" class="span1 vih date1" name="hiv_date" placeholder="a&ntilde;o" maxlength="4" />
@@ -181,17 +202,20 @@
     <div class="offset1 span2">
       <select id="hiv_result" class="span2 vih" name="hiv_result">
         <option value="">Resultado</option>
-        <option value="feu">Positivo</option>
-        <option value="ddu">Negativo</option>
+        <option value="positivo">Positivo</option>
+        <option value="negativo">Negativo</option>
       </select>
     </div>
     <div class="span4"> <a class="btn span1" id="hiv_save">Guardar</a>
-			<div class="alert alert-success span4">
- 			 	<button type="button" class="close">&times;</button>
-  			<strong></strong>
-			</div>
+      <div class="alert alert-success span4">
+        <button type="button" class="close">&times;</button>
+        <strong></strong>
+      </div>
     </div>
   </div>
+    <?php
+  }
+  ?>
   <div class="row">
     <div class="span8">
       <br/>

@@ -67,13 +67,13 @@
     <div class="span3" style="text-align:right">
       Lipotimia/S&iacute;ncope
     </div>
-    <div class="span1">
+    <div class="span1" style="text-align:left">
       <input type="checkbox" id="walk_syncope" class="sixmw" name="walk_sinc">
     </div>
     <div class="span2" style="text-align:right" id="walk_chest_pain" >
       Dolor t&oacute;racico
     </div>
-    <div class="span1">
+    <div class="span1" style="text-align:left">
       <input type="checkbox" class="sixmw" name="walk_toracic" >
     </div>
   </div>
