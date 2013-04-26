@@ -94,9 +94,6 @@ $con=mysqli_connect("localhost","healmy5_root","laravel","healmy5_health");
    mysqli_query($con,$sql2) or die (mysqli_error($con));
     
    
-   
-   /////////////////////////////////////////////////////////////////////////////
-   
    $sql2="CREATE TABLE  IF NOT EXISTS hap_surgical (
 			surgical_id			INT (150) PRIMARY KEY NOT NULL AUTO_INCREMENT
 			,surgical_date	DATE
@@ -105,12 +102,21 @@ $con=mysqli_connect("localhost","healmy5_root","laravel","healmy5_health");
    		,surgical_atr_date DATE
    		,eval_id				VARCHAR(50))";
    mysqli_query($con,$sql2) or die (mysqli_error($con));
+
+
+   $sql2="CREATE TABLE  IF NOT EXISTS hap_coag (
+      id INT (150) PRIMARY KEY NOT NULL AUTO_INCREMENT
+      ,coag_date  DATE
+      ,hep_tpt  VARCHAR (5)
+      ,hep_tp VARCHAR (5)
+      ,hep_inr VARCHAR (5)
+      ,eval_id  VARCHAR(50))";
+   mysqli_query($con,$sql2) or die (mysqli_error($con));
    
    
   $sql=mysqli_query($con,"SELECT status FROM users");
   if (!$sql){ mysqli_query($con,"ALTER TABLE users ADD status VARCHAR(60) AFTER rol");}
 
-	
 	$sql=mysqli_query($con,"SELECT improved_symts FROM hap_follow_up");
 	if (!$sql){ mysqli_query($con,"ALTER TABLE hap_follow_up ADD improved_symts VARCHAR(60) AFTER syncope");}
 
@@ -158,6 +164,43 @@ $con=mysqli_connect("localhost","healmy5_root","laravel","healmy5_health");
 
   $sql=mysqli_query($con,"SELECT esplenectomy FROM hap_hyperclotting");
   if (!$sql){ mysqli_query($con,"ALTER TABLE hap_hyperclotting ADD esplenectomy VARCHAR(60) AFTER neoplasia");}
+
+  $sql=mysqli_query($con,"SELECT doppl_cong_defects_otros FROM hap_ecocardio");
+  if (!$sql){ mysqli_query($con,"ALTER TABLE hap_ecocardio ADD doppl_cong_defects_otros VARCHAR(150) AFTER doppl_cong_defects  ");}
+
+  $sql=mysqli_query($con,"SELECT mri_other_defects FROM hap_mri");
+  if (!$sql){ mysqli_query($con,"ALTER TABLE hap_mri ADD mri_other_defects VARCHAR(150) AFTER mri_defects  ");}
+
+  $sql=mysqli_query($con,"SELECT artergph_location FROM hap_pulm_arteriography");
+  if (!$sql){ mysqli_query($con,"ALTER TABLE hap_pulm_arteriography ADD artergph_location VARCHAR(150) AFTER artergph_TEP  ");}
+
+  $sql=mysqli_query($con,"SELECT post_cvf_lt FROM hap_spirometry");
+  if (!$sql){ mysqli_query($con,"ALTER TABLE hap_spirometry ADD post_cvf_lt VARCHAR(150) AFTER bronchodil_changes  ");}
+
+  $sql=mysqli_query($con,"SELECT post_vef1_lt FROM hap_spirometry");
+  if (!$sql){ mysqli_query($con,"ALTER TABLE hap_spirometry ADD post_vef1_lt VARCHAR(150) AFTER post_cvf_lt  ");}
+
+  $sql=mysqli_query($con,"SELECT post_vef1_cvf FROM hap_spirometry");
+  if (!$sql){ mysqli_query($con,"ALTER TABLE hap_spirometry ADD post_vef1_cvf VARCHAR(150) AFTER post_vef1_lt  ");}
+
+  $sql=mysqli_query($con,"SELECT delta_abs_vef FROM hap_spirometry");
+  if (!$sql){ mysqli_query($con,"ALTER TABLE hap_spirometry ADD delta_abs_vef VARCHAR(150) AFTER post_vef1_cvf  ");}
+
+  $sql=mysqli_query($con,"SELECT delta_vef1 FROM hap_spirometry");
+  if (!$sql){ mysqli_query($con,"ALTER TABLE hap_spirometry ADD delta_vef1 VARCHAR(150) AFTER delta_abs_vef  ");}
+
+  $sql=mysqli_query($con,"SELECT borg FROM hap_six_mins_walk");
+  if (!$sql){ mysqli_query($con,"ALTER TABLE hap_six_mins_walk ADD borg VARCHAR(150) AFTER walk_symptoms  ");}
+
+  $sql=mysqli_query($con,"SELECT walk_syncope FROM hap_six_mins_walk");
+  if (!$sql){ mysqli_query($con,"ALTER TABLE hap_six_mins_walk ADD walk_syncope VARCHAR(150) AFTER borg  ");}
+
+  $sql=mysqli_query($con,"SELECT walk_toracic FROM hap_six_mins_walk");
+  if (!$sql){ mysqli_query($con,"ALTER TABLE hap_six_mins_walk ADD walk_toracic VARCHAR(150) AFTER walk_syncope  ");}
+
+
+
+
  
   $sql=mysqli_query($con,"SELECT post_its_right FROM hap_vasoreact_test");
   if ($sql){ mysqli_query($con,"ALTER TABLE hap_vasoreact_test DROP post_its_right");}
@@ -178,8 +221,6 @@ $con=mysqli_connect("localhost","healmy5_root","laravel","healmy5_health");
   $sql=mysqli_query($con,"SELECT reuma_ana FROM hap_reuma");
 	if ($sql){ mysqli_query($con,"ALTER TABLE hap_reuma DROP reuma_ana, DROP anti_ro, DROP anti_la, DROP anti_smt, DROP anti_rnp, DROP anti_u1rnp, DROP anti_u3rnp, DROP anti_jo, DROP rna_pol_3, DROP topiso_1, DROP centrom, DROP anti_slc, DROP anti_th_t0, DROP ss_dna, DROP ds_dna, DROP c_anca, DROP p_anca, DROP a_cardiolip_g, DROP a_cardiolip_m, DROP anticoag_lup, DROP a_2_cpl");}
   
-
-
 	$sql=mysqli_query($con,"SELECT outcome_dyspn FROM hap_outcome");
 	if ($sql){ mysqli_query($con,"ALTER TABLE hap_outcome DROP outcome_dyspn, DROP outcome_epid, DROP endart_failure, DROP lung_transplant, DROP dead_place");}
 	

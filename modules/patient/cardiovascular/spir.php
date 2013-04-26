@@ -14,12 +14,14 @@
     </div>
     <div class="row">
         <div class="span2">
-            <div class="input-append"><input type="text" placeholder="CVF" class="span1 spir1" id="cvf_lt" name="cvf_lt">
+            <div class="input-append">
+                <input type="text" placeholder="CVF" class="span1 spir1" id="cvf_lt" name="cvf_lt">
                 <span class="add-on">Lts. CVF</span>
             </div>
         </div>
         <div class="span2">
-            <div class="input-append"><input type="text" placeholder="VEF1" class="span1 spir1" id="vef1_lt" name="vef1_lt">
+            <div class="input-append">
+                <input type="text" placeholder="VEF1" class="span1 spir1" id="vef1_lt" name="vef1_lt">
                 <span class="add-on">Lts/1seg.</span>
             </div>
         </div>
@@ -38,12 +40,14 @@
     </div>
     <div class="row">
         <div class="span2">
-            <div class="input-append"><input type="text" placeholder="CVF" class="span1 spir1" id="post_cvf_lt" name="post_cvf_lt">
+            <div class="input-append">
+                <input type="text" placeholder="CVF" class="span1 spir1" id="post_cvf_lt" name="post_cvf_lt">
                 <span class="add-on">Lts. CVF</span>
             </div>
         </div>
         <div class="span2">
-            <div class="input-append"><input type="text" placeholder="VEF1" class="span1 spir1" id="post_vef1_lt" name="post_vef1_lt">
+            <div class="input-append">
+                <input type="text" placeholder="VEF1" class="span1 spir1" id="post_vef1_lt" name="post_vef1_lt">
                 <span class="add-on">Lts/1seg.</span>
             </div>
         </div>

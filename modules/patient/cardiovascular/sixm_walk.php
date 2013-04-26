@@ -38,7 +38,7 @@
     </div>
     <div class="span1">Disnea:</div>
     <div class="span1">
-      <select id="borg" class="span2 sixmw" name="walk_disnea">
+      <select id="borg" class="span2 sixmw" name="borg">
         <option value="">Escala Borg...</option>
         <option value="0">0-  Sin disnea</option>
         <option value="0.5">0.5-  Muy muy leve</option>
@@ -68,13 +68,13 @@
       Lipotimia/S&iacute;ncope
     </div>
     <div class="span1" style="text-align:left">
-      <input type="checkbox" id="walk_syncope" class="sixmw" name="walk_sinc">
+      <input type="checkbox" class="sixmw" name="walk_syncope"  id="walk_syncope">
     </div>
     <div class="span2" style="text-align:right" id="walk_chest_pain" >
       Dolor t&oacute;racico
     </div>
     <div class="span1" style="text-align:left">
-      <input type="checkbox" class="sixmw" name="walk_toracic" >
+      <input type="checkbox" class="sixmw" name="walk_toracic" id="walk_toracic">
     </div>
   </div>
   <div class="row">

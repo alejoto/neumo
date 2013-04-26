@@ -66,7 +66,7 @@
      
      <div class="row" id="other_defects3">
          <div class="offset3 span3">
-             <input type="text" id="a_tc_congenit_otros" class="span3 mri1" name="mri_other_defects" placeholder="Describir defectos cardiacos"/>
+             <input type="text" id="mri_other_defects" class="span3 mri1" name="mri_other_defects" placeholder="Describir defectos cardiacos"/>
          </div>
      </div>
      <div class="row">
