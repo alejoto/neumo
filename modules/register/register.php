@@ -13,7 +13,11 @@
     
       <div class="input-prepend">        
         <span class="add-on"><i class="icon-envelope "></i></span>
-        <input class="input-large" id="mail" name="mail" type="text" placeholder="Email">
+        <select class="input-large" id="mail" name="mail" >
+          <option value="">Ingreso controlado: escoja email</option>
+          <option value="aggt@une.net.co">Jorge Ortega Jaramillo aggt@une.net.co</option>
+          <option value=""></option>
+        </select>
         <br><br>
       
         <span class="add-on"><i class="icon-user"></i></span>
