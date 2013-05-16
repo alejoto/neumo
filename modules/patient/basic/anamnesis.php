@@ -29,7 +29,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="span2">Fecha evaluaci&oacute;n</div>
+    <div class="span2" style="text-align:left">Fecha evaluaci&oacute;n</div>
     <div class="span3" style="text-align: left;">
       <input type="text" id="year_ev" class="span1" placeholder="a&ntilde;o" maxlength="4"/>
       <input type="text" id="month_ev" class="span1" placeholder="mes" maxlength="2"/>

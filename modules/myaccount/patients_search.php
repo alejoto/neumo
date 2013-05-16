@@ -140,7 +140,7 @@
       <!-- ************************ -->
 
     </div>
-    <script src="../../assets/js/medics.js"></script>
+    <script src="../../assets/js/medic.js"></script>
     <script src="../../assets/js/patients.js"></script>
 
   </div>

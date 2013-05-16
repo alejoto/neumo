@@ -13,7 +13,7 @@
 
   <script src="../../assets/js/bootstrap.min.js"></script>
   <script src="../../assets/js/bootstrap-carousel.js"></script>
-  <script src="../../assets/js/bootstrap-modal.js"></script>
+  <!-- <script src="../../assets/js/bootstrap-modal.js"></script>  -->
   <script src="../../assets/js/medic.js"></script>
   <script src="../../assets/js/highcharts.js"></script>
 
@@ -29,7 +29,7 @@
           <img style="width: 30px; heigth: 23px;" src="../../assets/images/logo-gray.png">
         </p>
       </div>
-      <div class="span5">
+      <div class="span4">
         <div class="btn-group">
           <?php
           if( isset($_SESSION['evaluation'])&&$_GET['page']!='statistics' ){
@@ -83,17 +83,29 @@
               <a href="../login/logout.php" class="btn btn-inverse">Salir<i class="icon-share-alt icon-white"></i></a>
             </div>
           </div>
-          <div class="span5" style="color:gray;padding-top:7px">
+          
+<!--      ASDASDFASDFASDFASDFASDFASDF      -->
+          <div class="span2"  style="color:gray;padding-top:7px">
+          	<a href="#modal_help" id="button_modal" role="button" style="font-family:'Oxygen',sans-serif;" data-toggle="modal">Ayuda?</a>
+          	 
+          	<?php 
+          		include '../includes/help.php';
+          	?>
+          </div>
+          
+          <div class="span2" style="color:gray;padding-top:7px">
             <?php 
             include '../DB/connect.php';
             $user_id=$_SESSION['username'];
             $result_user = mysqli_query($con,"SELECT * FROM main_investigator WHERE user_id='$user_id'"  );  
             $row_user    = mysqli_fetch_array($result_user);
             ?>
+            
             <a href="myaccount.php?page=user_register" style="color:gray"  data-toggle="tooltip" title="Editar perfil" data-placement="bottom" >
               <?php echo $row_user['ivt_name'].' '.$row_user['ivt_surname']; ?>
             </a>
           </div>
         </div>
       </div>
-      <!--menu ending-->
+      
+	<!--menu ending-->
