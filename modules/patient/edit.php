@@ -124,13 +124,13 @@
             <div class="span7"><input type="text" id='cityreside' name='cityreside' <?php echo  'value="'.$cityreside.'"'  ; ?> placeholder="Ciudad"></div>
           </div>
           <div class="row">
-            <div class="offset2 span7"><button id='patient_save_btn' type="submit" class="btn">Salvar</button></div>
+            <div class="offset2 span7"><button id='patient_save_btn' type="submit" class="btn">Guardar</button></div>
           </div>
         </form>
       </div>
     </div>
     <div class="row">
-      <div class="offset4 span5"><h4>Volver a formularios cl&iacute;nicos</h4></div>
+      <div class="offset4 span5" style="text-align:justify;"><h4>Volver a formularios cl&iacute;nicos</h4></div>
     </div>
     <div class="row">
       <div class="offset4 span4 btn-group btn-group-vertical">
