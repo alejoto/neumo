@@ -1,0 +1,82 @@
+body {
+  /* it's neccesary to set absolute routes for the images */
+  background-image: url('../images/debut_light.png');
+  background-repeat: repeat;
+}
+
+.index-container {
+  margin-top: 30px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+h2.recolhap {
+  color: #5C5C64; 
+  font-family: 'Play', cursive;
+}
+
+.logo-recolhap {
+  width: 36px;
+  height: 29px;
+}
+
+.recolhap-logo-container {
+  margin-top: -18px; 
+  text-align: left; 
+  padding-left: 50px;
+}
+
+.carousel-center {
+  margin: 0 auto;
+}
+
+.index-info-container {
+  height: auto;
+  margin-top: 30px;
+}
+
+.index-info-box {
+  background: none; 
+  color: gray; 
+  border: none;
+}
+
+.index-info-box img {
+  opacity: 0.7;
+}
+
+.index-title-info {
+  color: #4A4C4C;
+  font-family: 'Oxygen', sans-serif;
+  font-weight: 700;
+  font-size:150%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.content-info-box {
+  font-size:14px;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 40px;
+}
+
+.footer_index {
+  margin-top: 0px; 
+  padding-left: 25px;
+}
+
+.footer-links {
+  color: #4A4C4C; 
+  font-family: 'Oxygen', sans-serif;
+}
+
+.heal-my-desease-link {
+  font-family: 'Oxygen', sans-serif; 
+  color: #4A4C4C;
+}
+
+.heal-my-desease-logo {
+  height: 29px;
+  opacity: 0.7;
+  margin-top: 0px auto;
+}
