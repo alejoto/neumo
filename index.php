@@ -6,28 +6,40 @@
     <title>RECOLHAP</title>
 
     <!--CSS Stylysheets start-->
-      <?php include 'modules/includes/stylesheets_pipeline.php'; ?>
+    <link href="assets/stylesheets/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="assets/stylesheets/neumo.css" rel="stylesheet" media="screen">
+    <link rel="icon"   type="image/png"  href="assets/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/stylesheets/bootstrap-responsive.css" rel="stylesheet">
     <!--CSS Stylysheets ends-->
 
-    <!--JS start-->
-      <?php include 'modules/includes/javascripts_pipeline.php'; ?>
-    <!--js ends-->
+    <!-- Fonts Start -->
+    <link href='http://fonts.googleapis.com/css?family=Oxygen:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Play:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/fonts/css/font-awesome.min.css">
+    <!-- Fonts Ends -->
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
   </head>
   
-  <body>
-    
-   <div class="container index-container">
-      <div class="row-fluid">        
-        <div class="span8 recolhap-logo-container">
-          <h2 class="recolhap">
+  <body style="background-image:url('assets/images/debut_light.png');background-repeat:repeat;">
+   <div class="container" style="height: auto;">
+      <br><br>
+      <div class="row-fluid">
+        
+        <div class="span8" style="margin-top: -18px; text-align: left; padding-left: 50px;">
+          <h2 style="color: #5C5C64; font-family: 'Play', cursive;">
             RECOLHAP 
-            <img class="logo-recolhap" src="assets/images/logo-gray.png">
+            <img style="width: 36px; heigth: 29px;" src="assets/images/logo-gray.png">
           </h2>
         </div>
         
         <div class="span4">
+          
+          
           <?php
-<<<<<<< HEAD
             if(isset($_SESSION['username'])){ 
               echo '<a href="modules/myaccount/myaccount.php?page=patients"><u>'
                     .$_SESSION['username'].
@@ -37,20 +49,17 @@
             <a href="#modal_login" id="button_modal" role="button" style="font-family:'Oxygen',sans-serif;" data-toggle="modal"><b style="font-family: 'Oxygen', sans-serif;">Entrar </b></a>&nbsp; | &nbsp;
             <a href="#modal_register" role="button" class="" data-toggle="modal" style="font-family:'Oxygen',sans-serif;"><b style="font-family: 'Oxygen', sans-serif;">Registrarse</b></a>
             <!-- <a href="#modal_help" id="button_modal_index" class="btn btn-inverse" style="font-family:'Oxygen',sans-serif;" data-toggle="modal"> -->
-            <!--	Ayuda
-            <!-- 	<i class="icon-question-sign"></i>
-            <!--</a> -->
+            	Ayuda
+              	<i class="icon-question-sign"></i>
+            </a>
             <?php  }
     
-=======
-            include 'modules/includes/logged?.php';
->>>>>>> branch 'master' of https://github.com/alejoto/neumo.git
             include 'modules/login/login.php';
             include 'modules/register/register.php';
           ?>
+        
         </div>
       </div>
-<<<<<<< HEAD
     </div>  
  
 
@@ -122,26 +131,6 @@
           		include './modules/includes/help.php';
           	?>
       </div>
-=======
->>>>>>> branch 'master' of https://github.com/alejoto/neumo.git
     </div>
- 
-    <!-- Carousel images start -->
-       <div class="row-fluid">
-        <div class="span12 carousel-center">
-         <div id="banner">
-            <?php include 'modules/includes/carousel.html'; ?>
-         </div>
-        </div>
-       </div>
-    <!-- Carousel images end -->
-
-    <div class="container index-info-container">
-      <?php include 'modules/includes/index_boxes.html' ?></hr>
-      <!--Footer start -->
-        <?php include 'modules/includes/index_footer.html' ?>
-      <!--Footer end -->
-    </div>
-    
   </body>
 </html>
