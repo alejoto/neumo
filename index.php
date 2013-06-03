@@ -46,7 +46,21 @@
                     '</u></a>';
               echo '<a href="modules/login/logout.php" role="button" class="btn btn-danger left_space">Salir</a>';
             }else{ ?>
+            <!--
+            * button name:          button_modal
+            * Triggers:             jquery open modal box
+            * Brieff description:   Open modal box with login form
+            * js associated file:   
+            * php AJAX:             no file, embeded html from modules/login/login.php
+            -->
             <a href="#modal_login" id="button_modal" role="button" style="font-family:'Oxygen',sans-serif;" data-toggle="modal"><b style="font-family: 'Oxygen', sans-serif;">Entrar </b></a>&nbsp; | &nbsp;
+            <!--
+            * button name:          
+            * Triggers:             jquery open modal box
+            * Brieff description:   Open modal box with register form
+            * js associated file:   
+            * php AJAX:             no file, embeded html from modules/register/register.php
+            -->
             <a href="#modal_register" role="button" class="" data-toggle="modal" style="font-family:'Oxygen',sans-serif;"><b style="font-family: 'Oxygen', sans-serif;">Registrarse</b></a>
             <!-- <a href="#modal_help" id="button_modal_index" class="btn btn-inverse" style="font-family:'Oxygen',sans-serif;" data-toggle="modal"> -->
             	Ayuda

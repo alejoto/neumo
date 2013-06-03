@@ -105,6 +105,13 @@ include '../patient/basic/hyperclot_preload.php';
     
   <div class="row">
     <div class="span8"><br><br>
+        <!--
+        * button name:          hiperclot_save
+        * Triggers:             $("#hiperclot_save").click()
+        * Brieff description:   Save (or update if exists) Hipercoagulabilidad test taken from this form
+        * js associated file:   Sript at end of this file
+        * php AJAX:             /patient/basic/hyperclot_save.php
+        -->
     <a id="hiperclot_save" class="btn">Guardar</a><br><br></div>
   </div>
   <div id="hyperclot_result"></div>

@@ -153,6 +153,13 @@
         </div>
         <div class="row">
             <div class="span6">
+                <!--
+                * button name:          react_save
+                * Triggers:             $("#react_save").click() -> to_database()
+                * Brieff description:   Save Vasoreactividad test
+                * js associated file:   ajax_forms.js
+                * php AJAX:             /patient/ajax_save.php
+                -->
                 <button class="btn span6" id="react_save">Guardar</button>
 
             </div>

@@ -57,6 +57,13 @@
           <div class="controls" style="margin-left: 0px;">
             <div id="idnumberctr" class="input-prepend input-append">
               <span class="add-on"><i class="icon-user"></i></span>
+              <!--
+                * button name:          idnumber
+                * Triggers:             enter_search()
+                * Brieff description:   Search an user by id. If exists show patient info and link to enter patient data. If not, show new patient form
+                * js associated file:   patients.js
+                * php AJAX:             modules/myaccount/ajax_search_patient.php
+                -->
               <input type="text" id="idnumber" placeholder="N&uacute;mero identidad"/>
               <button class="btn" type="button"> <i class="icon-search"></i></button>
             </div>
@@ -116,6 +123,13 @@
           <input type="text" id="statebth" name="statebth" placeholder="Departamento"><br>
           <input type="text" id="countrybth" name="countrybth" placeholder="Pa&iacute;s de origen"><br><br>
           <div class="btn-group" id="group_save_patient" >
+            <!--
+            * button name:          save_patient
+            * Triggers:             Submit form
+            * Brieff description:   Save new patient data and create firs main_eval for this patient
+            * js associated file:   None
+            * php AJAX:             Post: ajax_save_patient.php
+            -->
             <button type="submit" class="btn btn-info " id="save_patient" style="margin-left: 0px;">
               Guardar datos de paciente
               <i class="icon-circle-arrow-down"></i>

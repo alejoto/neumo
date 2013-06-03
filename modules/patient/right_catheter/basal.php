@@ -139,6 +139,13 @@
     </div>
     <div class="row">
         <div class="span6">
+            <!--
+            * button name:          save_rt_cath
+            * Triggers:             $("#save_rt_cath").click() -> to_database()
+            * Brieff description:   Save Basal text
+            * js associated file:   ajax_forms.js
+            * php AJAX:             /patient/ajax_save.php
+            -->
             <button class="btn span6" id="save_rt_cath">Guardar</button>
         </div>
     </div>
