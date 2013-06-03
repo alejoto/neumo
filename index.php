@@ -4,6 +4,7 @@
 <html>
   <head>
     <title>RECOLHAP</title>
+
     <!--CSS Stylysheets start-->
       <?php include 'modules/includes/stylesheets_pipeline.php'; ?>
     <!--CSS Stylysheets ends-->
