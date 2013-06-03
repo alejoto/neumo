@@ -22,14 +22,14 @@
 
   <!--menu starts here-->
   <div style="background:#3A3A3A;color:#fff;padding:10px;">
-    <div class="row-fluid" style="" >
-      <div class="span2">
+    <div class="row-fluid">
+      <div class="span3">
         <p style="color: #C6C6AA; font-family: 'Play', cursive; font-weight: 700; font-size:120%;">
           RECOLHAP
           <img style="width: 30px; heigth: 23px;" src="../../assets/images/logo-gray.png">
         </p>
       </div>
-      <div class="span4">
+      <div class="span6">
         <div class="btn-group">
           <?php
           if( isset($_SESSION['evaluation'])&&$_GET['page']!='statistics' ){
@@ -80,20 +80,17 @@
                 <i class="icon-user icon-signal"></i>
               </a>
               <?php } ?>
+              
+              <a href="#modal_help" id="button_modal" class="btn btn-inverse" style="font-family:'Oxygen',sans-serif;" data-toggle="modal">
+              	Ayuda
+              	<i class="icon-question-sign"></i>
+              </a>
+              
               <a href="../login/logout.php" class="btn btn-inverse">Salir<i class="icon-share-alt icon-white"></i></a>
             </div>
-          </div>
+          </div>   
           
-<!--      ASDASDFASDFASDFASDFASDFASDF      -->
-          <div class="span2"  style="color:gray;padding-top:7px">
-          	<a href="#modal_help" id="button_modal" role="button" style="font-family:'Oxygen',sans-serif;" data-toggle="modal">Ayuda?</a>
-          	 
-          	<?php 
-          		include '../includes/help.php';
-          	?>
-          </div>
-          
-          <div class="span2" style="color:gray;padding-top:7px">
+          <div class="span3" style="color:gray;padding-top:7px">
             <?php 
             include '../DB/connect.php';
             $user_id=$_SESSION['username'];
@@ -109,3 +106,11 @@
       </div>
       
 	<!--menu ending-->
+	
+	<!-- This is the menu for the help-->
+	
+          	<?php 
+          		include '../includes/help.php';
+          	?>
+    
+	

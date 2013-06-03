@@ -48,7 +48,10 @@
             }else{ ?>
             <a href="#modal_login" id="button_modal" role="button" style="font-family:'Oxygen',sans-serif;" data-toggle="modal"><b style="font-family: 'Oxygen', sans-serif;">Entrar </b></a>&nbsp; | &nbsp;
             <a href="#modal_register" role="button" class="" data-toggle="modal" style="font-family:'Oxygen',sans-serif;"><b style="font-family: 'Oxygen', sans-serif;">Registrarse</b></a>
-
+            <!-- <a href="#modal_help" id="button_modal_index" class="btn btn-inverse" style="font-family:'Oxygen',sans-serif;" data-toggle="modal"> -->
+            <!--	Ayuda
+            <!-- 	<i class="icon-question-sign"></i>
+            <!--</a> -->
             <?php  }
     
             include 'modules/login/login.php';
@@ -122,7 +125,12 @@
           </div>    
         </div>
       </div>
-
+	 <!-- TO DO!!! -->
+	  <div>
+          	<?php 
+          		include './modules/includes/help.php';
+          	?>
+      </div>
     </div>
   </body>
 </html>
