@@ -94,7 +94,7 @@ $pdf->AddPage();
 $pdf->SetFont('Arial','',11);
 
 $address ="FAVOR IMPRIMIR Y ENVIAR FIRMADO A: Calle 78B # 75-21 - Medellín, Antioquia A NOMBRE DE NATALIA GONZÁLEZ, JEFE DE INVESTIGACIONES CLÍNICAS.";
-$nameMatch = "Nombre ".$row['ivt_name']." ".$row['ivt_surname'].", con especialidad en ".$row['ivt_specialty']." identificado con cédula NO LA TIENE!! de la ciudad de ".$row['ivt_city'].", actuando en mí nombre, como aparece en el encabezado, al ingresar al registro nacional de hipertensión pulmonar acepto los siguientes compromisos:";
+$nameMatch = "Nombre ".$row['ivt_name']." ".$row['ivt_surname'].", con especialidad en ".$row['ivt_specialty']." identificado con cédula ".$row['ivt_doc']." de la ciudad de ".$row['ivt_city'].", actuando en mí nombre, como aparece en el encabezado, al ingresar al registro nacional de hipertensión pulmonar acepto los siguientes compromisos:";
 $pdf->MultiCell(0, 5, $nameMatch,0);
 $pdf->ln(10);
 for($i=0;$i<6;$i++)	{
@@ -107,7 +107,7 @@ $pdf->MultiCell(0, 5, $items[6],0);
 $pdf->Ln(15);
 // Add the space for the name, signature and id
 $pdf->Cell(90,3,"Nombre: ".$row['ivt_name']." ".$row['ivt_surname']);
-$pdf->Cell(0,3,"Cédula :________________________________");
+$pdf->Cell(0,3,"Cédula: ".$row['ivt_doc']);
 $pdf->Ln(18);
 $pdf->Cell(0,3,"Firma:__________________________________");
 $pdf->Ln(10);

@@ -80,12 +80,14 @@
                 <i class="icon-user icon-signal"></i>
               </a>
               <?php } ?>
-              
+              <a href="#modal_help" id="button_modal" class="btn btn-inverse" style="font-family:'Oxygen',sans-serif;" data-toggle="modal">
+              	Compromiso
+              	 <i class="icon-question-sign"></i>
+              </a>
               <a href="#modal_help" id="button_modal" class="btn btn-inverse" style="font-family:'Oxygen',sans-serif;" data-toggle="modal">
               	Ayuda
               	<i class="icon-question-sign"></i>
               </a>
-              
               <a href="../login/logout.php" class="btn btn-inverse">Salir<i class="icon-share-alt icon-white"></i></a>
             </div>
           </div>   

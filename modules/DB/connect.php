@@ -198,7 +198,8 @@ $con=mysqli_connect("localhost","healmy5_root","laravel","healmy5_health");
   $sql=mysqli_query($con,"SELECT walk_toracic FROM hap_six_mins_walk");
   if (!$sql){ mysqli_query($con,"ALTER TABLE hap_six_mins_walk ADD walk_toracic VARCHAR(150) AFTER walk_syncope  ");}
 
-
+  $sql=mysqli_query($con,"SELECT ivt_doc FROM main_investigator");
+  if (!$sql){ mysqli_query($con,"ALTER TABLE main_investigator ADD ivt_doc VARCHAR(60) AFTER ivt_surname");}
 
 
  
