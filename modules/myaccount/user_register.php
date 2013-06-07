@@ -95,7 +95,7 @@ else {?>
 				Nombres
 			</div>
 			<div class="span8" style="text-align:left">
-				<input type="text" id="ivt_name" name="ivt_name" <?php echo "value='".$row['ivt_name']."'"; ?> placeholder="Nombre" />
+				<input type="text" id="ivt_name" name="ivt_name" <?php echo "value='".$row['ivt_name']."'"; ?> placeholder="Nombre" maxlength="15"/>
 			</div>
 		</div>
 		<div class="row">
@@ -103,7 +103,7 @@ else {?>
 				Apellidos
 			</div>
 			<div class="span8" style="text-align:left">
-				<input type="text" id="ivt_surname" name="ivt_surname" <?php echo "value='".$row['ivt_surname']."'"; ?> placeholder="Apellido" />
+				<input type="text" id="ivt_surname" name="ivt_surname" <?php echo "value='".$row['ivt_surname']."'"; ?> placeholder="Apellido" maxlength="15"/>
 			</div>
 		</div>
 		<div class="row">
