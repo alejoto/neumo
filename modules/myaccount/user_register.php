@@ -13,6 +13,7 @@ include '../DB/connect.php';
 //set variables as empty
 $ivt_name='';
 $ivt_surname='';
+$ivt_doc='';
 $ivt_specialty='';
 $ivt_mobile='';
 $ivt_city='';
@@ -172,7 +173,6 @@ else {?>
     </div>
     <div class="row">
       <div class="offset4 span4 btn-group btn-group-vertical">
-      	<a href='compromise.php?info=<?php echo serialize($row); ?>' class='btn btn-inverse' target="_blank">COMPROMISE</a>
         <a href='myaccount.php?page=basic' class='btn btn-inverse'>DATOS CLINICOS</a>
         <a href='myaccount.php?page=blood' class='btn btn-inverse'>PRUEBAS EN SANGRE</a>
         <a href='myaccount.php?page=diagnostic' class='btn btn-inverse'>IMAGENES CLINICAS</a>

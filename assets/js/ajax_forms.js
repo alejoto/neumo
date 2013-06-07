@@ -458,6 +458,10 @@ $("#liver_save").click(function(){
 	$("#liver_save").hide();
 });
 
+$("#button_modal2").click(function(){
+	alert("sirve");
+});
+
 $("#bleed_save").click(function(){
 	var info = get_info("coag");
 	var result = to_database(info,"hap_coag");

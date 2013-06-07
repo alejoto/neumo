@@ -19,7 +19,12 @@
 
 </head>
 <body>
-
+<?php 
+	include '../DB/connect.php';
+	$user_id=$_SESSION['username'];
+	$result_user = mysqli_query($con,"SELECT * FROM main_investigator WHERE user_id='$user_id'"  );  
+	$row_user    = mysqli_fetch_array($result_user);
+?>
   <!--menu starts here-->
   <div style="background:#3A3A3A;color:#fff;padding:10px;">
     <div class="row-fluid">
@@ -80,10 +85,12 @@
                 <i class="icon-user icon-signal"></i>
               </a>
               <?php } ?>
-              <a href="#modal_help" id="button_modal" class="btn btn-inverse" style="font-family:'Oxygen',sans-serif;" data-toggle="modal">
+                       
+              <a href='../myaccount/compromise.php?info=<?php echo serialize($row_user); ?>' class='btn btn-inverse' target="_blank">
               	Compromiso
-              	 <i class="icon-question-sign"></i>
+              	 <i class="icon-print"></i>
               </a>
+              
               <a href="#modal_help" id="button_modal" class="btn btn-inverse" style="font-family:'Oxygen',sans-serif;" data-toggle="modal">
               	Ayuda
               	<i class="icon-question-sign"></i>
@@ -92,14 +99,7 @@
             </div>
           </div>   
           
-          <div class="span3" style="color:gray;padding-top:7px">
-            <?php 
-            include '../DB/connect.php';
-            $user_id=$_SESSION['username'];
-            $result_user = mysqli_query($con,"SELECT * FROM main_investigator WHERE user_id='$user_id'"  );  
-            $row_user    = mysqli_fetch_array($result_user);
-            ?>
-            
+          <div class="span3" style="color:gray;padding-top:7px">        
             <a href="myaccount.php?page=user_register" style="color:gray"  data-toggle="tooltip" title="Editar perfil" data-placement="bottom" >
               <?php echo $row_user['ivt_name'].' '.$row_user['ivt_surname']; ?>
             </a>

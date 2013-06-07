@@ -40,6 +40,7 @@
           
           
           <?php
+         
             if(isset($_SESSION['username'])){ 
               echo '<a href="modules/myaccount/myaccount.php?page=patients"><u>'
                     .$_SESSION['username'].
@@ -61,11 +62,8 @@
             * js associated file:   
             * php AJAX:             no file, embeded html from modules/register/register.php
             -->
-            <a href="#modal_register" role="button" class="" data-toggle="modal" style="font-family:'Oxygen',sans-serif;"><b style="font-family: 'Oxygen', sans-serif;">Registrarse</b></a>
-            <!-- <a href="#modal_help" id="button_modal_index" class="btn btn-inverse" style="font-family:'Oxygen',sans-serif;" data-toggle="modal"> -->
-            	Ayuda
-              	<i class="icon-question-sign"></i>
-            </a>
+            <a href="#modal_register" role="button" class="" data-toggle="modal" style="font-family:'Oxygen',sans-serif;"><b style="font-family: 'Oxygen', sans-serif;">Registrarse</b></a>&nbsp; | &nbsp;
+            <a href="#modal_help" id="button_modal_index" class="" style="font-family:'Oxygen',sans-serif;" data-toggle="modal"> <b style="font-family: 'Oxygen', sans-serif;"><b>Ayuda</b></a>
             <?php  }
     
             include 'modules/login/login.php';
