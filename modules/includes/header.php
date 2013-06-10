@@ -16,6 +16,7 @@
   <!-- <script src="../../assets/js/bootstrap-modal.js"></script>  -->
   <script src="../../assets/js/medic.js"></script>
   <script src="../../assets/js/highcharts.js"></script>
+  <script src="../../assets/js/tables.js"></script>
 
 </head>
 <body>
@@ -75,7 +76,10 @@
             </a>
             <?php } 
             else echo "";?>
-
+            <a class="btn btn-inverse" id="statistics_btn" href="../myaccount/myaccount.php?page=tables">
+                Tablas
+                <i class="icon-user icon-table"></i>
+              </a>
             <?php
             if( $_GET['page']!='statistics' ){
               

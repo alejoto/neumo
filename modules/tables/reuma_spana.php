@@ -14,8 +14,15 @@ main_eval.t_st
 ,main_investigator.ivt_surname
 FROM hap_reuma_spana LEFT JOIN  main_eval ON  main_eval.eval_id = hap_reuma_spana.eval_id
 LEFT JOIN main_investigator on main_investigator.user_id = main_eval.digiter_id
-LEFT JOIN main_patient on main_patient.patient_id = main_eval.patient_id
-ORDER BY main_patient.patient_id asc, t_st asc";
+LEFT JOIN main_patient on main_patient.patient_id = main_eval.patient_id ";
+
+// File that defines the permissions of the user logged
+include_once('../tables/permission.php');
+// If $table_total_permission is 'no', can see only his patients
+if($table_total_permission == 'no')
+    $sql    .= " where main_investigator.user_id = '".$_SESSION['username']."' ";
+
+$sql    .= " ORDER BY main_patient.patient_id asc, t_st asc";
 $result = mysqli_query($con,$sql);
 ?>
 <!--main content here-->
