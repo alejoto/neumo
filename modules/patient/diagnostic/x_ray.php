@@ -76,7 +76,17 @@
      </div>
      <div class="row">
          <div class="span8" style="text-align:center">
-         		<a class="btn" id="xray_save">Guardar</a>
+         	
+             <!--
+        * button name:          xray_save
+        * Triggers:             $('#xray_save').click() -> to_database() 
+        * Brieff description:   Save info of hap_x_ray
+        * js associated file:   ajax_forms.js 
+        * php AJAX:             patient/ajax_save.php 
+        -->
+
+             
+             <a class="btn" id="xray_save">Guardar</a>
          		<div class="alert alert-success">
  			 				<button type="button" class="close">&times;</button>
   						<strong></strong>

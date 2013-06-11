@@ -100,6 +100,15 @@
     </div>
     <div class="row">
         <div class="span8" style="text-align:center">
+            
+            <!--
+        * button name:          save_spir
+        * Triggers:             $('#save_spir').click() -> to_database() 
+        * Brieff description:   Save info of hap_spirometry
+        * js associated file:   ajax_forms.js 
+        * php AJAX:             patient/ajax_save.php 
+        -->
+            
             <a class="btn" id="save_spir">Guardar</a>
             <div class="alert alert-success">
  			 				<button type="button" class="close">&times;</button>

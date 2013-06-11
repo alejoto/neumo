@@ -25,7 +25,16 @@
   </div>
   <div class="row">
     <div class="span8">
-      <a class="btn" id="f_reum_save">
+      
+        <!--
+        * button name:          f_reum_save
+        * Triggers:             $('#f_reum_save').click() -> to_database() 
+        * Brieff description:   Save info of hap_reuma
+        * js associated file:   ajax_forms.js 
+        * php AJAX:             patient/ajax_save.php 
+        -->
+        
+        <a class="btn" id="f_reum_save">
         Guardar
       </a>
       <div class="alert alert-success">
@@ -60,7 +69,16 @@
   </div>
   <div class="row">
     <div class="span8">
-      <a class="btn" id="uns_ana_save">Guardar</a>
+      
+        <!--
+        * button name:          uns_ana_save
+        * Triggers:             $('#uns_ana_save').click() -> to_database() 
+        * Brieff description:   Save info of hap_reuma_ana
+        * js associated file:   ajax_forms.js 
+        * php AJAX:             patient/ajax_save.php 
+        -->
+        
+        <a class="btn" id="uns_ana_save">Guardar</a>
       <div class="alert alert-success">
  			 	<button type="button" class="close">&times;</button>
   			<strong></strong>
@@ -120,7 +138,17 @@
     </div>
   </div>
   <div class="row">
-    <div class="span8"><a class="btn" id="sp_ana_save">Guardar</a>
+    <div class="span8">
+        
+        <!--
+        * button name:          sp_ana_save
+        * Triggers:             $('#sp_ana_save').click() -> to_database() 
+        * Brieff description:   Save info of hap_reuma_spana
+        * js associated file:   ajax_forms.js 
+        * php AJAX:             patient/ajax_save.php 
+        -->
+        
+        <a class="btn" id="sp_ana_save">Guardar</a>
     <div class="alert alert-success">
  			 	<button type="button" class="close">&times;</button>
   			<strong></strong>
@@ -238,6 +266,15 @@
   </div>
   <div class="row">
     <div class="span8"> 
+        
+        <!--
+        * button name:          anti_ENAs_save
+        * Triggers:             $('#anti_ENAs_save').click() -> to_database() 
+        * Brieff description:   Save info of hap_reuma_enas
+        * js associated file:   ajax_forms.js 
+        * php AJAX:             patient/ajax_save.php 
+        -->    
+        
 	    <a class="btn" id="anti_ENAs_save">Guardar</a>
 	    <div class="alert alert-success">
  			 	<button type="button" class="close">&times;</button>
@@ -317,7 +354,16 @@
     </div>
   </div>
   <div class="row">
-    <div class="span8"> <a class="btn" id="anti_ph_lip_save">Guardar</a>
+    <div class="span8"> 
+        <!--
+        * button name:          anti_ph_lip_save
+        * Triggers:             $('#anti_ph_lip_save').click() -> to_database() 
+        * Brieff description:   Save info of hap_reuma_antilip
+        * js associated file:   ajax_forms.js 
+        * php AJAX:             patient/ajax_save.php 
+        -->
+        
+        <a class="btn" id="anti_ph_lip_save">Guardar</a>
     	<div class="alert alert-success">
  			 	<button type="button" class="close">&times;</button>
   			<strong></strong>
@@ -371,7 +417,17 @@
     </div>
   </div>
   <div class="row">
-    <div class="span8"> <a class="btn" id="anca_ab_save">Guardar</a>
+    <div class="span8"> 
+        
+        <!--
+        * button name:          anca_ab_save
+        * Triggers:             $('#anca_ab_save').click() -> to_database() 
+        * Brieff description:   Save info of hap_reuma_anca
+        * js associated file:   ajax_forms.js 
+        * php AJAX:             patient/ajax_save.php 
+        -->
+        
+        <a class="btn" id="anca_ab_save">Guardar</a>
     	<div class="alert alert-success">
  			 	<button type="button" class="close">&times;</button>
   			<strong></strong>
@@ -408,6 +464,15 @@
   </div>
   <div class="row">
     <div class="span8">
+        
+        <!--
+        * button name:          citrul_ab_save
+        * Triggers:             $('#citrul_ab_save').click() -> to_database() 
+        * Brieff description:   Save info of hap_reuma_citrul
+        * js associated file:   ajax_forms.js 
+        * php AJAX:             patient/ajax_save.php 
+        -->
+        
       <a class="btn" id="citrul_ab_save">
         Guardar
       </a>

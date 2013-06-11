@@ -51,7 +51,17 @@
     <div class="span2">
       <input type="text" id="hep_albumin" class="span1 live" name="hep_albumin" placeholder="g/dL" />
     </div>
-    <div class="span4"> <a class="btn span1" id="liver_save">Guardar</a>
+    <div class="span4"> 
+        
+        <!--
+        * button name:          liver_save
+        * Triggers:             $('#liver_save').click() -> to_database() 
+        * Brieff description:   Save info of hap_hepatic 
+        * js associated file:   ajax_forms.js 
+        * php AJAX:             patient/ajax_save.php 
+        -->
+        
+        <a class="btn span1" id="liver_save">Guardar</a>
 			<div class="alert alert-success span4">
  			 	<button type="button" class="close">&times;</button>
   			<strong></strong>
@@ -89,7 +99,17 @@
     </div>
   </div>
   <div class="row">
-    <div class="offset3 span4"> <a class="btn span1" id="bleed_save">Guardar</a>
+    <div class="offset3 span4"> 
+        
+        <!--
+        * button name:          bleed_save
+        * Triggers:             $('#bleed_save').click() -> to_database() 
+        * Brieff description:   Save info of hap_coag 
+        * js associated file:   ajax_forms.js 
+        * php AJAX:             patient/ajax_save.php 
+        -->
+        
+        <a class="btn span1" id="bleed_save">Guardar</a>
     	<div class="alert alert-success span4">
  			 	<button type="button" class="close">&times;</button>
   			<strong></strong>

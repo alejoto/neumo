@@ -100,7 +100,16 @@
      </div>
      <div class="row" style="text-align:center">
          <div class="span8">
-         		<a class="btn" id="ecoc_save">Guardar</a>
+         		
+             <!--
+        * button name:          ecoc_save
+        * Triggers:             $('#ecoc_save').click() -> to_database() 
+        * Brieff description:   Save info of hap_ecocardio
+        * js associated file:   ajax_forms.js 
+        * php AJAX:             patient/ajax_save.php 
+        -->
+             
+             <a class="btn" id="ecoc_save">Guardar</a>
          		<div class="alert alert-success">
  			 				<button type="button" class="close">&times;</button>
   						<strong></strong>
