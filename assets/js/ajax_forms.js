@@ -16,7 +16,7 @@ function to_database(info,table) {
 	var result = null;
 	
 	$.post("../patient/ajax_save.php",{ info:info, table:table }, function(data) {
-	//alert(data);
+	//alert("CARE");
 	if(data=='Yes') {
 		result = "Datos guardados exitosamente";
 	}else{
@@ -130,18 +130,19 @@ function check_date(column_name,table_name,date){
 			alert("Ya se le realizo un examen a ese paciente en esta fecha");
 		}
 	  });  
-	}
+}
 
 
 $(".date3").change(function(){
 	/* Create a variable with the date with jQuery */
-	var date = $(".date3").prev().prev().val() + "-"+ $(".date3").prev().val() 
-				+ "-" + $(".date3").val();
+	var date = $(this).prev().prev().val() + "-"+ $(this).prev().val() 
+				+ "-" + $(this).val();
 	/* Find the colum name for the date */
-	var column_name = $(".date3").parent().attr("name");
+	var column_name = $(this).parent().attr("name");
+	//alert(column_name);
 	
 	/* Find the table where this date must be persisted */
-	var table_name = "hap_"+$(".date3").parent().parent().attr("name");
+	var table_name = "hap_"+$(this).parent().parent().attr("name");
 	check_date(column_name, table_name, date);	
 });
 
