@@ -122,6 +122,29 @@ function get_info(info_id){
   return result;
 }
 
+/**
+-------------------------------------------------------------------------------------
+* Name			:	check_date(column_name,table_name,date)
+* Description	:	This function goes and retrive the values of the database and 
+* 					see if the given date is already in the database for that 
+*					particular patient
+* Conditions	: 	The tables names and columns must be as an attribute in the html
+* 					in the variable of name
+*
+*					example:
+*					<form action="" name='columnName'>
+*						<input type="text" id="i1" class="some_class some_table">
+*						<input type="text" id="i2" class="some_table">
+*					</form>
+*					<script>
+*					get_info("some_table");
+*					</script>
+*					
+* Result		:	A message with the result and ask for a good input 
+*
+* Depend on 	: 	None
+*
+*/
 function check_date(column_name,table_name,date){
 	$.post("../patient/ajax_check.php",{ column_name:column_name,
 					table_name:table_name, date:date }, function(data) {
@@ -138,7 +161,7 @@ $(".date3").change(function(){
 	var date = $(this).prev().prev().val() + "-"+ $(this).prev().val() 
 				+ "-" + $(this).val();
 	/* Find the colum name for the date */
-	var column_name = $(this).parent().attr("name");
+	var column_name = $(this).prev().prev().attr("name");
 	//alert(column_name);
 	
 	/* Find the table where this date must be persisted */

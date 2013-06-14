@@ -5,13 +5,13 @@
 
     </div>
   </div>
-  <div class="row">
+  <div class="row" name="renal">
     <div class="span1">Fecha</div>
     <div class="span3">
       <input type="text" id="y_renal" class="span1 ren date1" name="renal_date" placeholder="a&ntilde;o" maxlength="4"
       />
       <input type="text" id="m_renal" class="span1 ren" placeholder="mes" maxlength="2"/>
-      <input type="text" id="d_renal" class="span1 ren" placeholder="d&iacute;a" maxlength="2"/>
+      <input type="text" id="d_renal" class="span1 ren date3" placeholder="d&iacute;a" maxlength="2"/>
     </div>
   </div>
   <div class="row">

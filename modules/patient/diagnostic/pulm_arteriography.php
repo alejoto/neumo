@@ -4,12 +4,12 @@
          		<h4>ARTERIOGRAF&Iacute;A PULMONAR</h4>
          </div>
      </div>
-     <div class="row">
+     <div class="row" name="pulm_arteriography">
          <div class="span1">Fecha</div>
          <div class="span3">
              <input type="text" id="y_artg" class="span1 p_art date1" name="artergph_date" placeholder="a&ntilde;o" maxlength="4"/>
              <input type="text" id="m_artg" class="span1 p_art" placeholder="mes" maxlength="2"/>
-             <input type="text" id="d_artg" class="span1 p_art" placeholder="d&iacute;a" maxlength="2"/>
+             <input type="text" id="d_artg" class="span1 p_art date3" placeholder="d&iacute;a" maxlength="2"/>
          </div>
      </div>
      <div class="row">

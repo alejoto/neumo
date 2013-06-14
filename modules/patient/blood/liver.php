@@ -7,12 +7,12 @@
   <div class="row">
     <div class="span8">Pruebas hep&aacute;ticas</div>
   </div>
-  <div class="row">
+  <div class="row" name="hepatic">
     <div class="span1">Fecha</div>
     <div class="span3">
       <input type="text" id="y_liver" class="span1 live date1" name="hep_date" placeholder="a&ntilde;o" maxlength="4"/>
       <input type="text" id="m_liver" class="span1 live" placeholder="mes" maxlength="2"/>
-      <input type="text" id="d_liver" class="span1 live" placeholder="d&iacute;a" maxlength="2"/>
+      <input type="text" id="d_liver" class="span1 live date3" placeholder="d&iacute;a" maxlength="2"/>
     </div>
   </div>
   <div class="row">
@@ -76,12 +76,12 @@
   <div class="row">
     <div class="span8">Pruebas de coagulaci&oacute;n</div>
   </div>
-  <div class="row">
+  <div class="row" name="coag">
     <div class="span1">Fecha</div>
     <div class="span3">
       <input type="text" id="y_bleed" class="span1 coag date1" name="coag_date" placeholder="a&ntilde;o" maxlength="4"/>
       <input type="text" id="m_bleed" class="span1 coag" placeholder="mes" maxlength="2"/>
-      <input type="text" id="d_bleed" class="span1 coag" placeholder="d&iacute;a" maxlength="2"/>
+      <input type="text" id="d_bleed" class="span1 coag date3" placeholder="d&iacute;a" maxlength="2"/>
     </div>
   </div>
   <div class="row">

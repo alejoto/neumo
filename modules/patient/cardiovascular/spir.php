@@ -4,12 +4,12 @@
         		<h4>ESPIROMETR&Iacute;A</h4>
         </div>
     </div>
-    <div class="row">
+    <div class="row" name="spirometry">
         <div class="span2">Fecha realizaci&oacute;n</div>
         <div class="span3" style="text-align:left">
             <input type="text" id="y_spir" class="span1 spir1 date1" name="spirodate" placeholder="a&ntilde;o" maxlength="4"/>
             <input type="text" id="m_spir" class="span1 spir1" placeholder="mes" maxlength="2"/>
-            <input type="text" id="d_spir" class="span1 spir1" placeholder="d&iacute;a" maxlength="2"/>
+            <input type="text" id="d_spir" class="span1 spir1 date3" placeholder="d&iacute;a" maxlength="2"/>
         </div>
     </div>
     <div class="row">

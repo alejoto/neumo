@@ -4,12 +4,12 @@
          			<h4>ECOCARDIOGRAF&Iacute;A</h4>
          </div>
      </div>
-     <div class="row">
+     <div class="row" name="ecocardio">
          <div class="span1">Fecha</div>
          <div class="span3">
              <input type="text" id="y_ecoc" class="span1 eco date1" name="doppl_date" placeholder="a&ntilde;o" maxlength="4"/>
              <input type="text" id="m_ecoc" class="span1 eco" placeholder="mes" maxlength="2"/>
-             <input type="text" id="d_ecoc" class="span1 eco" placeholder="d&iacute;a" maxlength="2"/>
+             <input type="text" id="d_ecoc" class="span1 eco date3" placeholder="d&iacute;a" maxlength="2"/>
          </div>
          <div class="span2" style="text-align:right">V&iacute;a transductor</div>
          <div class="span2">

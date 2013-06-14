@@ -4,12 +4,12 @@
          		<h4>TOMOGRAF&Iacute;A PULMONAR</h4>
          </div>
      </div>
-     <div class="row">
+     <div class="row" name="tc_angio">
          <div class="span1">Fecha</div>
          <div class="span3">
              <input type="text" id="y_tc" class="span1 tcangio date1" name="a_tc_date" placeholder="a&ntilde;o" maxlength="4"/>
              <input type="text" id="m_tc" class="span1 tcangio" placeholder="mes" maxlength="2"/>
-             <input type="text" id="d_tc" class="span1 tcangio" placeholder="d&iacute;a" maxlength="2"/>
+             <input type="text" id="d_tc" class="span1 tcangio date3" placeholder="d&iacute;a" maxlength="2"/>
          </div>
      </div>
      <div class="row">

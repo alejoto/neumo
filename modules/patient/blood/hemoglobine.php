@@ -30,11 +30,11 @@
         * php AJAX:             patient/ajax_save.php 
         -->
         
-        <a class="btn span1" id="hb_save">Guardar</a>
-    <div class="alert alert-success span4">
- 			 	<button type="button" class="close">&times;</button>
-  			<strong></strong>
-			</div>
+	    <a class="btn span1" id="hb_save">Guardar</a>
+	    <div class="alert alert-success span4">
+	 		<button type="button" class="close">&times;</button>
+	  	<strong></strong>
+		</div>
     </div>
   </div>
   <div class="row">
@@ -95,12 +95,12 @@
     <div class="span8"> <b>D&iacute;mero D (mcg/mL)</b>
     </div>
   </div>
-  <div class="row">
+  <div class="row" name="hemo_dim">
     <div class="span1">Fecha</div>
-    <div class="span3">
+    <div class="span3" name="dim_date">
       <input type="text" id="y_dimer" class="span1 dim date1" name="dim_date" placeholder="a&ntilde;o" maxlength="4"/>
       <input type="text" id="m_dimer" class="span1 dim" placeholder="mes" maxlength="2"/>
-      <input type="text" id="d_dimer" class="span1 dim" placeholder="d&iacute;a" maxlength="2"/>
+      <input type="text" id="d_dimer" class="span1 dim date3" placeholder="d&iacute;a" maxlength="2"/>
     </div>
     <div class="span1">
       <input type="text" id="d_dimer_value" class="span1 dim" name="dim_d_dimer_value" placeholder="ng/mL"/>
@@ -131,13 +131,13 @@
 
     </div>
   </div>
-  <div class="row">
+  <div class="row" name="hemo_tropo">
     <div class="span1">Fecha</div>
-    <div class="span3">
+    <div class="span3" name="tropo_date">
       <input type="text" id="y_trop" class="span1 tropo date1" name="tropo_date" placeholder="a&ntilde;o" maxlength="4"
       />
       <input type="text" id="m_trop" class="span1 tropo" placeholder="mes" maxlength="2" />
-      <input type="text" id="d_trop" class="span1 tropo" placeholder="d&iacute;a" maxlength="2" />
+      <input type="text" id="d_trop" class="span1 tropo date3" placeholder="d&iacute;a" maxlength="2" />
     </div>
     <div class="span1">
       <input type="text" id="trop_result" class="span1 tropo" name="tropo_trop_result" placeholder="ng/ml"
@@ -169,12 +169,12 @@
 
     </div>
   </div>
-  <div class="row">
+  <div class="row" name="hemo_pept">
     <div class="span1">Fecha</div>
-    <div class="span3">
+    <div class="span3" name="pept_date">
       <input type="text" id="y_bpn" class="span1 pept date1" name="pept_date" placeholder="a&ntilde;o" maxlength="4" />
       <input type="text" id="m_bpn" class="span1 pept" placeholder="mes" maxlength="2" />
-      <input type="text" id="d_bpn" class="span1 pept" placeholder="d&iacute;a" maxlength="2" />
+      <input type="text" id="d_bpn" class="span1 pept date3" placeholder="d&iacute;a" maxlength="2" />
     </div>
   </div>
   <div class="row">
@@ -235,12 +235,12 @@
     
   } else {
     ?>
-    <div class="row">
+    <div class="row" name="vih">
     <div class="span1">Fecha</div>
-    <div class="span3">
+    <div class="span3" name="hiv_date">
       <input type="text" id="y_vih" class="span1 vih date1" name="hiv_date" placeholder="a&ntilde;o" maxlength="4" />
       <input type="text" id="m_vih" class="span1 vih" placeholder="mes" maxlength="2" />
-      <input type="text" id="d_vih" class="span1 vih" placeholder="d&iacute;a" maxlength="2" />
+      <input type="text" id="d_vih" class="span1 vih date3" placeholder="d&iacute;a" maxlength="2" />
     </div>
   </div>
   <div class="row">
