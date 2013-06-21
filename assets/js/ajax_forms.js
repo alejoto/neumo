@@ -146,16 +146,24 @@ function get_info(info_id){
 *
 */
 function check_date(column_name,table_name,date){
+	
+	$.ajaxSetup({async: false});
 	$.post("../patient/ajax_check.php",{ column_name:column_name,
 					table_name:table_name, date:date }, function(data) {
 		//alert(data);
+		$result = true;
 		if(data=='occuped') {
-			alert("Ya se le realizo un examen a ese paciente en esta fecha");
+			result = false;
 		}
 	  });  
+	return result;
+	$.ajaxSetup({async: true});
 }
 
-
+/**
+ * This function is call to check if the given date is already in the DB
+ * also reset some values and hide some forms
+ */
 $(".date3").change(function(){
 	/* Create a variable with the date with jQuery */
 	var date = $(this).prev().prev().val() + "-"+ $(this).prev().val() 
@@ -166,8 +174,27 @@ $(".date3").change(function(){
 	
 	/* Find the table where this date must be persisted */
 	var table_name = "hap_"+$(this).parent().parent().attr("name");
-	check_date(column_name, table_name, date);	
+	//var result = check_date(column_name, table_name, date);	
+	//alert(check_date(column_name, table_name, date));
+	if (!check_date(column_name, table_name, date)){
+		$(this).val("");
+		$(this).prev().val("");
+		$(this).prev().prev().val("");
+		$(this).prev().hide("fast");
+		$(this).hide("fast");
+		$(this).prev().prev().focus();
+		$(this).prev().prev().popover('show');
+		$(this).prev().prev().popover('destroy');
+		$(this).prev().prev().popover({
+            title: "Ya se ha realizado este examen a este paciente en esta fecha, ingrese una fecha diferente",
+            placement: 'right'
+        });
+		$(this).prev().prev().popover('show');
+		
+
+	}	
 });
+
 
 /* Function to show the alert */
 function show_alert(result, button){
