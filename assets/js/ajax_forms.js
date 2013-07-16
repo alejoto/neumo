@@ -154,6 +154,8 @@ function check_date(column_name,table_name,date){
 		$result = true;
 		if(data=='occuped') {
 			result = false;
+		}else{
+			result = true;
 		}
 	  });  
 	return result;

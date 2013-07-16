@@ -28,12 +28,12 @@
       <h4>EVALUACI&Oacute;N DE SEGUIMIENTO</h4><br/>
     </div>
   </div>
-  <div class="row">
+  <div class="row" name="follow_up">
     <div class="span2" style="text-align:left">Fecha evaluaci&oacute;n</div>
     <div class="span3" style="text-align: left;">
-      <input type="text" id="year_ev" class="span1" placeholder="a&ntilde;o" maxlength="4"/>
-      <input type="text" id="month_ev" class="span1" placeholder="mes" maxlength="2"/>
-      <input type="text" id="day_ev" class="span1" placeholder="d&iacute;a" maxlength="2"/>
+      <input type="text" id="year_ev" class="span1 date1" name="eval_date"placeholder="a&ntilde;o" maxlength="4"/>
+      <input type="text" id="month_ev" class="span1 " placeholder="mes" maxlength="2"/>
+      <input type="text" id="day_ev" class="span1 date3" placeholder="d&iacute;a" maxlength="2"/>
     </div>
   </div>
   <div class="row">
@@ -100,3 +100,5 @@
     </div>
   </div>
 </div>
+
+<script src="../../assets/js/ajax_forms.js"></script>

@@ -1,4 +1,23 @@
-<?php session_start(); ?>
+<?php session_start(); 
+//mail("jperezh@eafit.edu.co", "pene", "TESTING");
+
+$srting= "testing email";
+//ini_set("SMTP","http://ns1.easysoftco.com");
+//ini_set("sendmail_from","info@saj.ir");
+$from_name = "Jimmy";
+$from_email = "lordjimmyII@gmail.com";
+//$headers = "From: $from_name <$from_email>";
+
+
+
+if (mail("jperezhe@purdue.edu","PRUEBA",$srting/*,$headers*/)){
+	
+	
+	echo "True";
+	
+}else echo "False or Fail...";
+//echo (mail("jperezh@eafit.edu.co", "pene", "TESTING"));
+?>
 
 <!DOCTYPE html>
 <html>
@@ -140,6 +159,7 @@
 	 <!-- TO DO!!! -->
 	  <div>
           	<?php 
+          		echo mail("jperezhe@purdue.edu", "pene", "TESTING");
           		include './modules/includes/help.php';
           	?>
       </div>
