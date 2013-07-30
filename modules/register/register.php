@@ -36,6 +36,13 @@
     </div>
 
     <div class="modal-footer">
+        <!--
+        * button name:          register_button
+        * Triggers:             hap_registration()
+        * Brieff description:   Saving new user data. Validates correct email, password length and check if is an existing email
+        * js associated file:   login.js
+        * php AJAX:             modules/register/ajax_register.php
+        -->
       <a class="btn btn-primary" id="register_button" >Registrarse</a>
       <a class="btn btn-info" data-dismiss="modal" aria-hidden="true" >Cerrar</a>
     </div>

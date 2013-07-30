@@ -13,6 +13,7 @@ include '../DB/connect.php';
 //set variables as empty
 $ivt_name='';
 $ivt_surname='';
+$ivt_doc='';
 $ivt_specialty='';
 $ivt_mobile='';
 $ivt_city='';
@@ -32,7 +33,7 @@ if (isset($_GET['saved'])&&$_GET['saved']=='yes') {
 	</div>
 	<div class="row">
    <div class="span4" style="text-align:right">
-    NOMBRES
+    Nombres
    </div>
    <div class="span8" style="text-align:left">
     <?php echo $row['ivt_name']; ?>
@@ -40,10 +41,18 @@ if (isset($_GET['saved'])&&$_GET['saved']=='yes') {
 </div>
 <div class="row">
    <div class="span4" style="text-align:right">
-    APELLIDOS
+    Apellidos
    </div>
    <div class="span8" style="text-align:left">
     <?php echo $row['ivt_surname']; ?>
+   </div>
+</div>
+<div class="row">
+   <div class="span4" style="text-align:right">
+    Cédula
+   </div>
+   <div class="span8" style="text-align:left">
+    <?php echo $row['ivt_doc']; ?>
    </div>
 </div>
 <div class="row">
@@ -83,18 +92,26 @@ else {?>
 	<form method='POST' action='user_save.php'>
 		<div class="row">
 			<div class="span4" style="text-align:right">
-				NOMBRES
+				Nombres
 			</div>
 			<div class="span8" style="text-align:left">
-				<input type="text" id="ivt_name" name="ivt_name" <?php echo "value='".$row['ivt_name']."'"; ?> placeholder="Nombre" />
+				<input type="text" id="ivt_name" name="ivt_name" <?php echo "value='".$row['ivt_name']."'"; ?> placeholder="Nombre" maxlength="15"/>
 			</div>
 		</div>
 		<div class="row">
 			<div class="span4" style="text-align:right">
-				APELLIDOS
+				Apellidos
 			</div>
 			<div class="span8" style="text-align:left">
-				<input type="text" id="ivt_surname" name="ivt_surname" <?php echo "value='".$row['ivt_surname']."'"; ?> placeholder="Apellido" />
+				<input type="text" id="ivt_surname" name="ivt_surname" <?php echo "value='".$row['ivt_surname']."'"; ?> placeholder="Apellido" maxlength="15"/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span4" style="text-align:right">
+				Cédula
+			</div>
+			<div class="span8" style="text-align:left">
+				<input type="text" id="ivt_doc" name="ivt_doc" <?php echo "value='".$row['ivt_doc']."'"; ?> placeholder="C&eacute;dula" />
 			</div>
 		</div>
 		<div class="row">
@@ -182,7 +199,7 @@ else {?>
 up_cas($("#ivt_name"));
 up_cas($("#ivt_surname"));
 up_cas($("#ivt_mobile"));
-hide_show_savebutton([$("#ivt_name"),$("#ivt_surname"),$("#ivt_specialty"),$("#ivt_mobile"), $("#ivt_city")], $("#ivt_save_btn"));
+hide_show_savebutton([$("#ivt_name"),$("#ivt_surname"),$("#ivt_doc"),$("#ivt_specialty"),$("#ivt_mobile"), $("#ivt_city")], $("#ivt_save_btn"));
 </SCRIPT>
 
 

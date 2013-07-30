@@ -659,6 +659,10 @@ function trigger_v_react_test(syst,diast,p_syst,p_diast,pre_co,post_co){
     p_diast.keyup(function() {vasorreact_test(syst, diast, p_syst, p_diast, pre_co, post_co);});
     post_co.keyup(function() {vasorreact_test(syst, diast, p_syst, p_diast, pre_co, post_co);});
 }
+$("#button_modal2").click(function(){
+	alert("sirve");
+});
+
 /*
 *
 *

@@ -84,6 +84,13 @@
   
   <div class="row">
     <div class="span8"><br><br>
+        <!--
+        * button name:          ef_save
+        * Triggers:             $('#ef_save').click()
+        * Brieff description:   Save first_eval and hap_follow_up with data from 'Anamesis' and 'Examen fisico' forms
+        * js associated file:   clinic_eval.js
+        * php AJAX:             /patient/save_anam.php
+        -->
       <a class="btn" id="ef_save">
         Guardar
       </a><br><br>

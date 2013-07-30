@@ -4,14 +4,14 @@
       <h4>TEST "CAMINATA DE 6 MINUTOS"</h4>
     </div>
   </div>
-  <div class="row">
+  <div class="row" name="six_mins_walk">
     <div class="span1" style="text-align:right">
-      FECHA
+      Fecha
     </div>
     <div class="span3">
       <input type="text" id="y_sixmw" class="span1 sixmw date1" name="walk_date" placeholder="a&ntilde;o" maxlength="4"/>
       <input type="text" id="m_sixmw" class="span1 sixmw" placeholder="mes" maxlength="2"/>
-      <input type="text" id="d_sixmw" class="span1 sixmw" placeholder="d&iacute;a" maxlength="2"/>
+      <input type="text" id="d_sixmw" class="span1 sixmw date3" placeholder="d&iacute;a" maxlength="2"/>
     </div>
     <div class="span2" style="text-align:right">
       Metros caminados
@@ -84,7 +84,16 @@
   </div>
   <div class="row">
     <div class="span8" style="text-align:center">
-      <a class="btn" id="sixmin_save">Guardar</a>
+      
+        <!--
+        * button name:          sixmin_save
+        * Triggers:             $('#sixmin_save').click() -> to_database() 
+        * Brieff description:   Save info of hap_six_mins_walk
+        * js associated file:   ajax_forms.js 
+        * php AJAX:             patient/ajax_save.php 
+        -->
+        
+        <a class="btn" id="sixmin_save">Guardar</a>
       <div class="alert alert-success">
  			 	<button type="button" class="close">&times;</button>
   			<strong></strong>

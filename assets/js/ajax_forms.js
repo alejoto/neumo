@@ -16,7 +16,7 @@ function to_database(info,table) {
 	var result = null;
 	
 	$.post("../patient/ajax_save.php",{ info:info, table:table }, function(data) {
-	//alert(data);
+	//alert("CARE");
 	if(data=='Yes') {
 		result = "Datos guardados exitosamente";
 	}else{
@@ -122,28 +122,81 @@ function get_info(info_id){
   return result;
 }
 
+/**
+-------------------------------------------------------------------------------------
+* Name			:	check_date(column_name,table_name,date)
+* Description	:	This function goes and retrive the values of the database and 
+* 					see if the given date is already in the database for that 
+*					particular patient
+* Conditions	: 	The tables names and columns must be as an attribute in the html
+* 					in the variable of name
+*
+*					example:
+*					<form action="" name='columnName'>
+*						<input type="text" id="i1" class="some_class some_table">
+*						<input type="text" id="i2" class="some_table">
+*					</form>
+*					<script>
+*					get_info("some_table");
+*					</script>
+*					
+* Result		:	A message with the result and ask for a good input 
+*
+* Depend on 	: 	None
+*
+*/
 function check_date(column_name,table_name,date){
+	
+	$.ajaxSetup({async: false});
 	$.post("../patient/ajax_check.php",{ column_name:column_name,
 					table_name:table_name, date:date }, function(data) {
 		//alert(data);
+		$result = true;
 		if(data=='occuped') {
-			alert("Ya se le realizo un examen a ese paciente en esta fecha");
+			result = false;
+		}else{
+			result = true;
 		}
 	  });  
-	}
+	return result;
+	$.ajaxSetup({async: true});
+}
 
-
+/**
+ * This function is call to check if the given date is already in the DB
+ * also reset some values and hide some forms
+ */
 $(".date3").change(function(){
 	/* Create a variable with the date with jQuery */
-	var date = $(".date3").prev().prev().val() + "-"+ $(".date3").prev().val() 
-				+ "-" + $(".date3").val();
+	var date = $(this).prev().prev().val() + "-"+ $(this).prev().val() 
+				+ "-" + $(this).val();
 	/* Find the colum name for the date */
-	var column_name = $(".date3").parent().attr("name");
+	var column_name = $(this).prev().prev().attr("name");
+	//alert(column_name);
 	
 	/* Find the table where this date must be persisted */
-	var table_name = "hap_"+$(".date3").parent().parent().attr("name");
-	check_date(column_name, table_name, date);	
+	var table_name = "hap_"+$(this).parent().parent().attr("name");
+	//var result = check_date(column_name, table_name, date);	
+	//alert(check_date(column_name, table_name, date));
+	if (!check_date(column_name, table_name, date)){
+		$(this).val("");
+		$(this).prev().val("");
+		$(this).prev().prev().val("");
+		$(this).prev().hide("fast");
+		$(this).hide("fast");
+		$(this).prev().prev().focus();
+		$(this).prev().prev().popover('show');
+		$(this).prev().prev().popover('destroy');
+		$(this).prev().prev().popover({
+            title: "Ya se ha realizado este examen a este paciente en esta fecha, ingrese una fecha diferente",
+            placement: 'right'
+        });
+		$(this).prev().prev().popover('show');
+		
+
+	}	
 });
+
 
 /* Function to show the alert */
 function show_alert(result, button){
@@ -456,6 +509,10 @@ $("#liver_save").click(function(){
 	show_alert(result,$(this));
 	reset_fields("live");
 	$("#liver_save").hide();
+});
+
+$("#button_modal2").click(function(){
+	alert("sirve");
 });
 
 $("#bleed_save").click(function(){

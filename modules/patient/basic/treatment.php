@@ -15,6 +15,7 @@
   <div id="drug_already_exist" style='display:none ;text-align:left'>
     <div class="span4">Medicamento ya existe. Confirmar ingreso</div>
     <div class="btn-group" >
+        
       <a class='btn ' id='reconfirm_drugsave' href="#"><i class="icon-ok"></i> Ingresar</a>
       <a class='btn  ' href="#" id='cancel_duplicated_drug'><i class="icon-remove"></i> Cancelar</a>
     </div>
@@ -56,6 +57,13 @@
     <div class="row">
       <div class="span1">
         <div class="btn-group" id="save_cancel_drug">
+            <!--
+            * button name:          btn_add_drug
+            * Triggers:             enter_drug_toDB()
+            * Brieff description:   Check if exists and enter new droug to table hap_drug_treatment
+            * js associated file:   clinic_eval.js
+            * php AJAX:             patient/ajax_new_drug.php
+            -->
           <a id="btn_add_drug" class="btn "><i class="icon-ok"></i> Agregar </a>
           <a id='hide_drug_hap' class="btn "><i class="icon-remove"></i> Cancelar </a>
         </div>
@@ -214,6 +222,13 @@ if ($row['surgical_atr_date']!="") {
   <div class="row">
     <div class="span8">
       <hr/>
+      <!--
+        * button name:          treatment_save
+        * Triggers:             $("#treatment_save").click() ->to_database()
+        * Brieff description:   Save info in hap_surgical
+        * js associated file:   ajax_forms.js
+        * php AJAX:             patient/ajax_save.php
+        -->
       <a class="btn class3" id="treatment_save">Guardar</a>
       <div class="alert alert-success">
  			 	<button type="button" class="close">&times;</button>

@@ -29,6 +29,13 @@
       </div>
     </div>
     <div class="modal-footer">
+        <!--
+        * button name:          login
+        * Triggers:             hap_login_method()
+        * Brieff description:   Validates correct email and check if is a coincident email and password combination for one user. Return false or redirect to modules/myaccount/myaccount.php?page=patients
+        * js associated file:   login.js
+        * php AJAX:             modules/login/ajax_login.php
+        -->
       <a class="btn btn-primary" id="login" >Entrar</a>
       <!-- 
       button executes function in assets/js/login.js

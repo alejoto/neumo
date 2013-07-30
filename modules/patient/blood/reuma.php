@@ -8,12 +8,12 @@
     <div class="span8"> <b>Factor reumatoideo</b>
     </div>
   </div>
-  <div class="row">
+  <div class="row" name="reuma">
     <div class="span1">Fecha</div>
     <div class="span3">
       <input type="text" id="y_f_reum" class="span1 date1 reuma" name="reuma_date"  placeholder="a&ntilde;o" maxlength="4"/>
       <input type="text" id="m_f_reum" class="span1 reuma" placeholder="mes" maxlength="2"/>
-      <input type="text" id="d_f_reum" class="span1 reuma" placeholder="d&iacute;a" maxlength="2"/>
+      <input type="text" id="d_f_reum" class="span1 reuma date3" placeholder="d&iacute;a" maxlength="2"/>
     </div>
     <div class="span2">
       <select id="f_reum" class="reuma" name="reuma_fr">
@@ -25,9 +25,18 @@
   </div>
   <div class="row">
     <div class="span8">
-      <a class="btn" id="f_reum_save">
+      
+        <!--
+        * button name:          f_reum_save
+        * Triggers:             $('#f_reum_save').click() -> to_database() 
+        * Brieff description:   Save info of hap_reuma
+        * js associated file:   ajax_forms.js 
+        * php AJAX:             patient/ajax_save.php 
+        -->
+        
+        <a class="btn" id="f_reum_save">
         Guardar
-      </a>
+      	</a>
       <div class="alert alert-success">
  			 	<button type="button" class="close">&times;</button>
   			<strong></strong>
@@ -43,12 +52,12 @@
     <div class="span8"> <b>Anticuerpos antinucleares no espec&iacute;ficos (ANA)</b>
     </div>
   </div>
-  <div class="row">
+  <div class="row" name="reuma_ana">
     <div class="span1">Fecha</div>
     <div class="span3">
       <input type="text" id="y_uns_ana" class="span1 date1 ana" name="ana_date" placeholder="a&ntilde;o" maxlength="4"/>
       <input type="text" id="m_uns_ana" class="span1 ana" placeholder="mes" maxlength="2"/>
-      <input type="text" id="d_uns_ana" class="span1 ana" placeholder="d&iacute;a" maxlength="2"/>
+      <input type="text" id="d_uns_ana" class="span1 ana date3" placeholder="d&iacute;a" maxlength="2"/>
     </div>
     <div class="span2">
       <select id="uns_ana_value" class="ana" name="ana_result">
@@ -60,7 +69,16 @@
   </div>
   <div class="row">
     <div class="span8">
-      <a class="btn" id="uns_ana_save">Guardar</a>
+      
+        <!--
+        * button name:          uns_ana_save
+        * Triggers:             $('#uns_ana_save').click() -> to_database() 
+        * Brieff description:   Save info of hap_reuma_ana
+        * js associated file:   ajax_forms.js 
+        * php AJAX:             patient/ajax_save.php 
+        -->
+        
+        <a class="btn" id="uns_ana_save">Guardar</a>
       <div class="alert alert-success">
  			 	<button type="button" class="close">&times;</button>
   			<strong></strong>
@@ -76,12 +94,12 @@
     <div class="span8"> <b>Anticuerpos antinucleares por tipos</b>
     </div>
   </div>
-  <div class="row">
+  <div class="row" name="reuma_spana">
     <div class="span1">Fecha</div>
     <div class="span3">
       <input type="text" id="y_sp_ana" class="span1 spana date1" name="spana_date" placeholder="a&ntilde;o" maxlength="4"/>
       <input type="text" id="m_sp_ana" class="span1 spana" placeholder="mes" maxlength="2"/>
-      <input type="text" id="d_sp_ana" class="span1 spana" placeholder="d&iacute;a" maxlength="2"/>
+      <input type="text" id="d_sp_ana" class="span1 spana date3" placeholder="d&iacute;a" maxlength="2"/>
     </div>
   </div>
   <div class="row">
@@ -120,7 +138,17 @@
     </div>
   </div>
   <div class="row">
-    <div class="span8"><a class="btn" id="sp_ana_save">Guardar</a>
+    <div class="span8">
+        
+        <!--
+        * button name:          sp_ana_save
+        * Triggers:             $('#sp_ana_save').click() -> to_database() 
+        * Brieff description:   Save info of hap_reuma_spana
+        * js associated file:   ajax_forms.js 
+        * php AJAX:             patient/ajax_save.php 
+        -->
+        
+        <a class="btn" id="sp_ana_save">Guardar</a>
     <div class="alert alert-success">
  			 	<button type="button" class="close">&times;</button>
   			<strong></strong>
@@ -135,12 +163,12 @@
   <div class="row">
     <div class="span8"><b>Anticuerpos antinucleares antiENAs</b></div>
   </div>
-  <div class="row">
+  <div class="row" name="reuma_enas">
     <div class="span1">Fecha</div>
     <div class="span3">
       <input type="text" id="y_anti_ENAs" class="span1 enas date1" name="enas_date" placeholder="a&ntilde;o" maxlength="4"/>
       <input type="text" id="m_anti_ENAs" class="span1 enas" placeholder="mes" maxlength="2"/>
-      <input type="text" id="d_anti_ENAs" class="span1 enas" placeholder="d&iacute;a" maxlength="2"/>
+      <input type="text" id="d_anti_ENAs" class="span1 enas date3" placeholder="d&iacute;a" maxlength="2"/>
     </div>
   </div>
   <div class="row">
@@ -238,6 +266,15 @@
   </div>
   <div class="row">
     <div class="span8"> 
+        
+        <!--
+        * button name:          anti_ENAs_save
+        * Triggers:             $('#anti_ENAs_save').click() -> to_database() 
+        * Brieff description:   Save info of hap_reuma_enas
+        * js associated file:   ajax_forms.js 
+        * php AJAX:             patient/ajax_save.php 
+        -->    
+        
 	    <a class="btn" id="anti_ENAs_save">Guardar</a>
 	    <div class="alert alert-success">
  			 	<button type="button" class="close">&times;</button>
@@ -253,12 +290,12 @@
   <div class="row">
     <div class="span8"> <b>Anticuerpos antifosfol&iacute;pidos:</b></div>
   </div>
-  <div class="row">
+  <div class="row" name="reuma_antilip">
     <div class="span1">Fecha</div>
     <div class="span3">
       <input type="text" id="y_anti_ph_lip" class="span1 antilip date1" name="antilip_date" placeholder="a&ntilde;o" maxlength="4"/>
       <input type="text" id="m_anti_ph_lip" class="span1 antilip" placeholder="mes" maxlength="2"/>
-      <input type="text" id="d_anti_ph_lip" class="span1 antilip" placeholder="d&iacute;a" maxlength="2"/>
+      <input type="text" id="d_anti_ph_lip" class="span1 antilip date3" placeholder="d&iacute;a" maxlength="2"/>
     </div>
   </div>
   <div class="row">
@@ -317,7 +354,16 @@
     </div>
   </div>
   <div class="row">
-    <div class="span8"> <a class="btn" id="anti_ph_lip_save">Guardar</a>
+    <div class="span8"> 
+        <!--
+        * button name:          anti_ph_lip_save
+        * Triggers:             $('#anti_ph_lip_save').click() -> to_database() 
+        * Brieff description:   Save info of hap_reuma_antilip
+        * js associated file:   ajax_forms.js 
+        * php AJAX:             patient/ajax_save.php 
+        -->
+        
+        <a class="btn" id="anti_ph_lip_save">Guardar</a>
     	<div class="alert alert-success">
  			 	<button type="button" class="close">&times;</button>
   			<strong></strong>
@@ -332,12 +378,12 @@
   <div class="row">
     <div class="span8"> <b>Anticuerpos citoplasm&aacute;ticos antineutr&oacute;filos ANCA</b></div>
   </div>
-  <div class="row">
+  <div class="row" name="reuma_anca">
     <div class="span1">Fecha</div>
     <div class="span3">
       <input type="text" id="y_anca_ab" class="span1 anca date1" name="anca_date" placeholder="a&ntilde;o" maxlength="4"/>
       <input type="text" id="m_anca_ab" class="span1 anca" placeholder="mes" maxlength="2"/>
-      <input type="text" id="d_anca_ab" class="span1 anca" placeholder="d&iacute;a" maxlength="2"/>
+      <input type="text" id="d_anca_ab" class="span1 anca date3" placeholder="d&iacute;a" maxlength="2"/>
     </div>
   </div>
   <div class="row">
@@ -371,7 +417,17 @@
     </div>
   </div>
   <div class="row">
-    <div class="span8"> <a class="btn" id="anca_ab_save">Guardar</a>
+    <div class="span8"> 
+        
+        <!--
+        * button name:          anca_ab_save
+        * Triggers:             $('#anca_ab_save').click() -> to_database() 
+        * Brieff description:   Save info of hap_reuma_anca
+        * js associated file:   ajax_forms.js 
+        * php AJAX:             patient/ajax_save.php 
+        -->
+        
+        <a class="btn" id="anca_ab_save">Guardar</a>
     	<div class="alert alert-success">
  			 	<button type="button" class="close">&times;</button>
   			<strong></strong>
@@ -386,12 +442,12 @@
   <div class="row">
     <div class="span8"> <b>Anticuerpos anticitrulina</b></div>
   </div>
-  <div class="row">
+  <div class="row" name="reuma_citrul">
     <div class="span1">Fecha</div>
     <div class="span3">
       <input type="text" id="y_citrul_ab" class="span1 citrul date1" name="citrul_date" placeholder="a&ntilde;o" maxlength="4"/>
       <input type="text" id="m_citrul_ab" class="span1 citrul" placeholder="mes" maxlength="2"/>
-      <input type="text" id="d_citrul_ab" class="span1 citrul" placeholder="d&iacute;a" maxlength="2"/>
+      <input type="text" id="d_citrul_ab" class="span1 citrul date3" placeholder="d&iacute;a" maxlength="2"/>
     </div>
     <div class="span2">
       <select id="a_citrul" class="citrul" name="citrul_a_citrul">
@@ -408,6 +464,15 @@
   </div>
   <div class="row">
     <div class="span8">
+        
+        <!--
+        * button name:          citrul_ab_save
+        * Triggers:             $('#citrul_ab_save').click() -> to_database() 
+        * Brieff description:   Save info of hap_reuma_citrul
+        * js associated file:   ajax_forms.js 
+        * php AJAX:             patient/ajax_save.php 
+        -->
+        
       <a class="btn" id="citrul_ab_save">
         Guardar
       </a>

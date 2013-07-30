@@ -4,12 +4,12 @@
          		<h4>RESONANCIA MAGN&Eacute;TICA NUCLEAR</h4>
          </div>
      </div>
-     <div class="row">
+     <div class="row" name="mri">
          <div class="span1">Fecha</div>
          <div class="span3">
              <input type="text" id="y_rmn" class="span1 mri1 date1" name="mri_date" placeholder="a&ntilde;o" maxlength="4"/>
              <input type="text" id="m_rmn" class="span1 mri1" placeholder="mes" maxlength="2"/>
-             <input type="text" id="d_rmn" class="span1 mri1" placeholder="d&iacute;a" maxlength="2"/>
+             <input type="text" id="d_rmn" class="span1 mri1 date3" placeholder="d&iacute;a" maxlength="2"/>
          </div>
      </div>
      <div class="row">
@@ -74,7 +74,16 @@
      </div>
      <div class="row">
          <div class="span8" style="text-align:center">
-         		<a class="btn" id="mri_save">Guardar</a>
+         	
+             <!--
+        * button name:          mri_save
+        * Triggers:             $('#mri_save').click() -> to_database() 
+        * Brieff description:   Save info of hap_mri
+        * js associated file:   ajax_forms.js 
+        * php AJAX:             patient/ajax_save.php 
+        -->
+             
+             <a class="btn" id="mri_save">Guardar</a>
          		<div class="alert alert-success">
  			 				<button type="button" class="close">&times;</button>
   						<strong></strong>

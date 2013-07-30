@@ -4,12 +4,12 @@
          		<h4>RAYOS X</h4>
          </div>
      </div>
-     <div class="row">
+     <div class="row" name="x_ray">
          <div class="span1">Fecha</div>
          <div class="span3">
              <input type="text" id="y_xray" class="span1 xray date1" name="xray_date" placeholder="a&ntilde;o" maxlength="4"/>
              <input type="text" id="m_xray" class="span1 xray" placeholder="mes" maxlength="2"/>
-             <input type="text" id="d_xray" class="span1 xray" placeholder="d&iacute;a" maxlength="2"/>
+             <input type="text" id="d_xray" class="span1 xray date3" placeholder="d&iacute;a" maxlength="2"/>
          </div>
          <div class="span2">
              <div class="input-append">
@@ -76,7 +76,17 @@
      </div>
      <div class="row">
          <div class="span8" style="text-align:center">
-         		<a class="btn" id="xray_save">Guardar</a>
+         	
+             <!--
+        * button name:          xray_save
+        * Triggers:             $('#xray_save').click() -> to_database() 
+        * Brieff description:   Save info of hap_x_ray
+        * js associated file:   ajax_forms.js 
+        * php AJAX:             patient/ajax_save.php 
+        -->
+
+             
+             <a class="btn" id="xray_save">Guardar</a>
          		<div class="alert alert-success">
  			 				<button type="button" class="close">&times;</button>
   						<strong></strong>

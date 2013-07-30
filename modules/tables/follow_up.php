@@ -17,7 +17,7 @@ main_eval.t_st
 ,hap_follow_up.pregnant
 ,hap_follow_up.weight
 ,hap_follow_up.height
-,hap_follow_up.nyha_funct_class
+,hap_follow_up.nyha_funct
 ,hap_follow_up.sat_ox
 ,hap_follow_up.pulse
 ,hap_follow_up.pres_art_exfco
@@ -35,8 +35,16 @@ main_eval.t_st
 ,main_investigator.ivt_surname
 FROM hap_follow_up LEFT JOIN  main_eval ON  main_eval.eval_id = hap_follow_up.eval_id
 LEFT JOIN main_investigator on main_investigator.user_id = main_eval.digiter_id
-LEFT JOIN main_patient on main_patient.patient_id = main_eval.patient_id
-ORDER BY main_patient.patient_id asc, t_st asc";
+LEFT JOIN main_patient on main_patient.patient_id = main_eval.patient_id ";
+
+// File that defines the permissions of the user logged
+include_once('../tables/permission.php');
+// If $table_total_permission is 'no', can see only his patients
+if($table_total_permission == 'no')
+    $sql    .= " where main_investigator.user_id = '".$_SESSION['username']."' ";
+
+$sql    .= "ORDER BY main_patient.patient_id asc, t_st asc";
+
 $result = mysqli_query($con,$sql);
 ?>
 <!--main content here-->

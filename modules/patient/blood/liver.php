@@ -7,12 +7,12 @@
   <div class="row">
     <div class="span8">Pruebas hep&aacute;ticas</div>
   </div>
-  <div class="row">
+  <div class="row" name="hepatic">
     <div class="span1">Fecha</div>
     <div class="span3">
       <input type="text" id="y_liver" class="span1 live date1" name="hep_date" placeholder="a&ntilde;o" maxlength="4"/>
       <input type="text" id="m_liver" class="span1 live" placeholder="mes" maxlength="2"/>
-      <input type="text" id="d_liver" class="span1 live" placeholder="d&iacute;a" maxlength="2"/>
+      <input type="text" id="d_liver" class="span1 live date3" placeholder="d&iacute;a" maxlength="2"/>
     </div>
   </div>
   <div class="row">
@@ -51,7 +51,17 @@
     <div class="span2">
       <input type="text" id="hep_albumin" class="span1 live" name="hep_albumin" placeholder="g/dL" />
     </div>
-    <div class="span4"> <a class="btn span1" id="liver_save">Guardar</a>
+    <div class="span4"> 
+        
+        <!--
+        * button name:          liver_save
+        * Triggers:             $('#liver_save').click() -> to_database() 
+        * Brieff description:   Save info of hap_hepatic 
+        * js associated file:   ajax_forms.js 
+        * php AJAX:             patient/ajax_save.php 
+        -->
+        
+        <a class="btn span1" id="liver_save">Guardar</a>
 			<div class="alert alert-success span4">
  			 	<button type="button" class="close">&times;</button>
   			<strong></strong>
@@ -66,12 +76,12 @@
   <div class="row">
     <div class="span8">Pruebas de coagulaci&oacute;n</div>
   </div>
-  <div class="row">
+  <div class="row" name="coag">
     <div class="span1">Fecha</div>
     <div class="span3">
       <input type="text" id="y_bleed" class="span1 coag date1" name="coag_date" placeholder="a&ntilde;o" maxlength="4"/>
       <input type="text" id="m_bleed" class="span1 coag" placeholder="mes" maxlength="2"/>
-      <input type="text" id="d_bleed" class="span1 coag" placeholder="d&iacute;a" maxlength="2"/>
+      <input type="text" id="d_bleed" class="span1 coag date3" placeholder="d&iacute;a" maxlength="2"/>
     </div>
   </div>
   <div class="row">
@@ -89,7 +99,17 @@
     </div>
   </div>
   <div class="row">
-    <div class="offset3 span4"> <a class="btn span1" id="bleed_save">Guardar</a>
+    <div class="offset3 span4"> 
+        
+        <!--
+        * button name:          bleed_save
+        * Triggers:             $('#bleed_save').click() -> to_database() 
+        * Brieff description:   Save info of hap_coag 
+        * js associated file:   ajax_forms.js 
+        * php AJAX:             patient/ajax_save.php 
+        -->
+        
+        <a class="btn span1" id="bleed_save">Guardar</a>
     	<div class="alert alert-success span4">
  			 	<button type="button" class="close">&times;</button>
   			<strong></strong>
