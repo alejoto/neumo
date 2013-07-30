@@ -58,7 +58,7 @@
               else echo "";?>
 
               <?php
-              if( $_GET['page']=='statistics'&&!isset($_SESSION['evaluation']) ){
+              if( $_GET['page']=='statistics' && !isset($_SESSION['evaluation']) ){
             /*$_SESSION['evaluation'] is set at 'myaccount/start_eval_id.php' or 
             * 'myaccount/ajax_save_patient.php' and contains the eval_id value
             * during one unique register
@@ -79,18 +79,26 @@
                 Estad&iacute;sticas 
                 <i class="icon-user icon-signal"></i>
               </a>
-              <?php } ?>
+            <?php } ?>
+
+            <?php if( $_SESSION['username'] != "admin@recolhap.com" ){ ?>
+              <a href="../excel/excel.php" class="btn btn-inverse">
+                Exportar a excel                
+              </a>
+            <?php } ?>
+              
+              <a class="btn btn-inverse" href="#modal_help" id="button_modal" role="button" style="color: white; font-family:'Oxygen',sans-serif;" data-toggle="modal">
+                Ayuda?
+              </a>
               <a href="../login/logout.php" class="btn btn-inverse">Salir<i class="icon-share-alt icon-white"></i></a>
+
             </div>
           </div>
           
-<!--      ASDASDFASDFASDFASDFASDFASDF      -->
           <div class="span2"  style="color:gray;padding-top:7px">
-          	<a href="#modal_help" id="button_modal" role="button" style="font-family:'Oxygen',sans-serif;" data-toggle="modal">Ayuda?</a>
-          	 
-          	<?php 
-          		include '../includes/help.php';
-          	?>
+            <?php 
+              include '../includes/help.php';
+            ?>
           </div>
           
           <div class="span2" style="color:gray;padding-top:7px">

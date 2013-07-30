@@ -1,6 +1,9 @@
 <?php
 // connect to the MySQL server
-$con=mysqli_connect("localhost","healmy5_root","laravel","healmy5_health");
+
+//$con = mysqli_connect("localhost","root","root");
+//$con = mysqli_connect("localhost","healmy5_root","laravel","healmy5_health");
+$con = mysqli_connect("localhost","root","root","health");
   
   if (mysqli_connect_errno($con))
   {
