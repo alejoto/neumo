@@ -11,8 +11,7 @@ $from_email = "lordjimmyII@gmail.com";
 
 
 if (mail("jperezhe@purdue.edu","PRUEBA",$srting/*,$headers*/)){
-	
-	
+
 	echo "True";
 	
 }else echo "False or Fail...";

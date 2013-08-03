@@ -6,6 +6,7 @@ $excel = new Export2ExcelClass;
 $Matriz = array();
 $Matriz[] = $titles;
 
-$excel->WriteMatriz($Matriz); 
-$excel->Download("ArchivoExcel"); 
+info_patients();
+//$excel->WriteMatriz($Matriz); 
+//$excel->Download("ArchivoExcel"); 
 ?>
