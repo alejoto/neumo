@@ -156,13 +156,6 @@ if (mail("jperezhe@purdue.edu","PRUEBA",$srting/*,$headers*/)){
           </div>    
         </div>
       </div>
-	 <!-- TO DO!!! -->
-	  <div>
-          	<?php 
-          		echo mail("jperezhe@purdue.edu", "pene", "TESTING");
-          		include './modules/includes/help.php';
-          	?>
-      </div>
     </div>
   </body>
 </html>

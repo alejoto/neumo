@@ -1,5 +1,5 @@
 
-  <div id="modal_help" class="modal hide fade sign_up" tabindex="-1" role="dialog"  style="width: 600px;text-align: center;" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div id="modal_help" class="modal hide fade sign_up" tabindex="-1" role="dialog"  style="position:absolute;width: 600px;text-align: center;" aria-labelledby="myModalLabel" aria-hidden="true">
 
     <div class="modal-header">
       <h2 id="help_ModalLabel">Ayuda</h2>
