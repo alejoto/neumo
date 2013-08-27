@@ -84,7 +84,7 @@ if (mail("jperezhe@purdue.edu","PRUEBA",$srting/*,$headers*/)){
             <a href="#modal_register" role="button" class="" data-toggle="modal" style="font-family:'Oxygen',sans-serif;"><b style="font-family: 'Oxygen', sans-serif;">Registrarse</b></a>&nbsp; | &nbsp;
             <a href="#modal_help" id="button_modal_index" class="" style="font-family:'Oxygen',sans-serif;" data-toggle="modal"> <b style="font-family: 'Oxygen', sans-serif;"><b>Ayuda</b></a>
             <?php  }
-    
+    		include 'modules/includes/help.php';
             include 'modules/login/login.php';
             include 'modules/register/register.php';
           ?>
