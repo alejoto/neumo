@@ -124,6 +124,3 @@ if( $_GET['page']!='statistics' ){
 <?php 
 include '../includes/help.php';
 ?>
-
-
-

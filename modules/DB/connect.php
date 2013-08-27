@@ -3,7 +3,7 @@
 
 //$con = mysqli_connect("localhost","root","root");
 //$con = mysqli_connect("localhost","healmy5_root","laravel","healmy5_health");
-$con = mysqli_connect("localhost","root","root","health");
+$con = mysqli_connect("localhost","root","root","healmy5_health");
   
   if (mysqli_connect_errno($con))
   {
