@@ -19,7 +19,7 @@
     	<img alt="" src="/neumo/neumo/assets/images/help/tooltip.gif">
     	<hr>
       	<p>Los campos de fecha pediran primero el dia, a medida que llene el campo correctamente el sistema le pedira ingresar el mes y el año en el orden respectivo</p>
-      	<img alt="" src="/neumo/neumo/assets/images/help/date.gif">
+      	<img alt="" src="date.gif">
       	<hr>
     	<p>El sistema le pedira un documento de identidad del paciente, si el paciente existe mostrara su ficha m&eacute;dica y la opcion para ingresar datos de dicho paciente, si el paciente es nuevo le pedira la informaci&iacute;n necesaria para registrarlo</p>
     	<!-- Put a gif if it's necesary!! -->

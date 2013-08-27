@@ -16,16 +16,16 @@
   <!-- <script src="../../assets/js/bootstrap-modal.js"></script>  -->
   <script src="../../assets/js/medic.js"></script>
   <script src="../../assets/js/highcharts.js"></script>
-  <script src="../../assets/js/tables.js"></script>
+  <!--  <script src="../../assets/js/tables.js"></script> -->
 
 </head>
 <body>
   <?php 
-include '../DB/connect.php';
-$user_id=$_SESSION['username'];
-$result_user = mysqli_query($con,"SELECT * FROM main_investigator WHERE user_id='$user_id'"  );  
-$row_user    = mysqli_fetch_array($result_user);
-?>
+    include '../DB/connect.php';
+    $user_id=$_SESSION['username'];
+    $result_user = mysqli_query($con,"SELECT * FROM main_investigator WHERE user_id='$user_id'"  );  
+    $row_user    = mysqli_fetch_array($result_user);
+  ?>
 <!--menu starts here-->
 <div style="background:#3A3A3A;color:#fff;padding:10px;">
   <div class="row-fluid">
@@ -50,7 +50,7 @@ $row_user    = mysqli_fetch_array($result_user);
       </a>
       <?php } ?>
       <?php
-      if( $_GET['page']=='statistics'&&isset($_SESSION['evaluation']) ){
+      if( $_GET['page']=='statistics' && isset($_SESSION['evaluation']) ){
         /*$_SESSION['evaluation'] is set at 'myaccount/start_eval_id.php' or 
         * 'myaccount/ajax_save_patient.php' and contains the eval_id value
         * during one unique register
@@ -76,10 +76,14 @@ $row_user    = mysqli_fetch_array($result_user);
   </a>
   <?php } 
 else echo "";?>
+
+<!--
 <a class="btn btn-inverse" id="statistics_btn" href="../myaccount/myaccount.php?page=tables">
   Tablas
   <i class="icon-user icon-table"></i>
 </a>
+-->
+
 <?php
 if( $_GET['page']!='statistics' ){
 
