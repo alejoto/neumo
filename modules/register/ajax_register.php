@@ -51,6 +51,7 @@
       $content .='<p>Email: <span style="color: #0002a5; ">';
       $content .='<b><a href="mailto:projectmanager@healmydisease.com">projectmanager@healmydisease.com</a></b></span></p></font>';
       $content .='</body></html>';
+      
       mysqli_query($con,"INSERT INTO users (user_id, pwd, rol, status) VALUES ('".$tms."', '".$pwd1."','NN','$mail')");
       mail($mail,$subject,$content,$headers);
     }

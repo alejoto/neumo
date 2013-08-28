@@ -77,11 +77,11 @@
                   'desviacion septum ecocardio',
                   
                    // hap_electrok
-                  // 'fecha examen electroCG', 
-                  // 'eje electroCG', 
-                  // 'patron electroCG',
-                  // 'frecuencia electroCG', 
-                  // 'Tipo ritmo electroCG', 
+                  'fecha examen electroCG', 
+                  'eje electroCG', 
+                  'patron electroCG',
+                  'frecuencia electroCG', 
+                  'Tipo ritmo electroCG', 
                   
                   // hap_first_eval
                   'medico tratante', 
@@ -245,7 +245,6 @@
                          $data_patient['doppl_syst_press'], 
                          $data_patient['doppl_right_dilat'],
                          $data_patient['doppl_right_dysf'],
-                         $data_patient['doppl_right_dysf'],
                          $data_patient['doppl_pleur_effuss'],
                          $data_patient['left_heart_dysf'],
                          $data_patient['eject_fract'],
@@ -257,14 +256,14 @@
 
 
         /* ----------------------------------- hap_electrok --------------------------------------- */
-        // $sql_patient = "SELECT * FROM hap_electrok WHERE eval_id='$eval'";
-        // $data_patient = mysqli_fetch_array( mysqli_query($con,$sql_patient) );
-        // array_push($ans, $data_patient['ecg_date'], 
-        //                  $data_patient['axis'],
-        //                  $data_patient['pattern'], 
-        //                  $data_patient['frq'],
-        //                  $data_patient['rythm']);
-        /* ---------------------------------------------------------------------------------------- */
+        $sql_patient = "SELECT * FROM hap_electrok WHERE eval_id='$eval'";
+        $data_patient = mysqli_fetch_array( mysqli_query($con,$sql_patient) );
+        array_push($ans, $data_patient['ecg_date'], 
+                         $data_patient['axis'],
+                         $data_patient['pattern'], 
+                         $data_patient['frq'],
+                         $data_patient['rythm']);
+        /* ---------------------------------------------------------------------------------------- 
 
 
         /* ----------------------------------- hap_first_eval ------------------------------------- */
@@ -374,7 +373,9 @@
         
         
         /* ----------------------------------- main_eval ------------------------------------------ */
-        array_push($ans, $hospital, $t_st);
+        $sql_patient = "SELECT * FROM main_hospital WHERE hospital_id='$hospital'";
+        $data_patient = mysqli_fetch_array( mysqli_query($con,$sql_patient) );
+        array_push($ans, $data_patient['hospital_name'], $t_st);
         /* ----------------------------------------------------------------------------------------- */
         
         $Matriz[] = $ans;
