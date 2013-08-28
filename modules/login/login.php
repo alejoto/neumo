@@ -12,10 +12,10 @@
       </blockquote>
       <div class="input-prepend">
         <span class="add-on">@</span>
-        <input class="input-large" id="usr" name="usr" type="text" placeholder="Email">
+        <input class="input-large" id="usr" name="usr" type="text" placeholder="Email" maxlength="25">
         <br/><br/>
         <span class="add-on"><i class="icon-user"></i></span>
-        <input class="input-large" id="pwd" name="pwd" type="password" placeholder="Contrase&ntilde;a"><br/>
+        <input class="input-large" id="pwd" name="pwd" type="password" placeholder="Contrase&ntilde;a" maxlength="20"><br/>
       </div><br/>
       <div class="control-group error" id="msg"></div>
       <div  id="loading" style="display:none">

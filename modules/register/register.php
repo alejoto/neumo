@@ -21,10 +21,10 @@
         <br><br>
       
         <span class="add-on"><i class="icon-user"></i></span>
-        <input class="input-large" id="pwd1" name="pwd1" type="password" placeholder="Contrase&ntilde;a"><br><br>
+        <input class="input-large" id="pwd1" name="pwd1" type="password" placeholder="Contrase&ntilde;a" maxlength="20"><br><br>
 
         <span class="add-on"><i class="icon-check "></i></span>
-        <input class="input-large" id="pwd2" name="pwd2" type="password" placeholder="Confirmar contrase&ntilde;a"><br>
+        <input class="input-large" id="pwd2" name="pwd2" type="password" placeholder="Confirmar contrase&ntilde;a" maxlength="20"><br>
 
       </div><br>
       <div  id="loading_reg" style="display:none">

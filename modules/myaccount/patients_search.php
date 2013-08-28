@@ -64,7 +64,7 @@
                 * js associated file:   patients.js
                 * php AJAX:             modules/myaccount/ajax_search_patient.php
                 -->
-              <input type="text" id="idnumber" placeholder="N&uacute;mero identidad"/>
+              <input type="text" id="idnumber" placeholder="N&uacute;mero identidad" maxlength="20"/>
               <button class="btn" type="button"> <i class="icon-search"></i></button>
             </div>
           </div>
@@ -93,9 +93,9 @@
           
         </div>
         <form action="ajax_save_patient.php" method="post" style="padding-left: 70px; text-align: center; margin-top: 40px;">
-          <input type="text" id="docidnum" name="docidnum">        
-          <input type="text" id="name" name="name" placeholder="Nombre completo"><br>
-          <input type="text" id="surname" name="surname" placeholder="Apellidos"><br>
+          <input type="text" id="docidnum" name="docidnum" maxlength="20">        
+          <input type="text" id="name" name="name" placeholder="Nombre completo" maxlength="20"><br>
+          <input type="text" id="surname" name="surname" placeholder="Apellidos" maxlength="20"><br>
       
           <select id="gender" name="gender">
             <option value="">G&eacute;nero</option>
@@ -119,9 +119,9 @@
             </div>
           </div>
           
-          <input type="text" id="citybth" name="citybth" placeholder="Ciudad nacimiento"><br>  
-          <input type="text" id="statebth" name="statebth" placeholder="Departamento"><br>
-          <input type="text" id="countrybth" name="countrybth" placeholder="Pa&iacute;s de origen"><br><br>
+          <input type="text" id="citybth" name="citybth" placeholder="Ciudad nacimiento" maxlength="20"><br>  
+          <input type="text" id="statebth" name="statebth" placeholder="Departamento" maxlength="20"><br>
+          <input type="text" id="countrybth" name="countrybth" placeholder="Pa&iacute;s de origen" maxlength="20"><br><br>
           <div class="btn-group" id="group_save_patient" >
             <!--
             * button name:          save_patient
