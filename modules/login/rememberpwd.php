@@ -8,7 +8,8 @@ if (isset($_POST['usr'])) {
 		echo "Usuario no existe, debe registrarse!";
 	}
 	else {
-
+	  
+    $cont="<a href='http://localhost:8888/neumo2/modules/login/forgotten_pwd.php?user=".$tms."'>Acceda a este link para activar su usuario</a>";
 		$headers = "MIME-Version: 1.0" . "\r\n";
 		$headers .= "Content-type:text/html;charset=iso-8859-1" . "\r\n";
 		$headers .= 'From: No reply<no_reply@healmydisease.com>' . "\r\n";
