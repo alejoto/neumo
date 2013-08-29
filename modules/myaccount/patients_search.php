@@ -93,7 +93,7 @@
           
         </div>
         <form action="ajax_save_patient.php" method="post" style="padding-left: 70px; text-align: center; margin-top: 40px;">
-          <input type="text" id="docidnum" name="docidnum" maxlength="20">        
+          <input type="text" id="docidnum" name="docidnum" maxlength="20"  autocomplete="on">        
           <input type="text" id="name" name="name" placeholder="Nombre completo" maxlength="20"><br>
           <input type="text" id="surname" name="surname" placeholder="Apellidos" maxlength="20"><br>
       
