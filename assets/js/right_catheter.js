@@ -19,13 +19,12 @@
     });
 
 
-hide_show_savebutton([$("#year"),$("#month"),$("#day"), $("#res_vasc_pulm")
-    ,$('#res_vasc_syst'),$('#pap_sys'),$('#pap_dias'),$('#pas_sys')
+hide_show_savebutton([$("#year"),$("#month"),$("#day")
+    ,$('#pap_sys'),$('#pap_dias'),$('#pas_sys')
     ,$('#pas_dias'),$('#rt_atr_press'),$('#pulm_wedg_press')
     ,$('#cardiac_outp'),$('#rt_atr_oxim'),$('#heart_rate')], $('#ask_for_react_test'));
 
-hide_show_savebutton([  $("#post_res_vasc_pulm")
-    ,$('#post_res_vasc_syst'),$('#post_pap_sys'),$('#post_pap_dias'),$('#post_pas_sys')
+hide_show_savebutton([ $('#post_pap_sys'),$('#post_pap_dias'),$('#post_pas_sys')
     ,$('#post_pas_dias'),$('#post_rt_atr_press'),$('#post_pulm_wedg_press')
     ,$('#post_cardiac_outp'),$('#post_rt_atr_oxim'),$('#post_heart_rate')], $('#react_save'));
 
