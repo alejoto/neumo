@@ -1,6 +1,6 @@
 <?php 
   include '../DB/connect.php';
-  include '../login/email_format.php';
+  include '../DB/email_format.php';
 
   if (isset($_POST['usr'])) {
     $usr    = $_POST['usr'];

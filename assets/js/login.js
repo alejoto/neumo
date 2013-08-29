@@ -23,6 +23,7 @@ $('#usr').blur(function(){
   }
 })
 
+
 /*
 *
 *

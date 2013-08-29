@@ -1,4 +1,4 @@
-<form action="" method="post" autocomplete="on">
+<form action="" method="post" id="form_login" autocomplete="on">
   <div id="modal_login" class="modal hide fade sign_up" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 
     <div class="modal-header">
