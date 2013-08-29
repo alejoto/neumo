@@ -87,6 +87,10 @@ html,body {
   background-size: 100% 100%;
 }
 
+#usr, #pwd, #pwd1, #pwd2{
+  height: 30px;
+}
+
 .logo{
   float: left;
   padding-left: 90px;
