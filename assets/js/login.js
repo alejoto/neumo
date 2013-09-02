@@ -150,7 +150,7 @@ function hap_registration() {
         +" Ahora ingrese a su email para activar su cuenta."
         +" VERIFIQUE SU CARPETA SPAM si no encuentra el mensaje de activacion </div>");
 	  }
-	  else if (data=='mmm') {
+	  else if (data=="the process has already begun") {
 		  $("#msg_register").html("<div class='alert alert-error'>Usuario ya inici&oacute; proceso de registro.  Verifique bandeja de entrada de su email para terminar de activar cuenta.</div>");
 	  } 
 	  else

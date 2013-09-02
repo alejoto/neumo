@@ -16,10 +16,8 @@
   $row2   = mysqli_fetch_array($result2);
 
   if ($row2[0] !="" || $row2[0] !=null) {
-    echo "mmm";
-  }
-
-  else if ( $row[0] !="" || $row[0] !=null  ) {
+    echo "the process has already begun";
+  } else if ( $row[0] !="" || $row[0] !=null  ) {
     echo "no";
   } else {
     if( $pwd1 == $pwd2 && $pwd1 != "" ){
