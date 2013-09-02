@@ -3,8 +3,7 @@ require('../../assets/fpdf/fpdf.php');
 session_start();
 $items = array();
 $row = array();
-$row = $_GET['info'];
-$row = unserialize($row);
+$row = $_SESSION['compromise'];
 
 $items[0] = "1. Asumir la responsabilidad sobre la veracidad de la información ".
 		"según su fuente de origen, es decir, que esta coincide con hallazgos ". 

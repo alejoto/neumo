@@ -100,7 +100,8 @@ if( $_GET['page']!='statistics' ){
     </a>
     <?php } ?>
 
-    <a href='../myaccount/compromise.php?info=<?php echo serialize($row_user); ?>' class='btn btn-inverse' target="_blank">
+    <a href='../myaccount/compromise.php'<?php $_SESSION['compromise'] = $row_user;?> class='btn btn-inverse' target="_blank">
+    
       Compromiso
       <i class="icon-print"></i>
     </a>
